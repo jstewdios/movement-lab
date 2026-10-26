@@ -30,7 +30,15 @@ def main():
     p.add_argument('--vx', type=float, default=0)
     p.add_argument('--device', default='cuda:0')
     p.add_argument('--control-rate', action='store_true', help='sample at policy rate without extra substep forward calls (instrumentation check)')
+    p.add_argument('--disturbance-dv', type=float, default=None, help='00B: instantaneous world-x root velocity increment (m/s); zero is control')
+    p.add_argument('--disturbance-time', type=float, default=2.0)
+    p.add_argument('--default-position', action='store_true', help='00B: zero action, configured default joint targets through BAM')
     args = p.parse_args()
+    if args.disturbance_dv is not None:
+        if not np.isfinite([args.disturbance_dv, args.disturbance_time]).all() or not 1 <= args.disturbance_time < args.seconds - 1:
+            p.error('00B requires finite disturbance and at least 1 s before and after')
+        if args.control_rate:
+            p.error('00B requires physics-rate measurement')
     if args.seconds <= 0 or not np.isfinite([args.seconds, args.vx]).all():
         p.error('seconds must be positive; seconds and vx must be finite')
     upstream = args.upstream.resolve()
@@ -77,6 +85,8 @@ def main():
     twist.ranges.heading = None
     twist.rel_standing_envs = 0
     twist.rel_turn_in_place_envs = 0
+    if args.disturbance_dv is not None:
+        twist.rel_forward_envs = 0  # custom forward bucket otherwise overrides zero ranges
     for name, cmd in cfg.commands.items():
         cmd.resampling_time_range = (1e9, 1e9)
         if name != 'twist':
@@ -124,10 +134,15 @@ def main():
         if not args.control_rate:
             env.scene.update = record_update
         np.savez_compressed(out / 'initial.npz', qpos=array(env.sim.data.qpos), qvel=array(env.sim.data.qvel))
+        disturbance = None
+        if args.disturbance_dv is not None:
+            from movement_lab.disturbance import install
+            disturbance = install(env, robot, args.disturbance_time, args.disturbance_dv)
+            (out / 'disturbance.py').write_bytes(Path(__file__).with_name('disturbance.py').read_bytes())
         done = False
         with torch.inference_mode():
             for control_index in range(int(np.ceil(args.seconds/env.step_dt))):
-                current_action = policy(obs)
+                current_action = torch.zeros_like(policy(obs)) if args.default_position else policy(obs)
                 obs, _, dones, _ = wrapped.step(current_action)
                 if args.control_rate:
                     snapshot()
@@ -149,6 +164,10 @@ def main():
             versions={n: importlib.metadata.version(n) for n in ('mjlab','mujoco','mujoco-warp','warp-lang','torch','rsl-rl-lib','better-actuator-models')},
             measurement_code_sha256=sha(out/'evaluate.py'), analysis_code_sha256=sha(out/'measure.py'), config_sha256=sha(out/'resolved_config.txt'),
             summary=stats)
+        if disturbance is not None:
+            metadata['disturbance'] = disturbance
+            metadata['controller'] = 'default-position' if args.default_position else 'policy'
+            metadata['disturbance_code_sha256'] = sha(out/'disturbance.py')
         for name in ('env.yaml','agent.yaml'):
             f = checkpoint.parent/'params'/name
             if f.exists():

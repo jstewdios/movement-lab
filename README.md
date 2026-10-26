@@ -118,3 +118,87 @@ future rendering/export work; this repository does not copy robot assets.
 
 See [first results and validation](results/VALIDATION.md) and the generated
 [comparison report](results/comparison.html).
+
+## Movement Lab 00B — Disturbance and Recovery
+
+00A commands and records above remain the baseline. The optional 00B evaluator
+adds an instantaneous **world-x root-link velocity increment**, after 2 s of
+zero-command standing. This changes generalized velocity, not position, joint
+velocity, or actuator targets. It represents a reproducible momentum disturbance,
+not a force applied at a particular point. Do not infer a force in N from it.
+The requested and actual times, full generalized velocities immediately before
+and after, and first integrated velocity are saved in metadata. Timing is
+quantized to a physics step (including floating-point clock error).
+
+```bash
+PY=/home/james/microduck_rl/.venv/bin/python
+# New output root for each complete study; completed trials are resumable.
+$PY -m movement_lab.study00b --run --out results/00b-new
+$PY -m movement_lab.validate00b results/00b-new
+$PY -m unittest discover -s tests -v
+```
+
+The matrix is 22 four-second trials: checkpoints 99 and 348 and a configured
+BAM default-position controller, seeds 42/43, Δvx = 0, ±0.03, ±0.06 m/s
+for policies; default-position controls only (they cannot establish standing).
+The default-position controller supplies zero raw actions (upstream action
+scaling/offset gives configured default joint targets); it is powered and has
+BAM delay/friction, **not passive or zero torque**. Its checkpoint is loaded
+only to retain the shared evaluator and environment initialization.
+
+The post-settling window is [actual intervention time − 0.5 s, intervention).
+Trials failing the explicit settled gate are retained but cannot be classified
+as recovered. The report distinguishes upright survival, sustained recovery,
+root drift, endpoint actuator effort/work, contact, ankle lift, foot shift,
+and conservative step evidence. Recovery permits a new standing location.
+A recovered flag is an exploratory threshold decision; inspect trajectories and
+continuous metrics. Foot translations alone may be sliding, not stepping.
+`summary.json` contains all metrics including both foot contact fractions and
+peak lifts; `comparison.html` overlays synchronized trajectories and provenance.
+`validate00b` checks identical pre-event trajectories against each matched
+control and the sign of both velocity and displacement after integration.
+
+See [00B validation and interpretation](results/00b/standing/VALIDATION.md) and
+[00B comparison](results/00b/standing/comparison.html). The larger +0.15 m/s pilot
+is stored separately and excluded from the comparison matrix.
+
+### Tests with and without local 00B trajectories
+
+From the repository root, with the Python dependencies installed:
+
+```bash
+python -m unittest discover -s tests -v
+```
+
+A fresh checkout runs the measurement tests and checks against the committed
+00A trajectories. The optional `test_saved_interventions` checks each record in
+`results/00b/standing`: metadata without `trial.npz` is explicitly reported as a
+skipped subtest, not as validated evidence. Available trajectories still run all
+saved-record assertions, even when other records are missing; corrupt or invalid
+available records fail. The 00B raw trajectories are intentionally excluded from
+Git and must be preserved locally or regenerated to validate those records.
+
+To validate preserved records or a new study output directory, explicitly select
+the directory containing the per-trial subdirectories (each with `metadata.json`
+and `trial.npz`):
+
+```bash
+MOVEMENT_LAB_00B_FIXTURES=/absolute/path/to/00b-records \
+  python -m unittest discover -s tests -v
+# For example, after the study00b --out results/00b-new command above:
+MOVEMENT_LAB_00B_FIXTURES=results/00b-new \
+  python -m unittest discover -s tests -v
+```
+
+Explicit selection is strict: a nonexistent/empty directory or any discovered
+metadata record lacking its trajectory fails instead of skipping. This checks
+all discovered records, not completeness of the 22-trial matrix. The separate
+`python -m movement_lab.validate00b /path/to/00b-records` command additionally
+checks source/config provenance and matched-control causal comparisons; use it
+with complete study output, including the saved sources and initial states.
+Neither mode requires rerunning simulations when the original records exist.
+
+Fixture-routing regression tests include a deliberately mismatched **real 00A**
+trajectory and 00B metadata as a negative control: the existing sample-count
+assertion must reject it. This tests validation behavior and is not evidence
+that any missing 00B trajectory has been validated.

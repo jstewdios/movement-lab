@@ -1,0 +1,31 @@
+{
+  "trials": 7,
+  "causal_checks": [
+    {
+      "trial": "348-s42-dv+0.00",
+      "first_step_delta_vx": 0.0,
+      "first_step_delta_x": 0.0
+    },
+    {
+      "trial": "348-s42-dv-0.03",
+      "first_step_delta_vx": -0.023456212133169174,
+      "first_step_delta_x": -0.00011728145182132721
+    },
+    {
+      "trial": "99-s42-dv+0.00",
+      "first_step_delta_vx": 0.0,
+      "first_step_delta_x": 0.0
+    },
+    {
+      "trial": "99-s42-dv+0.03",
+      "first_step_delta_vx": 0.023629657924175262,
+      "first_step_delta_x": 0.00011814828030765057
+    },
+    {
+      "trial": "99-s42-dv-0.03",
+      "first_step_delta_vx": -0.02302083931863308,
+      "first_step_delta_x": -0.00011510425247251987
+    }
+  ],
+  "seed42_43_arrays_identical": {}
+}

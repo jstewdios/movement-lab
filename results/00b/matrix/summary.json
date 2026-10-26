@@ -1,0 +1,196 @@
+{
+  "348-s42-dv+0.00": {
+    "settled": true,
+    "upright": true,
+    "recovered": true,
+    "recovery_s": 0.020000457763671875,
+    "peak_tilt_deg": 5.892719745635986,
+    "final_root_shift_m": 0.00011204437760170549,
+    "peak_root_shift_m": 0.00012186653475509956,
+    "rms_effort_nm": 0.06646569818258286,
+    "work_j": 0.0005485694855451584,
+    "contact_fraction": [
+      1.0,
+      1.0
+    ],
+    "foot_final_shift_m": [
+      5.195352787268348e-05,
+      9.72025518422015e-05
+    ],
+    "foot_peak_lift_m": [
+      -3.507360816001892e-06,
+      5.891546607017517e-06
+    ],
+    "step_evidence": [
+      false,
+      false
+    ]
+  },
+  "348-s42-dv+0.03": {
+    "settled": true,
+    "upright": true,
+    "recovered": true,
+    "recovery_s": 0.020000457763671875,
+    "peak_tilt_deg": 6.125158786773682,
+    "final_root_shift_m": 8.869447628967464e-05,
+    "peak_root_shift_m": 0.0006654575117863715,
+    "rms_effort_nm": 0.06673312187194824,
+    "work_j": 0.0007025525555945933,
+    "contact_fraction": [
+      1.0,
+      1.0
+    ],
+    "foot_final_shift_m": [
+      0.00015067368804011494,
+      0.00020819510973524302
+    ],
+    "foot_peak_lift_m": [
+      0.00012313015758991241,
+      1.3666227459907532e-05
+    ],
+    "step_evidence": [
+      false,
+      false
+    ]
+  },
+  "348-s42-dv-0.03": {
+    "settled": true,
+    "upright": true,
+    "recovered": true,
+    "recovery_s": 0.020000457763671875,
+    "peak_tilt_deg": 5.892420291900635,
+    "final_root_shift_m": 0.00029781271587125957,
+    "peak_root_shift_m": 0.0010205270955339074,
+    "rms_effort_nm": 0.06586319208145142,
+    "work_j": 0.0006567652453668416,
+    "contact_fraction": [
+      1.0,
+      1.0
+    ],
+    "foot_final_shift_m": [
+      0.0002547614276409149,
+      0.0001392459962517023
+    ],
+    "foot_peak_lift_m": [
+      -3.507360816001892e-06,
+      2.3925676941871643e-05
+    ],
+    "step_evidence": [
+      false,
+      false
+    ]
+  },
+  "99-s42-dv+0.00": {
+    "settled": true,
+    "upright": true,
+    "recovered": true,
+    "recovery_s": 0.020000457763671875,
+    "peak_tilt_deg": 5.816553592681885,
+    "final_root_shift_m": 0.00022674746287520975,
+    "peak_root_shift_m": 0.00024583691265434027,
+    "rms_effort_nm": 0.04699078947305679,
+    "work_j": 0.0005662325420416892,
+    "contact_fraction": [
+      1.0,
+      1.0
+    ],
+    "foot_final_shift_m": [
+      6.658938946202397e-05,
+      2.964680243167095e-05
+    ],
+    "foot_peak_lift_m": [
+      3.555789589881897e-06,
+      6.591901183128357e-06
+    ],
+    "step_evidence": [
+      false,
+      false
+    ]
+  },
+  "99-s42-dv+0.03": {
+    "settled": true,
+    "upright": true,
+    "recovered": true,
+    "recovery_s": 0.020000457763671875,
+    "peak_tilt_deg": 5.90740442276001,
+    "final_root_shift_m": 0.0004764930345118046,
+    "peak_root_shift_m": 0.0006465622573159635,
+    "rms_effort_nm": 0.04743354022502899,
+    "work_j": 0.000774490530602634,
+    "contact_fraction": [
+      1.0,
+      1.0
+    ],
+    "foot_final_shift_m": [
+      0.00024326509446837008,
+      0.00014351510617416352
+    ],
+    "foot_peak_lift_m": [
+      6.360933184623718e-06,
+      3.8562342524528503e-05
+    ],
+    "step_evidence": [
+      false,
+      false
+    ]
+  },
+  "99-s42-dv-0.03": {
+    "settled": true,
+    "upright": true,
+    "recovered": true,
+    "recovery_s": 0.020000457763671875,
+    "peak_tilt_deg": 5.926883220672607,
+    "final_root_shift_m": 0.00013488448166754097,
+    "peak_root_shift_m": 0.00046997590106911957,
+    "rms_effort_nm": 0.04598461464047432,
+    "work_j": 0.0009770344477146864,
+    "contact_fraction": [
+      1.0,
+      1.0
+    ],
+    "foot_final_shift_m": [
+      0.00013075966853648424,
+      0.0001778459409251809
+    ],
+    "foot_peak_lift_m": [
+      7.545575499534607e-06,
+      2.142973244190216e-05
+    ],
+    "step_evidence": [
+      false,
+      false
+    ]
+  },
+  "default-s42-dv+0.00": {
+    "settled": false,
+    "upright": false,
+    "recovered": false,
+    "recovery_s": null,
+    "peak_tilt_deg": null,
+    "final_root_shift_m": null,
+    "peak_root_shift_m": null,
+    "rms_effort_nm": null,
+    "work_j": null,
+    "contact_fraction": null,
+    "foot_final_shift_m": null,
+    "foot_peak_lift_m": null,
+    "step_evidence": null,
+    "limitation": "terminated before disturbance; default controller cannot establish standing"
+  },
+  "default-s42-dv-0.03": {
+    "settled": false,
+    "upright": false,
+    "recovered": false,
+    "recovery_s": null,
+    "peak_tilt_deg": null,
+    "final_root_shift_m": null,
+    "peak_root_shift_m": null,
+    "rms_effort_nm": null,
+    "work_j": null,
+    "contact_fraction": null,
+    "foot_final_shift_m": null,
+    "foot_peak_lift_m": null,
+    "step_evidence": null,
+    "limitation": "terminated before disturbance; default controller cannot establish standing"
+  }
+}
