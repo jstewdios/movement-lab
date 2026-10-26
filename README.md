@@ -161,3 +161,44 @@ control and the sign of both velocity and displacement after integration.
 See [00B validation and interpretation](results/00b/standing/VALIDATION.md) and
 [00B comparison](results/00b/standing/comparison.html). The larger +0.15 m/s pilot
 is stored separately and excluded from the comparison matrix.
+
+### Tests with and without local 00B trajectories
+
+From the repository root, with the Python dependencies installed:
+
+```bash
+python -m unittest discover -s tests -v
+```
+
+A fresh checkout runs the measurement tests and checks against the committed
+00A trajectories. The optional `test_saved_interventions` checks each record in
+`results/00b/standing`: metadata without `trial.npz` is explicitly reported as a
+skipped subtest, not as validated evidence. Available trajectories still run all
+saved-record assertions, even when other records are missing; corrupt or invalid
+available records fail. The 00B raw trajectories are intentionally excluded from
+Git and must be preserved locally or regenerated to validate those records.
+
+To validate preserved records or a new study output directory, explicitly select
+the directory containing the per-trial subdirectories (each with `metadata.json`
+and `trial.npz`):
+
+```bash
+MOVEMENT_LAB_00B_FIXTURES=/absolute/path/to/00b-records \
+  python -m unittest discover -s tests -v
+# For example, after the study00b --out results/00b-new command above:
+MOVEMENT_LAB_00B_FIXTURES=results/00b-new \
+  python -m unittest discover -s tests -v
+```
+
+Explicit selection is strict: a nonexistent/empty directory or any discovered
+metadata record lacking its trajectory fails instead of skipping. This checks
+all discovered records, not completeness of the 22-trial matrix. The separate
+`python -m movement_lab.validate00b /path/to/00b-records` command additionally
+checks source/config provenance and matched-control causal comparisons; use it
+with complete study output, including the saved sources and initial states.
+Neither mode requires rerunning simulations when the original records exist.
+
+Fixture-routing regression tests include a deliberately mismatched **real 00A**
+trajectory and 00B metadata as a negative control: the existing sample-count
+assertion must reject it. This tests validation behavior and is not evidence
+that any missing 00B trajectory has been validated.
