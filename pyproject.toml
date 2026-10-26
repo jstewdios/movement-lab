@@ -1,0 +1,9 @@
+[project]
+name = "movement-lab"
+version = "0.1.0"
+description = "Balance, contact, and actuator measurements for existing Microduck policies"
+requires-python = ">=3.12"
+dependencies = ["numpy>=2", "matplotlib>=3.10"]
+
+# Evaluation deliberately uses the separately installed, tested Microduck
+# environment. See README; installing this project does not rebuild that stack.

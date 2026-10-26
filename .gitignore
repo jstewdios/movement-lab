@@ -1,0 +1,18 @@
+__pycache__/
+.cache/
+results/**/cache/
+results/**/matplotlib/
+results/*smoke*/
+
+# Python and test/build caches
+*.py[cod]
+.pytest_cache/
+
+# 00B raw trajectories: regenerate with movement_lab.study00b.
+# Keep small initial states, metadata, configs, and source snapshots.
+/results/00b/**/trial.npz
+
+# Incomplete CPU pilot and superseded/interrupted matrix trial artifacts.
+/results/00b/pilot-99/
+/results/00b/matrix/*/
+/results/00b/matrix/comparison.html
