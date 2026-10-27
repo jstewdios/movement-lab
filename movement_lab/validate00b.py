@@ -33,7 +33,9 @@ def check(root):
         if not m['disturbance']['applied']:
             continue
         onset=m['disturbance']['actual_time_s']
-        pre=a['time_s']<=onset+1e-6
+        # A boundary trial may terminate before its control. Integer indices
+        # select the same pre-event samples without requiring equal horizons.
+        pre=np.flatnonzero(a['time_s']<=onset+1e-6)
         # Identical states and all derived recordings up to injection.
         for key in a:
             np.testing.assert_array_equal(a[key][pre],c[key][pre],err_msg=name+':'+key)

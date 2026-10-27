@@ -16,3 +16,14 @@ results/*smoke*/
 /results/00b/pilot-99/
 /results/00b/matrix/*/
 /results/00b/matrix/comparison.html
+
+# 00C raw trajectories remain local.
+/results/00c/**/trial.npz
+/results/00c/**/evaluation.log
+
+# Archived 00C diagnostic/interrupted records stay local; publish notes/hashes.
+/results/00c/excluded/*/
+# Full comparison embeds every plot; retain only the report-linked PNG exports.
+/results/00c/boundary/trajectory-dv*.png
+!/results/00c/boundary/trajectory-dv-0.24.png
+!/results/00c/boundary/trajectory-dv+0.18.png

@@ -1,0 +1,178 @@
+{
+  "pair-s42-dv-0.24": {
+    "common_end_s": 5.000066757202148,
+    "post_rms_root_separation_m": 0.007793379481881857,
+    "pre_rms_joint_separation_rad": 0.09234657138586044,
+    "post_rms_joint_separation_rad": 0.0987042710185051,
+    "post_rms_root_response_difference_m": 0.0026907366700470448,
+    "post_rms_tilt_response_difference_deg": 1.694236159324646
+  },
+  "pair-s42-dv-0.18": {
+    "common_end_s": 5.000066757202148,
+    "post_rms_root_separation_m": 0.008106322027742863,
+    "pre_rms_joint_separation_rad": 0.09234657138586044,
+    "post_rms_joint_separation_rad": 0.09485828876495361,
+    "post_rms_root_response_difference_m": 0.0012287627905607224,
+    "post_rms_tilt_response_difference_deg": 0.7181053757667542
+  },
+  "pair-s42-dv-0.12": {
+    "common_end_s": 5.000066757202148,
+    "post_rms_root_separation_m": 0.00794211309403181,
+    "pre_rms_joint_separation_rad": 0.09234657138586044,
+    "post_rms_joint_separation_rad": 0.09341061115264893,
+    "post_rms_root_response_difference_m": 0.0006921569583937526,
+    "post_rms_tilt_response_difference_deg": 0.37067916989326477
+  },
+  "pair-s42-dv-0.06": {
+    "common_end_s": 5.000066757202148,
+    "post_rms_root_separation_m": 0.008033803664147854,
+    "pre_rms_joint_separation_rad": 0.09234657138586044,
+    "post_rms_joint_separation_rad": 0.09352889657020569,
+    "post_rms_root_response_difference_m": 0.0004731738881673664,
+    "post_rms_tilt_response_difference_deg": 0.3631885349750519
+  },
+  "pair-s42-dv-0.03": {
+    "common_end_s": 5.000066757202148,
+    "post_rms_root_separation_m": 0.008258250541985035,
+    "pre_rms_joint_separation_rad": 0.09234657138586044,
+    "post_rms_joint_separation_rad": 0.09313429147005081,
+    "post_rms_root_response_difference_m": 0.00020265340572223067,
+    "post_rms_tilt_response_difference_deg": 0.15280109643936157
+  },
+  "pair-s42-dv+0.00": {
+    "common_end_s": 5.000066757202148,
+    "post_rms_root_separation_m": 0.008422070182859898,
+    "pre_rms_joint_separation_rad": 0.09234657138586044,
+    "post_rms_joint_separation_rad": 0.09281913936138153,
+    "post_rms_root_response_difference_m": 0.0,
+    "post_rms_tilt_response_difference_deg": 0.0
+  },
+  "pair-s42-dv+0.03": {
+    "common_end_s": 5.000066757202148,
+    "post_rms_root_separation_m": 0.008289189077913761,
+    "pre_rms_joint_separation_rad": 0.09234657138586044,
+    "post_rms_joint_separation_rad": 0.09311098605394363,
+    "post_rms_root_response_difference_m": 0.00017347940593026578,
+    "post_rms_tilt_response_difference_deg": 0.16880732774734497
+  },
+  "pair-s42-dv+0.06": {
+    "common_end_s": 5.000066757202148,
+    "post_rms_root_separation_m": 0.007966971024870872,
+    "pre_rms_joint_separation_rad": 0.09234657138586044,
+    "post_rms_joint_separation_rad": 0.09201249480247498,
+    "post_rms_root_response_difference_m": 0.000550211756490171,
+    "post_rms_tilt_response_difference_deg": 0.34481409192085266
+  },
+  "pair-s42-dv+0.12": {
+    "common_end_s": 5.000066757202148,
+    "post_rms_root_separation_m": 0.008295738138258457,
+    "pre_rms_joint_separation_rad": 0.09234657138586044,
+    "post_rms_joint_separation_rad": 0.09284242987632751,
+    "post_rms_root_response_difference_m": 0.0012608550023287535,
+    "post_rms_tilt_response_difference_deg": 0.49612176418304443
+  },
+  "pair-s42-dv+0.18": {
+    "common_end_s": 2.700014352798462,
+    "post_rms_root_separation_m": 0.027251699939370155,
+    "pre_rms_joint_separation_rad": 0.09234657138586044,
+    "post_rms_joint_separation_rad": 0.14462994039058685,
+    "post_rms_root_response_difference_m": 0.021981561556458473,
+    "post_rms_tilt_response_difference_deg": 2.792525291442871
+  },
+  "pair-s42-dv+0.24": {
+    "common_end_s": 2.5800116062164307,
+    "post_rms_root_separation_m": 0.014354425482451916,
+    "pre_rms_joint_separation_rad": 0.09234657138586044,
+    "post_rms_joint_separation_rad": 0.1567470282316208,
+    "post_rms_root_response_difference_m": 0.00883813388645649,
+    "post_rms_tilt_response_difference_deg": 2.7597217559814453
+  },
+  "pair-s43-dv-0.24": {
+    "common_end_s": 2.7800161838531494,
+    "post_rms_root_separation_m": 0.04329988732933998,
+    "pre_rms_joint_separation_rad": 0.08636197447776794,
+    "post_rms_joint_separation_rad": 0.2013324499130249,
+    "post_rms_root_response_difference_m": 0.04478565976023674,
+    "post_rms_tilt_response_difference_deg": 16.80866241455078
+  },
+  "pair-s43-dv-0.18": {
+    "common_end_s": 5.000066757202148,
+    "post_rms_root_separation_m": 0.006762298755347729,
+    "pre_rms_joint_separation_rad": 0.08636197447776794,
+    "post_rms_joint_separation_rad": 0.09146060794591904,
+    "post_rms_root_response_difference_m": 0.0026371364947408438,
+    "post_rms_tilt_response_difference_deg": 0.42138671875
+  },
+  "pair-s43-dv-0.12": {
+    "common_end_s": 5.000066757202148,
+    "post_rms_root_separation_m": 0.006562963128089905,
+    "pre_rms_joint_separation_rad": 0.08636197447776794,
+    "post_rms_joint_separation_rad": 0.0902513787150383,
+    "post_rms_root_response_difference_m": 0.0021113702096045017,
+    "post_rms_tilt_response_difference_deg": 0.7040920257568359
+  },
+  "pair-s43-dv-0.06": {
+    "common_end_s": 5.000066757202148,
+    "post_rms_root_separation_m": 0.0055708084255456924,
+    "pre_rms_joint_separation_rad": 0.08636197447776794,
+    "post_rms_joint_separation_rad": 0.0894320160150528,
+    "post_rms_root_response_difference_m": 0.0010542640229687095,
+    "post_rms_tilt_response_difference_deg": 0.5102907419204712
+  },
+  "pair-s43-dv-0.03": {
+    "common_end_s": 5.000066757202148,
+    "post_rms_root_separation_m": 0.004635968245565891,
+    "pre_rms_joint_separation_rad": 0.08636197447776794,
+    "post_rms_joint_separation_rad": 0.08804651349782944,
+    "post_rms_root_response_difference_m": 0.00011340987839503214,
+    "post_rms_tilt_response_difference_deg": 0.08679880201816559
+  },
+  "pair-s43-dv+0.00": {
+    "common_end_s": 5.000066757202148,
+    "post_rms_root_separation_m": 0.004588470794260502,
+    "pre_rms_joint_separation_rad": 0.08636197447776794,
+    "post_rms_joint_separation_rad": 0.08689189702272415,
+    "post_rms_root_response_difference_m": 0.0,
+    "post_rms_tilt_response_difference_deg": 0.0
+  },
+  "pair-s43-dv+0.03": {
+    "common_end_s": 5.000066757202148,
+    "post_rms_root_separation_m": 0.005468390882015228,
+    "pre_rms_joint_separation_rad": 0.08636197447776794,
+    "post_rms_joint_separation_rad": 0.08704651892185211,
+    "post_rms_root_response_difference_m": 0.0011449429439380765,
+    "post_rms_tilt_response_difference_deg": 0.3491956889629364
+  },
+  "pair-s43-dv+0.06": {
+    "common_end_s": 5.000066757202148,
+    "post_rms_root_separation_m": 0.0051940069533884525,
+    "pre_rms_joint_separation_rad": 0.08636197447776794,
+    "post_rms_joint_separation_rad": 0.08681441098451614,
+    "post_rms_root_response_difference_m": 0.0011596943950280547,
+    "post_rms_tilt_response_difference_deg": 0.4089060127735138
+  },
+  "pair-s43-dv+0.12": {
+    "common_end_s": 5.000066757202148,
+    "post_rms_root_separation_m": 0.005889336112886667,
+    "pre_rms_joint_separation_rad": 0.08636197447776794,
+    "post_rms_joint_separation_rad": 0.08711948990821838,
+    "post_rms_root_response_difference_m": 0.0020140758715569973,
+    "post_rms_tilt_response_difference_deg": 0.8567566871643066
+  },
+  "pair-s43-dv+0.18": {
+    "common_end_s": 2.820017099380493,
+    "post_rms_root_separation_m": 0.011119355447590351,
+    "pre_rms_joint_separation_rad": 0.08636197447776794,
+    "post_rms_joint_separation_rad": 0.1303388923406601,
+    "post_rms_root_response_difference_m": 0.008901829831302166,
+    "post_rms_tilt_response_difference_deg": 2.5876200199127197
+  },
+  "pair-s43-dv+0.24": {
+    "common_end_s": 2.6000120639801025,
+    "post_rms_root_separation_m": 0.01680702157318592,
+    "pre_rms_joint_separation_rad": 0.08636197447776794,
+    "post_rms_joint_separation_rad": 0.14022064208984375,
+    "post_rms_root_response_difference_m": 0.01716078259050846,
+    "post_rms_tilt_response_difference_deg": 6.1303629875183105
+  }
+}

@@ -202,3 +202,65 @@ Fixture-routing regression tests include a deliberately mismatched **real 00A**
 trajectory and 00B metadata as a negative control: the existing sample-count
 assertion must reject it. This tests validation behavior and is not evidence
 that any missing 00B trajectory has been validated.
+
+## Movement Lab 00C — The Boundary of Balance
+
+The independent `study00c` runner reuses the corrected 00B intervention and
+validator. It records whole-robot COM in addition to existing measurements via
+an opt-in `--record-com` evaluator flag; ordinary 00A/00B evaluation is unchanged.
+
+```bash
+PY=/home/james/microduck_rl/.venv/bin/python
+$PY -m movement_lab.study00c --phase pilot --out results/00c/boundary-new
+# Inspect cost.jsonl, REPORT.md and validation.json before expanding.
+$PY -m movement_lab.study00c --phase expand --out results/00c/boundary-new
+$PY -m movement_lab.study00c --phase report --out results/00c/boundary-new
+$PY -m unittest discover -s tests -v
+```
+
+Pilot: four 5 s trials, seed 42, both policies, zero and +0.06 m/s. Expansion
+matches both policies and seeds 42/43 at every selected signed amplitude, with
+controls. Starting at ±0.06, two rounds double amplitude if every matched cell
+survives or refine below the smallest observed failure. One additional adaptive
+probe and one small interior audit per direction check the sampled region.
+There are at most 44 trials, amplitude capped at 0.48 m/s. These are sampled
+outcomes without a monotonicity assumption or a continuous safe-region claim.
+`adaptive_plan.json` preserves choices across resumes. Completed trials are
+reused; incomplete directories are retained and cause an error, not overwritten.
+
+`REPORT.md` describes conditions, outcome counts, region uncertainty and limits;
+`comparison.html` overlays event-aligned policy/control trajectories and
+`summary.json` includes continuous joint/contact/COM metrics. `divergence.json`
+compares policies only through their common recorded horizon. `manifest.json`
+hashes records, local raw trajectories and saved analysis sources. The new
+return-to-origin flag supplements the unchanged 00B recovery criterion.
+Raw 00C trajectories and evaluation logs are ignored by Git; all remain local.
+
+### Published 00C artifacts and reproduction limits
+
+The completed [scientific report](results/00c/boundary/REPORT.md) and
+[self-contained comparison](results/00c/boundary/comparison.html) accompany
+44 retained trial records, small initial states, resolved configurations,
+checkpoint/source hashes, simulator versions, summary/divergence metrics,
+validation results, adaptive decisions, and measured subprocess costs. Only
+the two PNGs referenced by the report are published; the comparison embeds
+all trajectory plots and representative joint plots.
+
+Raw trajectories, evaluation logs, caches, other PNG exports, and archived
+trial directories remain local and are ignored by Git. The
+[exclusion notes](results/00c/excluded/README.md) and archived-artifact hash
+manifest document the pre-event mismatch, repeat, and interruption. Nothing
+was excluded because it fell, and no acceptance tolerance was relaxed.
+`boundary/manifest.json` describes the complete local evidence set, including
+unpublished files; a fresh checkout cannot verify those missing files or rerun
+raw-record validation without restoring or regenerating the trajectories.
+The published report and visualization can be read without them.
+
+Regeneration requires the separately installed upstream environment, matching
+simulator versions, CUDA, and the two checkpoint files at the recorded paths
+(or equivalent relocated paths in the baseline metadata). Checkpoints and
+upstream robot assets are not bundled. Seeds do not guarantee bitwise replay
+across runs or machines; the observed pre-event mismatch remains unexplained.
+The measured 1846.9 s cost includes completed attempts and the repeat, excludes
+the untimed interrupted attempt, and is not GPU kernel time. Publication does
+not add simulation trials or change the scientific results.
