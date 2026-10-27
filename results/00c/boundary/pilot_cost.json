@@ -1,0 +1,11 @@
+{
+  "trials": [
+    "99-s42-dv+0.00",
+    "348-s42-dv+0.00",
+    "99-s42-dv+0.06",
+    "348-s42-dv+0.06"
+  ],
+  "subprocess_wall_seconds": 144.30780891000177,
+  "simulation_seconds_requested": 20,
+  "reviewed_before_expansion": true
+}

@@ -33,6 +33,7 @@ def main():
     p.add_argument('--disturbance-dv', type=float, default=None, help='00B: instantaneous world-x root velocity increment (m/s); zero is control')
     p.add_argument('--disturbance-time', type=float, default=2.0)
     p.add_argument('--default-position', action='store_true', help='00B: zero action, configured default joint targets through BAM')
+    p.add_argument('--record-com', action='store_true', help='00C: record mass-weighted whole-robot center of mass')
     args = p.parse_args()
     if args.disturbance_dv is not None:
         if not np.isfinite([args.disturbance_dv, args.disturbance_time]).all() or not 1 <= args.disturbance_time < args.seconds - 1:
@@ -104,6 +105,8 @@ def main():
         env.reset(seed=args.seed)
         obs = wrapped.get_observations()
         robot = env.scene['robot']
+        if args.record_com:
+            body_mass = robot.data.model.body_mass[:, robot.data.indexing.body_ids]
         assert robot.body_names[0] == 'trunk_base', robot.body_names
         rows = []
         current_action = None
@@ -131,6 +134,9 @@ def main():
                 foot_force_w_n=array(feet.force),
                 command=np.concatenate([array(env.command_manager.get_command(n)) for n in ('twist','head_pose','body_pose')]),
                 qpos=array(env.sim.data.qpos), qvel=array(env.sim.data.qvel)))
+            if args.record_com:
+                rows[-1]['com_position_w_m'] = array((d.body_com_pos_w * body_mass[..., None]).sum(dim=1) / body_mass.sum(dim=1)[:, None])
+                rows[-1]['com_velocity_w_m_s'] = array((d.body_com_lin_vel_w * body_mass[..., None]).sum(dim=1) / body_mass.sum(dim=1)[:, None])
         if not args.control_rate:
             env.scene.update = record_update
         np.savez_compressed(out / 'initial.npz', qpos=array(env.sim.data.qpos), qvel=array(env.sim.data.qvel))
@@ -168,6 +174,9 @@ def main():
             metadata['disturbance'] = disturbance
             metadata['controller'] = 'default-position' if args.default_position else 'policy'
             metadata['disturbance_code_sha256'] = sha(out/'disturbance.py')
+        if args.record_com:
+            metadata['body_mass_kg'] = array(body_mass).tolist()
+            metadata['com_definition'] = 'mass-weighted body inertial centers and linear velocities, all robot bodies'
         for name in ('env.yaml','agent.yaml'):
             f = checkpoint.parent/'params'/name
             if f.exists():
