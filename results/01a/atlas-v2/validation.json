@@ -1,0 +1,7 @@
+{
+  "recomputed_metrics": true,
+  "synchronized_arrays": true,
+  "command_mapping": true,
+  "baseline_repeat_max_qpos_difference": 0.0,
+  "max_initial_qpos_difference": 0.0
+}
