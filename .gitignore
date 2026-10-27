@@ -27,3 +27,16 @@ results/*smoke*/
 /results/00c/boundary/trajectory-dv*.png
 !/results/00c/boundary/trajectory-dv-0.24.png
 !/results/00c/boundary/trajectory-dv+0.18.png
+
+# 01A compiled models include upstream meshes; preserve locally, do not publish.
+/results/01a/**/replay_model.mjb
+/results/01a/*.log
+# Preflight and diagnostic attempts are retained locally and documented separately.
+/results/01a/pilot/
+/results/01a/pilot-gpu/
+/results/01a/smoke/
+/results/01a/smoke-state/
+/results/01a/atlas/
+
+# 01A full-rate raw trajectories remain local; retain initial states and hashes.
+/results/01a/**/trial.npz

@@ -1,0 +1,1908 @@
+{
+  "records": {
+    "flex": {
+      "sequence": "flex",
+      "seed": 42,
+      "amplitudes_rad": {
+        "left_hip_pitch": -0.15,
+        "right_hip_pitch": 0.15,
+        "left_knee": 0.25,
+        "right_knee": -0.25,
+        "left_ankle": -0.1,
+        "right_ankle": 0.1
+      },
+      "physics_dt": 0.005,
+      "control_dt": 0.02,
+      "requested_seconds": 3,
+      "stop_reasons": [
+        "penetration_over_10mm"
+      ],
+      "terminated": false,
+      "truncated": false,
+      "joint_names": [
+        "left_hip_yaw",
+        "left_hip_roll",
+        "left_hip_pitch",
+        "left_knee",
+        "left_ankle",
+        "neck_pitch",
+        "head_pitch",
+        "head_yaw",
+        "head_roll",
+        "right_hip_yaw",
+        "right_hip_roll",
+        "right_hip_pitch",
+        "right_knee",
+        "right_ankle"
+      ],
+      "all_joint_names": [
+        "left_hip_yaw",
+        "left_hip_roll",
+        "left_hip_pitch",
+        "left_knee",
+        "left_ankle",
+        "neck_pitch",
+        "head_pitch",
+        "head_yaw",
+        "head_roll",
+        "right_hip_yaw",
+        "right_hip_roll",
+        "right_hip_pitch",
+        "right_knee",
+        "right_ankle"
+      ],
+      "body_names": [
+        "trunk_base",
+        "yaw2roll",
+        "hip_l",
+        "upper_leg_left",
+        "leg",
+        "ankle_left",
+        "neck",
+        "neck_pitch",
+        "yaw_roll_motion",
+        "jaw_soft",
+        "bearing_roll",
+        "hip_l_2",
+        "upper_leg_right",
+        "leg_2",
+        "ankle_right"
+      ],
+      "target_offset_rad": [
+        0.0,
+        -0.08730000257492065,
+        -0.4578999876976013,
+        -0.004900000058114529,
+        0.453000009059906,
+        0.3490999937057495,
+        0.3490999937057495,
+        0.0,
+        0.0,
+        0.0,
+        0.08730000257492065,
+        0.4578999876976013,
+        0.004900000058114529,
+        -0.453000009059906
+      ],
+      "joint_limits_rad": [
+        [
+          -0.4363323129985824,
+          0.5235987755982988
+        ],
+        [
+          -0.3839724354386992,
+          0.38397243543880577
+        ],
+        [
+          -1.570796326794949,
+          1.5707963267948442
+        ],
+        [
+          -1.5707963267948983,
+          1.5707963267948948
+        ],
+        [
+          -1.5707963267949063,
+          1.5707963267948868
+        ],
+        [
+          -1.5707963267948974,
+          1.0471975511965967
+        ],
+        [
+          -1.5707963267948966,
+          1.5707963267948966
+        ],
+        [
+          -2.9670597283903613,
+          2.9670597283903595
+        ],
+        [
+          -0.43633231299858327,
+          0.4363323129985815
+        ],
+        [
+          -0.523598775598297,
+          0.43633231299858416
+        ],
+        [
+          -0.3839724354387507,
+          0.38397243543875426
+        ],
+        [
+          -1.57079632679494,
+          1.570796326794853
+        ],
+        [
+          -1.5707963267949339,
+          1.5707963267948593
+        ],
+        [
+          -1.5707963267949028,
+          1.5707963267948903
+        ]
+      ],
+      "mass_kg": [
+        0.19922399520874023,
+        0.02304060012102127,
+        0.00618933979421854,
+        0.04820669814944267,
+        0.02158440090715885,
+        0.03002459928393364,
+        0.03684139996767044,
+        0.00571999978274107,
+        0.04859999939799309,
+        0.1887660026550293,
+        0.02304060012102127,
+        0.00618933979421854,
+        0.04820669814944267,
+        0.02158440090715885,
+        0.030025100335478783
+      ],
+      "summary": {
+        "valid": false,
+        "classification": "invalid simulation/contact audit",
+        "final_stability_gate": false,
+        "duration_s": 0.8999993205070496,
+        "com_displacement_m": [
+          0.12602533400058746,
+          -0.00016508878616150469,
+          -0.08584016561508179
+        ],
+        "max_horizontal_com_excursion_m": 0.12602543830871582,
+        "com_height_min_max_m": [
+          0.06090845540165901,
+          0.14650337398052216
+        ],
+        "max_com_height_gain_m": -0.0002452433109283447,
+        "max_tilt_deg": 87.15008544921875,
+        "max_orientation_change_deg": 87.15013885498047,
+        "final_tilt_deg": 87.15008544921875,
+        "joint_range_rad": [
+          0.013234901241958141,
+          0.008778706192970276,
+          0.24113190174102783,
+          0.39358285069465637,
+          0.19200393557548523,
+          0.06996020674705505,
+          0.07026970386505127,
+          0.00032884033862501383,
+          0.001533008529804647,
+          0.0129456277936697,
+          0.009288303554058075,
+          0.24159970879554749,
+          0.39391520619392395,
+          0.19186818599700928
+        ],
+        "peak_tracking_error_rad": 0.14391539990901947,
+        "peak_command_offset_rad": 0.25,
+        "foot_contact_fraction": [
+          0.9333333333333333,
+          0.9333333333333333
+        ],
+        "feet_off_total_s": 0.04499998688697815,
+        "feet_off_longest_s": 0.034999996423721313,
+        "all_ground_off_total_s": 0.04499998688697815,
+        "all_ground_off_longest_s": 0.034999996423721313,
+        "nonfoot_contact_total_s": 0.009999990463256836,
+        "min_native_contact_distance_m": -0.010254540754811747,
+        "max_joint_limit_overshoot_rad": 0.0,
+        "peak_joint_effort_nm": 0.24704186618328094,
+        "rms_joint_effort_nm": 0.03533049300312996,
+        "absolute_mechanical_work_j": 0.10693108932070355,
+        "final_com_speed_m_s": 0.41482794284820557,
+        "final_root_angular_speed_rad_s": 3.457273483276367
+      },
+      "wall_seconds": 3.380705190007575
+    },
+    "head_nod": {
+      "sequence": "head_nod",
+      "seed": 42,
+      "amplitudes_rad": {
+        "neck_pitch": 0.2,
+        "head_pitch": -0.2
+      },
+      "physics_dt": 0.005,
+      "control_dt": 0.02,
+      "requested_seconds": 3,
+      "stop_reasons": [],
+      "terminated": false,
+      "truncated": false,
+      "joint_names": [
+        "left_hip_yaw",
+        "left_hip_roll",
+        "left_hip_pitch",
+        "left_knee",
+        "left_ankle",
+        "neck_pitch",
+        "head_pitch",
+        "head_yaw",
+        "head_roll",
+        "right_hip_yaw",
+        "right_hip_roll",
+        "right_hip_pitch",
+        "right_knee",
+        "right_ankle"
+      ],
+      "all_joint_names": [
+        "left_hip_yaw",
+        "left_hip_roll",
+        "left_hip_pitch",
+        "left_knee",
+        "left_ankle",
+        "neck_pitch",
+        "head_pitch",
+        "head_yaw",
+        "head_roll",
+        "right_hip_yaw",
+        "right_hip_roll",
+        "right_hip_pitch",
+        "right_knee",
+        "right_ankle"
+      ],
+      "body_names": [
+        "trunk_base",
+        "yaw2roll",
+        "hip_l",
+        "upper_leg_left",
+        "leg",
+        "ankle_left",
+        "neck",
+        "neck_pitch",
+        "yaw_roll_motion",
+        "jaw_soft",
+        "bearing_roll",
+        "hip_l_2",
+        "upper_leg_right",
+        "leg_2",
+        "ankle_right"
+      ],
+      "target_offset_rad": [
+        0.0,
+        -0.08730000257492065,
+        -0.4578999876976013,
+        -0.004900000058114529,
+        0.453000009059906,
+        0.3490999937057495,
+        0.3490999937057495,
+        0.0,
+        0.0,
+        0.0,
+        0.08730000257492065,
+        0.4578999876976013,
+        0.004900000058114529,
+        -0.453000009059906
+      ],
+      "joint_limits_rad": [
+        [
+          -0.4363323129985824,
+          0.5235987755982988
+        ],
+        [
+          -0.3839724354386992,
+          0.38397243543880577
+        ],
+        [
+          -1.570796326794949,
+          1.5707963267948442
+        ],
+        [
+          -1.5707963267948983,
+          1.5707963267948948
+        ],
+        [
+          -1.5707963267949063,
+          1.5707963267948868
+        ],
+        [
+          -1.5707963267948974,
+          1.0471975511965967
+        ],
+        [
+          -1.5707963267948966,
+          1.5707963267948966
+        ],
+        [
+          -2.9670597283903613,
+          2.9670597283903595
+        ],
+        [
+          -0.43633231299858327,
+          0.4363323129985815
+        ],
+        [
+          -0.523598775598297,
+          0.43633231299858416
+        ],
+        [
+          -0.3839724354387507,
+          0.38397243543875426
+        ],
+        [
+          -1.57079632679494,
+          1.570796326794853
+        ],
+        [
+          -1.5707963267949339,
+          1.5707963267948593
+        ],
+        [
+          -1.5707963267949028,
+          1.5707963267948903
+        ]
+      ],
+      "mass_kg": [
+        0.19922399520874023,
+        0.02304060012102127,
+        0.00618933979421854,
+        0.04820669814944267,
+        0.02158440090715885,
+        0.03002459928393364,
+        0.03684139996767044,
+        0.00571999978274107,
+        0.04859999939799309,
+        0.1887660026550293,
+        0.02304060012102127,
+        0.00618933979421854,
+        0.04820669814944267,
+        0.02158440090715885,
+        0.030025100335478783
+      ],
+      "summary": {
+        "valid": true,
+        "classification": "uncontrolled fall / body contact",
+        "final_stability_gate": false,
+        "duration_s": 3.00002121925354,
+        "com_displacement_m": [
+          0.16291305422782898,
+          0.00017838987696450204,
+          -0.09845469892024994
+        ],
+        "max_horizontal_com_excursion_m": 0.16291314363479614,
+        "com_height_min_max_m": [
+          0.04829392209649086,
+          0.14650337398052216
+        ],
+        "max_com_height_gain_m": -0.0002452433109283447,
+        "max_tilt_deg": 88.36682891845703,
+        "max_orientation_change_deg": 88.36685943603516,
+        "final_tilt_deg": 82.3911361694336,
+        "joint_range_rad": [
+          0.014953440055251122,
+          0.022914499044418335,
+          0.1317872703075409,
+          0.19471904635429382,
+          0.10487446188926697,
+          0.2158178687095642,
+          0.15580078959465027,
+          0.0024686139076948166,
+          0.005242114420980215,
+          0.014423810876905918,
+          0.02120102196931839,
+          0.13212960958480835,
+          0.1938621997833252,
+          0.10436186194419861
+        ],
+        "peak_tracking_error_rad": 0.1945440024137497,
+        "peak_command_offset_rad": 0.20000000298023224,
+        "foot_contact_fraction": [
+          0.9783333333333334,
+          0.9783333333333334
+        ],
+        "feet_off_total_s": 0.0599999725818634,
+        "feet_off_longest_s": 0.034999996423721313,
+        "all_ground_off_total_s": 0.0599999725818634,
+        "all_ground_off_longest_s": 0.034999996423721313,
+        "nonfoot_contact_total_s": 1.5600223541259766,
+        "min_native_contact_distance_m": -0.0066828381870768505,
+        "max_joint_limit_overshoot_rad": 0.0,
+        "peak_joint_effort_nm": 0.24704186618328094,
+        "rms_joint_effort_nm": 0.03781241923570633,
+        "absolute_mechanical_work_j": 0.11525656027562786,
+        "final_com_speed_m_s": 0.001678380649536848,
+        "final_root_angular_speed_rad_s": 0.02474799007177353
+      },
+      "wall_seconds": 11.653167960001156
+    },
+    "head_turn": {
+      "sequence": "head_turn",
+      "seed": 42,
+      "amplitudes_rad": {
+        "head_yaw": 0.25
+      },
+      "physics_dt": 0.005,
+      "control_dt": 0.02,
+      "requested_seconds": 3,
+      "stop_reasons": [],
+      "terminated": false,
+      "truncated": false,
+      "joint_names": [
+        "left_hip_yaw",
+        "left_hip_roll",
+        "left_hip_pitch",
+        "left_knee",
+        "left_ankle",
+        "neck_pitch",
+        "head_pitch",
+        "head_yaw",
+        "head_roll",
+        "right_hip_yaw",
+        "right_hip_roll",
+        "right_hip_pitch",
+        "right_knee",
+        "right_ankle"
+      ],
+      "all_joint_names": [
+        "left_hip_yaw",
+        "left_hip_roll",
+        "left_hip_pitch",
+        "left_knee",
+        "left_ankle",
+        "neck_pitch",
+        "head_pitch",
+        "head_yaw",
+        "head_roll",
+        "right_hip_yaw",
+        "right_hip_roll",
+        "right_hip_pitch",
+        "right_knee",
+        "right_ankle"
+      ],
+      "body_names": [
+        "trunk_base",
+        "yaw2roll",
+        "hip_l",
+        "upper_leg_left",
+        "leg",
+        "ankle_left",
+        "neck",
+        "neck_pitch",
+        "yaw_roll_motion",
+        "jaw_soft",
+        "bearing_roll",
+        "hip_l_2",
+        "upper_leg_right",
+        "leg_2",
+        "ankle_right"
+      ],
+      "target_offset_rad": [
+        0.0,
+        -0.08730000257492065,
+        -0.4578999876976013,
+        -0.004900000058114529,
+        0.453000009059906,
+        0.3490999937057495,
+        0.3490999937057495,
+        0.0,
+        0.0,
+        0.0,
+        0.08730000257492065,
+        0.4578999876976013,
+        0.004900000058114529,
+        -0.453000009059906
+      ],
+      "joint_limits_rad": [
+        [
+          -0.4363323129985824,
+          0.5235987755982988
+        ],
+        [
+          -0.3839724354386992,
+          0.38397243543880577
+        ],
+        [
+          -1.570796326794949,
+          1.5707963267948442
+        ],
+        [
+          -1.5707963267948983,
+          1.5707963267948948
+        ],
+        [
+          -1.5707963267949063,
+          1.5707963267948868
+        ],
+        [
+          -1.5707963267948974,
+          1.0471975511965967
+        ],
+        [
+          -1.5707963267948966,
+          1.5707963267948966
+        ],
+        [
+          -2.9670597283903613,
+          2.9670597283903595
+        ],
+        [
+          -0.43633231299858327,
+          0.4363323129985815
+        ],
+        [
+          -0.523598775598297,
+          0.43633231299858416
+        ],
+        [
+          -0.3839724354387507,
+          0.38397243543875426
+        ],
+        [
+          -1.57079632679494,
+          1.570796326794853
+        ],
+        [
+          -1.5707963267949339,
+          1.5707963267948593
+        ],
+        [
+          -1.5707963267949028,
+          1.5707963267948903
+        ]
+      ],
+      "mass_kg": [
+        0.19922399520874023,
+        0.02304060012102127,
+        0.00618933979421854,
+        0.04820669814944267,
+        0.02158440090715885,
+        0.03002459928393364,
+        0.03684139996767044,
+        0.00571999978274107,
+        0.04859999939799309,
+        0.1887660026550293,
+        0.02304060012102127,
+        0.00618933979421854,
+        0.04820669814944267,
+        0.02158440090715885,
+        0.030025100335478783
+      ],
+      "summary": {
+        "valid": true,
+        "classification": "uncontrolled fall / body contact",
+        "final_stability_gate": false,
+        "duration_s": 3.00002121925354,
+        "com_displacement_m": [
+          0.15198951959609985,
+          0.012062781490385532,
+          -0.09536228328943253
+        ],
+        "max_horizontal_com_excursion_m": 0.15249034762382507,
+        "com_height_min_max_m": [
+          0.051386334002017975,
+          0.14650337398052216
+        ],
+        "max_com_height_gain_m": -0.0002452433109283447,
+        "max_tilt_deg": 83.0156021118164,
+        "max_orientation_change_deg": 83.0845718383789,
+        "final_tilt_deg": 80.47915649414062,
+        "joint_range_rad": [
+          0.036356400698423386,
+          0.027347221970558167,
+          0.1627853512763977,
+          0.17694054543972015,
+          0.11018392443656921,
+          0.1644713580608368,
+          0.1264978051185608,
+          0.2251804769039154,
+          0.10172280669212341,
+          0.021261246874928474,
+          0.026395361870527267,
+          0.12178182601928711,
+          0.17753145098686218,
+          0.10533663630485535
+        ],
+        "peak_tracking_error_rad": 0.17394137382507324,
+        "peak_command_offset_rad": 0.25,
+        "foot_contact_fraction": [
+          0.9683333333333334,
+          0.9483333333333334
+        ],
+        "feet_off_total_s": 0.0599999725818634,
+        "feet_off_longest_s": 0.034999996423721313,
+        "all_ground_off_total_s": 0.04499998688697815,
+        "all_ground_off_longest_s": 0.034999996423721313,
+        "nonfoot_contact_total_s": 1.745022177696228,
+        "min_native_contact_distance_m": -0.009061870280211222,
+        "max_joint_limit_overshoot_rad": 0.0,
+        "peak_joint_effort_nm": 0.24704186618328094,
+        "rms_joint_effort_nm": 0.03770562633872032,
+        "absolute_mechanical_work_j": 0.13443684115256205,
+        "final_com_speed_m_s": 0.0009733126498758793,
+        "final_root_angular_speed_rad_s": 0.003484768560156226
+      },
+      "wall_seconds": 11.098766070004785
+    },
+    "left_flex": {
+      "sequence": "left_flex",
+      "seed": 42,
+      "amplitudes_rad": {
+        "left_hip_pitch": -0.15,
+        "left_knee": 0.25,
+        "left_ankle": -0.1
+      },
+      "physics_dt": 0.005,
+      "control_dt": 0.02,
+      "requested_seconds": 3,
+      "stop_reasons": [],
+      "terminated": false,
+      "truncated": false,
+      "joint_names": [
+        "left_hip_yaw",
+        "left_hip_roll",
+        "left_hip_pitch",
+        "left_knee",
+        "left_ankle",
+        "neck_pitch",
+        "head_pitch",
+        "head_yaw",
+        "head_roll",
+        "right_hip_yaw",
+        "right_hip_roll",
+        "right_hip_pitch",
+        "right_knee",
+        "right_ankle"
+      ],
+      "all_joint_names": [
+        "left_hip_yaw",
+        "left_hip_roll",
+        "left_hip_pitch",
+        "left_knee",
+        "left_ankle",
+        "neck_pitch",
+        "head_pitch",
+        "head_yaw",
+        "head_roll",
+        "right_hip_yaw",
+        "right_hip_roll",
+        "right_hip_pitch",
+        "right_knee",
+        "right_ankle"
+      ],
+      "body_names": [
+        "trunk_base",
+        "yaw2roll",
+        "hip_l",
+        "upper_leg_left",
+        "leg",
+        "ankle_left",
+        "neck",
+        "neck_pitch",
+        "yaw_roll_motion",
+        "jaw_soft",
+        "bearing_roll",
+        "hip_l_2",
+        "upper_leg_right",
+        "leg_2",
+        "ankle_right"
+      ],
+      "target_offset_rad": [
+        0.0,
+        -0.08730000257492065,
+        -0.4578999876976013,
+        -0.004900000058114529,
+        0.453000009059906,
+        0.3490999937057495,
+        0.3490999937057495,
+        0.0,
+        0.0,
+        0.0,
+        0.08730000257492065,
+        0.4578999876976013,
+        0.004900000058114529,
+        -0.453000009059906
+      ],
+      "joint_limits_rad": [
+        [
+          -0.4363323129985824,
+          0.5235987755982988
+        ],
+        [
+          -0.3839724354386992,
+          0.38397243543880577
+        ],
+        [
+          -1.570796326794949,
+          1.5707963267948442
+        ],
+        [
+          -1.5707963267948983,
+          1.5707963267948948
+        ],
+        [
+          -1.5707963267949063,
+          1.5707963267948868
+        ],
+        [
+          -1.5707963267948974,
+          1.0471975511965967
+        ],
+        [
+          -1.5707963267948966,
+          1.5707963267948966
+        ],
+        [
+          -2.9670597283903613,
+          2.9670597283903595
+        ],
+        [
+          -0.43633231299858327,
+          0.4363323129985815
+        ],
+        [
+          -0.523598775598297,
+          0.43633231299858416
+        ],
+        [
+          -0.3839724354387507,
+          0.38397243543875426
+        ],
+        [
+          -1.57079632679494,
+          1.570796326794853
+        ],
+        [
+          -1.5707963267949339,
+          1.5707963267948593
+        ],
+        [
+          -1.5707963267949028,
+          1.5707963267948903
+        ]
+      ],
+      "mass_kg": [
+        0.19922399520874023,
+        0.02304060012102127,
+        0.00618933979421854,
+        0.04820669814944267,
+        0.02158440090715885,
+        0.03002459928393364,
+        0.03684139996767044,
+        0.00571999978274107,
+        0.04859999939799309,
+        0.1887660026550293,
+        0.02304060012102127,
+        0.00618933979421854,
+        0.04820669814944267,
+        0.02158440090715885,
+        0.030025100335478783
+      ],
+      "summary": {
+        "valid": true,
+        "classification": "uncontrolled fall / body contact",
+        "final_stability_gate": false,
+        "duration_s": 3.00002121925354,
+        "com_displacement_m": [
+          0.13751213252544403,
+          0.0250980444252491,
+          -0.09287169575691223
+        ],
+        "max_horizontal_com_excursion_m": 0.1398652344942093,
+        "com_height_min_max_m": [
+          0.05387691780924797,
+          0.14650337398052216
+        ],
+        "max_com_height_gain_m": -0.0002452433109283447,
+        "max_tilt_deg": 85.7844009399414,
+        "max_orientation_change_deg": 87.98518371582031,
+        "final_tilt_deg": 82.76827239990234,
+        "joint_range_rad": [
+          0.011780212633311749,
+          0.030282296240329742,
+          0.21755817532539368,
+          0.3733504116535187,
+          0.20603469014167786,
+          0.15179124474525452,
+          0.10540655255317688,
+          0.09038679301738739,
+          0.07327725738286972,
+          0.02058405429124832,
+          0.04251500219106674,
+          0.1485448181629181,
+          0.23394286632537842,
+          0.13776904344558716
+        ],
+        "peak_tracking_error_rad": 0.3580769896507263,
+        "peak_command_offset_rad": 0.25,
+        "foot_contact_fraction": [
+          0.98,
+          0.95
+        ],
+        "feet_off_total_s": 0.04999998211860657,
+        "feet_off_longest_s": 0.034999996423721313,
+        "all_ground_off_total_s": 0.04499998688697815,
+        "all_ground_off_longest_s": 0.034999996423721313,
+        "nonfoot_contact_total_s": 2.020021975040436,
+        "min_native_contact_distance_m": -0.007029030992328378,
+        "max_joint_limit_overshoot_rad": 0.0,
+        "peak_joint_effort_nm": 0.24704186618328094,
+        "rms_joint_effort_nm": 0.04634903371334076,
+        "absolute_mechanical_work_j": 0.1678421578663373,
+        "final_com_speed_m_s": 0.0021236510947346687,
+        "final_root_angular_speed_rad_s": 0.05496577173471451
+      },
+      "wall_seconds": 11.532150629995158
+    },
+    "pitch": {
+      "sequence": "pitch",
+      "seed": 42,
+      "amplitudes_rad": {
+        "left_hip_pitch": -0.18,
+        "right_hip_pitch": 0.18
+      },
+      "physics_dt": 0.005,
+      "control_dt": 0.02,
+      "requested_seconds": 3,
+      "stop_reasons": [],
+      "terminated": false,
+      "truncated": false,
+      "joint_names": [
+        "left_hip_yaw",
+        "left_hip_roll",
+        "left_hip_pitch",
+        "left_knee",
+        "left_ankle",
+        "neck_pitch",
+        "head_pitch",
+        "head_yaw",
+        "head_roll",
+        "right_hip_yaw",
+        "right_hip_roll",
+        "right_hip_pitch",
+        "right_knee",
+        "right_ankle"
+      ],
+      "all_joint_names": [
+        "left_hip_yaw",
+        "left_hip_roll",
+        "left_hip_pitch",
+        "left_knee",
+        "left_ankle",
+        "neck_pitch",
+        "head_pitch",
+        "head_yaw",
+        "head_roll",
+        "right_hip_yaw",
+        "right_hip_roll",
+        "right_hip_pitch",
+        "right_knee",
+        "right_ankle"
+      ],
+      "body_names": [
+        "trunk_base",
+        "yaw2roll",
+        "hip_l",
+        "upper_leg_left",
+        "leg",
+        "ankle_left",
+        "neck",
+        "neck_pitch",
+        "yaw_roll_motion",
+        "jaw_soft",
+        "bearing_roll",
+        "hip_l_2",
+        "upper_leg_right",
+        "leg_2",
+        "ankle_right"
+      ],
+      "target_offset_rad": [
+        0.0,
+        -0.08730000257492065,
+        -0.4578999876976013,
+        -0.004900000058114529,
+        0.453000009059906,
+        0.3490999937057495,
+        0.3490999937057495,
+        0.0,
+        0.0,
+        0.0,
+        0.08730000257492065,
+        0.4578999876976013,
+        0.004900000058114529,
+        -0.453000009059906
+      ],
+      "joint_limits_rad": [
+        [
+          -0.4363323129985824,
+          0.5235987755982988
+        ],
+        [
+          -0.3839724354386992,
+          0.38397243543880577
+        ],
+        [
+          -1.570796326794949,
+          1.5707963267948442
+        ],
+        [
+          -1.5707963267948983,
+          1.5707963267948948
+        ],
+        [
+          -1.5707963267949063,
+          1.5707963267948868
+        ],
+        [
+          -1.5707963267948974,
+          1.0471975511965967
+        ],
+        [
+          -1.5707963267948966,
+          1.5707963267948966
+        ],
+        [
+          -2.9670597283903613,
+          2.9670597283903595
+        ],
+        [
+          -0.43633231299858327,
+          0.4363323129985815
+        ],
+        [
+          -0.523598775598297,
+          0.43633231299858416
+        ],
+        [
+          -0.3839724354387507,
+          0.38397243543875426
+        ],
+        [
+          -1.57079632679494,
+          1.570796326794853
+        ],
+        [
+          -1.5707963267949339,
+          1.5707963267948593
+        ],
+        [
+          -1.5707963267949028,
+          1.5707963267948903
+        ]
+      ],
+      "mass_kg": [
+        0.19922399520874023,
+        0.02304060012102127,
+        0.00618933979421854,
+        0.04820669814944267,
+        0.02158440090715885,
+        0.03002459928393364,
+        0.03684139996767044,
+        0.00571999978274107,
+        0.04859999939799309,
+        0.1887660026550293,
+        0.02304060012102127,
+        0.00618933979421854,
+        0.04820669814944267,
+        0.02158440090715885,
+        0.030025100335478783
+      ],
+      "summary": {
+        "valid": true,
+        "classification": "uncontrolled fall / body contact",
+        "final_stability_gate": false,
+        "duration_s": 3.00002121925354,
+        "com_displacement_m": [
+          0.14449146389961243,
+          -0.0008681219769641757,
+          -0.09394119679927826
+        ],
+        "max_horizontal_com_excursion_m": 0.14465656876564026,
+        "com_height_min_max_m": [
+          0.05280742421746254,
+          0.14650337398052216
+        ],
+        "max_com_height_gain_m": -0.0002452433109283447,
+        "max_tilt_deg": 86.32051086425781,
+        "max_orientation_change_deg": 86.3216781616211,
+        "final_tilt_deg": 82.26624298095703,
+        "joint_range_rad": [
+          0.01026932056993246,
+          0.02548389881849289,
+          0.29591524600982666,
+          0.17821656167507172,
+          0.10824453830718994,
+          0.19468501210212708,
+          0.12130311131477356,
+          0.0032688456121832132,
+          0.006346466485410929,
+          0.008918124251067638,
+          0.023470856249332428,
+          0.2961176335811615,
+          0.1780550479888916,
+          0.10807651281356812
+        ],
+        "peak_tracking_error_rad": 0.17821674048900604,
+        "peak_command_offset_rad": 0.18000000715255737,
+        "foot_contact_fraction": [
+          0.9783333333333334,
+          0.9783333333333334
+        ],
+        "feet_off_total_s": 0.04999998211860657,
+        "feet_off_longest_s": 0.034999996423721313,
+        "all_ground_off_total_s": 0.04499998688697815,
+        "all_ground_off_longest_s": 0.034999996423721313,
+        "nonfoot_contact_total_s": 1.9050220251083374,
+        "min_native_contact_distance_m": -0.00978106757984111,
+        "max_joint_limit_overshoot_rad": 0.0,
+        "peak_joint_effort_nm": 0.24704186618328094,
+        "rms_joint_effort_nm": 0.0389990396797657,
+        "absolute_mechanical_work_j": 0.11289207165011475,
+        "final_com_speed_m_s": 0.0013063934165984392,
+        "final_root_angular_speed_rad_s": 0.02186913602054119
+      },
+      "wall_seconds": 11.459385270005441
+    },
+    "sway": {
+      "sequence": "sway",
+      "seed": 42,
+      "amplitudes_rad": {
+        "left_hip_roll": 0.15,
+        "right_hip_roll": 0.15
+      },
+      "physics_dt": 0.005,
+      "control_dt": 0.02,
+      "requested_seconds": 3,
+      "stop_reasons": [
+        "penetration_over_10mm"
+      ],
+      "terminated": false,
+      "truncated": false,
+      "joint_names": [
+        "left_hip_yaw",
+        "left_hip_roll",
+        "left_hip_pitch",
+        "left_knee",
+        "left_ankle",
+        "neck_pitch",
+        "head_pitch",
+        "head_yaw",
+        "head_roll",
+        "right_hip_yaw",
+        "right_hip_roll",
+        "right_hip_pitch",
+        "right_knee",
+        "right_ankle"
+      ],
+      "all_joint_names": [
+        "left_hip_yaw",
+        "left_hip_roll",
+        "left_hip_pitch",
+        "left_knee",
+        "left_ankle",
+        "neck_pitch",
+        "head_pitch",
+        "head_yaw",
+        "head_roll",
+        "right_hip_yaw",
+        "right_hip_roll",
+        "right_hip_pitch",
+        "right_knee",
+        "right_ankle"
+      ],
+      "body_names": [
+        "trunk_base",
+        "yaw2roll",
+        "hip_l",
+        "upper_leg_left",
+        "leg",
+        "ankle_left",
+        "neck",
+        "neck_pitch",
+        "yaw_roll_motion",
+        "jaw_soft",
+        "bearing_roll",
+        "hip_l_2",
+        "upper_leg_right",
+        "leg_2",
+        "ankle_right"
+      ],
+      "target_offset_rad": [
+        0.0,
+        -0.08730000257492065,
+        -0.4578999876976013,
+        -0.004900000058114529,
+        0.453000009059906,
+        0.3490999937057495,
+        0.3490999937057495,
+        0.0,
+        0.0,
+        0.0,
+        0.08730000257492065,
+        0.4578999876976013,
+        0.004900000058114529,
+        -0.453000009059906
+      ],
+      "joint_limits_rad": [
+        [
+          -0.4363323129985824,
+          0.5235987755982988
+        ],
+        [
+          -0.3839724354386992,
+          0.38397243543880577
+        ],
+        [
+          -1.570796326794949,
+          1.5707963267948442
+        ],
+        [
+          -1.5707963267948983,
+          1.5707963267948948
+        ],
+        [
+          -1.5707963267949063,
+          1.5707963267948868
+        ],
+        [
+          -1.5707963267948974,
+          1.0471975511965967
+        ],
+        [
+          -1.5707963267948966,
+          1.5707963267948966
+        ],
+        [
+          -2.9670597283903613,
+          2.9670597283903595
+        ],
+        [
+          -0.43633231299858327,
+          0.4363323129985815
+        ],
+        [
+          -0.523598775598297,
+          0.43633231299858416
+        ],
+        [
+          -0.3839724354387507,
+          0.38397243543875426
+        ],
+        [
+          -1.57079632679494,
+          1.570796326794853
+        ],
+        [
+          -1.5707963267949339,
+          1.5707963267948593
+        ],
+        [
+          -1.5707963267949028,
+          1.5707963267948903
+        ]
+      ],
+      "mass_kg": [
+        0.19922399520874023,
+        0.02304060012102127,
+        0.00618933979421854,
+        0.04820669814944267,
+        0.02158440090715885,
+        0.03002459928393364,
+        0.03684139996767044,
+        0.00571999978274107,
+        0.04859999939799309,
+        0.1887660026550293,
+        0.02304060012102127,
+        0.00618933979421854,
+        0.04820669814944267,
+        0.02158440090715885,
+        0.030025100335478783
+      ],
+      "summary": {
+        "valid": false,
+        "classification": "invalid simulation/contact audit",
+        "final_stability_gate": false,
+        "duration_s": 1.219999074935913,
+        "com_displacement_m": [
+          0.1506313979625702,
+          0.009098397567868233,
+          -0.09295463562011719
+        ],
+        "max_horizontal_com_excursion_m": 0.15090592205524445,
+        "com_height_min_max_m": [
+          0.053793977946043015,
+          0.14650337398052216
+        ],
+        "max_com_height_gain_m": -0.0002452433109283447,
+        "max_tilt_deg": 83.53036499023438,
+        "max_orientation_change_deg": 84.1968002319336,
+        "final_tilt_deg": 83.53036499023438,
+        "joint_range_rad": [
+          0.00045939336996525526,
+          0.16799990832805634,
+          0.10841155052185059,
+          0.20479221642017365,
+          0.13122904300689697,
+          0.059991031885147095,
+          0.08055445551872253,
+          0.00378661067225039,
+          0.0069845314137637615,
+          0.002121686702594161,
+          0.13816913962364197,
+          0.0967545211315155,
+          0.1359138786792755,
+          0.08375972509384155
+        ],
+        "peak_tracking_error_rad": 0.20479239523410797,
+        "peak_command_offset_rad": 0.15000000596046448,
+        "foot_contact_fraction": [
+          0.9508196721311475,
+          0.9385245901639344
+        ],
+        "feet_off_total_s": 0.0599999725818634,
+        "feet_off_longest_s": 0.034999996423721313,
+        "all_ground_off_total_s": 0.054999977350234985,
+        "all_ground_off_longest_s": 0.034999996423721313,
+        "nonfoot_contact_total_s": 0.014999985694885254,
+        "min_native_contact_distance_m": -0.011260861185331428,
+        "max_joint_limit_overshoot_rad": 0.0,
+        "peak_joint_effort_nm": 0.24704186618328094,
+        "rms_joint_effort_nm": 0.03883201256394386,
+        "absolute_mechanical_work_j": 0.07483932297391968,
+        "final_com_speed_m_s": 0.23981916904449463,
+        "final_root_angular_speed_rad_s": 1.1532481908798218
+      },
+      "wall_seconds": 4.68497195999953
+    },
+    "twist": {
+      "sequence": "twist",
+      "seed": 42,
+      "amplitudes_rad": {
+        "left_hip_yaw": 0.2,
+        "right_hip_yaw": 0.2
+      },
+      "physics_dt": 0.005,
+      "control_dt": 0.02,
+      "requested_seconds": 3,
+      "stop_reasons": [],
+      "terminated": false,
+      "truncated": false,
+      "joint_names": [
+        "left_hip_yaw",
+        "left_hip_roll",
+        "left_hip_pitch",
+        "left_knee",
+        "left_ankle",
+        "neck_pitch",
+        "head_pitch",
+        "head_yaw",
+        "head_roll",
+        "right_hip_yaw",
+        "right_hip_roll",
+        "right_hip_pitch",
+        "right_knee",
+        "right_ankle"
+      ],
+      "all_joint_names": [
+        "left_hip_yaw",
+        "left_hip_roll",
+        "left_hip_pitch",
+        "left_knee",
+        "left_ankle",
+        "neck_pitch",
+        "head_pitch",
+        "head_yaw",
+        "head_roll",
+        "right_hip_yaw",
+        "right_hip_roll",
+        "right_hip_pitch",
+        "right_knee",
+        "right_ankle"
+      ],
+      "body_names": [
+        "trunk_base",
+        "yaw2roll",
+        "hip_l",
+        "upper_leg_left",
+        "leg",
+        "ankle_left",
+        "neck",
+        "neck_pitch",
+        "yaw_roll_motion",
+        "jaw_soft",
+        "bearing_roll",
+        "hip_l_2",
+        "upper_leg_right",
+        "leg_2",
+        "ankle_right"
+      ],
+      "target_offset_rad": [
+        0.0,
+        -0.08730000257492065,
+        -0.4578999876976013,
+        -0.004900000058114529,
+        0.453000009059906,
+        0.3490999937057495,
+        0.3490999937057495,
+        0.0,
+        0.0,
+        0.0,
+        0.08730000257492065,
+        0.4578999876976013,
+        0.004900000058114529,
+        -0.453000009059906
+      ],
+      "joint_limits_rad": [
+        [
+          -0.4363323129985824,
+          0.5235987755982988
+        ],
+        [
+          -0.3839724354386992,
+          0.38397243543880577
+        ],
+        [
+          -1.570796326794949,
+          1.5707963267948442
+        ],
+        [
+          -1.5707963267948983,
+          1.5707963267948948
+        ],
+        [
+          -1.5707963267949063,
+          1.5707963267948868
+        ],
+        [
+          -1.5707963267948974,
+          1.0471975511965967
+        ],
+        [
+          -1.5707963267948966,
+          1.5707963267948966
+        ],
+        [
+          -2.9670597283903613,
+          2.9670597283903595
+        ],
+        [
+          -0.43633231299858327,
+          0.4363323129985815
+        ],
+        [
+          -0.523598775598297,
+          0.43633231299858416
+        ],
+        [
+          -0.3839724354387507,
+          0.38397243543875426
+        ],
+        [
+          -1.57079632679494,
+          1.570796326794853
+        ],
+        [
+          -1.5707963267949339,
+          1.5707963267948593
+        ],
+        [
+          -1.5707963267949028,
+          1.5707963267948903
+        ]
+      ],
+      "mass_kg": [
+        0.19922399520874023,
+        0.02304060012102127,
+        0.00618933979421854,
+        0.04820669814944267,
+        0.02158440090715885,
+        0.03002459928393364,
+        0.03684139996767044,
+        0.00571999978274107,
+        0.04859999939799309,
+        0.1887660026550293,
+        0.02304060012102127,
+        0.00618933979421854,
+        0.04820669814944267,
+        0.02158440090715885,
+        0.030025100335478783
+      ],
+      "summary": {
+        "valid": true,
+        "classification": "uncontrolled fall / body contact",
+        "final_stability_gate": false,
+        "duration_s": 3.00002121925354,
+        "com_displacement_m": [
+          0.15199589729309082,
+          0.007538225967437029,
+          -0.09485462307929993
+        ],
+        "max_horizontal_com_excursion_m": 0.1521827131509781,
+        "com_height_min_max_m": [
+          0.05189399793744087,
+          0.14650337398052216
+        ],
+        "max_com_height_gain_m": -0.0002452433109283447,
+        "max_tilt_deg": 83.61270904541016,
+        "max_orientation_change_deg": 83.83211517333984,
+        "final_tilt_deg": 80.93524932861328,
+        "joint_range_rad": [
+          0.17527435719966888,
+          0.035188883543014526,
+          0.12213805317878723,
+          0.16279016435146332,
+          0.10136795043945312,
+          0.15463224053382874,
+          0.11105725169181824,
+          0.07302657514810562,
+          0.07234639674425125,
+          0.18499039113521576,
+          0.030171256512403488,
+          0.10669675469398499,
+          0.1729942113161087,
+          0.10910972952842712
+        ],
+        "peak_tracking_error_rad": 0.17269311845302582,
+        "peak_command_offset_rad": 0.20000000298023224,
+        "foot_contact_fraction": [
+          0.9716666666666667,
+          0.9766666666666667
+        ],
+        "feet_off_total_s": 0.054999977350234985,
+        "feet_off_longest_s": 0.034999996423721313,
+        "all_ground_off_total_s": 0.04999998211860657,
+        "all_ground_off_longest_s": 0.034999996423721313,
+        "nonfoot_contact_total_s": 1.7550221681594849,
+        "min_native_contact_distance_m": -0.009804333136014823,
+        "max_joint_limit_overshoot_rad": 0.0,
+        "peak_joint_effort_nm": 0.24704186618328094,
+        "rms_joint_effort_nm": 0.03611483424901962,
+        "absolute_mechanical_work_j": 0.12267175853571047,
+        "final_com_speed_m_s": 0.001346935285255313,
+        "final_root_angular_speed_rad_s": 0.020036129280924797
+      },
+      "wall_seconds": 11.424765420000767
+    },
+    "zero": {
+      "sequence": "zero",
+      "seed": 42,
+      "amplitudes_rad": {},
+      "physics_dt": 0.005,
+      "control_dt": 0.02,
+      "requested_seconds": 3,
+      "stop_reasons": [],
+      "terminated": false,
+      "truncated": false,
+      "joint_names": [
+        "left_hip_yaw",
+        "left_hip_roll",
+        "left_hip_pitch",
+        "left_knee",
+        "left_ankle",
+        "neck_pitch",
+        "head_pitch",
+        "head_yaw",
+        "head_roll",
+        "right_hip_yaw",
+        "right_hip_roll",
+        "right_hip_pitch",
+        "right_knee",
+        "right_ankle"
+      ],
+      "all_joint_names": [
+        "left_hip_yaw",
+        "left_hip_roll",
+        "left_hip_pitch",
+        "left_knee",
+        "left_ankle",
+        "neck_pitch",
+        "head_pitch",
+        "head_yaw",
+        "head_roll",
+        "right_hip_yaw",
+        "right_hip_roll",
+        "right_hip_pitch",
+        "right_knee",
+        "right_ankle"
+      ],
+      "body_names": [
+        "trunk_base",
+        "yaw2roll",
+        "hip_l",
+        "upper_leg_left",
+        "leg",
+        "ankle_left",
+        "neck",
+        "neck_pitch",
+        "yaw_roll_motion",
+        "jaw_soft",
+        "bearing_roll",
+        "hip_l_2",
+        "upper_leg_right",
+        "leg_2",
+        "ankle_right"
+      ],
+      "target_offset_rad": [
+        0.0,
+        -0.08730000257492065,
+        -0.4578999876976013,
+        -0.004900000058114529,
+        0.453000009059906,
+        0.3490999937057495,
+        0.3490999937057495,
+        0.0,
+        0.0,
+        0.0,
+        0.08730000257492065,
+        0.4578999876976013,
+        0.004900000058114529,
+        -0.453000009059906
+      ],
+      "joint_limits_rad": [
+        [
+          -0.4363323129985824,
+          0.5235987755982988
+        ],
+        [
+          -0.3839724354386992,
+          0.38397243543880577
+        ],
+        [
+          -1.570796326794949,
+          1.5707963267948442
+        ],
+        [
+          -1.5707963267948983,
+          1.5707963267948948
+        ],
+        [
+          -1.5707963267949063,
+          1.5707963267948868
+        ],
+        [
+          -1.5707963267948974,
+          1.0471975511965967
+        ],
+        [
+          -1.5707963267948966,
+          1.5707963267948966
+        ],
+        [
+          -2.9670597283903613,
+          2.9670597283903595
+        ],
+        [
+          -0.43633231299858327,
+          0.4363323129985815
+        ],
+        [
+          -0.523598775598297,
+          0.43633231299858416
+        ],
+        [
+          -0.3839724354387507,
+          0.38397243543875426
+        ],
+        [
+          -1.57079632679494,
+          1.570796326794853
+        ],
+        [
+          -1.5707963267949339,
+          1.5707963267948593
+        ],
+        [
+          -1.5707963267949028,
+          1.5707963267948903
+        ]
+      ],
+      "mass_kg": [
+        0.19922399520874023,
+        0.02304060012102127,
+        0.00618933979421854,
+        0.04820669814944267,
+        0.02158440090715885,
+        0.03002459928393364,
+        0.03684139996767044,
+        0.00571999978274107,
+        0.04859999939799309,
+        0.1887660026550293,
+        0.02304060012102127,
+        0.00618933979421854,
+        0.04820669814944267,
+        0.02158440090715885,
+        0.030025100335478783
+      ],
+      "summary": {
+        "valid": true,
+        "classification": "uncontrolled fall / body contact",
+        "final_stability_gate": false,
+        "duration_s": 3.00002121925354,
+        "com_displacement_m": [
+          0.15104632079601288,
+          -0.0002123773010680452,
+          -0.09450143575668335
+        ],
+        "max_horizontal_com_excursion_m": 0.15114083886146545,
+        "com_height_min_max_m": [
+          0.05224717780947685,
+          0.14650337398052216
+        ],
+        "max_com_height_gain_m": -0.0002452433109283447,
+        "max_tilt_deg": 83.59518432617188,
+        "max_orientation_change_deg": 83.59528350830078,
+        "final_tilt_deg": 81.30062866210938,
+        "joint_range_rad": [
+          0.007910793647170067,
+          0.021789520978927612,
+          0.10979515314102173,
+          0.17101116478443146,
+          0.10763490200042725,
+          0.1591612696647644,
+          0.11178439855575562,
+          0.0016466917004436255,
+          0.003170072566717863,
+          0.006190165877342224,
+          0.02078082412481308,
+          0.11026278138160706,
+          0.17115329205989838,
+          0.10739883780479431
+        ],
+        "peak_tracking_error_rad": 0.1711534708738327,
+        "peak_command_offset_rad": 0.0,
+        "foot_contact_fraction": [
+          0.9783333333333334,
+          0.9783333333333334
+        ],
+        "feet_off_total_s": 0.0599999725818634,
+        "feet_off_longest_s": 0.034999996423721313,
+        "all_ground_off_total_s": 0.054999977350234985,
+        "all_ground_off_longest_s": 0.034999996423721313,
+        "nonfoot_contact_total_s": 1.7400221824645996,
+        "min_native_contact_distance_m": -0.006799918859522261,
+        "max_joint_limit_overshoot_rad": 0.0,
+        "peak_joint_effort_nm": 0.24704186618328094,
+        "rms_joint_effort_nm": 0.03531290963292122,
+        "absolute_mechanical_work_j": 0.09962158148886066,
+        "final_com_speed_m_s": 0.0013254027580842376,
+        "final_root_angular_speed_rad_s": 0.020513491705060005
+      },
+      "wall_seconds": 11.316497310006525
+    },
+    "zero_repeat": {
+      "sequence": "zero_repeat",
+      "seed": 42,
+      "amplitudes_rad": {},
+      "physics_dt": 0.005,
+      "control_dt": 0.02,
+      "requested_seconds": 3,
+      "stop_reasons": [],
+      "terminated": false,
+      "truncated": false,
+      "joint_names": [
+        "left_hip_yaw",
+        "left_hip_roll",
+        "left_hip_pitch",
+        "left_knee",
+        "left_ankle",
+        "neck_pitch",
+        "head_pitch",
+        "head_yaw",
+        "head_roll",
+        "right_hip_yaw",
+        "right_hip_roll",
+        "right_hip_pitch",
+        "right_knee",
+        "right_ankle"
+      ],
+      "all_joint_names": [
+        "left_hip_yaw",
+        "left_hip_roll",
+        "left_hip_pitch",
+        "left_knee",
+        "left_ankle",
+        "neck_pitch",
+        "head_pitch",
+        "head_yaw",
+        "head_roll",
+        "right_hip_yaw",
+        "right_hip_roll",
+        "right_hip_pitch",
+        "right_knee",
+        "right_ankle"
+      ],
+      "body_names": [
+        "trunk_base",
+        "yaw2roll",
+        "hip_l",
+        "upper_leg_left",
+        "leg",
+        "ankle_left",
+        "neck",
+        "neck_pitch",
+        "yaw_roll_motion",
+        "jaw_soft",
+        "bearing_roll",
+        "hip_l_2",
+        "upper_leg_right",
+        "leg_2",
+        "ankle_right"
+      ],
+      "target_offset_rad": [
+        0.0,
+        -0.08730000257492065,
+        -0.4578999876976013,
+        -0.004900000058114529,
+        0.453000009059906,
+        0.3490999937057495,
+        0.3490999937057495,
+        0.0,
+        0.0,
+        0.0,
+        0.08730000257492065,
+        0.4578999876976013,
+        0.004900000058114529,
+        -0.453000009059906
+      ],
+      "joint_limits_rad": [
+        [
+          -0.4363323129985824,
+          0.5235987755982988
+        ],
+        [
+          -0.3839724354386992,
+          0.38397243543880577
+        ],
+        [
+          -1.570796326794949,
+          1.5707963267948442
+        ],
+        [
+          -1.5707963267948983,
+          1.5707963267948948
+        ],
+        [
+          -1.5707963267949063,
+          1.5707963267948868
+        ],
+        [
+          -1.5707963267948974,
+          1.0471975511965967
+        ],
+        [
+          -1.5707963267948966,
+          1.5707963267948966
+        ],
+        [
+          -2.9670597283903613,
+          2.9670597283903595
+        ],
+        [
+          -0.43633231299858327,
+          0.4363323129985815
+        ],
+        [
+          -0.523598775598297,
+          0.43633231299858416
+        ],
+        [
+          -0.3839724354387507,
+          0.38397243543875426
+        ],
+        [
+          -1.57079632679494,
+          1.570796326794853
+        ],
+        [
+          -1.5707963267949339,
+          1.5707963267948593
+        ],
+        [
+          -1.5707963267949028,
+          1.5707963267948903
+        ]
+      ],
+      "mass_kg": [
+        0.19922399520874023,
+        0.02304060012102127,
+        0.00618933979421854,
+        0.04820669814944267,
+        0.02158440090715885,
+        0.03002459928393364,
+        0.03684139996767044,
+        0.00571999978274107,
+        0.04859999939799309,
+        0.1887660026550293,
+        0.02304060012102127,
+        0.00618933979421854,
+        0.04820669814944267,
+        0.02158440090715885,
+        0.030025100335478783
+      ],
+      "summary": {
+        "valid": true,
+        "classification": "uncontrolled fall / body contact",
+        "final_stability_gate": false,
+        "duration_s": 3.00002121925354,
+        "com_displacement_m": [
+          0.15104632079601288,
+          -0.0002123773010680452,
+          -0.09450143575668335
+        ],
+        "max_horizontal_com_excursion_m": 0.15114083886146545,
+        "com_height_min_max_m": [
+          0.05224717780947685,
+          0.14650337398052216
+        ],
+        "max_com_height_gain_m": -0.0002452433109283447,
+        "max_tilt_deg": 83.59518432617188,
+        "max_orientation_change_deg": 83.59528350830078,
+        "final_tilt_deg": 81.30062866210938,
+        "joint_range_rad": [
+          0.007910793647170067,
+          0.021789520978927612,
+          0.10979515314102173,
+          0.17101116478443146,
+          0.10763490200042725,
+          0.1591612696647644,
+          0.11178439855575562,
+          0.0016466917004436255,
+          0.003170072566717863,
+          0.006190165877342224,
+          0.02078082412481308,
+          0.11026278138160706,
+          0.17115329205989838,
+          0.10739883780479431
+        ],
+        "peak_tracking_error_rad": 0.1711534708738327,
+        "peak_command_offset_rad": 0.0,
+        "foot_contact_fraction": [
+          0.9783333333333334,
+          0.9783333333333334
+        ],
+        "feet_off_total_s": 0.0599999725818634,
+        "feet_off_longest_s": 0.034999996423721313,
+        "all_ground_off_total_s": 0.054999977350234985,
+        "all_ground_off_longest_s": 0.034999996423721313,
+        "nonfoot_contact_total_s": 1.7400221824645996,
+        "min_native_contact_distance_m": -0.006799918859522261,
+        "max_joint_limit_overshoot_rad": 0.0,
+        "peak_joint_effort_nm": 0.24704186618328094,
+        "rms_joint_effort_nm": 0.03531290963292122,
+        "absolute_mechanical_work_j": 0.09962158148886066,
+        "final_com_speed_m_s": 0.0013254027580842376,
+        "final_root_angular_speed_rad_s": 0.020513491705060005
+      },
+      "wall_seconds": 11.26635227999941
+    }
+  },
+  "archive": {
+    "invalid": [
+      "flex",
+      "sway"
+    ],
+    "('uncontrolled fall / body contact', 5, 6, 2)": [
+      "head_nod",
+      "head_turn"
+    ],
+    "('uncontrolled fall / body contact', 5, 5, 3)": [
+      "left_flex"
+    ],
+    "('uncontrolled fall / body contact', 5, 5, 2)": [
+      "pitch"
+    ],
+    "('uncontrolled fall / body contact', 5, 6, 1)": [
+      "twist",
+      "zero",
+      "zero_repeat"
+    ]
+  }
+}

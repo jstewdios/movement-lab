@@ -264,3 +264,60 @@ across runs or machines; the observed pre-event mismatch remains unexplained.
 The measured 1846.9 s cost includes completed attempts and the repeat, excludes
 the untimed interrupted attempt, and is not GPU kernel time. Publication does
 not add simulation trials or change the scientific results.
+
+## Movement Lab 01A — Free Movement Discovery
+
+A separate open-loop experiment uses the upstream **curated groundcontact** model
+and the existing BAM XL330 M6 position-target interface. It loads no policy or
+checkpoint and changes no 00A–00C code or upstream files. This model differs from
+00A–00C's feet-only walk collision model; their physical outcomes are not directly
+comparable.
+
+```bash
+PY=/home/james/microduck_rl/.venv/bin/python
+PYTHONDONTWRITEBYTECODE=1 $PY -m movement_lab.discover01a --out results/01a/new
+$PY -m movement_lab.discovery_metrics results/01a/new
+$PY -m movement_lab.validate01a results/01a/new
+$PY -m movement_lab.replay01a results/01a/new/head_turn
+$PY -m unittest discover -s tests -v
+```
+
+Use a new output directory. `--only zero` runs a single baseline smoke test;
+full-pilot validation deliberately requires all eight sequences and the repeat.
+The fixed pilot is nine 3 s trials (27 simulated seconds / 5,400 physics steps),
+including powered zero action and its repeat. Commands are named-joint offsets
+with a cosine rise/hold/return, bounded to 0.25 rad and checked against joint limits
+with 0.02 rad command margin. The action-manager mapping determines joint order;
+position targets, measured joints, actuator output, generalized states, link poses,
+whole-body COM, and foot sensors are recorded at 200 Hz. Commands update at 50 Hz.
+The last 1.2 s holds default targets. Four-physics-step actuator delay, fixed 7.35 V
+supply, 0.1 V/Nm sag, and the upstream actuator torque/friction constraints remain
+active. Zero action is powered default-position control, not zero torque.
+
+The fixed descriptive archive groups observed tilt, horizontal COM excursion,
+measured joint range, and endpoint class. It retains every record in every bin;
+there is no reward optimization, elite replacement, or adaptive search. CPU
+MuJoCo geometry checks at recorded states supplement the GPU foot sensors,
+recording all modeled terrain contacts and penetration, including nonfoot support.
+These checks do not reconstruct GPU contact forces. Stop flags cover nonfinite
+states, penetration over 10 mm, generalized speed over 100, joint-limit overshoot
+over 0.03 rad, and foot force over 100 N. These are diagnostic thresholds, not
+hardware safety ratings; stop decisions take effect at the next control boundary
+(up to 20 ms). Native NaN termination remains active; walking/fall termination is
+removed so the falling motion can be observed.
+
+Open `replay.html` for a portable measured-link-center replay with joint targets
+versus actual positions, or use `replay01a` for full geometry in a desktop MuJoCo
+viewer. Both replay saved states without reintegrating dynamics. The local compiled
+MJB includes upstream geometry and requires a compatible MuJoCo version; it is
+ignored by Git. Raw NPZ trajectories are retained, and model/config/source hashes
+are recorded. Regeneration requires the installed upstream environment and GPU.
+The HTML uses 50 Hz decimated samples played at 12.5 frames/s (four times slower
+than recorded time); local NPZ retains every physics sample and is excluded from Git.
+
+See [01A report](results/01a/atlas-v2/REPORT.md),
+[atlas](results/01a/atlas-v2/atlas.png), and
+[recorded-state replay](results/01a/atlas-v2/replay.html).
+The [attempt log](results/01a/ATTEMPTS.md) documents preflight fixes and excluded
+diagnostic outputs. No roll, jump, or recovery success is inferred from a fall,
+feet-off interval, low endpoint speed, or contact alone.

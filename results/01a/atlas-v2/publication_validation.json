@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-27",
+  "tests_command": "PYTHONDONTWRITEBYTECODE=1 /home/james/microduck_rl/.venv/bin/python -m unittest discover -s tests -v",
+  "tests_count": 22,
+  "tests_passed": true,
+  "recorded_validation": [
+    "movement_lab.validate01a",
+    "movement_lab.discovery_metrics"
+  ],
+  "validation_on_temporary_copy": true,
+  "recomputed_artifacts_byte_identical": [
+    "atlas.json",
+    "atlas.png",
+    "replay.html",
+    "validation.json",
+    "independent_validation.json"
+  ],
+  "publication_manifest_hashes_verified": true,
+  "raw_and_metadata_files_verified_unchanged": 36,
+  "excluded_assets": "Full-rate trial.npz files, compiled replay_model.mjb, diagnostic attempts, logs and caches remain local. Manifest hashes include excluded local assets; full validation requires them.",
+  "replay_timing": "50 Hz sampled states, 12.5 frames/s playback; four times slower than recorded time"
+}

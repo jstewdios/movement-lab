@@ -1,0 +1,210 @@
+{
+  "sequence": "left_flex",
+  "seed": 42,
+  "amplitudes_rad": {
+    "left_hip_pitch": -0.15,
+    "left_knee": 0.25,
+    "left_ankle": -0.1
+  },
+  "physics_dt": 0.005,
+  "control_dt": 0.02,
+  "requested_seconds": 3,
+  "stop_reasons": [],
+  "terminated": false,
+  "truncated": false,
+  "joint_names": [
+    "left_hip_yaw",
+    "left_hip_roll",
+    "left_hip_pitch",
+    "left_knee",
+    "left_ankle",
+    "neck_pitch",
+    "head_pitch",
+    "head_yaw",
+    "head_roll",
+    "right_hip_yaw",
+    "right_hip_roll",
+    "right_hip_pitch",
+    "right_knee",
+    "right_ankle"
+  ],
+  "all_joint_names": [
+    "left_hip_yaw",
+    "left_hip_roll",
+    "left_hip_pitch",
+    "left_knee",
+    "left_ankle",
+    "neck_pitch",
+    "head_pitch",
+    "head_yaw",
+    "head_roll",
+    "right_hip_yaw",
+    "right_hip_roll",
+    "right_hip_pitch",
+    "right_knee",
+    "right_ankle"
+  ],
+  "body_names": [
+    "trunk_base",
+    "yaw2roll",
+    "hip_l",
+    "upper_leg_left",
+    "leg",
+    "ankle_left",
+    "neck",
+    "neck_pitch",
+    "yaw_roll_motion",
+    "jaw_soft",
+    "bearing_roll",
+    "hip_l_2",
+    "upper_leg_right",
+    "leg_2",
+    "ankle_right"
+  ],
+  "target_offset_rad": [
+    0.0,
+    -0.08730000257492065,
+    -0.4578999876976013,
+    -0.004900000058114529,
+    0.453000009059906,
+    0.3490999937057495,
+    0.3490999937057495,
+    0.0,
+    0.0,
+    0.0,
+    0.08730000257492065,
+    0.4578999876976013,
+    0.004900000058114529,
+    -0.453000009059906
+  ],
+  "joint_limits_rad": [
+    [
+      -0.4363323129985824,
+      0.5235987755982988
+    ],
+    [
+      -0.3839724354386992,
+      0.38397243543880577
+    ],
+    [
+      -1.570796326794949,
+      1.5707963267948442
+    ],
+    [
+      -1.5707963267948983,
+      1.5707963267948948
+    ],
+    [
+      -1.5707963267949063,
+      1.5707963267948868
+    ],
+    [
+      -1.5707963267948974,
+      1.0471975511965967
+    ],
+    [
+      -1.5707963267948966,
+      1.5707963267948966
+    ],
+    [
+      -2.9670597283903613,
+      2.9670597283903595
+    ],
+    [
+      -0.43633231299858327,
+      0.4363323129985815
+    ],
+    [
+      -0.523598775598297,
+      0.43633231299858416
+    ],
+    [
+      -0.3839724354387507,
+      0.38397243543875426
+    ],
+    [
+      -1.57079632679494,
+      1.570796326794853
+    ],
+    [
+      -1.5707963267949339,
+      1.5707963267948593
+    ],
+    [
+      -1.5707963267949028,
+      1.5707963267948903
+    ]
+  ],
+  "mass_kg": [
+    0.19922399520874023,
+    0.02304060012102127,
+    0.00618933979421854,
+    0.04820669814944267,
+    0.02158440090715885,
+    0.03002459928393364,
+    0.03684139996767044,
+    0.00571999978274107,
+    0.04859999939799309,
+    0.1887660026550293,
+    0.02304060012102127,
+    0.00618933979421854,
+    0.04820669814944267,
+    0.02158440090715885,
+    0.030025100335478783
+  ],
+  "summary": {
+    "valid": true,
+    "classification": "uncontrolled fall / body contact",
+    "final_stability_gate": false,
+    "duration_s": 3.00002121925354,
+    "com_displacement_m": [
+      0.13751213252544403,
+      0.0250980444252491,
+      -0.09287169575691223
+    ],
+    "max_horizontal_com_excursion_m": 0.1398652344942093,
+    "com_height_min_max_m": [
+      0.05387691780924797,
+      0.14650337398052216
+    ],
+    "max_com_height_gain_m": -0.0002452433109283447,
+    "max_tilt_deg": 85.7844009399414,
+    "max_orientation_change_deg": 87.98518371582031,
+    "final_tilt_deg": 82.76827239990234,
+    "joint_range_rad": [
+      0.011780212633311749,
+      0.030282296240329742,
+      0.21755817532539368,
+      0.3733504116535187,
+      0.20603469014167786,
+      0.15179124474525452,
+      0.10540655255317688,
+      0.09038679301738739,
+      0.07327725738286972,
+      0.02058405429124832,
+      0.04251500219106674,
+      0.1485448181629181,
+      0.23394286632537842,
+      0.13776904344558716
+    ],
+    "peak_tracking_error_rad": 0.3580769896507263,
+    "peak_command_offset_rad": 0.25,
+    "foot_contact_fraction": [
+      0.98,
+      0.95
+    ],
+    "feet_off_total_s": 0.04999998211860657,
+    "feet_off_longest_s": 0.034999996423721313,
+    "all_ground_off_total_s": 0.04499998688697815,
+    "all_ground_off_longest_s": 0.034999996423721313,
+    "nonfoot_contact_total_s": 2.020021975040436,
+    "min_native_contact_distance_m": -0.007029030992328378,
+    "max_joint_limit_overshoot_rad": 0.0,
+    "peak_joint_effort_nm": 0.24704186618328094,
+    "rms_joint_effort_nm": 0.04634903371334076,
+    "absolute_mechanical_work_j": 0.1678421578663373,
+    "final_com_speed_m_s": 0.0021236510947346687,
+    "final_root_angular_speed_rad_s": 0.05496577173471451
+  },
+  "wall_seconds": 11.532150629995158
+}
