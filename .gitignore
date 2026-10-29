@@ -40,3 +40,20 @@ results/*smoke*/
 
 # 01A full-rate raw trajectories remain local; retain initial states and hashes.
 /results/01a/**/trial.npz
+
+# 01B local full-rate trajectories, compiled geometry and evaluation logs.
+/results/01b/**/trial.npz
+/results/01b/**/replay_model.mjb
+/results/01b*.log
+# Bounded 01B landing diagnosis logs remain local and hashed.
+/results/01b/landing-diagnosis/*.log
+# Bounded 01B departure execution logs remain local and hashed.
+/results/01b/departures/**/*.log
+
+# 01B publication: retain redundant exports/preflight snapshots locally.
+/results/01b/gate/
+/results/01b/**/atlas.png
+!/results/01b/gpu-gate/atlas.png
+/results/01b/landing-diagnosis/preflight.txt
+/results/01b/landing-diagnosis/preflight_inspect.py
+/results/01b/departures/tests-initial.txt

@@ -1,0 +1,4912 @@
+{
+  "original": {
+    "initial": {
+      "root_qpos": [
+        0.0,
+        0.0,
+        0.125,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "root_qvel": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sole_clearance_m": {
+        "left_foot_collision": 0.007817637295621415,
+        "right_foot_collision": 0.007817637675727677
+      }
+    },
+    "samples": 12,
+    "duration_s": 0.059999991208314896,
+    "first100ms_observed_through_s": 0.059999991208314896,
+    "minimum_contact_distance_m": -0.003160030468895663,
+    "maximum_native_contacts": 2,
+    "contacts_first100ms": [
+      {
+        "time_s": 0.03999999538064003,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012852445959871967,
+          0.04231550120522848,
+          -0.0006857356634345307
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0013714713268690613,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.03999999538064003,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.011856058959600272,
+          -0.042079455933920526,
+          -0.0008681935605448802
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0017363871210897604,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.044999994337558746,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012858319219449955,
+          0.04236980369079975,
+          -0.0011709417653685199
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0023418835307370397,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.044999994337558746,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.01212937448700424,
+          -0.04208684255244847,
+          -0.0013748613893846007
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0027497227787692015,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.04999999329447746,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012856725148018219,
+          0.042416688589757515,
+          -0.0013592672873279205
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.002718534574655841,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.04999999329447746,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012067972889506975,
+          -0.0421039423935735,
+          -0.0015630557276197048
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0031261114552394095,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.05499999225139618,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012858656860810896,
+          0.04245706160189208,
+          -0.001384952110976201
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.002769904221952402,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.05499999225139618,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012047339680537571,
+          -0.04212389291525442,
+          -0.0015800152344478315
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.003160030468895663,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.059999991208314896,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012867951983967363,
+          0.04249587135997238,
+          -0.0013254174740510208
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0026508349481020417,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.059999991208314896,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012040351624092744,
+          -0.04214505425806207,
+          -0.0015093397240221176
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.003018679448044235,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      }
+    ],
+    "first100ms_joint_range_rad": [
+      0.006521230097860098,
+      0.012097910046577454,
+      0.03433108329772949,
+      0.005254342686384916,
+      0.056369513273239136,
+      0.04086512327194214,
+      0.028767943382263184,
+      0.0012821696000173688,
+      0.002970694098621607,
+      0.021695777773857117,
+      0.00942685455083847,
+      0.020679891109466553,
+      0.01288297027349472,
+      0.0639612078666687
+    ],
+    "joint_names": [
+      "left_hip_yaw",
+      "left_hip_roll",
+      "left_hip_pitch",
+      "left_knee",
+      "left_ankle",
+      "neck_pitch",
+      "head_pitch",
+      "head_yaw",
+      "head_roll",
+      "right_hip_yaw",
+      "right_hip_roll",
+      "right_hip_pitch",
+      "right_knee",
+      "right_ankle"
+    ],
+    "source_hashes": {
+      "trial.npz": "1194722af893182da60eaa3e273b14b7bb256fa836d2c57b3eb51afbc16302d8",
+      "initial.npz": "58c240f05c261c622a970d5cd3e043e613f61948cab909084b092b0d03e772da",
+      "metadata.json": "c4a945f8d4bfaec8b5a98508282c6c00b4508e7dff4c0c05ba33b7b37d99010e"
+    }
+  },
+  "historical00a": {
+    "initial": {
+      "root_qpos": [
+        0.0,
+        0.0,
+        0.125,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "root_qvel": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sole_clearance_m": {
+        "left_foot_collision": 0.007817637295621415,
+        "right_foot_collision": 0.007817637675727677
+      }
+    },
+    "samples": 1000,
+    "duration_s": 5.000066757202148,
+    "first100ms_observed_through_s": 0.10000000894069672,
+    "minimum_contact_distance_m": -0.003160030468895663,
+    "maximum_native_contacts": 6,
+    "contacts_first100ms": [
+      {
+        "time_s": 0.03999999538064003,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012852445959871967,
+          0.04231550120522848,
+          -0.0006857356634345307
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0013714713268690613,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.03999999538064003,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.011856058959600272,
+          -0.042079455933920526,
+          -0.0008681935605448802
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0017363871210897604,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.044999994337558746,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012858319219449955,
+          0.04236980369079975,
+          -0.0011709417653685199
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0023418835307370397,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.044999994337558746,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.01212937448700424,
+          -0.04208684255244847,
+          -0.0013748613893846007
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0027497227787692015,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.04999999329447746,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012856725148018219,
+          0.042416688589757515,
+          -0.0013592672873279205
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.002718534574655841,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.04999999329447746,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012067972889506975,
+          -0.0421039423935735,
+          -0.0015630557276197048
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0031261114552394095,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.05499999225139618,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012858656860810896,
+          0.04245706160189208,
+          -0.001384952110976201
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.002769904221952402,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.05499999225139618,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012047339680537571,
+          -0.04212389291525442,
+          -0.0015800152344478315
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.003160030468895663,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.059999991208314896,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012867951983967363,
+          0.04249587135997238,
+          -0.0013254174740510208
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0026508349481020417,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.059999991208314896,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012040351624092744,
+          -0.04214505425806207,
+          -0.0015093397240221176
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.003018679448044235,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.06499999016523361,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012877309025202115,
+          0.04253286588536836,
+          -0.001227531756043967
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.002455063512087934,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.06499999016523361,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012040104001351564,
+          -0.04216492630420657,
+          -0.0013943467052894747
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0027886934105789494,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.06999999284744263,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012886144998584514,
+          0.042566601956446515,
+          -0.0011152610664030152
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0022305221328060305,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.06999999284744263,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012042066634842367,
+          -0.04218206650586795,
+          -0.0012634533233756998
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0025269066467513996,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.07499999552965164,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012894200731768533,
+          0.04259815477412833,
+          -0.0010023639378470071
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0020047278756940142,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.07499999552965164,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012045760962522543,
+          -0.04219580595558543,
+          -0.001131450146647403
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.002262900293294806,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.07999999821186066,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012901673007248617,
+          0.04262832264297514,
+          -0.0008960097925368679
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0017920195850737357,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.07999999821186066,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012051348497242086,
+          -0.04220637770532147,
+          -0.0010062030027654335
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.002012406005530867,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.08500000089406967,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012906708664968052,
+          0.04266005679128101,
+          -0.000799168916533843
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.001598337833067686,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.08500000089406967,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012067329791592776,
+          -0.04222014391602256,
+          -0.0008885554502997745
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.001777110900599549,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.09000000357627869,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012911702413294708,
+          0.04269116568246668,
+          -0.0007138817417906168
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0014277634835812335,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.09000000357627869,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.01197428065770428,
+          -0.044344392329858186,
+          -0.00078160152084662
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.00156320304169324,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.0950000062584877,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012915924392195797,
+          0.042720898026531104,
+          -0.0006397249951379433
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0012794499902758867,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.0950000062584877,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.011540530216886615,
+          -0.046861540314841604,
+          -0.0006863793873219011
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0013727587746438022,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.10000000894069672,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012921077327792256,
+          0.04275035438308262,
+          -0.0005761088782935252
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0011522177565870505,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.10000000894069672,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.010224917738210057,
+          -0.05037862302600054,
+          -0.0006052593451409084
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0012105186902818168,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      }
+    ],
+    "first100ms_joint_range_rad": [
+      0.018683793023228645,
+      0.024134598672389984,
+      0.03433108329772949,
+      0.011964574456214905,
+      0.06130605936050415,
+      0.044622212648391724,
+      0.028767943382263184,
+      0.0015056777046993375,
+      0.007867442443966866,
+      0.0696798637509346,
+      0.026746317744255066,
+      0.028076142072677612,
+      0.01985882967710495,
+      0.07301124930381775
+    ],
+    "joint_names": [
+      "left_hip_yaw",
+      "left_hip_roll",
+      "left_hip_pitch",
+      "left_knee",
+      "left_ankle",
+      "neck_pitch",
+      "head_pitch",
+      "head_yaw",
+      "head_roll",
+      "right_hip_yaw",
+      "right_hip_roll",
+      "right_hip_pitch",
+      "right_knee",
+      "right_ankle"
+    ],
+    "source_hashes": {
+      "trial.npz": "f11cce74e99e705c65ef8f27c2e0240e8c19adfa74e98677804c69ed75f5ab24",
+      "initial.npz": "b4538ad710decdfa7c5a8767a0be0f7139276f35c9b285bdde6dd4317f8fcf3d",
+      "metadata.json": "d71a5dcf0f841042da8d013e0ee6312bf806300e8a4d7ca2ec98a3db1554dafa"
+    }
+  },
+  "historical_prefix_exact": {
+    "time_s": true,
+    "action": true,
+    "joint_target_rad": true,
+    "joint_position_rad": true,
+    "joint_velocity_rad_s": true,
+    "joint_force_nm": true,
+    "qpos": true,
+    "qvel": true,
+    "foot_found": true,
+    "foot_force_w_n": true
+  },
+  "simulation_config_exact": true,
+  "simulation_config": "nconmax=35, njmax=1500, ls_parallel=True, contact_sensor_maxmatch=64, mujoco=MujocoCfg(timestep=0.005, integrator='implicitfast', impratio=1.0, cone='pyramidal', jacobian='auto', solver='newton', iterations=10, tolerance=1e-08, ls_iterations=20, ls_tolerance=0.01, ccd_iterations=50, gravity=(0.0, 0.0, -9.81), disableflags=(), enableflags=()), nan_guard=NanGuardCfg(enabled=False, buffer_size=100, output_dir='/tmp/mjlab/nan_dumps', max_envs_to_dump=5))",
+  "options": {
+    "timestep": 0.005,
+    "iterations": 10.0,
+    "tolerance": 1e-08,
+    "ls_iterations": 20.0,
+    "ls_tolerance": 0.01,
+    "solver": 2.0,
+    "integrator": 3.0,
+    "cone": 0.0,
+    "impratio": 1.0,
+    "ccd_iterations": 50.0,
+    "ccd_tolerance": 1e-06,
+    "gravity": [
+      0.0,
+      0.0,
+      -9.81
+    ]
+  },
+  "clearance-1mm": {
+    "initial": {
+      "root_qpos": [
+        0.0,
+        0.0,
+        0.11818236112594604,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "root_qvel": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sole_clearance_m": {
+        "left_foot_collision": 0.000999998421567459,
+        "right_foot_collision": 0.0009999988016737215
+      }
+    },
+    "samples": 1200,
+    "duration_s": 6.000089645385742,
+    "first100ms_observed_through_s": 0.10000000894069672,
+    "minimum_contact_distance_m": -0.0011557680154691656,
+    "maximum_native_contacts": 6,
+    "contacts_first100ms": [
+      {
+        "time_s": 0.014999999664723873,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.010594834849530704,
+          0.05171822491004716,
+          -0.0002577102436089056
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0005154204872178112,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.014999999664723873,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.01193465974721503,
+          0.04004157418600263,
+          -0.0002526197247387815
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.000505239449477563,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.014999999664723873,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.010595226700033033,
+          -0.05171959078309239,
+          -0.00025744796834167817
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0005148959366833563,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.014999999664723873,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.011934939185145791,
+          -0.04004292706634085,
+          -0.0002524115602411999
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0005048231204823998,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.019999999552965164,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012540781719961746,
+          0.04200805181697131,
+          -0.000452392422957657
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.000904784845915314,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.019999999552965164,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012550482614381136,
+          -0.04200970418158215,
+          -0.0004521209809621304
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0009042419619242608,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.02499999850988388,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012576928847207946,
+          0.04204955231249173,
+          -0.0005395205612248712
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0010790411224497424,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.02499999850988388,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012581631575629096,
+          -0.042049896257034376,
+          -0.000545614521403497
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.001091229042806994,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.029999997466802597,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012602406747650279,
+          0.04208523879472821,
+          -0.0005629079309429951
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0011258158618859902,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.029999997466802597,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012593109992148029,
+          -0.04208371926283202,
+          -0.0005778840077345828
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0011557680154691656,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.034999996423721313,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012620997616076568,
+          0.04211447103824992,
+          -0.0005506493185114792
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0011012986370229584,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.034999996423721313,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012595682867553956,
+          -0.042113271906500716,
+          -0.0005769820050548556
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0011539640101097112,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.03999999538064003,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012632487271903196,
+          0.04213891046883578,
+          -0.0005211685282033611
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0010423370564067221,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.03999999538064003,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012599564711112586,
+          -0.042138492771720736,
+          -0.0005574924036317714
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0011149848072635428,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.044999994337558746,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012639572538353527,
+          0.04216154632417466,
+          -0.00048421643031420743
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0009684328606284149,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.044999994337558746,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012603366866757091,
+          -0.042164129423217074,
+          -0.0005297934445100396
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0010595868890200793,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.04999999329447746,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012644005110457159,
+          0.042182093889112315,
+          -0.00044584981605872657
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0008916996321174531,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.04999999329447746,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012607701773524048,
+          -0.04218792545600685,
+          -0.0004990430312350322
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0009980860624700643,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.05499999225139618,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012648207293886122,
+          0.042202219804493436,
+          -0.00040868969284578146
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0008173793856915629,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.05499999225139618,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012611857229374197,
+          -0.04221025011209584,
+          -0.0004686269701595961
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0009372539403191922,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.059999991208314896,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012653384264506386,
+          0.042223301750166496,
+          -0.0003743780607862648
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0007487561215725295,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.059999991208314896,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012615908296910432,
+          -0.04223143594576112,
+          -0.0004404068770262268
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0008808137540524535,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.06499999016523361,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012658464645841996,
+          0.04224839111560272,
+          -0.0003467628879112467
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0006935257758224934,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.06499999016523361,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012622184129226555,
+          -0.042250707086601384,
+          -0.0004122138512477197
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0008244277024954394,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.06999999284744263,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012664259066435132,
+          0.042275234646749225,
+          -0.00032445561873591273
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0006489112374718255,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.06999999284744263,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012628949930638298,
+          -0.04226865802867392,
+          -0.0003864057919705944
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0007728115839411888,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.07499999552965164,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012671742229205524,
+          0.042303570146676926,
+          -0.0003065812534489192
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0006131625068978384,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.07499999552965164,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012636801266381562,
+          -0.04228551892895496,
+          -0.0003626072093865359
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0007252144187730718,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.07999999821186066,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012681295716246283,
+          0.04233456175856395,
+          -0.0002926533787011502
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0005853067574023004,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.07999999821186066,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012592261037147074,
+          -0.04432906219549727,
+          -0.00034173617714601187
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0006834723542920237,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.08500000089406967,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012685385898148023,
+          0.04236745014642775,
+          -0.0002810072790982651
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0005620145581965302,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.08500000089406967,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.011362971172108691,
+          -0.05047497412632078,
+          -0.0003216829791253856
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0006433659582507712,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.09000000357627869,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012687015606757921,
+          0.04240054994490882,
+          -0.0002708306554131054
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0005416613108262108,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.09000000357627869,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.011340326650564708,
+          -0.050494210304958376,
+          -0.00030110003141476174
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0006022000628295235,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.0950000062584877,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012687169964627393,
+          0.042434046750633204,
+          -0.0002619380087658077
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0005238760175316154,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.0950000062584877,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.011306277779423017,
+          -0.05051834105068177,
+          -0.0002798768258868798
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0005597536517737596,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.10000000894069672,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.010857901112607767,
+          0.0513750156139043,
+          -0.00025382657453996375
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0005076531490799275,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.10000000894069672,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.011275587528056002,
+          -0.05054083978117957,
+          -0.00025987750015903175
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0005197550003180635,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      }
+    ],
+    "first100ms_joint_range_rad": [
+      0.01343631837517023,
+      0.02438102662563324,
+      0.03522384166717529,
+      0.01429174654185772,
+      0.05935513973236084,
+      0.04370906949043274,
+      0.024480551481246948,
+      0.0019578454084694386,
+      0.008756899274885654,
+      0.07070764899253845,
+      0.027476832270622253,
+      0.0375748872756958,
+      0.03855380415916443,
+      0.0701475739479065
+    ],
+    "joint_names": [
+      "left_hip_yaw",
+      "left_hip_roll",
+      "left_hip_pitch",
+      "left_knee",
+      "left_ankle",
+      "neck_pitch",
+      "head_pitch",
+      "head_yaw",
+      "head_roll",
+      "right_hip_yaw",
+      "right_hip_roll",
+      "right_hip_pitch",
+      "right_knee",
+      "right_ankle"
+    ],
+    "source_hashes": {
+      "trial.npz": "c70267f71e3fde1dd7b8ea392a9f8d34a96d137f7d2721a0cceb2ca829b7fc7b",
+      "initial.npz": "d4a2e0aaefb52de826a8a884e5f8b10edc814010c28f5632fa166aedf751cdc9",
+      "metadata.json": "3e659dbd474181267fc3fabb8551e5a78c9321df755feaffc34511e18238efb7"
+    },
+    "gate": {
+      "pass_": true,
+      "reasons": [],
+      "pass": true
+    }
+  },
+  "clearance-1mm-repeat": {
+    "initial": {
+      "root_qpos": [
+        0.0,
+        0.0,
+        0.11818236112594604,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "root_qvel": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sole_clearance_m": {
+        "left_foot_collision": 0.000999998421567459,
+        "right_foot_collision": 0.0009999988016737215
+      }
+    },
+    "samples": 1200,
+    "duration_s": 6.000089645385742,
+    "first100ms_observed_through_s": 0.10000000894069672,
+    "minimum_contact_distance_m": -0.0011557680154691656,
+    "maximum_native_contacts": 6,
+    "contacts_first100ms": [
+      {
+        "time_s": 0.014999999664723873,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.010594834849530704,
+          0.05171822491004716,
+          -0.0002577102436089056
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0005154204872178112,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.014999999664723873,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.01193465974721503,
+          0.04004157418600263,
+          -0.0002526197247387815
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.000505239449477563,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.014999999664723873,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.010595226700033033,
+          -0.05171959078309239,
+          -0.00025744796834167817
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0005148959366833563,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.014999999664723873,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.011934939185145791,
+          -0.04004292706634085,
+          -0.0002524115602411999
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0005048231204823998,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.019999999552965164,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012540781719961746,
+          0.04200805181697131,
+          -0.000452392422957657
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.000904784845915314,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.019999999552965164,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012550482614381136,
+          -0.04200970418158215,
+          -0.0004521209809621304
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0009042419619242608,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.02499999850988388,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012576928847207946,
+          0.04204955231249173,
+          -0.0005395205612248712
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0010790411224497424,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.02499999850988388,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012581631575629096,
+          -0.042049896257034376,
+          -0.000545614521403497
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.001091229042806994,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.029999997466802597,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012602406747650279,
+          0.04208523879472821,
+          -0.0005629079309429951
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0011258158618859902,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.029999997466802597,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012593109992148029,
+          -0.04208371926283202,
+          -0.0005778840077345828
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0011557680154691656,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.034999996423721313,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012620997616076568,
+          0.04211447103824992,
+          -0.0005506493185114792
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0011012986370229584,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.034999996423721313,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012595682867553956,
+          -0.042113271906500716,
+          -0.0005769820050548556
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0011539640101097112,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.03999999538064003,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012632487271903196,
+          0.04213891046883578,
+          -0.0005211685282033611
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0010423370564067221,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.03999999538064003,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012599564711112586,
+          -0.042138492771720736,
+          -0.0005574924036317714
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0011149848072635428,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.044999994337558746,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012639572538353527,
+          0.04216154632417466,
+          -0.00048421643031420743
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0009684328606284149,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.044999994337558746,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012603366866757091,
+          -0.042164129423217074,
+          -0.0005297934445100396
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0010595868890200793,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.04999999329447746,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012644005110457159,
+          0.042182093889112315,
+          -0.00044584981605872657
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0008916996321174531,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.04999999329447746,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012607701773524048,
+          -0.04218792545600685,
+          -0.0004990430312350322
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0009980860624700643,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.05499999225139618,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012648207293886122,
+          0.042202219804493436,
+          -0.00040868969284578146
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0008173793856915629,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.05499999225139618,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012611857229374197,
+          -0.04221025011209584,
+          -0.0004686269701595961
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0009372539403191922,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.059999991208314896,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012653384264506386,
+          0.042223301750166496,
+          -0.0003743780607862648
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0007487561215725295,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.059999991208314896,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012615908296910432,
+          -0.04223143594576112,
+          -0.0004404068770262268
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0008808137540524535,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.06499999016523361,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012658464645841996,
+          0.04224839111560272,
+          -0.0003467628879112467
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0006935257758224934,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.06499999016523361,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012622184129226555,
+          -0.042250707086601384,
+          -0.0004122138512477197
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0008244277024954394,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.06999999284744263,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012664259066435132,
+          0.042275234646749225,
+          -0.00032445561873591273
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0006489112374718255,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.06999999284744263,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012628949930638298,
+          -0.04226865802867392,
+          -0.0003864057919705944
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0007728115839411888,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.07499999552965164,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012671742229205524,
+          0.042303570146676926,
+          -0.0003065812534489192
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0006131625068978384,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.07499999552965164,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012636801266381562,
+          -0.04228551892895496,
+          -0.0003626072093865359
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0007252144187730718,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.07999999821186066,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012681295716246283,
+          0.04233456175856395,
+          -0.0002926533787011502
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0005853067574023004,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.07999999821186066,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012592261037147074,
+          -0.04432906219549727,
+          -0.00034173617714601187
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0006834723542920237,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.08500000089406967,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012685385898148023,
+          0.04236745014642775,
+          -0.0002810072790982651
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0005620145581965302,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.08500000089406967,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.011362971172108691,
+          -0.05047497412632078,
+          -0.0003216829791253856
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0006433659582507712,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.09000000357627869,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012687015606757921,
+          0.04240054994490882,
+          -0.0002708306554131054
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0005416613108262108,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.09000000357627869,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.011340326650564708,
+          -0.050494210304958376,
+          -0.00030110003141476174
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0006022000628295235,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.0950000062584877,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.012687169964627393,
+          0.042434046750633204,
+          -0.0002619380087658077
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0005238760175316154,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.0950000062584877,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.011306277779423017,
+          -0.05051834105068177,
+          -0.0002798768258868798
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0005597536517737596,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.10000000894069672,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/left_foot_collision"
+        ],
+        "position_w_m": [
+          -0.010857901112607767,
+          0.0513750156139043,
+          -0.00025382657453996375
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0005076531490799275,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      },
+      {
+        "time_s": 0.10000000894069672,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "geom_names": [
+          "terrain",
+          "robot/right_foot_collision"
+        ],
+        "position_w_m": [
+          -0.011275587528056002,
+          -0.05054083978117957,
+          -0.00025987750015903175
+        ],
+        "normal_geom1_to_geom2": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance_m": -0.0005197550003180635,
+        "solref": [
+          0.02,
+          1.0
+        ],
+        "solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "friction": [
+          1.0,
+          1.0,
+          0.005,
+          0.0001,
+          0.0001
+        ],
+        "dim": 3
+      }
+    ],
+    "first100ms_joint_range_rad": [
+      0.01343631837517023,
+      0.02438102662563324,
+      0.03522384166717529,
+      0.01429174654185772,
+      0.05935513973236084,
+      0.04370906949043274,
+      0.024480551481246948,
+      0.0019578454084694386,
+      0.008756899274885654,
+      0.07070764899253845,
+      0.027476832270622253,
+      0.0375748872756958,
+      0.03855380415916443,
+      0.0701475739479065
+    ],
+    "joint_names": [
+      "left_hip_yaw",
+      "left_hip_roll",
+      "left_hip_pitch",
+      "left_knee",
+      "left_ankle",
+      "neck_pitch",
+      "head_pitch",
+      "head_yaw",
+      "head_roll",
+      "right_hip_yaw",
+      "right_hip_roll",
+      "right_hip_pitch",
+      "right_knee",
+      "right_ankle"
+    ],
+    "source_hashes": {
+      "trial.npz": "c70267f71e3fde1dd7b8ea392a9f8d34a96d137f7d2721a0cceb2ca829b7fc7b",
+      "initial.npz": "d4a2e0aaefb52de826a8a884e5f8b10edc814010c28f5632fa166aedf751cdc9",
+      "metadata.json": "2f0b1e424accb76f86c9ac3b713c7b6ad1b8167bd8060daab73d065dec92a8ab"
+    },
+    "gate": {
+      "pass_": true,
+      "reasons": [],
+      "pass": true
+    }
+  }
+}

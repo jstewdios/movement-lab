@@ -1,0 +1,84 @@
+{
+  "left_foot_collision": {
+    "geom_pos": true,
+    "geom_quat": true,
+    "geom_solref": true,
+    "geom_solimp": true,
+    "geom_friction": true,
+    "geom_margin": true,
+    "geom_gap": true,
+    "geom_condim": true,
+    "geom_contype": true,
+    "geom_conaffinity": true,
+    "mesh_vertices_exact": true
+  },
+  "right_foot_collision": {
+    "geom_pos": true,
+    "geom_quat": true,
+    "geom_solref": true,
+    "geom_solimp": true,
+    "geom_friction": true,
+    "geom_margin": true,
+    "geom_gap": true,
+    "geom_condim": true,
+    "geom_contype": true,
+    "geom_conaffinity": true,
+    "mesh_vertices_exact": true
+  },
+  "conditions": {
+    "clearance-1mm": {
+      "gate": {
+        "pass_": true,
+        "reasons": [],
+        "pass": true
+      },
+      "duration_s": 6.000089645385742,
+      "min_distance_m": -0.0011557680154691656,
+      "max_tilt_deg": 6.078702449798584,
+      "settled_max_com_speed_m_s": 0.002158482326194644,
+      "settled_max_angular_speed_rad_s": 0.03721040114760399,
+      "settled_com_range_xyz_m": [
+        0.0007170392200350761,
+        0.00020425525144673884,
+        8.7738037109375e-05
+      ],
+      "settled_mean_foot_fz_n": -7.232147216796875,
+      "settled_contact_fraction": [
+        1.0,
+        1.0
+      ],
+      "nonfoot_samples": 0,
+      "peak_effort_nm": 0.24704186618328094,
+      "peak_tracking_rad": 0.3491051495075226,
+      "runner_wall_s": 43.50871237501269
+    },
+    "clearance-1mm-repeat": {
+      "gate": {
+        "pass_": true,
+        "reasons": [],
+        "pass": true
+      },
+      "duration_s": 6.000089645385742,
+      "min_distance_m": -0.0011557680154691656,
+      "max_tilt_deg": 6.078702449798584,
+      "settled_max_com_speed_m_s": 0.002158482326194644,
+      "settled_max_angular_speed_rad_s": 0.03721040114760399,
+      "settled_com_range_xyz_m": [
+        0.0007170392200350761,
+        0.00020425525144673884,
+        8.7738037109375e-05
+      ],
+      "settled_mean_foot_fz_n": -7.232147216796875,
+      "settled_contact_fraction": [
+        1.0,
+        1.0
+      ],
+      "nonfoot_samples": 0,
+      "peak_effort_nm": 0.24704186618328094,
+      "peak_tracking_rad": 0.3491051495075226,
+      "runner_wall_s": 37.50607903499622
+    }
+  },
+  "repeat_all_arrays_exact": true,
+  "only_initial_root_z_changed": true
+}

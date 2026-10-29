@@ -1,0 +1,256 @@
+{
+  "initialization_root_z_m": 0.1181823627,
+  "condition": "1mm clearance; checkpoint99 plus named residual",
+  "sequence": "left_+1",
+  "seed": 42,
+  "amplitudes_rad": {
+    "left_hip_pitch": -0.02,
+    "left_knee": 0.035,
+    "left_ankle": -0.015
+  },
+  "physics_dt": 0.005,
+  "control_dt": 0.02,
+  "requested_seconds": 6,
+  "stop_reasons": [],
+  "terminated": false,
+  "truncated": false,
+  "joint_names": [
+    "left_hip_yaw",
+    "left_hip_roll",
+    "left_hip_pitch",
+    "left_knee",
+    "left_ankle",
+    "neck_pitch",
+    "head_pitch",
+    "head_yaw",
+    "head_roll",
+    "right_hip_yaw",
+    "right_hip_roll",
+    "right_hip_pitch",
+    "right_knee",
+    "right_ankle"
+  ],
+  "all_joint_names": [
+    "left_hip_yaw",
+    "left_hip_roll",
+    "left_hip_pitch",
+    "left_knee",
+    "left_ankle",
+    "neck_pitch",
+    "head_pitch",
+    "head_yaw",
+    "head_roll",
+    "right_hip_yaw",
+    "right_hip_roll",
+    "right_hip_pitch",
+    "right_knee",
+    "right_ankle"
+  ],
+  "body_names": [
+    "trunk_base",
+    "yaw2roll",
+    "hip_l",
+    "upper_leg_left",
+    "leg",
+    "ankle_left",
+    "neck",
+    "neck_pitch",
+    "yaw_roll_motion",
+    "jaw_soft",
+    "bearing_roll",
+    "hip_l_2",
+    "upper_leg_right",
+    "leg_2",
+    "ankle_right"
+  ],
+  "target_offset_rad": [
+    0.0,
+    -0.08730000257492065,
+    -0.4578999876976013,
+    -0.004900000058114529,
+    0.453000009059906,
+    0.3490999937057495,
+    0.3490999937057495,
+    0.0,
+    0.0,
+    0.0,
+    0.08730000257492065,
+    0.4578999876976013,
+    0.004900000058114529,
+    -0.453000009059906
+  ],
+  "joint_limits_rad": [
+    [
+      -0.4363323129985824,
+      0.5235987755982988
+    ],
+    [
+      -0.3839724354386992,
+      0.38397243543880577
+    ],
+    [
+      -1.570796326794949,
+      1.5707963267948442
+    ],
+    [
+      -1.5707963267948983,
+      1.5707963267948948
+    ],
+    [
+      -1.5707963267949063,
+      1.5707963267948868
+    ],
+    [
+      -1.5707963267948974,
+      1.0471975511965967
+    ],
+    [
+      -1.5707963267948966,
+      1.5707963267948966
+    ],
+    [
+      -2.9670597283903613,
+      2.9670597283903595
+    ],
+    [
+      -0.43633231299858327,
+      0.4363323129985815
+    ],
+    [
+      -0.523598775598297,
+      0.43633231299858416
+    ],
+    [
+      -0.3839724354387507,
+      0.38397243543875426
+    ],
+    [
+      -1.57079632679494,
+      1.570796326794853
+    ],
+    [
+      -1.5707963267949339,
+      1.5707963267948593
+    ],
+    [
+      -1.5707963267949028,
+      1.5707963267948903
+    ]
+  ],
+  "mass_kg": [
+    0.19922399520874023,
+    0.02304060012102127,
+    0.00618933979421854,
+    0.04820669814944267,
+    0.02158440090715885,
+    0.03002459928393364,
+    0.03684139996767044,
+    0.00571999978274107,
+    0.04859999939799309,
+    0.1887660026550293,
+    0.02304060012102127,
+    0.00618933979421854,
+    0.04820669814944267,
+    0.02158440090715885,
+    0.030025100335478783
+  ],
+  "summary": {
+    "valid": true,
+    "classification": "upright quiet endpoint",
+    "final_stability_gate": true,
+    "duration_s": 6.000089645385742,
+    "com_displacement_m": [
+      0.011436562053859234,
+      0.0003353543870616704,
+      -0.0022646337747573853
+    ],
+    "max_horizontal_com_excursion_m": 0.011441477574408054,
+    "com_height_min_max_m": [
+      0.13766618072986603,
+      0.1396857351064682
+    ],
+    "max_com_height_gain_m": -0.0002452433109283447,
+    "max_tilt_deg": 6.1626200675964355,
+    "max_orientation_change_deg": 6.306616306304932,
+    "final_tilt_deg": 6.1626200675964355,
+    "joint_range_rad": [
+      0.11282576620578766,
+      0.02438102662563324,
+      0.08136337995529175,
+      0.030021468177437782,
+      0.08275651931762695,
+      0.14373600482940674,
+      0.09253844618797302,
+      0.03197057172656059,
+      0.06705240160226822,
+      0.09628014266490936,
+      0.027651533484458923,
+      0.14011803269386292,
+      0.062301889061927795,
+      0.07015672326087952
+    ],
+    "peak_tracking_error_rad": 0.3491051495075226,
+    "peak_command_offset_rad": 0.3520042598247528,
+    "foot_contact_fraction": [
+      0.9983333333333333,
+      0.9983333333333333
+    ],
+    "feet_off_total_s": 0.009999999776482582,
+    "feet_off_longest_s": 0.009999999776482582,
+    "all_ground_off_total_s": 0.009999999776482582,
+    "all_ground_off_longest_s": 0.009999999776482582,
+    "nonfoot_contact_total_s": 0.0,
+    "min_native_contact_distance_m": -0.0011557680154691656,
+    "max_joint_limit_overshoot_rad": 0.0,
+    "peak_joint_effort_nm": 0.24704186618328094,
+    "rms_joint_effort_nm": 0.05073293298482895,
+    "absolute_mechanical_work_j": 0.0841537390764469,
+    "final_com_speed_m_s": 0.00020112904894631356,
+    "final_root_angular_speed_rad_s": 0.002655708696693182
+  },
+  "wall_seconds": 24.06720166199375,
+  "gate": {
+    "pass_": true,
+    "reasons": [],
+    "pass": true
+  },
+  "departure_metrics": {
+    "physical_gate": {
+      "pass_": true,
+      "reasons": [],
+      "pass": true
+    },
+    "settled_before_command": true,
+    "stable_final_half_second": true,
+    "recovered": true,
+    "recovery_delay_s": 3.504753112792969e-05,
+    "returned_final": true,
+    "peak_com_excursion_xyz_m": [
+      0.0007055141031742096,
+      0.00017052629846148193,
+      0.0001287907361984253
+    ],
+    "final_com_offset_xyz_m": [
+      0.0006831753998994827,
+      -0.00015908997738733888,
+      -0.00012464821338653564
+    ],
+    "final_max_joint_offset_rad": 0.009249478578567505,
+    "peak_orientation_change_deg": 0.7506883144378662,
+    "foot_contact_transitions": [
+      0,
+      0
+    ],
+    "min_foot_fz_magnitude_n": [
+      2.980290412902832,
+      3.7904207706451416
+    ],
+    "final_mean_foot_fz_n": [
+      -3.1808276176452637,
+      -4.05202054977417
+    ],
+    "peak_effort_postsettle_nm": 0.10366057604551315,
+    "controlled_response": false,
+    "classification": "stable; measurable response or contraction not established"
+  }
+}

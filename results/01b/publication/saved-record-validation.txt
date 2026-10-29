@@ -1,0 +1,77 @@
+PASS: hashes, checkpoint, arrays, controller composition, mapping, gate, saved-state geometry/COM/contact audit
+PASS: hashes, checkpoint, arrays, controller composition, mapping, gate, saved-state geometry/COM/contact audit
+PASS: hashes, checkpoint, arrays, controller composition, mapping, gate, saved-state geometry/COM/contact audit
+PASS: hashes, checkpoint, arrays, controller composition, mapping, gate, saved-state geometry/COM/contact audit
+PASS: hashes, checkpoint, arrays, controller composition, mapping, gate, saved-state geometry/COM/contact audit
+PASS: hashes, checkpoint, arrays, controller composition, mapping, gate, saved-state geometry/COM/contact audit
+PASS: hashes, checkpoint, arrays, controller composition, mapping, gate, saved-state geometry/COM/contact audit
+PASS: hashes, checkpoint, arrays, controller composition, mapping, gate, saved-state geometry/COM/contact audit
+PASS: hashes, checkpoint, arrays, controller composition, mapping, gate, saved-state geometry/COM/contact audit
+PASS: hashes, checkpoint, arrays, controller composition, mapping, gate, saved-state geometry/COM/contact audit
+PASS: hashes, checkpoint, arrays, controller composition, mapping, gate, saved-state geometry/COM/contact audit
+{
+  "baseline": {
+    "samples": 1200,
+    "matched_prefix_exact": true,
+    "envelope": true,
+    "actuator_transmission_mapping": true,
+    "composed_target_limits": true,
+    "recovery_recomputed": true
+  },
+  "final-control": {
+    "samples": 1200,
+    "matched_prefix_exact": true,
+    "envelope": true,
+    "actuator_transmission_mapping": true,
+    "composed_target_limits": true,
+    "recovery_recomputed": true
+  },
+  "flex": {
+    "samples": 1200,
+    "matched_prefix_exact": true,
+    "envelope": true,
+    "actuator_transmission_mapping": true,
+    "composed_target_limits": true,
+    "recovery_recomputed": true
+  },
+  "head-negative": {
+    "samples": 1200,
+    "matched_prefix_exact": true,
+    "envelope": true,
+    "actuator_transmission_mapping": true,
+    "composed_target_limits": true,
+    "recovery_recomputed": true
+  },
+  "head-positive": {
+    "samples": 1200,
+    "matched_prefix_exact": true,
+    "envelope": true,
+    "actuator_transmission_mapping": true,
+    "composed_target_limits": true,
+    "recovery_recomputed": true
+  },
+  "shift-negative": {
+    "samples": 1200,
+    "matched_prefix_exact": true,
+    "envelope": true,
+    "actuator_transmission_mapping": true,
+    "composed_target_limits": true,
+    "recovery_recomputed": true
+  },
+  "shift-positive": {
+    "samples": 1200,
+    "matched_prefix_exact": true,
+    "envelope": true,
+    "actuator_transmission_mapping": true,
+    "composed_target_limits": true,
+    "recovery_recomputed": true
+  },
+  "unilateral": {
+    "samples": 1200,
+    "matched_prefix_exact": true,
+    "envelope": true,
+    "actuator_transmission_mapping": true,
+    "composed_target_limits": true,
+    "recovery_recomputed": true
+  }
+}

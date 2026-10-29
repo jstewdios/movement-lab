@@ -1,0 +1,226 @@
+{
+  "records": {
+    "zero": {
+      "sequence": "zero",
+      "seed": 42,
+      "amplitudes_rad": {},
+      "physics_dt": 0.005,
+      "control_dt": 0.02,
+      "requested_seconds": 6,
+      "stop_reasons": [
+        "penetration_over_3mm"
+      ],
+      "terminated": false,
+      "truncated": false,
+      "joint_names": [
+        "left_hip_yaw",
+        "left_hip_roll",
+        "left_hip_pitch",
+        "left_knee",
+        "left_ankle",
+        "neck_pitch",
+        "head_pitch",
+        "head_yaw",
+        "head_roll",
+        "right_hip_yaw",
+        "right_hip_roll",
+        "right_hip_pitch",
+        "right_knee",
+        "right_ankle"
+      ],
+      "all_joint_names": [
+        "left_hip_yaw",
+        "left_hip_roll",
+        "left_hip_pitch",
+        "left_knee",
+        "left_ankle",
+        "neck_pitch",
+        "head_pitch",
+        "head_yaw",
+        "head_roll",
+        "right_hip_yaw",
+        "right_hip_roll",
+        "right_hip_pitch",
+        "right_knee",
+        "right_ankle"
+      ],
+      "body_names": [
+        "trunk_base",
+        "yaw2roll",
+        "hip_l",
+        "upper_leg_left",
+        "leg",
+        "ankle_left",
+        "neck",
+        "neck_pitch",
+        "yaw_roll_motion",
+        "jaw_soft",
+        "bearing_roll",
+        "hip_l_2",
+        "upper_leg_right",
+        "leg_2",
+        "ankle_right"
+      ],
+      "target_offset_rad": [
+        0.0,
+        -0.08730000257492065,
+        -0.4578999876976013,
+        -0.004900000058114529,
+        0.453000009059906,
+        0.3490999937057495,
+        0.3490999937057495,
+        0.0,
+        0.0,
+        0.0,
+        0.08730000257492065,
+        0.4578999876976013,
+        0.004900000058114529,
+        -0.453000009059906
+      ],
+      "joint_limits_rad": [
+        [
+          -0.4363323129985824,
+          0.5235987755982988
+        ],
+        [
+          -0.3839724354386992,
+          0.38397243543880577
+        ],
+        [
+          -1.570796326794949,
+          1.5707963267948442
+        ],
+        [
+          -1.5707963267948983,
+          1.5707963267948948
+        ],
+        [
+          -1.5707963267949063,
+          1.5707963267948868
+        ],
+        [
+          -1.5707963267948974,
+          1.0471975511965967
+        ],
+        [
+          -1.5707963267948966,
+          1.5707963267948966
+        ],
+        [
+          -2.9670597283903613,
+          2.9670597283903595
+        ],
+        [
+          -0.43633231299858327,
+          0.4363323129985815
+        ],
+        [
+          -0.523598775598297,
+          0.43633231299858416
+        ],
+        [
+          -0.3839724354387507,
+          0.38397243543875426
+        ],
+        [
+          -1.57079632679494,
+          1.570796326794853
+        ],
+        [
+          -1.5707963267949339,
+          1.5707963267948593
+        ],
+        [
+          -1.5707963267949028,
+          1.5707963267948903
+        ]
+      ],
+      "mass_kg": [
+        0.19922399520874023,
+        0.02304060012102127,
+        0.00618933979421854,
+        0.04820669814944267,
+        0.02158440090715885,
+        0.03002459928393364,
+        0.03684139996767044,
+        0.00571999978274107,
+        0.04859999939799309,
+        0.1887660026550293,
+        0.02304060012102127,
+        0.00618933979421854,
+        0.04820669814944267,
+        0.02158440090715885,
+        0.030025100335478783
+      ],
+      "summary": {
+        "valid": true,
+        "classification": "unsettled / nonupright endpoint",
+        "final_stability_gate": false,
+        "duration_s": 0.059999991208314896,
+        "com_displacement_m": [
+          0.00045357708586379886,
+          0.0003116056032013148,
+          -0.009977146983146667
+        ],
+        "max_horizontal_com_excursion_m": 0.0005503001157194376,
+        "com_height_min_max_m": [
+          0.13662761449813843,
+          0.14650337398052216
+        ],
+        "max_com_height_gain_m": -0.0002452433109283447,
+        "max_tilt_deg": 0.8490366339683533,
+        "max_orientation_change_deg": 0.9626529812812805,
+        "final_tilt_deg": 0.7146373987197876,
+        "joint_range_rad": [
+          0.006521230097860098,
+          0.012097910046577454,
+          0.03433108329772949,
+          0.005254342686384916,
+          0.056369513273239136,
+          0.04086512327194214,
+          0.028767943382263184,
+          0.0012821696000173688,
+          0.002970694098621607,
+          0.021695777773857117,
+          0.00942685455083847,
+          0.020679891109466553,
+          0.01288297027349472,
+          0.0639612078666687
+        ],
+        "peak_tracking_error_rad": 0.34191110730171204,
+        "peak_command_offset_rad": 0.31905397772789,
+        "foot_contact_fraction": [
+          0.4166666666666667,
+          0.4166666666666667
+        ],
+        "feet_off_total_s": 0.034999996423721313,
+        "feet_off_longest_s": 0.034999996423721313,
+        "all_ground_off_total_s": 0.034999996423721313,
+        "all_ground_off_longest_s": 0.034999996423721313,
+        "nonfoot_contact_total_s": 0.0,
+        "min_native_contact_distance_m": -0.003160030468895663,
+        "max_joint_limit_overshoot_rad": 0.0,
+        "peak_joint_effort_nm": 0.24704186618328094,
+        "rms_joint_effort_nm": 0.09590896219015121,
+        "absolute_mechanical_work_j": 0.033927876605277366,
+        "final_com_speed_m_s": 0.04700798913836479,
+        "final_root_angular_speed_rad_s": 0.73885577917099
+      },
+      "wall_seconds": 1.6743125700158998,
+      "gate": {
+        "pass_": false,
+        "reasons": [
+          "incomplete_horizon",
+          "no_settled_window",
+          "penetration_over_3mm"
+        ],
+        "pass": false
+      }
+    }
+  },
+  "archive": {
+    "('unsettled / nonupright endpoint', 0, 0, 0)": [
+      "zero"
+    ]
+  }
+}

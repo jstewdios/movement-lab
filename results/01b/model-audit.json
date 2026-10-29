@@ -1,0 +1,250 @@
+{
+  "xml_hashes": {
+    "walk": "80fc4424ed71e430ec4919110dfdb5c714dc1c4e1138e1832a16865cf31eb8c8",
+    "groundcontact": "99d23867e46e9d4748ff1398016b850f09fb6cf02a558c0272743b39ce3acf15"
+  },
+  "identical_physical_arrays": {
+    "body_mass": true,
+    "body_inertia": true,
+    "body_ipos": true,
+    "body_iquat": true,
+    "body_pos": true,
+    "body_quat": true,
+    "jnt_type": true,
+    "jnt_pos": true,
+    "jnt_axis": true,
+    "jnt_range": true,
+    "dof_damping": true,
+    "dof_armature": true,
+    "actuator_gear": true
+  },
+  "initial_qpos_max_difference": 0.0,
+  "initial_qvel_max_difference": 0.0,
+  "models": {
+    "walk": {
+      "nq": 21,
+      "nv": 20,
+      "nu": 14,
+      "mass": 0.7372431799999999,
+      "collision_geoms": [
+        {
+          "name": null,
+          "body": "trunk_base",
+          "mesh": "power_support",
+          "contype": 2,
+          "conaffinity": 2,
+          "condim": 3,
+          "friction": [
+            1.0,
+            0.005,
+            0.0001
+          ]
+        },
+        {
+          "name": null,
+          "body": "leg",
+          "mesh": "leg",
+          "contype": 2,
+          "conaffinity": 2,
+          "condim": 3,
+          "friction": [
+            1.0,
+            0.005,
+            0.0001
+          ]
+        },
+        {
+          "name": "left_foot_collision",
+          "body": "ankle_left",
+          "mesh": "sole_left",
+          "contype": 1,
+          "conaffinity": 1,
+          "condim": 3,
+          "friction": [
+            1.0,
+            0.005,
+            0.0001
+          ]
+        },
+        {
+          "name": null,
+          "body": "leg_2",
+          "mesh": "leg",
+          "contype": 2,
+          "conaffinity": 2,
+          "condim": 3,
+          "friction": [
+            1.0,
+            0.005,
+            0.0001
+          ]
+        },
+        {
+          "name": "right_foot_collision",
+          "body": "ankle_right",
+          "mesh": "sole_right",
+          "contype": 1,
+          "conaffinity": 1,
+          "condim": 3,
+          "friction": [
+            1.0,
+            0.005,
+            0.0001
+          ]
+        }
+      ]
+    },
+    "groundcontact": {
+      "nq": 21,
+      "nv": 20,
+      "nu": 14,
+      "mass": 0.7372431799999999,
+      "collision_geoms": [
+        {
+          "name": null,
+          "body": "trunk_base",
+          "mesh": "power_support",
+          "contype": 2,
+          "conaffinity": 2,
+          "condim": 3,
+          "friction": [
+            1.0,
+            0.005,
+            0.0001
+          ]
+        },
+        {
+          "name": null,
+          "body": "trunk_base",
+          "mesh": "np_f970",
+          "contype": 1,
+          "conaffinity": 1,
+          "condim": 3,
+          "friction": [
+            1.0,
+            0.005,
+            0.0001
+          ]
+        },
+        {
+          "name": null,
+          "body": "hip_l",
+          "mesh": "hip_l",
+          "contype": 1,
+          "conaffinity": 1,
+          "condim": 3,
+          "friction": [
+            1.0,
+            0.005,
+            0.0001
+          ]
+        },
+        {
+          "name": null,
+          "body": "leg",
+          "mesh": "leg",
+          "contype": 1,
+          "conaffinity": 1,
+          "condim": 3,
+          "friction": [
+            1.0,
+            0.005,
+            0.0001
+          ]
+        },
+        {
+          "name": "left_foot_collision",
+          "body": "ankle_left",
+          "mesh": "sole_left",
+          "contype": 1,
+          "conaffinity": 1,
+          "condim": 3,
+          "friction": [
+            1.0,
+            0.005,
+            0.0001
+          ]
+        },
+        {
+          "name": null,
+          "body": "jaw_soft",
+          "mesh": "top_head_shell",
+          "contype": 1,
+          "conaffinity": 1,
+          "condim": 3,
+          "friction": [
+            1.0,
+            0.005,
+            0.0001
+          ]
+        },
+        {
+          "name": null,
+          "body": "jaw_soft",
+          "mesh": "jaw",
+          "contype": 1,
+          "conaffinity": 1,
+          "condim": 3,
+          "friction": [
+            1.0,
+            0.005,
+            0.0001
+          ]
+        },
+        {
+          "name": null,
+          "body": "jaw_soft",
+          "mesh": "bottom_head_shell",
+          "contype": 1,
+          "conaffinity": 1,
+          "condim": 3,
+          "friction": [
+            1.0,
+            0.005,
+            0.0001
+          ]
+        },
+        {
+          "name": null,
+          "body": "hip_l_2",
+          "mesh": "hip_l",
+          "contype": 1,
+          "conaffinity": 1,
+          "condim": 3,
+          "friction": [
+            1.0,
+            0.005,
+            0.0001
+          ]
+        },
+        {
+          "name": null,
+          "body": "leg_2",
+          "mesh": "leg",
+          "contype": 1,
+          "conaffinity": 1,
+          "condim": 3,
+          "friction": [
+            1.0,
+            0.005,
+            0.0001
+          ]
+        },
+        {
+          "name": "right_foot_collision",
+          "body": "ankle_right",
+          "mesh": "sole_right",
+          "contype": 1,
+          "conaffinity": 1,
+          "condim": 3,
+          "friction": [
+            1.0,
+            0.005,
+            0.0001
+          ]
+        }
+      ]
+    }
+  },
+  "historical_replay_max_link_error_m": 3.164714151848713e-08
+}

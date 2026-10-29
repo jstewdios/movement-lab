@@ -1,0 +1,18 @@
+{
+  "discovery_metrics.py": "318d39537ee29a8d18e6576733c2df20b354b7c24b41da145b061a0bc43cb3ca",
+  "atlas.json": "f29e5cf67632e75f1f64aff0ad71fec6c0d82e4088a8b9fdb2c58ff1066088ae",
+  "departure01b.py": "aa90cf62f11e82760d8f5cced255caa4ce07b823a0ce733164dae1abf827ea1a",
+  "atlas.png": "7cf80181f77cf934fcd97f9255ee32f3347167fd7d3244b6ccce471e717ca05d",
+  "validation01b.json": "54803914b2e596b66868ddb925c0943fcccd39be3ea6cf4f242fcd82f7f5e398",
+  "resolved_config.txt": "88e9f314ec72ffc2842144ae90d6c8d85345582dd2e59a0f7bda1651767c8f78",
+  "replay01a.py": "570b180058b5e1c58e22a5d1e706fc662baa9dd14652686ee2167d32a278efa2",
+  "controlled01b.py": "cf631c62c81cdf2d99e5800a2da7d22986cab8880d3f43966d422ca4a4c82a30",
+  "provenance.json": "7c90169d4f4ec54c09eb4acd4fce606f2a53145de77c3d985b53e87d725018ce",
+  "replay_model.mjb": "cba1a6dab0683d8ecaa26872b573c48a82bf9c27b7c260c25e80d74abcf0b9bd",
+  "validation.json": "99b3cf47780b9f0ea1160b3ae812ba153ac784db2117db8096e1ecafd4466317",
+  "departure_metrics01b.py": "03bf4d4e2b3def802e9a4cfbe42b2d14de21157fa6d03434dceefca2d53e15df",
+  "replay.html": "42071ef8138cd4899f0dbaceab50c09dbf829c81f81c35b9ee5d6a462891440f",
+  "head_+1/metadata.json": "cff6566a9bbd143702f8b319cc9634aee85593e59605c4e5e25cf983b8420ebe",
+  "head_+1/initial.npz": "d4a2e0aaefb52de826a8a884e5f8b10edc814010c28f5632fa166aedf751cdc9",
+  "head_+1/trial.npz": "68de7428127667855b434877a582facee6b14c6e4d1ddc29fe4f894707c2cf32"
+}

@@ -1,0 +1,32 @@
+test_nonmonotone_points_are_retained_and_audited (test_boundary.BoundaryTests.test_nonmonotone_points_are_retained_and_audited) ... ok
+test_return_is_distinct_from_displaced_recovery (test_boundary.BoundaryTests.test_return_is_distinct_from_displaced_recovery) ... ok
+test_rotated_standing_is_not_return_to_original_orientation (test_boundary.BoundaryTests.test_rotated_standing_is_not_return_to_original_orientation) ... ok
+test_upright_instability_is_not_called_falling (test_boundary.BoundaryTests.test_upright_instability_is_not_called_falling) ... ok
+test_terminated_trial_uses_common_pre_event_samples (test_boundary.BoundaryValidationTests.test_terminated_trial_uses_common_pre_event_samples) ... ok
+test_bounded_signed_commands_and_recovery (test_controlled01b.ControlledGateTests.test_bounded_signed_commands_and_recovery) ... ok
+test_contact_and_settling_failures (test_controlled01b.ControlledGateTests.test_contact_and_settling_failures) ... ok
+test_rejects_quiet_fallen_and_body_supported (test_controlled01b.ControlledGateTests.test_rejects_quiet_fallen_and_body_supported) ... ok
+test_body_support_is_not_airborne_or_stable (test_discovery.ClassificationTests.test_body_support_is_not_airborne_or_stable) ... ok
+test_quiet_fall_is_not_success (test_discovery.ClassificationTests.test_quiet_fall_is_not_success) ... ok
+test_airtime_requires_consecutive_samples (test_discovery.DiscoveryTests.test_airtime_requires_consecutive_samples) ... ok
+test_pulse_boundaries_and_slew (test_discovery.DiscoveryTests.test_pulse_boundaries_and_slew) ... ok
+test_recovery_requires_settling_and_final_stability (test_disturbance.DisturbanceTests.test_recovery_requires_settling_and_final_stability) ... ok
+test_saved_interventions (test_disturbance.DisturbanceTests.test_saved_interventions) ... ok
+test_step_evidence_rejects_sliding_and_requires_lift (test_disturbance.DisturbanceTests.test_step_evidence_rejects_sliding_and_requires_lift) ... ok
+test_clearance_is_world_mesh_minimum_and_translates (test_landing01b.LandingAuditTests.test_clearance_is_world_mesh_minimum_and_translates) ... ok
+test_diagnostic_runner_has_only_zero_plan (test_landing01b.LandingAuditTests.test_diagnostic_runner_has_only_zero_plan) ... ok
+test_known_physics (test_measure.Measurements.test_known_physics) ... ok
+test_reject_corruption (test_measure.Measurements.test_reject_corruption) ... ok
+test_tilt (test_measure.Measurements.test_tilt) ... ok
+test_repeatability (test_records.RecordedTrials.test_repeatability) ... ok
+test_saved_rollouts (test_records.RecordedTrials.test_saved_rollouts) ... ok
+test_absent_optional_records_are_skipped (test_saved_fixture_modes.SavedFixtureModes.test_absent_optional_records_are_skipped) ... ok
+test_corrupt_available_archive_is_not_skipped (test_saved_fixture_modes.SavedFixtureModes.test_corrupt_available_archive_is_not_skipped) ... ok
+test_explicit_metadata_without_raw_record_fails (test_saved_fixture_modes.SavedFixtureModes.test_explicit_metadata_without_raw_record_fails) ... ok
+test_explicit_missing_or_empty_root_fails (test_saved_fixture_modes.SavedFixtureModes.test_explicit_missing_or_empty_root_fails) ... ok
+test_partial_directory_still_checks_available_real_record (test_saved_fixture_modes.SavedFixtureModes.test_partial_directory_still_checks_available_real_record) ... ok
+
+----------------------------------------------------------------------
+Ran 27 tests in 0.601s
+
+OK
