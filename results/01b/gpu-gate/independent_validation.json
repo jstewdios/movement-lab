@@ -1,0 +1,7 @@
+{
+  "samples": 12,
+  "duration_s": 0.059999991208314896,
+  "pose_error_m": 1.774056629377796e-08,
+  "com_error_m": 1.2439453883628104e-08,
+  "foot_occupancy_exact": true
+}

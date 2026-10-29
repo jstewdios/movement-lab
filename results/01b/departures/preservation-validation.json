@@ -1,0 +1,11 @@
+{
+  "historical_manifests_verified": {
+    "results/01b/evidence-manifest.json": 28,
+    "results/01b/landing-diagnosis/diagnostic-manifest.json": 53
+  },
+  "upstream_files_unchanged": 109,
+  "completed_gpu_trials": 8,
+  "physics_samples": 9600,
+  "planned_budget_exceeded": false,
+  "final_zero_repeat_exact": true
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "time_s": 0.04999999329447746,
+    "distance_m": -0.0031261114552394095,
+    "geoms": [
+      "terrain",
+      "robot/right_foot_collision"
+    ],
+    "bodies": [
+      "terrain",
+      "robot/ankle_right"
+    ]
+  },
+  {
+    "time_s": 0.05499999225139618,
+    "distance_m": -0.003160030468895663,
+    "geoms": [
+      "terrain",
+      "robot/right_foot_collision"
+    ],
+    "bodies": [
+      "terrain",
+      "robot/ankle_right"
+    ]
+  },
+  {
+    "time_s": 0.059999991208314896,
+    "distance_m": -0.003018679448044235,
+    "geoms": [
+      "terrain",
+      "robot/right_foot_collision"
+    ],
+    "bodies": [
+      "terrain",
+      "robot/ankle_right"
+    ]
+  }
+]

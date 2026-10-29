@@ -1,0 +1,8 @@
+{
+  "shift_+1": {
+    "composition": true,
+    "residual_schedule": true,
+    "initial_state": true,
+    "gate_recomputed": true
+  }
+}

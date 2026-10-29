@@ -321,3 +321,34 @@ See [01A report](results/01a/atlas-v2/REPORT.md),
 The [attempt log](results/01a/ATTEMPTS.md) documents preflight fixes and excluded
 diagnostic outputs. No roll, jump, or recovery success is inferred from a fall,
 feet-off interval, low endpoint speed, or contact alone.
+
+## Movement Lab 01B — Stable Baseline and Controlled Departures
+
+Completed bounded study: a validated 1 mm-clearance starting condition supports
+small head-yaw articulation with partial return under checkpoint 99. Bilateral
+flexion leaves a stable offset; lateral and unilateral commands miss the declared
+response thresholds. No unloading, stepping or falling is demonstrated.
+
+Read the [controlled-departure report](results/01b/departures/REPORT.md) and
+[comparison with measured replays](results/01b/departures/comparison.html).
+Eight six-second departure-study GPU runs completed with the unchanged 3 mm
+penetration limit. The [initial failed baseline](results/01b/REPORT.md) and
+[landing diagnosis](results/01b/landing-diagnosis/REPORT.md) preserve the progression:
+the original 3.16 mm overlap also occurs in 00A, while a separate 1 mm-clearance
+initialization passes the same gate twice before departure evaluation.
+
+The [publication and reproduction notes](results/01b/PUBLICATION.md) distinguish
+published reports/replays/configurations/source/provenance from local raw data,
+compiled robot geometry, logs and redundant exports. No prior study was changed.
+Full saved-record validation requires those local artifacts and the separately
+installed upstream environment/checkpoint; a fresh checkout cannot verify missing
+raw evidence. Portable replays use saved link centers without integrating dynamics.
+
+```bash
+PY=/home/james/microduck_rl/.venv/bin/python
+$PY -m unittest discover -s tests -v
+$PY -m movement_lab.validate01b results/01b/gpu-gate
+$PY -m movement_lab.validate01b results/01b/landing-diagnosis/clearance-1mm
+$PY -m movement_lab.validate01b results/01b/landing-diagnosis/clearance-1mm-repeat
+$PY -m movement_lab.validate_departures01b
+```
