@@ -36,8 +36,8 @@
       "sha256": "1040895f31ac4191e1187d85cb778de282510b5e4db2785c78604d04423ce54d"
     },
     "movement_lab/write_report01c.py": {
-      "bytes": 11732,
-      "sha256": "f2b10790dc4c46a05613d72ab37772ee9959bf20378853254446663ccad9a669"
+      "bytes": 12982,
+      "sha256": "1cd6f5c89eca87148c807cc6e97458a8b42c24e54ea79adaa78d20ec8fd56cc5"
     },
     "results/01c/ATTEMPTS.md": {
       "bytes": 708,
@@ -420,8 +420,8 @@
       "sha256": "cd154f69632dbec6d429966ba05362a02d200f93015ef15f0af082314b660856"
     },
     "tests/test_transition01c.py": {
-      "bytes": 2079,
-      "sha256": "f5a6900e74921b31748066ab85e2d70a8d75af723199a38f141d0329e676a595"
+      "bytes": 6568,
+      "sha256": "111d3d3882db84eb6f6444637adb0fcf91c5b01da977cdcbb25d7edc811d1a5d"
     }
   },
   "local_only_files": {
