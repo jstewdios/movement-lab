@@ -1,0 +1,53 @@
+{
+  "trials": [
+    [
+      "baseline",
+      "zero"
+    ],
+    [
+      "flex",
+      "flex_+1"
+    ],
+    [
+      "extend",
+      "flex_-1"
+    ],
+    [
+      "head-positive",
+      "head_+1"
+    ],
+    [
+      "head-negative",
+      "head_-1"
+    ],
+    [
+      "rock-forward",
+      "rock_+1"
+    ],
+    [
+      "rock-backward",
+      "rock_-1"
+    ],
+    [
+      "final-control",
+      "zero_repeat"
+    ]
+  ],
+  "seconds": 10,
+  "launch_budget_wall_s": 600,
+  "maximum_trials": 8,
+  "policy": "checkpoint99",
+  "initial_clearance_mm": 1,
+  "penetration_limit_mm": 3,
+  "pulse": {
+    "start": 2,
+    "rise": 0.6,
+    "hold": 1,
+    "return_duration": 1.4
+  },
+  "thresholds": {
+    "joint_response_rad": 0.005,
+    "com_response_m": 0.0005
+  },
+  "interpretation": "stable changed configurations accepted; return evaluated separately"
+}

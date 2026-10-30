@@ -352,3 +352,39 @@ $PY -m movement_lab.validate01b results/01b/landing-diagnosis/clearance-1mm
 $PY -m movement_lab.validate01b results/01b/landing-diagnosis/clearance-1mm-repeat
 $PY -m movement_lab.validate_departures01b
 ```
+
+## Movement Lab 01C — Controlled Transitions
+
+The completed first pilot retained five ten-second records in 510.8 s, with
+stable flex reconfiguration and partial return for extension and signed head yaw.
+Rocking and the final zero repeat were omitted by the launch cap; historical
+six-second baseline arrays, model and configuration match exactly.
+
+The bounded pilot retains checkpoint 99, the validated 1 mm-clearance reset,
+groundcontact and the unchanged 3 mm penetration gate. It probes signed flexion,
+extension, head yaw and sagittal rocking with smooth additive joint residuals;
+each ten-second record includes five seconds after residual removal. Stable
+changed configurations and partial return are evaluated separately.
+
+```bash
+PY=/home/james/microduck_rl/.venv/bin/python
+PYTHONDONTWRITEBYTECODE=1 $PY -m movement_lab.study01c --out results/01c/new-pilot
+$PY -m movement_lab.report01c results/01c/new-pilot
+$PY -m movement_lab.write_report01c results/01c/new-pilot
+$PY -m unittest discover -s tests -v
+```
+
+Read the [pilot report](results/01c/pilot-gpu/REPORT.md),
+[atlas and synchronized recorded-state replay](results/01c/pilot-gpu/comparison.html),
+and [attempt notes](results/01c/ATTEMPTS.md). Baseline failure stops departures.
+The driver refuses existing output roots and bounds launches to eight trials
+and 510 wall seconds, reserving 90 seconds for the final launched trial.
+This is a launch budget, not a hard GPU-kernel-time measurement. The runner
+also accepts `--amplitude-scale`, `--rise`, `--hold`, and `--return-duration`.
+Raw trajectories, geometry and logs remain local and hashed.
+
+01C [publication and reproduction notes](results/01c/PUBLICATION.md) explain the
+five **ten-second** records, the untested conditions, and local-only evidence.
+`python -m movement_lab.publication01c` verifies published hashes;
+`python -m movement_lab.validate01c` performs read-only full saved-record validation
+when the local trajectories, compiled models and upstream dependencies are present.

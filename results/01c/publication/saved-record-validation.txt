@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/james/movement-lab/movement_lab/validate01c.py", line 108, in <module>
+    main()
+  File "/home/james/movement-lab/movement_lab/validate01c.py", line 103, in main
+    print(json.dumps(audit(args.root), indent=2))
+                     ^^^^^^^^^^^^^^^^
+  File "/home/james/movement-lab/movement_lab/validate01c.py", line 38, in audit
+    assert set(summary) == TRIALS | {'budget_stop'}
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

@@ -1,0 +1,9 @@
+{
+  "historical_manifest_files": {
+    "results/01b/evidence-manifest.json": 28,
+    "results/01b/landing-diagnosis/diagnostic-manifest.json": 53,
+    "results/01b/departures/study-manifest.json": 168
+  },
+  "upstream_files_unchanged": 109
+}
+PASS: all 01B published scientific evidence and local-only files unchanged; shared README/.gitignore preserve original bytes as prefixes and only append 01C documentation/exclusions
