@@ -1,0 +1,6 @@
+{
+  "results/01b/departures/baseline/zero/trial.npz": "c70267f71e3fde1dd7b8ea392a9f8d34a96d137f7d2721a0cceb2ca829b7fc7b",
+  "results/01b/departures/flex/flex_+1/trial.npz": "44e76262a1944b0c0c3647c95dc8dfa6b4acb6baac76b4821029ca4c99b274f2",
+  "results/01b/departures/head-positive/head_+1/trial.npz": "68de7428127667855b434877a582facee6b14c6e4d1ddc29fe4f894707c2cf32",
+  "results/01b/departures/head-negative/head_-1/trial.npz": "aa2ae537192bf29edd3e7d105d4efe37d9a94145eaafc1bbb4f45d7b92ebaf29"
+}

@@ -57,3 +57,14 @@ results/*smoke*/
 /results/01b/landing-diagnosis/preflight.txt
 /results/01b/landing-diagnosis/preflight_inspect.py
 /results/01b/departures/tests-initial.txt
+
+# 01C full-rate trajectories, upstream geometry and runtime logs remain local.
+/results/01c/**/trial.npz
+/results/01c/**/replay_model.mjb
+/results/01c/**/*.log
+
+# 01C publication: failed zero-sample preflight and redundant per-trial plots.
+/results/01c/pilot/
+/results/01c/pilot-gpu/*/atlas.png
+# Intermediate publication test run; final 38-test and original 36-test runs publish.
+/results/01c/publication/tests-with-publication.txt

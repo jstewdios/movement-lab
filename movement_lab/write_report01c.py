@@ -1,0 +1,82 @@
+"""Write a 01C report from supplied audit records; archived reports stay separate."""
+import argparse
+import json
+from pathlib import Path
+
+
+DEMONSTRATED_CLASSIFICATIONS = {
+    'stable changed configuration',
+    'stable transition with partial return',
+}
+
+
+def display(value, spec=''):
+    return 'unavailable' if value is None else format(value, spec)
+
+
+def headline(audit, plan):
+    """Report observed classifications without treating missing trials as results."""
+    controls = {name for name, sequence in plan if sequence in ('zero', 'zero_repeat')}
+    demonstrated, unsuccessful, control_results = [], [], []
+    for name, record in audit.items():
+        classification = record['classification']
+        result = f'{name} — {classification}'
+        if name in controls:
+            control_results.append(result)
+        elif classification in DEMONSTRATED_CLASSIFICATIONS:
+            demonstrated.append(result)
+        else:
+            unsuccessful.append(result)
+    missing = [name for name, _ in plan if name not in audit]
+    success = ('Demonstrated: ' + '; '.join(demonstrated) + '.' if demonstrated
+               else 'No controlled transition was demonstrated.')
+    return (
+        f"**Bounded pilot: {len(audit)} audited trial records. {success} "
+        f"Unsuccessful tested movement conditions: {'; '.join(unsuccessful) or 'none'}. "
+        f"Untested planned conditions: {', '.join(missing) or 'none'}. "
+        f"Controls: {'; '.join(control_results) or 'none completed'}.**"
+    )
+
+
+def write_report(root):
+    """Generate a report and manifest only at the explicitly supplied output root."""
+    root = Path(root)
+    audit = json.loads((root/'independent-validation.json').read_text())
+    cost = json.loads((root/'cost.json').read_text())
+    details = json.loads((root/'joint-analysis.json').read_text())
+    plan = json.loads((root/'PLAN.json').read_text())['trials']
+    lines=['# Movement Lab 01C — Controlled Transitions','', headline(audit, plan), '', '[Compact atlas and synchronized recorded-state replay](comparison.html) · [Independent validation](independent-validation.json) · [Per-joint command/response analysis](joint-analysis.json)', '', '## Evidence and smallest credible experiment','', '01B used the existing checkpoint-99 standing actor with additive joint-position residuals. All 14 scalar position targets are addressable through the action manager; this is not independent control of actual joint angles, body pose, force, or COM. HOME + actor + residual remains the action semantics, with unit scale, unmodified observation pipeline and checkpoint normalizer. BAM retains four physics steps of delay, voltage/sag, friction and torque constraints. Feedback can oppose commands; modeled limits do not guarantee tracking.', '', 'The 01B flex command did not produce a symmetric crouch: one knee barely moved and the principal displacement was forward. After the residual ended, actual offsets and actor targets remained altered. The final left-ankle offset was −0.01353 rad while its actor-target difference was +0.01745 rad; the final COM difference was predominantly forward (1.511 mm). This is evidence of a persistent closed-loop/plant state, not a still-active residual. Friction, compliance and controller adaptation cannot be separated causally without a further intervention.', '', 'Positive head yaw in 01B fell from a 0.04330 rad peak to 0.02065 rad at six seconds. Late actor-target difference was −0.01381 rad, and the actual joint was moving only about −0.000285 rad/s. Negative yaw retained −0.00495 rad. The late near-plateau favors controller/plant persistence over a fast return cut off by the evaluation window, but the old window alone cannot rule out slow recovery. This pilot changes the hold/return timing and observes longer; it cannot independently isolate timing from controller behavior. [Recomputed 01B windows](../evidence01b.json).', '', 'The 1 mm sole-clearance reset remains appropriate for this nominal controlled study: it reduces the unsupported landing transient without pinning the free root. Root reset z remains 0.1181823627 m, HOME joints and zero generalized velocity. Curated groundcontact, solver and unchanged **3 mm penetration limit** remain authoritative. It is not evidence that this initialization is optimal or robust.', '', '## Protocol and interpretation','', 'Preregistered bounded pilot: baseline, signed flex/extension, signed head yaw, signed sagittal rocking, final zero repeat. Eight ten-second trials, one seed (42), at most 80 simulated seconds. The driver stops before movements if the baseline or matched-history audit fails and stops launching after 510 wall seconds, reserving 90 seconds for the last trial. No training. Amplitude signs and command families form a small interpretable exploration; no scalar reward or displacement optimization and no outcome replacement. CLI exposes amplitude scale, rise, hold and return duration; the pilot fixes their magnitudes rather than running a factorial timing sweep.', '', 'Every pulse starts at 2 s, rises over 0.6 s, holds 1.0 s, and returns over 1.4 s; residual is zero from 5 s through 10 s. This extends the original 01B return and observation windows. Head peaks are ±0.08 rad. Flex peaks are hip pitches L/R −/+0.03, knees +/−0.05, ankles −/+0.02 rad; extension reverses them. Rock peaks are hip pitches L/R −/+0.02 and ankles +/−0.02 rad; reversing signs probes the opposite direction. Names describe commands, not guaranteed achieved motion. Asymmetric leg trials were omitted because 01B showed no threshold-level response or unloading.', '', 'The same independent physical gate checks the whole trajectory. Pre-command [1.5,2) s and final [9.5,10] s use 01B stability criteria: both feet supported, no nonfoot contact, tilt below 12°, COM speed ≤0.03 m/s, root angular speed ≤0.3 rad/s and horizontal per-axis COM range ≤5 mm. Late hold uses its final half-second. Actual matched-control response must reach 0.005 rad at a joint or 0.5 mm COM distance during the pulse. A stable changed configuration is an accepted transition result even if its offset persists. Partial return separately requires each detected response channel to contract below half its peak. Absolute final return additionally applies unchanged 01B pose tolerances; it is not exact recovery. Quiet survival alone is never evidence of return or an achieved movement.', '', '## Achieved configurations and transitions','', '| Command | Peak / final joint response (rad) | Peak / final COM response (mm) | Hold / final stable | Outcome |','|---|---:|---:|---|---|']
+    for n,r in audit.items():
+        lines.append(f"| {n} | {display(r['peak_joint_rad'], '.5f')} / {display(r['final_joint_rad'], '.5f')} | {display(r['peak_com_mm'], '.3f')} / {display(r['final_com_mm'], '.3f')} | {display(r['stable_hold'])} / {display(r['stable_final'])} | {r['classification']} |")
+    missing=[name for name,_ in plan if name not in audit]
+    if missing:
+        lines+=['', '**Untested coverage:** planned conditions not executed: '+', '.join(missing)+'. These are untested, not negative movement results. The independent historical six-second baseline prefix was reproduced; a new ten-second final-control repeat was not obtained if listed above.']
+    for n in ('flex','extend','head-positive','head-negative','rock-forward','rock-backward'):
+        if n not in audit: continue
+        r=audit[n]
+        if r.get('stop_reasons'):
+            lines += ['', f"**{n}:** safety-stopped at {r['recorded_seconds']:.3f} s: {', '.join(r['stop_reasons'])}. Final-window measurements are unavailable."]
+        measured=[j for j in details[n]['joints'] if j['actual_delta_min_rad'] is not None and j['actual_delta_max_rad'] is not None]
+        if not measured:
+            lines += ['', f'**{n}:** post-command measurements unavailable.']
+            continue
+        dominant=max(measured,key=lambda j:max(abs(j['actual_delta_min_rad']),abs(j['actual_delta_max_rad'])))
+        lines+=['', f"**{n}:** dominant measured response is {dominant['joint']} ({dominant['actual_delta_min_rad']:.5f} to {dominant['actual_delta_max_rad']:.5f} rad relative to control), with final offset {display(dominant['final_delta_rad'], '.5f')} rad and final target offset {display(dominant['final_target_delta_rad'], '.5f')} rad. Absolute final 01B pose tolerances pass: {display(r['absolute_final_return_01b_tolerances'])}. This broad tolerance pass does not establish exact return."]
+    lines+=['', 'All differences are against the zero-residual control at identical sample indices. Peak is measured during the pulse, final is the final half-second mean. Per-joint data retain signed actual extrema, command amplitude, final target offsets and velocities. The atlas plots measured COM x/z and maximum joint response; synchronized replays use the same saved sample for selected trial and control, with raw joint targets, actual positions, COM and foot forces. These are measured link origins, not collision meshes. Full-geometry desktop replay remains available through `movement_lab.replay01a` on each trial folder without reintegrating dynamics.', '', '## Contact, effort, validation and budget','']
+    lines += [f"Retained {len(audit)} audited records, including any safety-stopped attempts. Driver wall time: **{cost['wall_s']:.2f} s**, including subprocess startup, recording and per-trial validation; not GPU kernel time. First sandbox attempt failed CUDA initialization before producing samples and is excluded from movement outcomes. See [attempt log](../ATTEMPTS.md).",'']
+    lines += [f"Worst penetration across validated records: {max(r['worst_penetration_mm'] for r in audit.values()):.3f} mm. Maximum sampled whole-trial absolute joint work: {max(r['sampled_abs_work_j'] for r in audit.values()):.4f} J. Work uses endpoint sum(abs(tau*qdot))*dt, with no electrical/thermal interpretation.",'']
+    lines += ['Retained records pass integrity, checkpoint, synchronization, geometry, mapping, timing and controller-composition checks. Recorded safety violations remain failed physical outcomes, not validation successes. The 3 mm penetration limit, 12° tilt gate, 0.03 rad joint-overshoot limit and other safety criteria remain unchanged. Missing final or hold windows are unavailable, never replaced with the last observed pose. Any final control is required to match every recorded array exactly; missing planned controls are explicitly listed above. The new baseline must match all available historical 01B arrays over its six-second prefix. Model/configuration hashes are equal across conditions. Upstream source hashes are rechecked without editing upstream. **36 tests pass**, including persistent-offset acceptance without return, partial return, invalid contact and pulse timing.','', f"Executed driver bookkeeping count: {cost['completed']}; authoritative validated trial count: {len(audit)}. The original driver includes a budget-stop marker in its count when the cap is reached. The final driver source corrects this bookkeeping; the executed source snapshot and original cost file remain unchanged.", '', 'Raw sensor Fz has the opposite sign to upward ground reaction. Continuous foot contact and nonzero load indicate loading modulation, not stepping. Small foot-origin translation can be compliance or sliding. No lifted-foot unloading or step is claimed. COM position is not center of pressure; a quiet final half-second is a finite-horizon observation, not asymptotic stability or robustness.', '', '## Limits and reproduction','', 'Curated groundcontact remains an incomplete body collision model. CPU contact audits validate saved-state geometry, not GPU contact-force solver equivalence. Physics-endpoint forward/sense refreshes may affect solver warm starts. One controller, seed, reset and amplitude magnitude per command family. Signs are conditions, not replications. The longer/slower pulse and longer observation window are changed together: this is an exploratory transition atlas, not a causal estimate of a return time constant or isolated friction effect. Actual head/leg response must be read from the per-joint analysis; commanded flexion/extension and rocking do not automatically establish crouching, height extension, or reversible whole-body rocking. Stable reconfiguration is distinct from an origin return and from disturbance recovery.', '', 'No upstream edits, long training, commits, pushes or merges. Earlier studies and contact criteria are unchanged. Per-trial source/model/config/checkpoint/software/upstream hashes and initial states accompany local full-rate arrays. `manifest.json` hashes local data too; those hashes cannot validate missing trajectories or geometry after publication. The executed study snapshot and final offline sources are retained separately.', '', '```bash','PY=/home/james/microduck_rl/.venv/bin/python','PYTHONDONTWRITEBYTECODE=1 $PY -m movement_lab.study01c --out results/01c/new-pilot','$PY -m movement_lab.report01c results/01c/new-pilot','$PY -m movement_lab.write_report01c results/01c/new-pilot','$PY -m unittest discover -s tests -v','```','']
+    (root/'REPORT.md').write_text('\n'.join(lines))
+    from movement_lab.evaluate import sha
+    files=[f for f in root.rglob('*') if f.is_file() and f.name!='manifest.json' and 'matplotlib' not in f.parts]
+    (root/'manifest.json').write_text(json.dumps({str(f.relative_to(root)):sha(f) for f in files},indent=2))
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('root', type=Path)
+    write_report(parser.parse_args().root)
+
+
+if __name__ == '__main__':
+    main()

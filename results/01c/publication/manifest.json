@@ -1,0 +1,566 @@
+{
+  "schema": 1,
+  "study": "01C completed bounded pilot",
+  "base_commit": "813d32698f2e0a7e73eb2ef5e4cd51ff81f6123c",
+  "published_files": {
+    ".gitignore": {
+      "bytes": 2377,
+      "sha256": "deaee538dab5b9dbe77902882bf25f0fbfc3579fe03d4333ef65844ac610a65f"
+    },
+    "README.md": {
+      "bytes": 22912,
+      "sha256": "66d5557ff53c92ec2214c4cf280d7279499315b76a9a85b52dd29948677bad67"
+    },
+    "movement_lab/diagnose01b_for01c.py": {
+      "bytes": 1012,
+      "sha256": "a30f3f5a9b6f6ce5c1d1f4ff922f7d6e7b5f5aadde5df0bac14b18dc5983e40f"
+    },
+    "movement_lab/publication01c.py": {
+      "bytes": 5207,
+      "sha256": "9790a0304881997b614de101ec2329a939191eecb3950cbb32bac15ea61c4c0a"
+    },
+    "movement_lab/report01c.py": {
+      "bytes": 10473,
+      "sha256": "ab33806bc89d2238d9be55f046149c53acfbf95cd8dd50a1d08121310d36e09f"
+    },
+    "movement_lab/study01c.py": {
+      "bytes": 9384,
+      "sha256": "151dd547b29d81768928ceb46812e7f3736dc3957d89c7770f5073c4cca190eb"
+    },
+    "movement_lab/transition01c.py": {
+      "bytes": 17473,
+      "sha256": "155851dfa0edd868d34bf5d3cbe36d85d17148d81e7bdb37ecebc2817da04521"
+    },
+    "movement_lab/validate01c.py": {
+      "bytes": 6023,
+      "sha256": "1040895f31ac4191e1187d85cb778de282510b5e4db2785c78604d04423ce54d"
+    },
+    "movement_lab/write_report01c.py": {
+      "bytes": 13699,
+      "sha256": "16425f7e68e7ef9239e1545db6852dc44513d161ca4f303486a3dac7f9bf2c81"
+    },
+    "results/01c/ATTEMPTS.md": {
+      "bytes": 708,
+      "sha256": "f8ead6492b3e90dcc7f792811b53b26ca7c36ab3335ea8345a48e17739b0d4d6"
+    },
+    "results/01c/PUBLICATION.md": {
+      "bytes": 7548,
+      "sha256": "a05f357f91f178b0697d662cfd7cb65e23abdceb533e76344cc5b926dba63826"
+    },
+    "results/01c/evidence01b-provenance.json": {
+      "bytes": 497,
+      "sha256": "702c707ebee85e49625b997bdd64d577a2cf1554a3725a1a555ae06270133102"
+    },
+    "results/01c/evidence01b.json": {
+      "bytes": 3822,
+      "sha256": "157523abd84322e8894556c5c202d1ae8265baacd6ed4c64921ed147fbefdae1"
+    },
+    "results/01c/manifest.json": {
+      "bytes": 12392,
+      "sha256": "52447c31264e4270baf467d6101f05477868979ac1ee667af7dd6869402a464e"
+    },
+    "results/01c/pilot-gpu/PLAN.json": {
+      "bytes": 841,
+      "sha256": "4471673ebad6f21b13d84973b1700b69125e5d617aaa40ad627edac2dac2e043"
+    },
+    "results/01c/pilot-gpu/REPORT.md": {
+      "bytes": 11158,
+      "sha256": "b0eab00bb0ea418ac6789ee0162611765a8eb18ac5bf7d9f9f7aa3e5411d8acc"
+    },
+    "results/01c/pilot-gpu/atlas.png": {
+      "bytes": 119825,
+      "sha256": "0f6da749fdc94c869cf3dd6697ad0068ba33234df1b5279fcb8675743615e1ec"
+    },
+    "results/01c/pilot-gpu/baseline/atlas.json": {
+      "bytes": 5842,
+      "sha256": "532e2d875e924aea0a67ee4f0356de2b882cae58e3d44070cb206e8996b76c00"
+    },
+    "results/01c/pilot-gpu/baseline/controlled01b.py": {
+      "bytes": 2976,
+      "sha256": "cf631c62c81cdf2d99e5800a2da7d22986cab8880d3f43966d422ca4a4c82a30"
+    },
+    "results/01c/pilot-gpu/baseline/departure_metrics01b.py": {
+      "bytes": 4254,
+      "sha256": "03bf4d4e2b3def802e9a4cfbe42b2d14de21157fa6d03434dceefca2d53e15df"
+    },
+    "results/01c/pilot-gpu/baseline/discovery_metrics.py": {
+      "bytes": 9454,
+      "sha256": "318d39537ee29a8d18e6576733c2df20b354b7c24b41da145b061a0bc43cb3ca"
+    },
+    "results/01c/pilot-gpu/baseline/manifest.json": {
+      "bytes": 1343,
+      "sha256": "8039abdfa3fc74ad7c3db93432d88b68c8c5827853649bef8cb8441767cd9e02"
+    },
+    "results/01c/pilot-gpu/baseline/provenance.json": {
+      "bytes": 15589,
+      "sha256": "609d7b51e58babe1840da33571813b2ff2e8bb767d4259674471e8c53c1904de"
+    },
+    "results/01c/pilot-gpu/baseline/replay.html": {
+      "bytes": 818388,
+      "sha256": "7664a4ee64572d6b3871fe5ef237c0f262d6071b58b9e1453a2477781bc83195"
+    },
+    "results/01c/pilot-gpu/baseline/replay01a.py": {
+      "bytes": 1190,
+      "sha256": "570b180058b5e1c58e22a5d1e706fc662baa9dd14652686ee2167d32a278efa2"
+    },
+    "results/01c/pilot-gpu/baseline/resolved_config.txt": {
+      "bytes": 23591,
+      "sha256": "88e9f314ec72ffc2842144ae90d6c8d85345582dd2e59a0f7bda1651767c8f78"
+    },
+    "results/01c/pilot-gpu/baseline/transition01c.py": {
+      "bytes": 17473,
+      "sha256": "155851dfa0edd868d34bf5d3cbe36d85d17148d81e7bdb37ecebc2817da04521"
+    },
+    "results/01c/pilot-gpu/baseline/validation.json": {
+      "bytes": 91,
+      "sha256": "99b3cf47780b9f0ea1160b3ae812ba153ac784db2117db8096e1ecafd4466317"
+    },
+    "results/01c/pilot-gpu/baseline/zero/initial.npz": {
+      "bytes": 1418,
+      "sha256": "d4a2e0aaefb52de826a8a884e5f8b10edc814010c28f5632fa166aedf751cdc9"
+    },
+    "results/01c/pilot-gpu/baseline/zero/metadata.json": {
+      "bytes": 4847,
+      "sha256": "3489df51d8b19b3c1b2f2f39df7596d7a649cece70dce51c819d9639f4910e3d"
+    },
+    "results/01c/pilot-gpu/comparison.html": {
+      "bytes": 4570804,
+      "sha256": "0ea44476fafb44128f0e36c03351b5161d011ace7802ee316029908b57dc9d8d"
+    },
+    "results/01c/pilot-gpu/cost.json": {
+      "bytes": 50,
+      "sha256": "cc2da54cdff67a55a4edd95943d2988430fa3bbb8d782acaba3f601690da4a90"
+    },
+    "results/01c/pilot-gpu/extend/atlas.json": {
+      "bytes": 6040,
+      "sha256": "d8b9539ddbb6a18a8aca41bf50f2be96c0f7ba70ad16c4c6eb7f73c03641f1c1"
+    },
+    "results/01c/pilot-gpu/extend/controlled01b.py": {
+      "bytes": 2976,
+      "sha256": "cf631c62c81cdf2d99e5800a2da7d22986cab8880d3f43966d422ca4a4c82a30"
+    },
+    "results/01c/pilot-gpu/extend/departure_metrics01b.py": {
+      "bytes": 4254,
+      "sha256": "03bf4d4e2b3def802e9a4cfbe42b2d14de21157fa6d03434dceefca2d53e15df"
+    },
+    "results/01c/pilot-gpu/extend/discovery_metrics.py": {
+      "bytes": 9454,
+      "sha256": "318d39537ee29a8d18e6576733c2df20b354b7c24b41da145b061a0bc43cb3ca"
+    },
+    "results/01c/pilot-gpu/extend/flex_-1/initial.npz": {
+      "bytes": 1418,
+      "sha256": "d4a2e0aaefb52de826a8a884e5f8b10edc814010c28f5632fa166aedf751cdc9"
+    },
+    "results/01c/pilot-gpu/extend/flex_-1/metadata.json": {
+      "bytes": 5011,
+      "sha256": "d61a439365ab01c08d9d3074f75079d56bf2a47768dcc27c51fff7a4136edea5"
+    },
+    "results/01c/pilot-gpu/extend/manifest.json": {
+      "bytes": 1352,
+      "sha256": "32f54d916653ee1556bd15fa2afb33f1f89876b29b27fecb7f789003578d1322"
+    },
+    "results/01c/pilot-gpu/extend/provenance.json": {
+      "bytes": 15589,
+      "sha256": "e7da0bc3ac17312369c934ebba9934390ae00b77420b93f13ccf7ab5a8fb3147"
+    },
+    "results/01c/pilot-gpu/extend/replay.html": {
+      "bytes": 818486,
+      "sha256": "d9e0d54df9eced491cfb42a8a3268ebb2c6a4c72fbd16f4a54639b9ba1215672"
+    },
+    "results/01c/pilot-gpu/extend/replay01a.py": {
+      "bytes": 1190,
+      "sha256": "570b180058b5e1c58e22a5d1e706fc662baa9dd14652686ee2167d32a278efa2"
+    },
+    "results/01c/pilot-gpu/extend/resolved_config.txt": {
+      "bytes": 23591,
+      "sha256": "88e9f314ec72ffc2842144ae90d6c8d85345582dd2e59a0f7bda1651767c8f78"
+    },
+    "results/01c/pilot-gpu/extend/transition01c.py": {
+      "bytes": 17473,
+      "sha256": "155851dfa0edd868d34bf5d3cbe36d85d17148d81e7bdb37ecebc2817da04521"
+    },
+    "results/01c/pilot-gpu/extend/validation.json": {
+      "bytes": 91,
+      "sha256": "99b3cf47780b9f0ea1160b3ae812ba153ac784db2117db8096e1ecafd4466317"
+    },
+    "results/01c/pilot-gpu/final_diagnose01b_for01c.py": {
+      "bytes": 1012,
+      "sha256": "a30f3f5a9b6f6ce5c1d1f4ff922f7d6e7b5f5aadde5df0bac14b18dc5983e40f"
+    },
+    "results/01c/pilot-gpu/final_report01c.py": {
+      "bytes": 9624,
+      "sha256": "e8454d2745708623f68f3870981799313f2980c9107cb2a123935a5e95b96673"
+    },
+    "results/01c/pilot-gpu/final_study01c.py": {
+      "bytes": 6876,
+      "sha256": "d42dccd9fdf851156f7a110fd123ef2317801ff8f8f803186eeb0237e7d87f28"
+    },
+    "results/01c/pilot-gpu/final_transition01c.py": {
+      "bytes": 17473,
+      "sha256": "155851dfa0edd868d34bf5d3cbe36d85d17148d81e7bdb37ecebc2817da04521"
+    },
+    "results/01c/pilot-gpu/final_write_report01c.py": {
+      "bytes": 11732,
+      "sha256": "f2b10790dc4c46a05613d72ab37772ee9959bf20378853254446663ccad9a669"
+    },
+    "results/01c/pilot-gpu/flex/atlas.json": {
+      "bytes": 6034,
+      "sha256": "a6fffce87e66dce92f7a580616485f11923e3de17391a1f5ff3ed90f9e89dec2"
+    },
+    "results/01c/pilot-gpu/flex/controlled01b.py": {
+      "bytes": 2976,
+      "sha256": "cf631c62c81cdf2d99e5800a2da7d22986cab8880d3f43966d422ca4a4c82a30"
+    },
+    "results/01c/pilot-gpu/flex/departure_metrics01b.py": {
+      "bytes": 4254,
+      "sha256": "03bf4d4e2b3def802e9a4cfbe42b2d14de21157fa6d03434dceefca2d53e15df"
+    },
+    "results/01c/pilot-gpu/flex/discovery_metrics.py": {
+      "bytes": 9454,
+      "sha256": "318d39537ee29a8d18e6576733c2df20b354b7c24b41da145b061a0bc43cb3ca"
+    },
+    "results/01c/pilot-gpu/flex/flex_+1/initial.npz": {
+      "bytes": 1418,
+      "sha256": "d4a2e0aaefb52de826a8a884e5f8b10edc814010c28f5632fa166aedf751cdc9"
+    },
+    "results/01c/pilot-gpu/flex/flex_+1/metadata.json": {
+      "bytes": 5005,
+      "sha256": "613bfb52f545ac32a61e7d4f5759d0918dbbf89f227bb0733c3c9cc23d13f8d4"
+    },
+    "results/01c/pilot-gpu/flex/manifest.json": {
+      "bytes": 1352,
+      "sha256": "bf2c9cce750012908deddd303e0ceead2fa6fbadb590ac1803735be370f4b91e"
+    },
+    "results/01c/pilot-gpu/flex/provenance.json": {
+      "bytes": 15589,
+      "sha256": "ceb03b7653d23195098b7bd13b489205ad790c12603024a8e682cc3af49c8e66"
+    },
+    "results/01c/pilot-gpu/flex/replay.html": {
+      "bytes": 819461,
+      "sha256": "7ab5947c47adb0019951c15440442bd675acf9e2f88f26aec8a427e0c1dd9c27"
+    },
+    "results/01c/pilot-gpu/flex/replay01a.py": {
+      "bytes": 1190,
+      "sha256": "570b180058b5e1c58e22a5d1e706fc662baa9dd14652686ee2167d32a278efa2"
+    },
+    "results/01c/pilot-gpu/flex/resolved_config.txt": {
+      "bytes": 23591,
+      "sha256": "88e9f314ec72ffc2842144ae90d6c8d85345582dd2e59a0f7bda1651767c8f78"
+    },
+    "results/01c/pilot-gpu/flex/transition01c.py": {
+      "bytes": 17473,
+      "sha256": "155851dfa0edd868d34bf5d3cbe36d85d17148d81e7bdb37ecebc2817da04521"
+    },
+    "results/01c/pilot-gpu/flex/validation.json": {
+      "bytes": 91,
+      "sha256": "99b3cf47780b9f0ea1160b3ae812ba153ac784db2117db8096e1ecafd4466317"
+    },
+    "results/01c/pilot-gpu/head-negative/atlas.json": {
+      "bytes": 5883,
+      "sha256": "556ba6d523697bca0c0569c2ee78f01949083f5b5d3359f6ee9884d24251b508"
+    },
+    "results/01c/pilot-gpu/head-negative/controlled01b.py": {
+      "bytes": 2976,
+      "sha256": "cf631c62c81cdf2d99e5800a2da7d22986cab8880d3f43966d422ca4a4c82a30"
+    },
+    "results/01c/pilot-gpu/head-negative/departure_metrics01b.py": {
+      "bytes": 4254,
+      "sha256": "03bf4d4e2b3def802e9a4cfbe42b2d14de21157fa6d03434dceefca2d53e15df"
+    },
+    "results/01c/pilot-gpu/head-negative/discovery_metrics.py": {
+      "bytes": 9454,
+      "sha256": "318d39537ee29a8d18e6576733c2df20b354b7c24b41da145b061a0bc43cb3ca"
+    },
+    "results/01c/pilot-gpu/head-negative/head_-1/initial.npz": {
+      "bytes": 1418,
+      "sha256": "d4a2e0aaefb52de826a8a884e5f8b10edc814010c28f5632fa166aedf751cdc9"
+    },
+    "results/01c/pilot-gpu/head-negative/head_-1/metadata.json": {
+      "bytes": 4874,
+      "sha256": "371eb7fcb32c5baa93ac858cc7e667c50f7c8e24108499936d7b47f27c66bc70"
+    },
+    "results/01c/pilot-gpu/head-negative/manifest.json": {
+      "bytes": 1352,
+      "sha256": "d9c1e5efb83ee8c1a1de70f6f059296f1294890e8d5a5e649fff89236bbc5895"
+    },
+    "results/01c/pilot-gpu/head-negative/provenance.json": {
+      "bytes": 15589,
+      "sha256": "fdbb0439c0ffaf0a6154ecc67debad490db5c43e8465a3057d656de4844a33d6"
+    },
+    "results/01c/pilot-gpu/head-negative/replay.html": {
+      "bytes": 818439,
+      "sha256": "12eeab4ef49ce96230a48bbf632529c7c1e09e7c8f05c5e082057bedbdccd9db"
+    },
+    "results/01c/pilot-gpu/head-negative/replay01a.py": {
+      "bytes": 1190,
+      "sha256": "570b180058b5e1c58e22a5d1e706fc662baa9dd14652686ee2167d32a278efa2"
+    },
+    "results/01c/pilot-gpu/head-negative/resolved_config.txt": {
+      "bytes": 23591,
+      "sha256": "88e9f314ec72ffc2842144ae90d6c8d85345582dd2e59a0f7bda1651767c8f78"
+    },
+    "results/01c/pilot-gpu/head-negative/transition01c.py": {
+      "bytes": 17473,
+      "sha256": "155851dfa0edd868d34bf5d3cbe36d85d17148d81e7bdb37ecebc2817da04521"
+    },
+    "results/01c/pilot-gpu/head-negative/validation.json": {
+      "bytes": 91,
+      "sha256": "99b3cf47780b9f0ea1160b3ae812ba153ac784db2117db8096e1ecafd4466317"
+    },
+    "results/01c/pilot-gpu/head-positive/atlas.json": {
+      "bytes": 5883,
+      "sha256": "60f5d4d59676d916b5fa589a488e2dd71b780c81fa3d0163c305a3d55dc7838e"
+    },
+    "results/01c/pilot-gpu/head-positive/controlled01b.py": {
+      "bytes": 2976,
+      "sha256": "cf631c62c81cdf2d99e5800a2da7d22986cab8880d3f43966d422ca4a4c82a30"
+    },
+    "results/01c/pilot-gpu/head-positive/departure_metrics01b.py": {
+      "bytes": 4254,
+      "sha256": "03bf4d4e2b3def802e9a4cfbe42b2d14de21157fa6d03434dceefca2d53e15df"
+    },
+    "results/01c/pilot-gpu/head-positive/discovery_metrics.py": {
+      "bytes": 9454,
+      "sha256": "318d39537ee29a8d18e6576733c2df20b354b7c24b41da145b061a0bc43cb3ca"
+    },
+    "results/01c/pilot-gpu/head-positive/head_+1/initial.npz": {
+      "bytes": 1418,
+      "sha256": "d4a2e0aaefb52de826a8a884e5f8b10edc814010c28f5632fa166aedf751cdc9"
+    },
+    "results/01c/pilot-gpu/head-positive/head_+1/metadata.json": {
+      "bytes": 4874,
+      "sha256": "41b0d32a710ecb51ac8070aaa1ebbf528d7f6bd0a98bc98de535d11c332916fb"
+    },
+    "results/01c/pilot-gpu/head-positive/manifest.json": {
+      "bytes": 1352,
+      "sha256": "0b2997a0c3c5aca432e22918c7e5646bc07ab22f9669f505516985eb08bbce6d"
+    },
+    "results/01c/pilot-gpu/head-positive/provenance.json": {
+      "bytes": 15589,
+      "sha256": "7b1ace215bd03106249cac13aa9d3ad5e6bc0a097f86961670cc858ccd7ad6b8"
+    },
+    "results/01c/pilot-gpu/head-positive/replay.html": {
+      "bytes": 819148,
+      "sha256": "3a129b438972b9810ea0e9c477288da18e54289d5aebf4719111dbf16ab79e1b"
+    },
+    "results/01c/pilot-gpu/head-positive/replay01a.py": {
+      "bytes": 1190,
+      "sha256": "570b180058b5e1c58e22a5d1e706fc662baa9dd14652686ee2167d32a278efa2"
+    },
+    "results/01c/pilot-gpu/head-positive/resolved_config.txt": {
+      "bytes": 23591,
+      "sha256": "88e9f314ec72ffc2842144ae90d6c8d85345582dd2e59a0f7bda1651767c8f78"
+    },
+    "results/01c/pilot-gpu/head-positive/transition01c.py": {
+      "bytes": 17473,
+      "sha256": "155851dfa0edd868d34bf5d3cbe36d85d17148d81e7bdb37ecebc2817da04521"
+    },
+    "results/01c/pilot-gpu/head-positive/validation.json": {
+      "bytes": 91,
+      "sha256": "99b3cf47780b9f0ea1160b3ae812ba153ac784db2117db8096e1ecafd4466317"
+    },
+    "results/01c/pilot-gpu/independent-validation.json": {
+      "bytes": 11370,
+      "sha256": "a128b6079c47f5df7e154a8172083343d81c7a12c4c40ad25f1e9758977f2819"
+    },
+    "results/01c/pilot-gpu/joint-analysis.json": {
+      "bytes": 27684,
+      "sha256": "44e47136300a5d8d743878835c71ff1eff39ad2bf472dbee102cda949d866576"
+    },
+    "results/01c/pilot-gpu/manifest.json": {
+      "bytes": 9349,
+      "sha256": "ce834bfc796c265a25d70d330c4581b007a4283d17f98ca4e379de4d3513ee65"
+    },
+    "results/01c/pilot-gpu/study01c.py": {
+      "bytes": 6812,
+      "sha256": "73a5b9fe370beaea3f2d91423e16826aad9b76486c2c1044989fd80d8c318946"
+    },
+    "results/01c/pilot-gpu/summary.json": {
+      "bytes": 10681,
+      "sha256": "e8a679f78ba124885e9d6ac6dfd6f2d966e0f557bb6939a989628e54da57648d"
+    },
+    "results/01c/pilot-gpu/test_transition01c.py": {
+      "bytes": 2079,
+      "sha256": "f5a6900e74921b31748066ab85e2d70a8d75af723199a38f141d0329e676a595"
+    },
+    "results/01c/pilot-gpu/tests.txt": {
+      "bytes": 4632,
+      "sha256": "cca97b4d207535978d0c1662c2f40962cf05df4751b0981471b7ebe09f8607df"
+    },
+    "results/01c/publication/earlier-evidence-audit-passed.txt": {
+      "bytes": 424,
+      "sha256": "06ff89d54af77a6b8803d3ca35a5c7c198d2d8878969717ef0546a6bc5742a8f"
+    },
+    "results/01c/publication/earlier-evidence-validation.txt": {
+      "bytes": 580,
+      "sha256": "2c76c400ea72ff6eb3b6f74a3861582ce30e0ea0d005c3cec5b0f0958863ea01"
+    },
+    "results/01c/publication/saved-record-validation-passed.txt": {
+      "bytes": 11198,
+      "sha256": "86a8fc6c0375ff90d4bd227c86575aaf396962031cf1e02f23362566561dc251"
+    },
+    "results/01c/publication/saved-record-validation.txt": {
+      "bytes": 605,
+      "sha256": "1c2cea0ada95eade8bbe648ed70426b583539da4f48cb0029c865d293d90122b"
+    },
+    "results/01c/publication/tests-final.txt": {
+      "bytes": 4908,
+      "sha256": "bd0eb1294a9449114f0c2ecf63e52824984d0afcf25542977eb34e595b6f3c41"
+    },
+    "results/01c/publication/tests.txt": {
+      "bytes": 4632,
+      "sha256": "94c862de8d1df56a5806c62a56835e7dc3429d7ff5ef11baa085ddb80ea5d98d"
+    },
+    "results/01c/tests.txt": {
+      "bytes": 4632,
+      "sha256": "cca97b4d207535978d0c1662c2f40962cf05df4751b0981471b7ebe09f8607df"
+    },
+    "tests/test_publication01c.py": {
+      "bytes": 1057,
+      "sha256": "cd154f69632dbec6d429966ba05362a02d200f93015ef15f0af082314b660856"
+    },
+    "tests/test_transition01c.py": {
+      "bytes": 16336,
+      "sha256": "18c3675d7b9ec99ab70d7855c5195692d83e5e6b587c4031aac2eccaa349cfeb"
+    }
+  },
+  "local_only_files": {
+    "results/01c/pilot-gpu/baseline.log": {
+      "bytes": 11898,
+      "sha256": "917174714f470184253f6c3913fa919c38ad621d169b67ac74d1b51985730464"
+    },
+    "results/01c/pilot-gpu/baseline/atlas.png": {
+      "bytes": 97565,
+      "sha256": "f4c1a43b63a2e6b260a299d28e65aa3159fe39b7dd26395ba390619f251b9055"
+    },
+    "results/01c/pilot-gpu/baseline/replay_model.mjb": {
+      "bytes": 81042335,
+      "sha256": "cba1a6dab0683d8ecaa26872b573c48a82bf9c27b7c260c25e80d74abcf0b9bd"
+    },
+    "results/01c/pilot-gpu/baseline/zero/trial.npz": {
+      "bytes": 2195719,
+      "sha256": "cb0032b046695b77a12d565119839474e363a30689c6178e1d2aef470080edb7"
+    },
+    "results/01c/pilot-gpu/extend.log": {
+      "bytes": 11896,
+      "sha256": "a9c48fdf163e576ca35d7c216a27bba35cab9816fb7fba7bb452719544963ad7"
+    },
+    "results/01c/pilot-gpu/extend/atlas.png": {
+      "bytes": 99941,
+      "sha256": "1be6011b2ddf43d8788df0fd7bc1b84232dc97990e580ebc7d761a692c3561ae"
+    },
+    "results/01c/pilot-gpu/extend/flex_-1/trial.npz": {
+      "bytes": 2208945,
+      "sha256": "dcad6910adb858786bfd50462d88b24672e6de88c19845e074df2cd5a4334fc2"
+    },
+    "results/01c/pilot-gpu/extend/replay_model.mjb": {
+      "bytes": 81042335,
+      "sha256": "cba1a6dab0683d8ecaa26872b573c48a82bf9c27b7c260c25e80d74abcf0b9bd"
+    },
+    "results/01c/pilot-gpu/flex.log": {
+      "bytes": 11896,
+      "sha256": "5f74bb26c6b1c6550c47cf7645f8660422449cdf3e60333dde920984b16a5bdc"
+    },
+    "results/01c/pilot-gpu/flex/atlas.png": {
+      "bytes": 92446,
+      "sha256": "d257ccc9fabb516ad15740f70c74390e290edc439cbd0f7037b28a37292b72d0"
+    },
+    "results/01c/pilot-gpu/flex/flex_+1/trial.npz": {
+      "bytes": 2175752,
+      "sha256": "4b4f819c9adc959208bf22b9c48f186a2aa5564308ed9916f2ea735707cf3d2e"
+    },
+    "results/01c/pilot-gpu/flex/replay_model.mjb": {
+      "bytes": 81042335,
+      "sha256": "cba1a6dab0683d8ecaa26872b573c48a82bf9c27b7c260c25e80d74abcf0b9bd"
+    },
+    "results/01c/pilot-gpu/head-negative.log": {
+      "bytes": 11896,
+      "sha256": "165a8a25b8e43ca78b34bf836053f2e3cdd3953d5b8ff37f6092938cc29be4ae"
+    },
+    "results/01c/pilot-gpu/head-negative/atlas.png": {
+      "bytes": 97687,
+      "sha256": "0772373fd652bc36ce74defc9d282536b49ddee365919e00edf17b88e495b03e"
+    },
+    "results/01c/pilot-gpu/head-negative/head_-1/trial.npz": {
+      "bytes": 2197802,
+      "sha256": "e04176f5e76a95f361057028e9564c99a7614be9f7a8b5069c8a4224201fc328"
+    },
+    "results/01c/pilot-gpu/head-negative/replay_model.mjb": {
+      "bytes": 81042335,
+      "sha256": "cba1a6dab0683d8ecaa26872b573c48a82bf9c27b7c260c25e80d74abcf0b9bd"
+    },
+    "results/01c/pilot-gpu/head-positive.log": {
+      "bytes": 11896,
+      "sha256": "4559e5261314915c4332046bd81058fc23ffa50bbd2c44bfad7e669bda393f36"
+    },
+    "results/01c/pilot-gpu/head-positive/atlas.png": {
+      "bytes": 93278,
+      "sha256": "e79f54c7e16e1be1f06ede0fb56db86e89bbe97e48cc7860df056902fb90fe4f"
+    },
+    "results/01c/pilot-gpu/head-positive/head_+1/trial.npz": {
+      "bytes": 2190513,
+      "sha256": "5ada446a22d969fc72bfb735dbe6ec6b536dea61f43eff9ff32f97ec1ff80860"
+    },
+    "results/01c/pilot-gpu/head-positive/replay_model.mjb": {
+      "bytes": 81042335,
+      "sha256": "cba1a6dab0683d8ecaa26872b573c48a82bf9c27b7c260c25e80d74abcf0b9bd"
+    },
+    "results/01c/pilot/PLAN.json": {
+      "bytes": 841,
+      "sha256": "4471673ebad6f21b13d84973b1700b69125e5d617aaa40ad627edac2dac2e043"
+    },
+    "results/01c/pilot/baseline.log": {
+      "bytes": 7386,
+      "sha256": "3e5589e8c620a04c2833e6af177e216da987c376b058b811faced087ce1ea15e"
+    },
+    "results/01c/pilot/baseline/controlled01b.py": {
+      "bytes": 2976,
+      "sha256": "cf631c62c81cdf2d99e5800a2da7d22986cab8880d3f43966d422ca4a4c82a30"
+    },
+    "results/01c/pilot/baseline/departure_metrics01b.py": {
+      "bytes": 4254,
+      "sha256": "03bf4d4e2b3def802e9a4cfbe42b2d14de21157fa6d03434dceefca2d53e15df"
+    },
+    "results/01c/pilot/baseline/discovery_metrics.py": {
+      "bytes": 9454,
+      "sha256": "318d39537ee29a8d18e6576733c2df20b354b7c24b41da145b061a0bc43cb3ca"
+    },
+    "results/01c/pilot/baseline/replay01a.py": {
+      "bytes": 1190,
+      "sha256": "570b180058b5e1c58e22a5d1e706fc662baa9dd14652686ee2167d32a278efa2"
+    },
+    "results/01c/pilot/baseline/resolved_config.txt": {
+      "bytes": 23591,
+      "sha256": "88e9f314ec72ffc2842144ae90d6c8d85345582dd2e59a0f7bda1651767c8f78"
+    },
+    "results/01c/pilot/baseline/transition01c.py": {
+      "bytes": 17473,
+      "sha256": "155851dfa0edd868d34bf5d3cbe36d85d17148d81e7bdb37ecebc2817da04521"
+    },
+    "results/01c/pilot/cost.json": {
+      "bytes": 52,
+      "sha256": "f26694a8731dfa7b1d5fbb2d0c4f531a39cf921f099d6f9520a81e26950288cc"
+    },
+    "results/01c/pilot/study01c.py": {
+      "bytes": 6812,
+      "sha256": "73a5b9fe370beaea3f2d91423e16826aad9b76486c2c1044989fd80d8c318946"
+    },
+    "results/01c/pilot/summary.json": {
+      "bytes": 165,
+      "sha256": "5ce461c89ca7faace5ecb1ae9fbb87c0fbb3ba3654cc87cc011ca34283d74c74"
+    },
+    "results/01c/publication/tests-with-publication.txt": {
+      "bytes": 4908,
+      "sha256": "f7ff71d82fc40629ac3f6449a164f5630642be35637ee09b7e750738d9b64789"
+    }
+  },
+  "full_local_audit": {
+    "original_manifest_entries": {
+      "results/01c/manifest.json": 117,
+      "results/01c/pilot-gpu/manifest.json": 96
+    },
+    "upstream_unchanged": true,
+    "earlier_tracked_evidence_unchanged": true
+  },
+  "note": "Inventory excludes itself. Original manifests remain unchanged and cover full local evidence; missing data is not validated in a checkout."
+}
