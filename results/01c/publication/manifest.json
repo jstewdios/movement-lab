@@ -20,12 +20,12 @@
       "sha256": "9790a0304881997b614de101ec2329a939191eecb3950cbb32bac15ea61c4c0a"
     },
     "movement_lab/report01c.py": {
-      "bytes": 9624,
-      "sha256": "e8454d2745708623f68f3870981799313f2980c9107cb2a123935a5e95b96673"
+      "bytes": 10473,
+      "sha256": "ab33806bc89d2238d9be55f046149c53acfbf95cd8dd50a1d08121310d36e09f"
     },
     "movement_lab/study01c.py": {
-      "bytes": 6876,
-      "sha256": "d42dccd9fdf851156f7a110fd123ef2317801ff8f8f803186eeb0237e7d87f28"
+      "bytes": 9384,
+      "sha256": "151dd547b29d81768928ceb46812e7f3736dc3957d89c7770f5073c4cca190eb"
     },
     "movement_lab/transition01c.py": {
       "bytes": 17473,
@@ -36,8 +36,8 @@
       "sha256": "1040895f31ac4191e1187d85cb778de282510b5e4db2785c78604d04423ce54d"
     },
     "movement_lab/write_report01c.py": {
-      "bytes": 12982,
-      "sha256": "1cd6f5c89eca87148c807cc6e97458a8b42c24e54ea79adaa78d20ec8fd56cc5"
+      "bytes": 13699,
+      "sha256": "16425f7e68e7ef9239e1545db6852dc44513d161ca4f303486a3dac7f9bf2c81"
     },
     "results/01c/ATTEMPTS.md": {
       "bytes": 708,
@@ -420,8 +420,8 @@
       "sha256": "cd154f69632dbec6d429966ba05362a02d200f93015ef15f0af082314b660856"
     },
     "tests/test_transition01c.py": {
-      "bytes": 6568,
-      "sha256": "111d3d3882db84eb6f6444637adb0fcf91c5b01da977cdcbb25d7edc811d1a5d"
+      "bytes": 16336,
+      "sha256": "18c3675d7b9ec99ab70d7855c5195692d83e5e6b587c4031aac2eccaa349cfeb"
     }
   },
   "local_only_files": {
