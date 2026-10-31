@@ -1,0 +1,18 @@
+{
+  "budget_wall_s": 600.0,
+  "trials_per_arm": 2,
+  "search_seed": 42,
+  "simulator_seed": 42,
+  "order": [
+    "baseline",
+    "adaptive-0",
+    "control-0",
+    "control-1",
+    "adaptive-1"
+  ],
+  "independent_confirmation": "not allocated; no reproducibility claim",
+  "action_space": "24 head/flex coefficient pairs from {-1,-.5,0,.5,1} squared except zero",
+  "initialization": "checkpoint99, groundcontact, root z .1181823627, 1mm clearance",
+  "validity": "unchanged 01C/01B, 3mm penetration, stable hold and final",
+  "timing": "2s start; .6s rise, 1s hold, 1.4s return, 10s horizon"
+}

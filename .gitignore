@@ -68,3 +68,12 @@ results/*smoke*/
 /results/01c/pilot-gpu/*/atlas.png
 # Intermediate publication test run; final 38-test and original 36-test runs publish.
 /results/01c/publication/tests-with-publication.txt
+
+# 02A local raw evidence and upstream geometry; manifests preserve hashes.
+/results/02a/**/trial.npz
+/results/02a/**/replay_model.mjb
+/results/02a/**/*.log
+# 02A publication: redundant per-trial atlas exports remain local and hashed.
+/results/02a/pilot-gpu/*/atlas.png
+# Redundant publication console transcripts; structured audit JSON is published.
+/results/02a/publication/saved-record-validation*.txt

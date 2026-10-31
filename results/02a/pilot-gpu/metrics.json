@@ -1,0 +1,22 @@
+{
+  "adaptive": {
+    "evaluated": 2,
+    "discoveries": 1,
+    "physically_invalid": 0,
+    "valid_unproductive": 1,
+    "discovery_curve": [
+      1,
+      1
+    ]
+  },
+  "control": {
+    "evaluated": 2,
+    "discoveries": 2,
+    "physically_invalid": 0,
+    "valid_unproductive": 0,
+    "discovery_curve": [
+      1,
+      2
+    ]
+  }
+}

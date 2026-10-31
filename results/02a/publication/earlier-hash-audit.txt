@@ -1,0 +1,10 @@
+01b published and local inventories verified; shared-doc prefixes unchanged
+01c published and local inventories verified; shared-doc prefixes unchanged
+{
+  "historical_manifest_files": {
+    "results/01b/evidence-manifest.json": 28,
+    "results/01b/landing-diagnosis/diagnostic-manifest.json": 53,
+    "results/01b/departures/study-manifest.json": 168
+  },
+  "upstream_files_unchanged": 109
+}

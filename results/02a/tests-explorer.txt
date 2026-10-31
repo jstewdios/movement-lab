@@ -1,0 +1,11 @@
+test_fixed_execution_arguments_and_combination (tests.test_explore02a.AdapterEnvelopeTests.test_fixed_execution_arguments_and_combination) ... ok
+test_control_ignores_outcome (tests.test_explore02a.ExplorationTests.test_control_ignores_outcome) ... ok
+test_invalid_retained_and_duplicate_outcome_not_discovered (tests.test_explore02a.ExplorationTests.test_invalid_retained_and_duplicate_outcome_not_discovered) ... ok
+test_missing_baseline_hard_failure (tests.test_explore02a.ExplorationTests.test_missing_baseline_hard_failure) ... ok
+test_reproducible_and_history_influences_proposal (tests.test_explore02a.ExplorationTests.test_reproducible_and_history_influences_proposal) ... ok
+test_phase_noise_rejected_and_contact_failure_retained (tests.test_explore02a.PhysicalDescriptorTests.test_phase_noise_rejected_and_contact_failure_retained) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.037s
+
+OK

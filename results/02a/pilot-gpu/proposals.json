@@ -1,0 +1,47 @@
+[
+  {
+    "id": "baseline",
+    "action": [
+      0,
+      0
+    ],
+    "proposal_reason": "mandatory standing control",
+    "status": "validated record"
+  },
+  {
+    "id": "adaptive-0",
+    "action": [
+      -1.0,
+      0.0
+    ],
+    "proposal_reason": "uniform without replacement",
+    "status": "validated record"
+  },
+  {
+    "id": "control-0",
+    "action": [
+      -1.0,
+      0.0
+    ],
+    "proposal_reason": "uniform without replacement",
+    "status": "validated record"
+  },
+  {
+    "id": "control-1",
+    "action": [
+      0.5,
+      1.0
+    ],
+    "proposal_reason": "uniform without replacement",
+    "status": "validated record"
+  },
+  {
+    "id": "adaptive-1",
+    "action": [
+      -1.0,
+      -0.5
+    ],
+    "proposal_reason": "nearest valid neighborhood mutation; failed-region distance; novelty tie score",
+    "status": "validated record"
+  }
+]
