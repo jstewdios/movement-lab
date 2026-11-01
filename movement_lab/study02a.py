@@ -9,6 +9,8 @@ import time
 import numpy as np
 from movement_lab.explore02a import Explorer, measure, plot
 from movement_lab.evaluate import sha
+from movement_lab.historical02a import record_historical
+from movement_lab.process02a import run_until
 
 
 def main():
@@ -26,7 +28,7 @@ def main():
                 validity='unchanged 01C/01B, 3mm penetration, stable hold and final',
                 timing='2s start; .6s rise, 1s hold, 1.4s return, 10s horizon')
     (out/'PLAN.json').write_text(json.dumps(plan, indent=2))
-    for name in ('study02a.py', 'explore02a.py', 'residual02a.py'):
+    for name in ('study02a.py', 'explore02a.py', 'residual02a.py', 'historical02a.py', 'process02a.py'):
         (out/name).write_bytes(Path(__file__).with_name(name).read_bytes())
     arms = {name: Explorer(42, name == 'adaptive') for name in ('adaptive', 'control')}
     attempts = []; status = 'complete'
@@ -44,14 +46,15 @@ def main():
             trial = out/name
             cmd = [sys.executable, '-m', 'movement_lab.transition01c', '--out', str(trial), '--sequence', 'zero'] if arm is None else [sys.executable, '-m', 'movement_lab.residual02a', '--out', str(trial), '--coefficients', *map(str, action)]
             tick = time.monotonic()
+            row['phase'] = 'execution'; save()
             with (out/(name+'.log')).open('w') as log:
-                result = subprocess.run(cmd, stdout=log, stderr=subprocess.STDOUT, timeout=max(.01, deadline-time.monotonic()))
+                result = run_until(cmd, deadline, stdout=log, stderr=subprocess.STDOUT)
             row.update(returncode=result.returncode, execution_wall_s=time.monotonic()-tick)
             if result.returncode: raise RuntimeError('execution failed: '+name)
             # The existing full audit runs in a deadline-bounded subprocess.
             code = "import json; from pathlib import Path; from movement_lab.study01c import check; print(json.dumps(check(Path(%r),Path(%r))))" % (str(trial), str(out/'baseline'))
-            audit = subprocess.run([sys.executable, '-c', code], capture_output=True, text=True,
-                                   timeout=max(.01, deadline-time.monotonic()))
+            row['phase'] = 'validation'; save()
+            audit = run_until([sys.executable, '-c', code], deadline, capture_output=True, text=True)
             (out/(name+'-validation.log')).write_text(audit.stdout+audit.stderr)
             if audit.returncode: raise RuntimeError('hard validation failure: '+name)
             row['validation'] = json.loads(audit.stdout.splitlines()[-1]); row['status'] = 'validated record'
@@ -60,19 +63,20 @@ def main():
             baseline = dict(np.load(out/'baseline/zero/trial.npz'))
             if arm is None:
                 assert row['validation']['physical_valid'], 'invalid baseline'
-                historical = Path('results/01c/pilot-gpu/baseline')
-                if (historical/'zero/trial.npz').exists():
-                    old = dict(np.load(historical/'zero/trial.npz'))
-                    assert set(old) == set(a) and all(np.array_equal(a[k], old[k]) for k in a), 'historical baseline mismatch'
-                    assert sha(trial/'replay_model.mjb') == sha(historical/'replay_model.mjb'), 'historical model mismatch'
-                    assert (trial/'resolved_config.txt').read_bytes() == (historical/'resolved_config.txt').read_bytes(), 'historical config mismatch'
+                row['historical_comparison'] = record_historical(trial, out/'historical-baseline-audit.json')
             else:
                 r = measure(a, baseline, m)
                 row['outcome'] = arms[arm].observe(dict(id=name, action=action, trajectory_sha256=sha(meta.parent/'trial.npz'), **r))
+            row['phase'] = 'complete'
             save()
-    except subprocess.TimeoutExpired:
+    except subprocess.TimeoutExpired as exc:
         status = 'hard deadline reached; incomplete attempt retained'
-        if attempts: attempts[-1]['status'] = 'deadline interrupted'
+        if attempts:
+            row = attempts[-1]
+            row.update(status='deadline interrupted', interrupted_phase=row['phase'],
+                       subprocess_tree_reaped=True)
+            if row['phase'] == 'validation':
+                (out/(row['id']+'-validation.log')).write_text((exc.output or '')+(exc.stderr or ''))
     except Exception as exc:
         status = 'hard failure: '+repr(exc)
         if attempts: attempts[-1]['status'] = status

@@ -40,7 +40,7 @@ def audit():
     # Original inventories are immutable; they include excluded local raw files.
     manifests = {}
     for p in root.rglob('manifest.json'):
-        if 'publication' in p.parts: continue
+        if 'publication' in p.parts or 'review-fixes' in p.parts: continue
         entries = json.loads(p.read_text())
         for n, digest in entries.items(): assert sha(p.parent/n) == digest, (str(p), n)
         manifests[str(p)] = len(entries)
@@ -48,6 +48,11 @@ def audit():
         if n in ('.gitignore', 'README.md'):
             data = Path(n).read_bytes()
             assert any(hashlib.sha256(data[:i+1]).hexdigest() == digest for i, value in enumerate(data) if value == 10), ('original shared-doc prefix', n)
+        elif n in ('movement_lab/study02a.py', 'movement_lab/report02a.py'):
+            # Experimental source hashes describe the original publication, not review fixes.
+            from movement_lab.publication02a import ORIGINAL_PUBLICATION
+            original = subprocess.check_output(['git', 'show', ORIGINAL_PUBLICATION+':'+n])
+            assert hashlib.sha256(original).hexdigest() == digest, n
         else:
             assert sha(n) == digest, n
     changed = git('diff', BASE, '--name-only').splitlines()

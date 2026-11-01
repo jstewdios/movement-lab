@@ -5,6 +5,8 @@ from pathlib import Path
 import numpy as np
 from movement_lab.evaluate import sha
 from movement_lab.explore02a import ACTIONS, plot
+from movement_lab.historical02a import record_historical, describe_historical
+from movement_lab.study01c import check
 
 
 def main():
@@ -18,17 +20,16 @@ def main():
     fig, axes = plt.subplots(2, 2, figsize=(11, 7))
     control = root/'baseline/zero/trial.npz'
     rows = []
+    baseline_validation = check(root/'baseline', root/'baseline')
+    assert baseline_validation['physical_valid'], 'invalid new 02A baseline'
+    c = dict(np.load(control))
+    baseline_audit = record_historical(root/'baseline', root/'historical-baseline-audit.json')
+    historical_note = describe_historical(baseline_audit)
     if control.exists():
-        c = dict(np.load(control))
-        historical = Path('results/01c/pilot-gpu/baseline')
-        base = root/'baseline'
-        baseline_audit = {'historical_arrays_exact': all(np.array_equal(v, np.load(historical/'zero/trial.npz')[k]) for k, v in c.items()),
-                          'model_equal': sha(base/'replay_model.mjb') == sha(historical/'replay_model.mjb'),
-                          'config_equal': (base/'resolved_config.txt').read_bytes() == (historical/'resolved_config.txt').read_bytes()}
-        assert all(baseline_audit.values()), baseline_audit
-        (root/'historical-baseline-audit.json').write_text(json.dumps(baseline_audit, indent=2))
         for r in attempts:
             if not r.get('arm') or 'outcome' not in r: continue
+            checked = check(root/r['id'], root/'baseline')
+            assert checked == r['validation'], ('new 02A validation mismatch', r['id'])
             meta = next((root/r['id']).glob('*/metadata.json')); m = json.loads(meta.read_text())
             h, f = r['action']; assert (h, f) in ACTIONS
             expected = {'head_yaw': .08*h, 'left_hip_pitch': -.03*f, 'right_hip_pitch': .03*f,
@@ -68,7 +69,8 @@ def main():
                        f"Per-proposal discovery indicators: adaptive {[int(r['discovery']) for r in adaptive]}, "
                        f"control {[int(r['discovery']) for r in control_rows]}. "
                        "These two trials per arm and one paired search seed cannot establish an algorithm-level advantage. "
-                       "In the initial pilot, the adaptive second command was valid but redundant; experience changed the proposal without improving discovery.")
+                       "No general discovery-efficiency conclusion is supported by this sample.")
+    (root/'report-validation.json').write_text(json.dumps(dict(baseline=baseline_validation, historical=baseline_audit, new_records='strict per-trial 01C validation against new 02A baseline'), indent=2)+'\n')
     text = f'''# Movement Lab 02A — Learning to Explore
 
 The explorer and physical archive are implemented. This bounded run is a feasibility result; it does not establish that adaptation improves discovery efficiency. No motor policy was trained and no discovery has independent confirmation.
@@ -76,6 +78,8 @@ The explorer and physical archive are implemented. This bounded run is a feasibi
 Descriptive counts (no uncertainty estimate at this sample size): `{json.dumps(statistics)}`.
 
 {result_note}
+
+{historical_note}
 
 Execution/validation wall time: {cost['wall_s']:.2f} s. Stop status: **{cost['status']}**. Ten-minute hard subprocess deadline; plotting and hashing occur after GPU work ends. 01C measured 510.8 s for five ten-second trials, motivating a shared baseline plus two proposals per arm. Missing or interrupted trials are retained as attempts and never counted as successes. Unequal completed budgets preclude a matched comparison.
 
@@ -107,7 +111,7 @@ Offline proof revalidated four existing 01C records and exercised archive accept
 
 [Physical diversity](outcomes.png) · [Representative full-rate trajectories and discovery curves](trajectories.png) · [Archive](archive.json) · [Attempts](attempts.json) · [Plan](PLAN.json) · [Cost](cost.json).
 
-The baseline is compared exactly to the historical 01C arrays, model and resolved configuration by report02a. Per-trial 01C checks retain hash/checkpoint, CPU geometry/COM/contact, controller composition, exact initial/precommand prefix, pulse, target and actuator mapping audits. The 3 mm penetration threshold, groundcontact and 1 mm sole-clearance reset remain unchanged. Baseline incompleteness or integrity failures halt the study; physical safety stops remain unsuccessful observations. The executed adapter is preserved in this output root. After the pilot its CLI was restricted to out/coefficients/seed so timing and amplitude overrides cannot bypass the declared envelope; the pilot already used those fixed defaults. The final driver also performs the historical baseline comparison before departures and returns a nonzero status on hard failure; the executed snapshot is preserved, and the pilot historical match was independently checked during the run. Sources are snapshotted and full local files hashed; missing raw NPZ/MJB files cannot be validated from hashes alone. Prior studies and upstream Microduck RL remain unchanged.
+Historical evidence status and available comparisons are recorded above and in historical-baseline-audit.json and report-validation.json. Missing or partial history is never counted as historical validation; every available artifact must match. New 02A records are checked strictly against their own baseline regardless of historical availability. Per-trial 01C checks retain hash/checkpoint, CPU geometry/COM/contact, controller composition, exact initial/precommand prefix, pulse, target and actuator mapping audits. The 3 mm penetration threshold, groundcontact and 1 mm sole-clearance reset remain unchanged. Baseline incompleteness or integrity failures halt the study; physical safety stops remain unsuccessful observations. The executed adapter is preserved in this output root. After the pilot its CLI was restricted to out/coefficients/seed so timing and amplitude overrides cannot bypass the declared envelope; the pilot already used those fixed defaults. The final driver also performs the historical baseline comparison before departures and returns a nonzero status on hard failure; the executed snapshot is preserved, and the pilot historical match was independently checked during the run. Sources are snapshotted and full local files hashed; missing raw NPZ/MJB files cannot be validated from hashes alone. Prior studies and upstream Microduck RL remain unchanged.
 
 ```bash
 PY=/home/james/microduck_rl/.venv/bin/python
