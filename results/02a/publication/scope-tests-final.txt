@@ -1,0 +1,8 @@
+test_missing_conditions_are_hard_failure (tests.test_publication02a.Publication02aTests.test_missing_conditions_are_hard_failure) ... ok
+test_redundant_physical_outcome_is_not_command_diversity (tests.test_publication02a.Publication02aTests.test_redundant_physical_outcome_is_not_command_diversity) ... ok
+test_scope (tests.test_publication02a.Publication02aTests.test_scope) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.002s
+
+OK

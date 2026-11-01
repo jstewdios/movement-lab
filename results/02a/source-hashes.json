@@ -1,0 +1,9 @@
+{
+  "movement_lab/explore02a.py": "fbc7e0790c4f4994cb529db9720bbd08ee7d011201d7c4802301c56a336bc217",
+  "movement_lab/study02a.py": "c8eb1998a0bfa69b37cfb201ea6f98f7459edb68f9888b1c357af97ed5df1534",
+  "movement_lab/report02a.py": "fe87d4cddfb3e667a45182055af11861175979c93d74c1da238d0ed4cd0930ba",
+  "movement_lab/residual02a.py": "b0b144d73e14e5830812ec5393aa88a16e74dee542d97e451a8f5b4514574135",
+  "tests/test_explore02a.py": "d678c1688b0262da4391d4ff6982e2fc85fb66ca562365a5fda83ea4d097620b",
+  "README.md": "86a2ecb638699d64e462f20e4af50ab7f85a995a05d4218e7cc4dd229fec8f11",
+  ".gitignore": "c6f6617b1ce992a8eb1116e2b6221d765e6037b431d98f18526423845b3d6cdd"
+}

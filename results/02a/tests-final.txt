@@ -1,0 +1,88 @@
+test_nonmonotone_points_are_retained_and_audited (test_boundary.BoundaryTests.test_nonmonotone_points_are_retained_and_audited) ... ok
+test_return_is_distinct_from_displaced_recovery (test_boundary.BoundaryTests.test_return_is_distinct_from_displaced_recovery) ... ok
+test_rotated_standing_is_not_return_to_original_orientation (test_boundary.BoundaryTests.test_rotated_standing_is_not_return_to_original_orientation) ... ok
+test_upright_instability_is_not_called_falling (test_boundary.BoundaryTests.test_upright_instability_is_not_called_falling) ... ok
+test_terminated_trial_uses_common_pre_event_samples (test_boundary.BoundaryValidationTests.test_terminated_trial_uses_common_pre_event_samples) ... ok
+test_bounded_signed_commands_and_recovery (test_controlled01b.ControlledGateTests.test_bounded_signed_commands_and_recovery) ... ok
+test_contact_and_settling_failures (test_controlled01b.ControlledGateTests.test_contact_and_settling_failures) ... ok
+test_rejects_quiet_fallen_and_body_supported (test_controlled01b.ControlledGateTests.test_rejects_quiet_fallen_and_body_supported) ... ok
+test_contact_invalidity_and_motionless_fall_rejected (test_departure01b.DepartureCriteriaTests.test_contact_invalidity_and_motionless_fall_rejected) ... ok
+test_final_quietness_without_sustained_return_is_insufficient (test_departure01b.DepartureCriteriaTests.test_final_quietness_without_sustained_return_is_insufficient) ... ok
+test_response_requires_actual_motion_and_return (test_departure01b.DepartureCriteriaTests.test_response_requires_actual_motion_and_return) ... ok
+test_unsettled_precommand_is_rejected (test_departure01b.DepartureCriteriaTests.test_unsettled_precommand_is_rejected) ... ok
+test_body_support_is_not_airborne_or_stable (test_discovery.ClassificationTests.test_body_support_is_not_airborne_or_stable) ... ok
+test_quiet_fall_is_not_success (test_discovery.ClassificationTests.test_quiet_fall_is_not_success) ... ok
+test_airtime_requires_consecutive_samples (test_discovery.DiscoveryTests.test_airtime_requires_consecutive_samples) ... ok
+test_pulse_boundaries_and_slew (test_discovery.DiscoveryTests.test_pulse_boundaries_and_slew) ... ok
+test_recovery_requires_settling_and_final_stability (test_disturbance.DisturbanceTests.test_recovery_requires_settling_and_final_stability) ... ok
+test_saved_interventions (test_disturbance.DisturbanceTests.test_saved_interventions) ... ok
+test_step_evidence_rejects_sliding_and_requires_lift (test_disturbance.DisturbanceTests.test_step_evidence_rejects_sliding_and_requires_lift) ... ok
+test_fixed_execution_arguments_and_combination (test_explore02a.AdapterEnvelopeTests.test_fixed_execution_arguments_and_combination) ... ok
+test_control_ignores_outcome (test_explore02a.ExplorationTests.test_control_ignores_outcome) ... ok
+test_invalid_retained_and_duplicate_outcome_not_discovered (test_explore02a.ExplorationTests.test_invalid_retained_and_duplicate_outcome_not_discovered) ... ok
+test_missing_baseline_hard_failure (test_explore02a.ExplorationTests.test_missing_baseline_hard_failure) ... ok
+test_reproducible_and_history_influences_proposal (test_explore02a.ExplorationTests.test_reproducible_and_history_influences_proposal) ... ok
+test_phase_noise_rejected_and_contact_failure_retained (test_explore02a.PhysicalDescriptorTests.test_phase_noise_rejected_and_contact_failure_retained) ... ok
+test_clearance_is_world_mesh_minimum_and_translates (test_landing01b.LandingAuditTests.test_clearance_is_world_mesh_minimum_and_translates) ... ok
+test_diagnostic_runner_has_only_zero_plan (test_landing01b.LandingAuditTests.test_diagnostic_runner_has_only_zero_plan) ... ok
+test_known_physics (test_measure.Measurements.test_known_physics) ... ok
+test_reject_corruption (test_measure.Measurements.test_reject_corruption) ... ok
+test_tilt (test_measure.Measurements.test_tilt) ... ok
+test_accepts_legitimate_01b_sources (test_publication01b.PublicationScopeTests.test_accepts_legitimate_01b_sources) ... ok
+test_rejects_unexpected_files_and_near_matches (test_publication01b.PublicationScopeTests.test_rejects_unexpected_files_and_near_matches) ... ok
+test_accepts_study_sources_and_evidence (test_publication01c.Publication01cScopeTests.test_accepts_study_sources_and_evidence) ... ok
+test_rejects_earlier_and_unexpected_sources (test_publication01c.Publication01cScopeTests.test_rejects_earlier_and_unexpected_sources) ... ok
+test_repeatability (test_records.RecordedTrials.test_repeatability) ... ok
+test_saved_rollouts (test_records.RecordedTrials.test_saved_rollouts) ... ok
+test_absent_optional_records_are_skipped (test_saved_fixture_modes.SavedFixtureModes.test_absent_optional_records_are_skipped) ... ok
+test_corrupt_available_archive_is_not_skipped (test_saved_fixture_modes.SavedFixtureModes.test_corrupt_available_archive_is_not_skipped) ... ok
+test_explicit_metadata_without_raw_record_fails (test_saved_fixture_modes.SavedFixtureModes.test_explicit_metadata_without_raw_record_fails) ... ok
+test_explicit_missing_or_empty_root_fails (test_saved_fixture_modes.SavedFixtureModes.test_explicit_missing_or_empty_root_fails) ... ok
+test_partial_directory_still_checks_available_real_record (test_saved_fixture_modes.SavedFixtureModes.test_partial_directory_still_checks_available_real_record) ... ok
+test_incomplete_baseline_is_hard_failure (test_transition01c.SafetyStoppedPipelineTests.test_incomplete_baseline_is_hard_failure) ... PASS: hashes, checkpoint, arrays, controller composition, mapping, gate, saved-state geometry/COM/contact audit
+ok
+test_mixed_complete_and_safety_stopped_reports (test_transition01c.SafetyStoppedPipelineTests.test_mixed_complete_and_safety_stopped_reports) ... PASS: hashes, checkpoint, arrays, controller composition, mapping, gate, saved-state geometry/COM/contact audit
+PASS: hashes, checkpoint, arrays, controller composition, mapping, gate, saved-state geometry/COM/contact audit
+PASS: hashes, checkpoint, arrays, controller composition, mapping, gate, saved-state geometry/COM/contact audit
+PASS: hashes, checkpoint, arrays, controller composition, mapping, gate, saved-state geometry/COM/contact audit
+ok
+test_safety_stopped_movement_and_partial_final_window (test_transition01c.SafetyStoppedPipelineTests.test_safety_stopped_movement_and_partial_final_window) ... PASS: hashes, checkpoint, arrays, controller composition, mapping, gate, saved-state geometry/COM/contact audit
+PASS: hashes, checkpoint, arrays, controller composition, mapping, gate, saved-state geometry/COM/contact audit
+ok
+test_unexplained_truncation_corrupt_or_missing_data_is_not_safety_outcome (test_transition01c.SafetyStoppedPipelineTests.test_unexplained_truncation_corrupt_or_missing_data_is_not_safety_outcome) ... PASS: hashes, checkpoint, arrays, controller composition, mapping, gate, saved-state geometry/COM/contact audit
+PASS: hashes, checkpoint, arrays, controller composition, mapping, gate, saved-state geometry/COM/contact audit
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/james/movement-lab/movement_lab/validate01b.py", line 42, in <module>
+    if __name__=='__main__': main()
+                             ^^^^^^
+  File "/home/james/movement-lab/movement_lab/validate01b.py", line 14, in main
+    assert sha(out/name)==digest,name
+           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: flex_+1/metadata.json
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/james/movement-lab/movement_lab/validate01b.py", line 42, in <module>
+    if __name__=='__main__': main()
+                             ^^^^^^
+  File "/home/james/movement-lab/movement_lab/validate01b.py", line 14, in main
+    assert sha(out/name)==digest,name
+           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: flex_+1/metadata.json
+ok
+test_budget_limited_missing_flexion_or_head_yaw (test_transition01c.TransitionReportTests.test_budget_limited_missing_flexion_or_head_yaw) ... ok
+test_complete_five_trial_pilot (test_transition01c.TransitionReportTests.test_complete_five_trial_pilot) ... ok
+test_completed_trial_with_different_classification (test_transition01c.TransitionReportTests.test_completed_trial_with_different_classification) ... ok
+test_no_demonstrated_controlled_transition (test_transition01c.TransitionReportTests.test_no_demonstrated_controlled_transition) ... ok
+test_no_motion_and_invalid_support (test_transition01c.TransitionTests.test_no_motion_and_invalid_support) ... ok
+test_partial_return_and_timing (test_transition01c.TransitionTests.test_partial_return_and_timing) ... ok
+test_persistent_configuration_is_not_return (test_transition01c.TransitionTests.test_persistent_configuration_is_not_return) ... ok
+test_stopped_window_metrics_without_local_geometry (test_transition01c.TransitionTests.test_stopped_window_metrics_without_local_geometry) ... ok
+
+----------------------------------------------------------------------
+Ran 53 tests in 70.520s
+
+OK
+PASS independent audit and atlas: 3 records

@@ -388,3 +388,33 @@ five **ten-second** records, the untested conditions, and local-only evidence.
 `python -m movement_lab.publication01c` verifies published hashes;
 `python -m movement_lab.validate01c` performs read-only full saved-record validation
 when the local trajectories, compiled models and upstream dependencies are present.
+
+## Movement Lab 02A — Learning to Explore
+
+A small across-trial adaptive explorer uses a two-coefficient residual action
+space on the unchanged checkpoint-99 standing controller. A uniform control
+uses the same action space and trial budget. Archive admission requires physical
+validation and sustained measured body-state differences, not different commands.
+This is search adaptation, with no newly trained motor policy.
+
+[Recorded-data proof](results/02a/offline/README.md) ·
+[Bounded GPU feasibility report](results/02a/pilot-gpu/REPORT.md).
+
+```bash
+PY=/home/james/microduck_rl/.venv/bin/python
+$PY -m movement_lab.explore02a --recorded results/01c/pilot-gpu --out results/02a/offline-new
+$PY -m movement_lab.study02a --out results/02a/pilot-new --budget 600
+$PY -m movement_lab.report02a results/02a/pilot-new
+```
+
+New output roots are mandatory. The GPU execution and validation subprocesses
+share a hard ten-minute deadline. The five-trial feasibility allocation is too
+small to establish improved discovery efficiency or independent reproducibility.
+Attempts, failures and incomplete evidence remain inspectable. Full local raw
+trajectories and upstream geometry are hashed and retained but excluded from Git.
+
+02A [publication and reproduction notes](results/02a/PUBLICATION.md) describe the
+published inventory and preserved local-only evidence. Read-only
+`python -m movement_lab.validate02a` recomputes physical outcomes and proposal
+history when local raw evidence is present; `python -m movement_lab.publication02a`
+verifies the published inventory (`--full` also checks excluded local artifacts).
