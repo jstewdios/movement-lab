@@ -116,9 +116,9 @@ def main(argv=None):
     cfg = {k: (str(v) if isinstance(v, Path) else v) for k, v in vars(args).items()}
     cfg.update(hard_range=HARD_RANGE, hidden=HIDDEN, z_dim=Z_DIM, n_params=int(vec.size),
                model_sha256=json.loads((args.model / 'model.json').read_text())['mjb_sha256'])
-    (args.out / 'config.json').write_text(json.dumps(cfg, indent=1))
+    (args.out / 'config.json').write_text(json.dumps(cfg, indent=1), newline='\n')
     probes = probe_conditions()
-    log = open(args.out / 'progress.jsonl', 'w')
+    log = open(args.out / 'progress.jsonl', 'w', newline='\n')
     snaps, rollouts, sim_s = [vec.copy()], 0, 0.0
     started = time.perf_counter()
     with ProcessPoolExecutor(args.workers, initializer=_init, initargs=(str(args.model),)) as pool:
@@ -160,7 +160,7 @@ def main(argv=None):
     log.close()
     np.savez_compressed(args.out / 'snapshots.npz', snapshots=np.array(snaps), final=vec)
     final = dict(arm=args.arm, seed=args.seed, init=str(args.init), rollouts=rollouts, sim_s=sim_s, wall_s=time.perf_counter() - started)
-    (args.out / 'final.json').write_text(json.dumps(final, indent=1))
+    (args.out / 'final.json').write_text(json.dumps(final, indent=1), newline='\n')
     print(json.dumps(final))
 
 

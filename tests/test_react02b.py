@@ -234,6 +234,95 @@ class SeedSeparationTests(unittest.TestCase):
         # Regression: several paths at once (Windows text pipes once hid all but the last).
         self.assertEqual(ignored(paths), set(paths[:3]))
 
+    def test_published_gzip_has_lf_content_whatever_wrote_the_local_file(self):
+        import gzip
+        import tempfile
+        from pathlib import Path
+        from movement_lab.eval02b import publish_results
+        lines = b'{"a": 1}\n{"b": 2}\n'
+        with tempfile.TemporaryDirectory() as d:
+            (Path(d) / 'results.jsonl').write_bytes(lines)
+            publish_results(d)
+            lf = (Path(d) / 'results.jsonl.gz').read_bytes()
+            (Path(d) / 'results.jsonl').write_bytes(lines.replace(b'\n', b'\r\n'))  # Windows text mode
+            publish_results(d)
+            self.assertEqual((Path(d) / 'results.jsonl.gz').read_bytes(), lf)
+            self.assertEqual(gzip.decompress(lf), lines)
+
+    def test_manifest_refuses_crlf_text_and_names_crlf_checkouts(self):
+        import hashlib
+        import tempfile
+        from pathlib import Path
+        from movement_lab.publication02b import check, crlf_text
+        with tempfile.TemporaryDirectory() as d:
+            lf, crlf, binary = Path(d, 'lf.json'), Path(d, 'crlf.json'), Path(d, 'x.png')
+            lf.write_bytes(b'{\n "a": 1\n}')
+            crlf.write_bytes(b'{\r\n "a": 1\r\n}')
+            binary.write_bytes(b'\x89PNG\r\n\x1a\n\x00\x00')
+            self.assertEqual(crlf_text([lf, crlf, binary]), [crlf])
+            expected = hashlib.sha256(lf.read_bytes()).hexdigest()
+            self.assertEqual(check(lf, expected), 'ok')
+            self.assertEqual(check(crlf, expected), 'crlf')
+            self.assertEqual(check(binary, expected), 'mismatch')
+            self.assertEqual(check(Path(d, 'absent'), expected), 'missing')
+
+    def test_02b_text_is_checked_out_with_lf(self):
+        # The manifest hashes exact bytes; they verify on any platform only if
+        # Git checks 02B text out as LF (regression: CRLF on Windows checkouts).
+        import shutil
+        import subprocess
+        from pathlib import Path
+        from movement_lab.publication02b import crlf_text, source_paths
+        if shutil.which('git') is None or not Path('.git').exists():
+            self.skipTest('needs the git checkout')
+        tracked = ['results/02b/REPORT.md', 'results/02b/manifest.json', 'movement_lab/sim02b.py', 'tests/test_react02b.py']
+        r = subprocess.run(['git', 'check-attr', 'eol', '--', *tracked], capture_output=True, check=True)
+        self.assertEqual([l.rsplit(b': ', 1)[1] for l in r.stdout.splitlines()], [b'lf'] * len(tracked))
+        files = subprocess.run(['git', 'ls-files', '-z', 'results/02b'], capture_output=True, check=True).stdout.split(b'\0')
+        published = [Path(f.decode()) for f in files if f]
+        self.assertGreater(len(published), 50)
+        self.assertEqual(crlf_text(published + list(source_paths().values())), [])
+
+    def test_model_regeneration_installs_only_a_matching_model(self):
+        import hashlib
+        import json
+        import tempfile
+        from pathlib import Path
+        from movement_lab import model02b
+        good = b'compiled model bytes'
+        info = dict(mjb_sha256=hashlib.sha256(good).hexdigest(), total_mass=0.737, opt=dict(timestep=0.005),
+                    python='published machine', wall_s=1.0, upstream=dict(path='C:/x'), packages={}, device_for_compile='cpu')
+
+        def fake_compile(payload, **changed):
+            def compile_fn(out):
+                (out / 'model.mjb').write_bytes(payload)
+                (out / 'resolved_config.txt').write_bytes(b'cfg')
+                fresh = dict(info, mjb_sha256=hashlib.sha256(payload).hexdigest(), python='this machine', wall_s=2.0, **changed)
+                (out / 'model.json').write_text(json.dumps(fresh))
+                return fresh
+            return compile_fn
+
+        import contextlib
+        import io
+        with tempfile.TemporaryDirectory() as d, contextlib.redirect_stdout(io.StringIO()):
+            out = Path(d)
+            published = json.dumps(info, indent=1).encode()
+            (out / 'model.json').write_bytes(published)
+            (out / 'resolved_config.txt').write_bytes(b'cfg')
+            with self.assertRaises(SystemExit):  # a different model is never installed
+                model02b.regenerate(out, fake_compile(b'other bytes'))
+            self.assertFalse((out / 'model.mjb').exists())
+            with self.assertRaises(SystemExit):  # same bytes, different recorded physics
+                model02b.regenerate(out, fake_compile(good, total_mass=0.8))
+            self.assertFalse((out / 'model.mjb').exists())
+            model02b.regenerate(out, fake_compile(good))  # fresh checkout: metadata only
+            self.assertEqual((out / 'model.mjb').read_bytes(), good)
+            self.assertEqual((out / 'model.json').read_bytes(), published)  # published metadata untouched
+            self.assertEqual(model02b.regenerate(out, None)['mjb_sha256'], info['mjb_sha256'])  # already present
+            (out / 'model.mjb').write_bytes(b'tampered')
+            with self.assertRaises(SystemExit):
+                model02b.regenerate(out, fake_compile(good))
+
     def test_wilson_interval(self):
         from movement_lab.eval02b import wilson
         lo, hi = wilson(10, 10)
@@ -301,6 +390,25 @@ class PhysicsTests(unittest.TestCase):
         k = int(round(0.1 / sim02b.DT))
         self.assertTrue(np.array_equal(rec['qpos'][:k], ref['qpos'][:k]))
         self.assertGreater(rec['qvel'][k, 0] - ref['qvel'][k, 0], 0.1)
+
+    def test_recorded_sole_forces_include_actuation_and_pulses(self):
+        # Regression: the measurement copy once carried only qpos/qvel, so the
+        # recorded soles held up an unactuated robot (about 4% under its weight)
+        # and never felt sustained pulses.
+        weight = float(self.sim.m.body_mass.sum()) * 9.81
+        base = dict(seed=0, duration_s=0.5, gyro_noise=0, gravity_noise=0)
+        plain, rec = sim02b.rollout(self.sim, sim02b.zero_theta(), Condition(**base), record=True)
+        t, f = rec['time_s'], rec['foot_force_n'].sum(axis=1)
+        stance = (t > 0.1) & (t < 0.3)
+        self.assertAlmostEqual(f[stance].mean() / weight, 1.0, delta=0.01)
+        _, prec = sim02b.rollout(self.sim, sim02b.zero_theta(), Condition(
+            **base, pulse_time_s=0.1, pulse_duration_s=0.2, pulse_force=(0.0, 0.0, -1.0)), record=True)
+        during = (prec['time_s'] > 0.15) & (prec['time_s'] < 0.29)
+        self.assertAlmostEqual(prec['foot_force_n'].sum(axis=1)[during].mean() - weight, 1.0, delta=0.1)
+        # Recording is measurement only: it does not change the trial.
+        unrecorded, _ = sim02b.rollout(self.sim, sim02b.zero_theta(), Condition(**base))
+        self.assertEqual(plain['fitness'], unrecorded['fitness'])
+        self.assertEqual(plain['final_root_xy'], unrecorded['final_root_xy'])
 
 
 if __name__ == '__main__':

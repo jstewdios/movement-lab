@@ -288,8 +288,12 @@ def rollout(sim: Sim, theta, cond: Condition, record=False, terminate=True, grac
                 s['peak_torque_nm'] = max(s['peak_torque_nm'], float(np.abs(tau).max()))
                 s['work_j'] += float(np.abs(tau * d.qvel[sim.vadr]).sum()) * DT
             if record:
+                # Full state copy, not just qpos/qvel: contact forces depend on the
+                # BAM torques in ctrl, sustained pulses in xfrc_applied and the
+                # solver warm start. This equals mj_forward(m, d) without touching
+                # d, so the simulated trial itself is unchanged.
                 aux = sim.aux
-                aux.qpos[:], aux.qvel[:], aux.time = d.qpos, d.qvel, d.time
+                mj.mj_copyData(aux, m, d)
                 mj.mj_forward(m, aux)
                 lf, rf, nf, pen, force = sim.contacts(aux)
                 rec['time_s'].append(d.time); rec['qpos'].append(d.qpos.copy()); rec['qvel'].append(d.qvel.copy())

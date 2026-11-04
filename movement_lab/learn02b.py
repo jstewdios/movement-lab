@@ -145,11 +145,11 @@ def main(argv=None):
                fitness_weights=dict(tilt=sim02b.W_TILT, action=sim02b.W_ACTION, rate=sim02b.W_RATE),
                features=sim02b.FEATURES, feature_scale=sim02b.FEATURE_SCALE.tolist(), action_bound=sim02b.ACTION_BOUND,
                model_sha256=json.loads((args.model / 'model.json').read_text())['mjb_sha256'])
-    (out / 'config.json').write_text(json.dumps(cfg, indent=1))
+    (out / 'config.json').write_text(json.dumps(cfg, indent=1), newline='\n')
     rng = np.random.default_rng(args.seed)
     theta = np.zeros(PARAM_SHAPE)
     probes = probe_conditions()
-    log = open(out / 'progress.jsonl', 'w')
+    log = open(out / 'progress.jsonl', 'w', newline='\n')
     thetas, rollouts, sim_s = [theta.copy()], 0, 0.0
     best = dict(fitness=-np.inf, theta=theta.copy(), it=-1)
     candidates = []  # random arm: (fitness, it, theta)
@@ -226,7 +226,7 @@ def main(argv=None):
                      wall_s=time.perf_counter() - started, theta_norm=float(np.linalg.norm(theta)))
         log.close()
     np.savez_compressed(out / 'thetas.npz', thetas=np.array(thetas), final=theta)
-    (out / 'final.json').write_text(json.dumps(final, indent=1))
+    (out / 'final.json').write_text(json.dumps(final, indent=1), newline='\n')
     print(json.dumps(final))
 
 

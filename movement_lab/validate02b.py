@@ -115,7 +115,7 @@ def main(argv=None):
     runs = check_runs(args.root, info, report)
     if eval02b.read_results(args.root / 'eval/final') is not None:
         check_eval(args.root, runs, report, args.resimulate, args.root / 'model')
-    (args.root / 'validation.json').write_text(json.dumps(report, indent=1))
+    (args.root / 'validation.json').write_text(json.dumps(report, indent=1), newline='\n')
     print(json.dumps(report, indent=1))
     print('PASS')
 

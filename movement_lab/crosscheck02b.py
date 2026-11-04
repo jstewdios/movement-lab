@@ -164,7 +164,7 @@ def main(argv=None):
     finally:
         env.close()
     report['wall_s'] = time.perf_counter() - started
-    (args.out / 'crosscheck.json').write_text(json.dumps(report, indent=1))
+    (args.out / 'crosscheck.json').write_text(json.dumps(report, indent=1), newline='\n')
 
 
 if __name__ == '__main__':

@@ -270,7 +270,7 @@ From the movement-lab root with the upstream venv (`PYTHONPATH=. PYTHONUTF8=1`):
 
 ```bash
 PY=~/microduck_rl/.venv/Scripts/python.exe      # Linux: .venv/bin/python
-$PY -m movement_lab.model02b --out results/02b/model         # ~20 s; local 81 MB MJB (ignored)
+$PY -m movement_lab.model02b --out results/02b/model         # ~20 s; local 81 MB MJB (ignored), installed only if it matches model.json
 $PY -m movement_lab.study02b train --root results/02b        # 9 runs, 62 min on 12 threads
 $PY -m movement_lab.study02b evaluate --root results/02b     # 6,800 held-out trials, 10 min
 $PY -m movement_lab.study02b ablate --root results/02b       # 3,000 trials, 7 min
@@ -279,8 +279,11 @@ $PY -m movement_lab.study02b evaluate-revision --root results/02b --seeds 1
 $PY -m movement_lab.study02b crosscheck --root results/02b   # mjlab on CPU, ~37 min
 $PY -m movement_lab.analysis02b --root results/02b && $PY -m movement_lab.replay02b --root results/02b
 $PY -m movement_lab.validate02b --root results/02b --resimulate 24
+$PY -m movement_lab.publication02b --root results/02b --verify
 $PY -m unittest tests.test_react02b -v
 ```
+
+On a fresh checkout `results/02b/model` already holds the published `model.json`; `model02b` then compiles into a temporary directory, checks the result against it, and installs only a matching `model.mjb`.
 
 **Cost.** Measured wall time was 8,556 s for training, evaluation, ablation, revision and cross-check (the cross-check overlapped other steps), plus about 25 min of pilots and analysis. Training used 69,600 physical trials, the revision 25,600, and held-out evaluation 10,888.
 
@@ -295,7 +298,7 @@ $PY -m unittest tests.test_react02b -v
 
 **Files.**
 
-- `manifest.json` hashes every artifact. Local-only items: the compiled model (upstream meshes), logs, raw `results.jsonl` (published as deterministic `.gz`) and mesh renders.
+- `manifest.json` hashes every artifact and the 02B sources (SHA-256 of the exact bytes). Published text is LF on every platform (`.gitattributes` pins it), so the same hashes verify on Linux and Windows checkouts. Local-only items: the compiled model (upstream meshes), logs, raw `results.jsonl` (published as deterministic `.gz`) and mesh renders.
 - `report/tables.json` holds every number quoted here.
 - The [replay](report/replay.html) is a portable stick-figure playback of recorded states (no meshes): HOME falling, the reflex standing and being pushed, and the step-event pair.
 - Mesh renders for visual inspection were made locally and are not published (upstream CC BY-NC-SA assets).

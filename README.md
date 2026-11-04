@@ -452,7 +452,7 @@ own mjlab/MuJoCo-Warp environment, with 99/100 outcome agreement.
 ```bash
 PY=~/microduck_rl/.venv/Scripts/python.exe     # Linux: ~/microduck_rl/.venv/bin/python
 export PYTHONPATH=. PYTHONUTF8=1
-$PY -m movement_lab.model02b --out results/02b/model      # compile + hash (local MJB)
+$PY -m movement_lab.model02b --out results/02b/model      # compile; installs the local MJB only if it matches model.json
 $PY -m movement_lab.study02b train --root results/02b     # 9 runs, ~1 h on 12 threads
 $PY -m movement_lab.study02b evaluate --root results/02b  # held-out batteries
 $PY -m movement_lab.study02b ablate --root results/02b

@@ -8,6 +8,11 @@ it stays local (ignored by Git); its hash and every checked property are
 recorded in ``model.json`` so later rollouts can verify they use the same model.
 
     python -m movement_lab.model02b --out results/02b/model
+
+On a fresh checkout ``results/02b/model`` already holds the published
+``model.json`` and ``resolved_config.txt`` but not the MJB. The command then
+compiles into a temporary directory and installs ``model.mjb`` only if its hash
+equals the published one; the published files are never overwritten.
 """
 import argparse
 import hashlib
@@ -15,8 +20,10 @@ import importlib.metadata
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
+import tempfile
 import time
 from pathlib import Path
 
@@ -71,14 +78,14 @@ def env_cfg(num_envs=1, seed=42):
     return cfg
 
 
-def main():
-    p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument('--out', type=Path, required=True)
-    p.add_argument('--upstream', type=Path, default=Path(os.environ.get('MICRODUCK_RL', Path.home() / 'microduck_rl')))
-    p.add_argument('--device', default='cpu', help='mjlab device used only to construct/compile the env')
-    args = p.parse_args()
-    out = args.out.resolve()
-    out.mkdir(parents=True, exist_ok=False)
+# Provenance of one compile (machine, interpreter, timing). Everything else in
+# model.json describes the model itself and must match on regeneration.
+PROVENANCE = ('wall_s', 'python', 'upstream', 'packages', 'device_for_compile')
+
+
+def compile_model(out, upstream, device='cpu'):
+    """Compile through mjlab into ``out``: model.mjb, model.json, resolved_config.txt."""
+    out = Path(out)
     os.environ.setdefault('WANDB_MODE', 'disabled')
     started = time.perf_counter()
     import mujoco
@@ -87,8 +94,9 @@ def main():
 
     task = TASK
     cfg = env_cfg()
-    (out / 'resolved_config.txt').write_text(re.sub(r' at 0x[0-9a-fA-F]+', '', repr(cfg)))
-    env = ManagerBasedRlEnv(cfg, device=args.device)
+    # LF on every platform: these files are published and hashed byte-for-byte.
+    (out / 'resolved_config.txt').write_text(re.sub(r' at 0x[0-9a-fA-F]+', '', repr(cfg)), newline='\n')
+    env = ManagerBasedRlEnv(cfg, device=device)
     try:
         m = env.sim.mj_model
         term = env.action_manager.get_term('joint_pos')
@@ -113,10 +121,10 @@ def main():
                 geoms.append(dict(id=i, name=m.geom(i).name, body=m.body(m.geom_bodyid[i]).name,
                                   condim=int(m.geom_condim[i]), priority=int(m.geom_priority[i]),
                                   friction=m.geom_friction[i].tolist()))
-        upstream = args.upstream.resolve()
+        upstream = Path(upstream).resolve()
         pkgs = {k: importlib.metadata.version(k) for k in ('mjlab', 'mujoco', 'mujoco-warp', 'warp-lang', 'torch', 'better-actuator-models', 'numpy')}
         info = dict(
-            task=task, robot='MICRODUCK_STANDUP_ROBOT_CFG (curated groundcontact)', device_for_compile=args.device,
+            task=task, robot='MICRODUCK_STANDUP_ROBOT_CFG (curated groundcontact)', device_for_compile=device,
             mjb_sha256=sha(mjb), joints=list(JOINTS), home=list(HOME), action_offset=offset.tolist(),
             joint_range=m.jnt_range[joint_ids].tolist(), forcerange=m.actuator_forcerange.tolist(),
             armature=m.dof_armature[dofs].tolist(), dof_solref=m.dof_solref[dofs].tolist(),
@@ -129,10 +137,61 @@ def main():
                           robot_xml_sha256=sha(upstream / 'src/mjlab_microduck/robot/microduck/robot_groundcontact.xml'),
                           constants_sha256=sha(upstream / 'src/mjlab_microduck/robot/microduck_constants.py')),
             packages=pkgs, python=sys.version, wall_s=time.perf_counter() - started)
-        (out / 'model.json').write_text(json.dumps(info, indent=1))
-        print(json.dumps({k: info[k] for k in ('mjb_sha256', 'opt', 'total_mass', 'wall_s')}, indent=1))
+        (out / 'model.json').write_text(json.dumps(info, indent=1), newline='\n')
+        return info
     finally:
         env.close()
+
+
+def model_differences(saved, fresh):
+    """Fields describing the model (not its provenance) that differ."""
+    keys = (set(saved) | set(fresh)) - set(PROVENANCE)
+    canon = lambda v: json.loads(json.dumps(v))
+    return sorted(k for k in keys if canon(saved.get(k)) != canon(fresh.get(k)))
+
+
+def regenerate(out, compile_fn):
+    """Restore the local MJB next to published metadata; never overwrite it.
+
+    Returns the fresh info. Raises SystemExit, installing nothing, if the
+    compiled model differs from the published one."""
+    saved = json.loads((out / 'model.json').read_text())
+    mjb = out / 'model.mjb'
+    if mjb.exists():
+        if sha(mjb) != saved['mjb_sha256']:
+            raise SystemExit(f'{mjb} exists but does not match the published hash; move it away to regenerate')
+        print(f'{mjb} already present and matches the published hash {saved["mjb_sha256"]}')
+        return saved
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp = Path(tmp)
+        fresh = compile_fn(tmp)
+        diffs = model_differences(saved, fresh)
+        if diffs:
+            raise SystemExit(f'compiled model differs from the published one in {diffs} '
+                             f'(published mjb {saved["mjb_sha256"]}, compiled {fresh["mjb_sha256"]}); nothing installed')
+        if (tmp / 'resolved_config.txt').read_bytes() != (out / 'resolved_config.txt').read_bytes():
+            print('WARNING: resolved_config.txt differs from the published copy (the compiled model is identical)')
+        notes = [k for k in PROVENANCE if json.dumps(saved.get(k)) != json.dumps(fresh.get(k)) and k != 'wall_s']
+        shutil.move(str(tmp / 'model.mjb'), str(mjb))
+    print(f'installed {mjb}: hash matches the published {saved["mjb_sha256"]}'
+          + (f'; provenance differs only in {notes}' if notes else ''))
+    return fresh
+
+
+def main(argv=None):
+    p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    p.add_argument('--out', type=Path, required=True)
+    p.add_argument('--upstream', type=Path, default=Path(os.environ.get('MICRODUCK_RL', Path.home() / 'microduck_rl')))
+    p.add_argument('--device', default='cpu', help='mjlab device used only to construct/compile the env')
+    args = p.parse_args(argv)
+    out = args.out.resolve()
+    compile_fn = lambda d: compile_model(d, args.upstream, args.device)
+    if (out / 'model.json').exists():
+        info = regenerate(out, compile_fn)
+    else:
+        out.mkdir(parents=True, exist_ok=False)
+        info = compile_fn(out)
+    print(json.dumps({k: info[k] for k in ('mjb_sha256', 'opt', 'total_mass', 'wall_s')}, indent=1))
 
 
 if __name__ == '__main__':

@@ -162,7 +162,7 @@ def main(argv=None):
         print(label, d['summary'])
     out = args.root / 'report' / 'replay.html'
     out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(PAGE.replace('__DATA__', json.dumps(data, separators=(',', ':'))), encoding='utf-8')
+    out.write_text(PAGE.replace('__DATA__', json.dumps(data, separators=(',', ':'))), encoding='utf-8', newline='\n')
     print('wrote', out, f'{out.stat().st_size / 1e6:.2f} MB')
 
 

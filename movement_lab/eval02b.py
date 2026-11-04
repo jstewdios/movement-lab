@@ -163,7 +163,7 @@ def aggregate(rows):
             mean_root_disp_survivors_mm=float(1000 * np.mean([r['final_root_disp_m'] for r in surv])) if surv else None,
             max_sat_frac=float(max(r['sat_frac'] for r in rs)), max_peak_torque_nm=float(max(r['peak_torque_nm'] for r in rs)),
             mean_work_j_survivors=float(np.mean([r['work_j'] for r in surv])) if surv else None,
-            fall_causes={c2: sum(r['fall_cause'] == c2 for r in rs) for c2 in {r['fall_cause'] for r in rs} if c2})
+            fall_causes={c2: sum(r['fall_cause'] == c2 for r in rs) for c2 in sorted({r['fall_cause'] for r in rs if r['fall_cause']})})
     return out
 
 
@@ -228,7 +228,9 @@ def publish_results(path):
     """Write a deterministic gzip copy (no timestamp) of results.jsonl for Git."""
     import gzip
     path = Path(path)
-    raw = (path / 'results.jsonl').read_bytes()
+    # LF content whichever platform wrote the local file (Windows text mode
+    # once wrote CRLF), so the published bytes do not depend on the platform.
+    raw = (path / 'results.jsonl').read_bytes().replace(b'\r\n', b'\n')
     (path / 'results.jsonl.gz').write_bytes(gzip.compress(raw, mtime=0))
 
 
@@ -275,7 +277,7 @@ def main(argv=None):
     with ProcessPoolExecutor(args.workers, initializer=_init, initargs=(str(args.model),)) as pool:
         rows = list(pool.map(_run, tasks, chunksize=4))
     wall = time.perf_counter() - started
-    with open(args.out / 'results.jsonl', 'w') as f:
+    with open(args.out / 'results.jsonl', 'w', newline='\n') as f:
         for r in rows:
             f.write(json.dumps(r) + '\n')
     publish_results(args.out)
@@ -283,7 +285,7 @@ def main(argv=None):
                    thetas={k: (v[1][1].tolist() if isinstance(v[1], tuple) else v[1].tolist()) for k, v in ctrls.items()},
                    model_sha256=info['mjb_sha256'], n_conditions=len(conds), wall_s=wall,
                    batteries=batteries, results=aggregate(rows))
-    (args.out / 'summary.json').write_text(json.dumps(summary, indent=1))
+    (args.out / 'summary.json').write_text(json.dumps(summary, indent=1), newline='\n')
     for c, sets in summary['results'].items():
         print(c, {s: f"{v['survived']}/{v['n']}" for s, v in sets.items()})
     print(f'wall {wall:.1f}s for {len(rows)} rollouts')

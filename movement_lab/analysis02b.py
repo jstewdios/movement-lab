@@ -351,7 +351,7 @@ def stance_quality(runs, out, workers=11):
     for (name, it), r in zip(keys, res):
         d = table.setdefault(name, {}).setdefault(str(it), dict(final_tilt=[], survived=[]))
         d['final_tilt'].append(r['final_tilt_deg']); d['survived'].append(r['survived'])
-    cache.write_text(json.dumps(table))
+    cache.write_text(json.dumps(table), newline='\n')
     return table
 
 
@@ -697,7 +697,7 @@ def main(argv=None):
             from movement_lab.eval02b import load_theta
             from movement_lab.revise02b import Residual
             rown = {}
-            for c in {r['controller'] for r in rev_rows}:
+            for c in sorted({r['controller'] for r in rev_rows}):  # sorted: set order follows hash randomization
                 s = c.rsplit('-s', 1)[1].split('-')[0]
                 spec = {'warm': f'{args.root}/runs/ars-push-s{s}/thetas.npz', 'linear': f'linear:{args.root}/revision/linear-s{s}/snapshots.npz',
                         'residual': f'residual:{args.root}/revision/residual-s{s}/snapshots.npz'}[c.split('-')[0]]
@@ -716,7 +716,7 @@ def main(argv=None):
                                             chance_total=84 * 2 * 0.5 ** len(th))
         t['stance'] = {n: {i: dict(median_final_tilt=float(np.median(v['final_tilt'])), survived=int(sum(v['survived'])), n=len(v['survived']))
                            for i, v in d.items()} for n, d in st.items()}
-    (out / 'tables.json').write_text(json.dumps(t, indent=1, default=float))
+    (out / 'tables.json').write_text(json.dumps(t, indent=1, default=float), newline='\n')
     print('wrote', sorted(x.name for x in out.iterdir()))
 
 

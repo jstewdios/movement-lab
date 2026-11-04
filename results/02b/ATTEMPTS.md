@@ -93,3 +93,34 @@ geometric inverted-pendulum estimate, not a measured stability margin.
 - Mesh renders (local only, `renders/` ignored) were used to check the motion by
   eye: HOME topples forward over the toes, the reflex stands nearly still after a
   0.2 m/s forward push, and a 0.2 m/s backward push rotates it about the heel edge.
+
+## After review (Codex review of PR #7)
+
+Three findings, all fixed. Simulated trials, outcomes and every quoted number are
+unchanged.
+
+- **Recorded sole forces ignored the actuators.** Recording copied only
+  positions and velocities into the measurement `MjData`, so its contact solve
+  held up an unactuated robot and never saw sustained pulses. The recorded total
+  sole force in quiet stance was 7.00 N against a 7.23 N weight; a 1 N downward
+  trunk pulse showed as +0.10 N. Recording now copies the full state
+  (`mj_copyData`, so ctrl, `xfrc_applied` and warm start are included): 7.23 N, and
+  +1.01 N for the pulse. Every other recorded field (states, contact flags,
+  COM, tilt) and every summary is bit-identical before and after, checked on the
+  step-event trial and a pulse trial. Only the sole-force panels of
+  `response.png` and `step_event.png` changed. No table, statistic or report
+  statement used these forces (step events come from contact presence in the
+  simulated state). A regression test checks weight support and pulse loading.
+- **Model regeneration on a fresh checkout.** `model02b --out results/02b/model`
+  refused to run because the directory holds the published metadata. It now
+  compiles into a temporary directory and installs `model.mjb` only if it is the
+  published model (hash and recorded properties). It never overwrites
+  `model.json` or `resolved_config.txt`.
+- **Manifest hashes depended on checkout line endings.** Windows text mode wrote
+  CRLF, and `core.autocrlf` kept CRLF in this working tree, so the manifest held
+  CRLF hashes while Git stores LF. A Linux checkout could not verify them.
+  `.gitattributes` now pins LF for the 02B files, the 02B writers emit LF, and the
+  manifest refuses CRLF in published text. Verification also checks the source
+  hashes and names CRLF checkouts explicitly. The three published `.jsonl.gz`
+  tables held CRLF rows inside; they were rebuilt with LF rows (identical
+  records, new bytes).

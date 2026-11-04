@@ -44,7 +44,7 @@ def train(root, iterations, seeds):
                                         '--seed', str(seed), '--iterations', str(iterations), '--out', str(out)],
                                        stdout=f, stderr=subprocess.STDOUT)
             wall = time.perf_counter() - started
-            with open(root / 'cost.jsonl', 'a') as f:
+            with open(root / 'cost.jsonl', 'a', newline='\n') as f:
                 f.write(json.dumps(dict(step='train', run=out.name, exit=code, wall_s=wall)) + '\n')
             print(out.name, 'exit', code, f'{wall:.0f}s', flush=True)
             if code:
@@ -58,7 +58,7 @@ def evaluate(root, seeds):
     for c in ctrls:
         cmd += ['--controller', c]
     code = subprocess.call(cmd)
-    with open(root / 'cost.jsonl', 'a') as f:
+    with open(root / 'cost.jsonl', 'a', newline='\n') as f:
         f.write(json.dumps(dict(step='evaluate', exit=code, wall_s=time.perf_counter() - started)) + '\n')
     raise SystemExit(code)
 
@@ -66,7 +66,7 @@ def evaluate(root, seeds):
 def _call(root, step, cmd):
     started = time.perf_counter()
     code = subprocess.call([sys.executable, '-m', *cmd])
-    with open(root / 'cost.jsonl', 'a') as f:
+    with open(root / 'cost.jsonl', 'a', newline='\n') as f:
         f.write(json.dumps(dict(step=step, exit=code, wall_s=time.perf_counter() - started)) + '\n')
     if code:
         raise SystemExit(code)
