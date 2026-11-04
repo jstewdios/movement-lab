@@ -6,7 +6,7 @@ from pathlib import Path
 import numpy as np
 
 from movement_lab.eval02c import controllers, grid, shifts, read_rows, init_worker, evaluate
-from movement_lab.learn02c import conditions, update_distribution
+from movement_lab.learn02c import completed_checkpoints, conditions, update_distribution
 from movement_lab.sim02b import Condition, DEFAULT_MODEL
 from movement_lab.sim02c import Design
 
@@ -30,10 +30,13 @@ def validate(root, resimulate=0):
         check(cfg['model_sha256'] == model_info['mjb_sha256'], run.name + ': published model identity')
         check(sha(Path(cfg['base'])) == cfg['base_sha256'], run.name + ': frozen base checkpoint identity')
         check(cfg['iterations'] * cfg['population'] * cfg['conditions'] == 3840, run.name + ': declared budget')
-        snaps = sorted(run.glob('generation-*.npz'))
+        snaps = completed_checkpoints(run)
         check(len(snaps) == cfg['iterations'], f'{run.name}: generation count')
         for name, expected in cfg['sources'].items():
-            check(sha(Path('movement_lab') / name) == expected, f'{run.name}: {name} source')
+            # Published runs retain the exact source they used, even when later
+            # maintenance changes checkpoint handling. Never rewrite run hashes.
+            sources = (Path('movement_lab') / name, root / 'source-training' / name)
+            check(any(p.is_file() and sha(p) == expected for p in sources), f'{run.name}: {name} source')
         prev_mean = np.zeros(cfg['knots'] * 14)
         prev_std = np.full(cfg['knots'] * 14, cfg['std'])
         for i, path in enumerate(snaps):

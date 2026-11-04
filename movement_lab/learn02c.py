@@ -13,6 +13,7 @@ import hashlib
 import json
 import os
 from pathlib import Path
+import re
 import time
 import numpy as np
 
@@ -49,6 +50,13 @@ def conditions(seed, generation, count, lo, hi, stratified=False):
 
 def digest(p):
     return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+
+
+def completed_checkpoints(directory):
+    """Only atomically promoted generations, never unfinished .tmp.npz files."""
+    paths = (p for p in Path(directory).glob('generation-*.npz')
+             if p.is_file() and re.fullmatch(r'generation-[0-9]{3,}\.npz', p.name))
+    return sorted(paths, key=lambda p: int(p.stem.removeprefix('generation-')))
 
 
 def update_distribution(mean, std, candidates, scores, elite, floor):
@@ -101,7 +109,7 @@ def main(argv=None):
         mean = np.load(a.init)['best'].copy()
     best = mean.copy()
     generation, elapsed, trials = 0, 0., 0
-    checkpoints = sorted(a.out.glob('generation-*.npz'))
+    checkpoints = completed_checkpoints(a.out)
     if a.resume and checkpoints:
         z = np.load(checkpoints[-1])
         mean, std, best = z['mean'], z['std'], z['best']

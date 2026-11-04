@@ -6,6 +6,7 @@ from pathlib import Path
 import numpy as np
 
 from movement_lab.eval02c import read_rows
+from movement_lab.learn02c import completed_checkpoints
 
 
 def summarize(rows):
@@ -63,7 +64,7 @@ def tables(root):
                                   step_recovery=sum(r['recovery_with_step'] for r in recovered),
                                   recovered_where_reflex_fails=sum(not base[r['condition']['seed']]['recovered_200hz'] for r in recovered))
     for run in sorted((root / 'runs').iterdir()):
-        history = [json.loads(str(np.load(p)['row'])) for p in sorted(run.glob('generation-*.npz'))]
+        history = [json.loads(str(np.load(p)['row'])) for p in completed_checkpoints(run)]
         out['learning'][run.name] = history
     return out
 

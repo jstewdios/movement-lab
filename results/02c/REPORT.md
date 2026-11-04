@@ -343,3 +343,9 @@ checkout can verify the published evidence without the local development NPZs;
 `--full` additionally requires those files. Numerical replay needs the separately
 installed matching upstream environment and model. No hardware claim follows
 from this simulation.
+
+After review, checkpoint discovery was corrected to ignore interrupted staging
+writes. The [maintenance record](ATTEMPTS.md#pr-8-checkpoint-write-review-fix)
+documents the regression and its verification. The original trainer is archived
+in [source-training/learn02c.py](source-training/learn02c.py); published run hashes
+and numerical results retain their original provenance.

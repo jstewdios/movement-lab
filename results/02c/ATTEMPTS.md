@@ -164,3 +164,27 @@ is a learned transient coordination benefit with continuous support, not
 emergent locomotion. No extra generations were launched to chase a favorable
 step. The next useful changes concern state-conditioned response and access to
 valid contact transitions, rather than a larger budget for this same option.
+
+## PR #8 checkpoint-write review fix
+
+Review found that `generation-*.npz` also discovers unfinished `.tmp.npz`
+staging files. Resume, analysis and validation now share discovery of completed
+numeric generation filenames only. A regression truncates a real checkpoint
+archive before promotion and raises an I/O error, both before the first commit
+and after one completed generation. Resume must preserve completed checkpoint
+bytes, rerun only unfinished generations, and reproduce uninterrupted candidates,
+outcomes, RNG state and final weights. Physics is stubbed for this fault test;
+the existing real-physics tests also pass.
+
+The trainer that produced the published experiments is preserved byte-for-byte
+in `source-training/learn02c.py`, matching the original run configuration hashes.
+Artifact validation checks that recorded source when the current trainer differs.
+No configurations, checkpoints, evaluations or numerical research results were
+rewritten. Resume still requires an exact configuration/source match; the archive
+is for provenance and does not silently permit resuming across source changes.
+
+The [targeted test log](review-checkpoint-tests.txt) and
+[artifact audit](review-checkpoint-validation.json) record the fix verification.
+The audit uses copies of all six published runs with a truncated
+`generation-021.tmp.npz` added to each; all 2,280 checks pass and tables remain
+identical. No training experiment was rerun for this maintenance change.

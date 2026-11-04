@@ -1,8 +1,10 @@
 """Scientific validity and reproducibility checks for 02C."""
 import importlib.util
+import json
 from pathlib import Path
 import tempfile
 import unittest
+from unittest.mock import patch
 import numpy as np
 
 from movement_lab.sim02c import Design, residual, audit, rollout, BASE
@@ -103,6 +105,82 @@ class MeasurementTests(unittest.TestCase):
         a, _ = update_distribution(mean, std, c, np.array([3, 1, 0]), 1, .04)
         b, _ = update_distribution(mean, std, c, np.array([1, 3, 0]), 1, .04)
         np.testing.assert_array_equal(a, -b)
+
+
+class CheckpointTests(unittest.TestCase):
+    def test_checkpoint_discovery_only_lists_promoted_generations_in_numeric_order(self):
+        from movement_lab.learn02c import completed_checkpoints
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            for name in ('generation-001.npz', 'generation-999.npz', 'generation-1000.npz',
+                         'generation-1001.tmp.npz', 'generation-latest.npz', 'generation-001.backup.npz'):
+                (root / name).touch()
+            (root / 'generation-1002.npz').mkdir()
+            self.assertEqual([p.name for p in completed_checkpoints(root)],
+                             ['generation-001.npz', 'generation-999.npz', 'generation-1000.npz'])
+
+    def test_resume_ignores_interrupted_checkpoint_write(self):
+        from movement_lab import learn02c
+
+        # Keep the real search, RNG and disk I/O; replace only expensive physics.
+        def outcomes(_worker, tasks, **kwargs):
+            for vec, cond, _design in tasks:
+                yield dict(fitness=float(-np.mean((vec - .1) ** 2) + cond.seed % 17 * .001),
+                           survived=True, recovered=True, failure_cause=None, simulated_s=4.)
+
+        save = np.savez_compressed
+        with tempfile.TemporaryDirectory() as td, \
+                patch.object(learn02c, 'ProcessPoolExecutor') as pool, \
+                patch.object(learn02c.os, 'nice', create=True):
+            physics = pool.return_value.__enter__.return_value.map
+            physics.side_effect = outcomes
+            root = Path(td)
+            model = root / 'model'; model.mkdir()
+            (model / 'model.mjb').write_bytes(b'model hash fixture; physics is stubbed')
+            base = root / 'base.npz'; base.write_bytes(b'baseline hash fixture')
+            common = ['--iterations', '3', '--population', '4', '--elite', '2',
+                      '--conditions', '2', '--workers', '1', '--model', str(model), '--base', str(base)]
+            uninterrupted = root / 'uninterrupted'
+            learn02c.main(['--out', str(uninterrupted), *common])
+
+            for interrupted_generation in (1, 2):
+                with self.subTest(interrupted_generation=interrupted_generation):
+                    run = root / f'interrupted-{interrupted_generation}'
+                    staging = run / f'generation-{interrupted_generation:03d}.tmp.npz'
+
+                    def interrupt_write(path, *args, **kwargs):
+                        save(path, *args, **kwargs)
+                        if Path(path) == staging:
+                            data = staging.read_bytes()
+                            staging.write_bytes(data[:len(data) // 2])
+                            raise OSError('simulated interrupted checkpoint write')
+
+                    with patch.object(learn02c.np, 'savez_compressed', side_effect=interrupt_write):
+                        with self.assertRaisesRegex(OSError, 'simulated interrupted checkpoint write'):
+                            learn02c.main(['--out', str(run), *common])
+                    self.assertTrue(staging.exists())
+                    self.assertFalse((run / f'generation-{interrupted_generation:03d}.npz').exists())
+                    self.assertFalse((run / 'final.json').exists())
+
+                    committed = {p.name: p.read_bytes() for p in learn02c.completed_checkpoints(run)}
+                    physics.reset_mock()
+                    learn02c.main(['--out', str(run), '--resume', *common])
+                    self.assertEqual(physics.call_count, 4 - interrupted_generation)
+                    for name, content in committed.items():
+                        self.assertEqual((run / name).read_bytes(), content)
+                    self.assertFalse(staging.exists())
+                    for generation in (1, 2, 3):
+                        name = f'generation-{generation:03d}.npz'
+                        with np.load(uninterrupted / name) as expected, np.load(run / name) as actual:
+                            for key in ('candidates', 'scores', 'outcomes', 'mean', 'std', 'best', 'conditions'):
+                                np.testing.assert_array_equal(actual[key], expected[key], err_msg=f'{name}: {key}')
+                            left, right = json.loads(str(actual['state'])), json.loads(str(expected['state']))
+                            for key in ('generation', 'trials', 'rng'):
+                                self.assertEqual(left[key], right[key], f'{name}: {key}')
+                    with np.load(uninterrupted / 'final.npz') as expected, np.load(run / 'final.npz') as actual:
+                        for key in ('best', 'mean'):
+                            np.testing.assert_array_equal(actual[key], expected[key])
+                    self.assertEqual(json.loads((run / 'final.json').read_text())['trials'], 24)
 
 
 @unittest.skipUnless(PHYSICS, 'local compiled model / BAM unavailable')
