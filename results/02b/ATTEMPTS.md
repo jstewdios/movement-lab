@@ -124,3 +124,8 @@ unchanged.
   hashes and names CRLF checkouts explicitly. The three published `.jsonl.gz`
   tables held CRLF rows inside; they were rebuilt with LF rows (identical
   records, new bytes).
+- **Found while checking the regeneration:** two loops iterated over Python sets,
+  whose order follows per-process hash randomization. One reordered keys in
+  `tables.json`, the other in future `summary.json` files. Both are now sorted.
+  Regenerated outputs are byte-identical across processes, and `tables.json`
+  holds the same values as before.
