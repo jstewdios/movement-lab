@@ -1,0 +1,9 @@
+{
+ "arm": "random",
+ "disturb": "push",
+ "seed": 2,
+ "rollouts": 7840,
+ "sim_s": 9058.039999999999,
+ "wall_s": 251.2859033999266,
+ "theta_norm": 0.30179890631633094
+}

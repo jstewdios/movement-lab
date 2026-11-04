@@ -1,0 +1,15 @@
+{"step": "train", "run": "ars-push-s1", "exit": 0, "wall_s": 441.77601939998567}
+{"step": "train", "run": "random-push-s1", "exit": 0, "wall_s": 229.50901949999388}
+{"step": "train", "run": "ars-none-s1", "exit": 0, "wall_s": 534.1102204999188}
+{"step": "train", "run": "ars-push-s2", "exit": 0, "wall_s": 519.0732185000088}
+{"step": "train", "run": "random-push-s2", "exit": 0, "wall_s": 251.91118399996776}
+{"step": "train", "run": "ars-none-s2", "exit": 0, "wall_s": 512.6877540000714}
+{"step": "train", "run": "ars-push-s3", "exit": 0, "wall_s": 445.2630258999998}
+{"step": "train", "run": "random-push-s3", "exit": 0, "wall_s": 252.63013479998335}
+{"step": "train", "run": "ars-none-s3", "exit": 0, "wall_s": 528.6755949000362}
+{"step": "evaluate", "exit": 0, "wall_s": 603.4700666000135}
+{"step": "ablate", "exit": 0, "wall_s": 420.110739500029}
+{"step": "revise:linear-s1", "exit": 0, "wall_s": 769.4295215999009}
+{"step": "crosscheck", "exit": 0, "wall_s": 2233.0070531999227}
+{"step": "revise:residual-s1", "exit": 0, "wall_s": 693.6204824000597}
+{"step": "evaluate-revision", "exit": 0, "wall_s": 120.4548859000206}

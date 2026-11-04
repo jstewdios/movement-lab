@@ -1,0 +1,6 @@
+# 02B evidence is hashed byte-for-byte (results/02b/manifest.json). Check its
+# text out with LF on every platform, whatever core.autocrlf says, so the same
+# hashes verify on Linux, macOS and Windows.
+/results/02b/** text=auto eol=lf
+/movement_lab/*02b.py text eol=lf
+/tests/test_react02b.py text eol=lf

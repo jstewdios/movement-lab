@@ -1,0 +1,22 @@
+{
+ "arm": "linear",
+ "init": "results\\02b\\runs\\ars-push-s1\\thetas.npz",
+ "seed": 1,
+ "out": "results\\02b\\revision\\linear-s1",
+ "iterations": 25,
+ "directions": 32,
+ "top": 16,
+ "conditions": 8,
+ "step": 0.02,
+ "noise": 0.03,
+ "workers": 11,
+ "model": "C:\\Users\\James\\movement-lab\\results\\02b\\model",
+ "hard_range": [
+  0.15,
+  0.45
+ ],
+ "hidden": 16,
+ "z_dim": 33,
+ "n_params": 84,
+ "model_sha256": "ebb2ce87cae95c606e6db4ad2e790e9f4309e557443d6ea1a0629d5ba5e3cf8c"
+}

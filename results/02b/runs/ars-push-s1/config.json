@@ -1,0 +1,46 @@
+{
+ "arm": "ars",
+ "disturb": "push",
+ "seed": 1,
+ "out": "results\\02b\\runs\\ars-push-s1",
+ "iterations": 60,
+ "directions": 16,
+ "top": 8,
+ "conditions": 4,
+ "step": 0.02,
+ "noise": 0.03,
+ "random_scale": [
+  0.01,
+  0.3
+ ],
+ "workers": 11,
+ "model": "C:\\Users\\James\\movement-lab\\results\\02b\\model",
+ "push_max": 0.4,
+ "push_window": [
+  1.0,
+  2.0
+ ],
+ "train_duration": 4.0,
+ "joint_noise": 0.02,
+ "fitness_weights": {
+  "tilt": 0.5,
+  "action": 0.02,
+  "rate": 0.05
+ },
+ "features": [
+  "gravity_x",
+  "gravity_y",
+  "gyro_x",
+  "gyro_y",
+  "gyro_z"
+ ],
+ "feature_scale": [
+  0.1,
+  0.1,
+  1.0,
+  1.0,
+  1.0
+ ],
+ "action_bound": 0.35,
+ "model_sha256": "ebb2ce87cae95c606e6db4ad2e790e9f4309e557443d6ea1a0629d5ba5e3cf8c"
+}
