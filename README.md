@@ -470,3 +470,54 @@ compiled model (`*.mjb`, upstream meshes), logs and raw per-trial tables stay
 local. Per-trial tables are published as deterministic `.jsonl.gz`, and
 `manifest.json` hashes everything. Physics tests skip explicitly when the local
 model is absent.
+
+## Movement Lab 02C — Learning to Move
+
+A separate experiment learns a short joint-motion sequence after a balance
+disturbance, starting from 02B's frozen standing reflex. Every waypoint is
+learned; there is no foot-placement target, gait template, or displacement
+reward. The disturbance onset is supplied explicitly. Sensor-triggered execution
+is evaluated separately and does not constitute learned disturbance detection.
+
+The learned head-and-leg sequences recover **16/18** held-out 0.32 m/s pushes
+across three training seeds; the frozen reflex recovers **0/6**, and matched
+random-search winners **0/18**. Reversing the learned sequence removes this gain.
+**No verified recovery step emerged.** Successful main-grid responses keep both soles on
+the floor, and one learned controller overcorrects every smaller 0.20/0.26 m/s
+push. The result is useful temporal coordination with a narrow recovery domain,
+not locomotion.
+
+Read the [research report](results/02c/REPORT.md),
+[protocol](results/02c/PROTOCOL.md), [attempts and revisions](results/02c/ATTEMPTS.md),
+and [recorded-state replay](results/02c/report/replay.html).
+
+The study preserves upstream Microduck and all prior study code. It uses the
+exact 02B model and native BAM/MuJoCo path with two low-priority CPU workers,
+plus an upstream CUDA fidelity check. CEM and matched nonadaptive random search
+each receive three seeds and 3,840 episodes per seed. Every generation saves
+parameters, candidate outcomes, conditions and RNG state for exact resumption.
+
+```bash
+PY=/home/james/microduck_rl/.venv/bin/python
+export PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
+# On a fresh checkout, first restore the verified local model (see 02B above).
+$PY -m movement_lab.model02b --out results/02b/model
+$PY -m movement_lab.preflight02c --out results/02c-new/preflight.json
+$PY -m movement_lab.study02c train --root results/02c-new
+$PY -m movement_lab.study02c evaluate --root results/02c-new
+$PY -m movement_lab.study02c report --root results/02c-new
+$PY -m movement_lab.contact02c --root results/02c-new
+$PY -m movement_lab.crosscheck02c --root results/02c-new  # requires working CUDA
+$PY -m movement_lab.crosscheck02c --root results/02c-new --wide-only
+$PY -m movement_lab.validate02c --root results/02c-new --resimulate 12
+$PY -m movement_lab.publication02c --root results/02c --verify
+$PY -m unittest tests.test_move02c -v
+```
+
+Use a new output root to reproduce the study. Rerunning `train` resumes incomplete
+runs and reuses completed runs; evaluation refuses to overwrite existing evidence.
+Each run's 600 s budget stops generation launches, so an in-flight generation may
+finish. Checkpoints, compressed held-out tables and selected 200 Hz trajectories
+are committed. Upstream meshes and compiled model files remain local. The report
+distinguishes recovery, foot-frame motion, passive initial slip, and verified
+airborne support relocation.

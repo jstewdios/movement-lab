@@ -1,0 +1,32 @@
+test_checkpoint_discovery_only_lists_promoted_generations_in_numeric_order (tests.test_move02c.CheckpointTests.test_checkpoint_discovery_only_lists_promoted_generations_in_numeric_order) ... ok
+test_resume_ignores_interrupted_checkpoint_write (tests.test_move02c.CheckpointTests.test_resume_ignores_interrupted_checkpoint_write) ... {"generation": 1, "trials": 8, "wall_s": 0.0012402869997458765, "best_score": 0.0045, "mean_score": -0.027004210855534283, "recovered": 8, "survived": 8, "std_mean": 0.0625, "failure_counts": {"tilt": 0, "height": 0, "nonfoot": 0, "penetration": 0, "nonfinite": 0, "null": 8}}
+{"generation": 2, "trials": 16, "wall_s": 0.0038381280000976403, "best_score": 0.0025000000000000005, "mean_score": 0.0009765520903292106, "recovered": 8, "survived": 8, "std_mean": 0.04, "failure_counts": {"tilt": 0, "height": 0, "nonfoot": 0, "penetration": 0, "nonfinite": 0, "null": 8}}
+{"generation": 3, "trials": 24, "wall_s": 0.006083326999942074, "best_score": 0.0004999999999999996, "mean_score": -0.0004131769801537996, "recovered": 8, "survived": 8, "std_mean": 0.04, "failure_counts": {"tilt": 0, "height": 0, "nonfoot": 0, "penetration": 0, "nonfinite": 0, "null": 8}}
+{"generation": 1, "trials": 8, "wall_s": 0.0004813350005861139, "best_score": 0.0045, "mean_score": -0.027004210855534283, "recovered": 8, "survived": 8, "std_mean": 0.0625, "failure_counts": {"tilt": 0, "height": 0, "nonfoot": 0, "penetration": 0, "nonfinite": 0, "null": 8}}
+{"generation": 2, "trials": 16, "wall_s": 0.002812985000673507, "best_score": 0.0025000000000000005, "mean_score": 0.0009765520903292106, "recovered": 8, "survived": 8, "std_mean": 0.04, "failure_counts": {"tilt": 0, "height": 0, "nonfoot": 0, "penetration": 0, "nonfinite": 0, "null": 8}}
+{"generation": 3, "trials": 24, "wall_s": 0.004940824000186694, "best_score": 0.0004999999999999996, "mean_score": -0.0004131769801537996, "recovered": 8, "survived": 8, "std_mean": 0.04, "failure_counts": {"tilt": 0, "height": 0, "nonfoot": 0, "penetration": 0, "nonfinite": 0, "null": 8}}
+{"generation": 1, "trials": 8, "wall_s": 0.000616303000242624, "best_score": 0.0045, "mean_score": -0.027004210855534283, "recovered": 8, "survived": 8, "std_mean": 0.0625, "failure_counts": {"tilt": 0, "height": 0, "nonfoot": 0, "penetration": 0, "nonfinite": 0, "null": 8}}
+{"generation": 2, "trials": 16, "wall_s": 0.001309035000303993, "best_score": 0.0025000000000000005, "mean_score": 0.0009765520903292106, "recovered": 8, "survived": 8, "std_mean": 0.04, "failure_counts": {"tilt": 0, "height": 0, "nonfoot": 0, "penetration": 0, "nonfinite": 0, "null": 8}}
+{"generation": 3, "trials": 24, "wall_s": 0.0038175210002009408, "best_score": 0.0004999999999999996, "mean_score": -0.0004131769801537996, "recovered": 8, "survived": 8, "std_mean": 0.04, "failure_counts": {"tilt": 0, "height": 0, "nonfoot": 0, "penetration": 0, "nonfinite": 0, "null": 8}}
+ok
+test_a_real_relocation_requires_air_clearance_and_sustained_replant (tests.test_move02c.MeasurementTests.test_a_real_relocation_requires_air_clearance_and_sustained_replant) ... ok
+test_all_seed_namespaces_are_disjoint_and_bins_are_covered (tests.test_move02c.MeasurementTests.test_all_seed_namespaces_are_disjoint_and_bins_are_covered) ... ok
+test_cem_responds_to_experience_not_iteration_number (tests.test_move02c.MeasurementTests.test_cem_responds_to_experience_not_iteration_number) ... ok
+test_fall_replant_low_height_penetration_and_motion_cannot_win (tests.test_move02c.MeasurementTests.test_fall_replant_low_height_penetration_and_motion_cannot_win) ... ok
+test_measured_joint_limit_exploit_is_rejected (tests.test_move02c.MeasurementTests.test_measured_joint_limit_exploit_is_rejected) ... ok
+test_quiet_flight_or_vertical_motion_is_not_a_recovered_stance (tests.test_move02c.MeasurementTests.test_quiet_flight_or_vertical_motion_is_not_a_recovered_stance) ... ok
+test_sliding_and_contact_flicker_are_not_steps (tests.test_move02c.MeasurementTests.test_sliding_and_contact_flicker_are_not_steps) ... ok
+test_untriggered_and_finished_options_are_exactly_zero (tests.test_move02c.MeasurementTests.test_untriggered_and_finished_options_are_exactly_zero) ... ok
+test_material_contact_point_jacobian_preserves_root_translation (tests.test_move02c.PhysicsTests.test_material_contact_point_jacobian_preserves_root_translation) ... ok
+test_resume_restores_distribution_rng_and_selected_winner (tests.test_move02c.PhysicsTests.test_resume_restores_distribution_rng_and_selected_winner) ... {"generation": 1, "trials": 3, "wall_s": 1.5499539610000284, "best_score": 0.48922237297234716, "mean_score": 0.48750656194241015, "recovered": 0, "survived": 0, "std_mean": 0.0625, "failure_counts": {"tilt": 3, "height": 0, "nonfoot": 0, "penetration": 0, "nonfinite": 0, "null": 0}}
+{"generation": 2, "trials": 6, "wall_s": 2.004329126000812, "best_score": 0.5342918244731159, "mean_score": 0.5342851082893562, "recovered": 0, "survived": 0, "std_mean": 0.04, "failure_counts": {"tilt": 3, "height": 0, "nonfoot": 0, "penetration": 0, "nonfinite": 0, "null": 0}}
+{"generation": 1, "trials": 3, "wall_s": 1.4407669419997546, "best_score": 0.48922237297234716, "mean_score": 0.48750656194241015, "recovered": 0, "survived": 0, "std_mean": 0.0625, "failure_counts": {"tilt": 3, "height": 0, "nonfoot": 0, "penetration": 0, "nonfinite": 0, "null": 0}}
+{"generation": 2, "trials": 6, "wall_s": 2.9130633699996906, "best_score": 0.5342918244731159, "mean_score": 0.5342851082893562, "recovered": 0, "survived": 0, "std_mean": 0.04, "failure_counts": {"tilt": 3, "height": 0, "nonfoot": 0, "penetration": 0, "nonfinite": 0, "null": 0}}
+ok
+test_sequences_cannot_anticipate_the_event (tests.test_move02c.PhysicsTests.test_sequences_cannot_anticipate_the_event) ... ok
+test_zero_option_exactly_reproduces_02b_and_recording_is_passive (tests.test_move02c.PhysicsTests.test_zero_option_exactly_reproduces_02b_and_recording_is_passive) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 10.401s
+
+OK

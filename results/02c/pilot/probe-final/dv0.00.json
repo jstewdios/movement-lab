@@ -1,0 +1,156 @@
+{
+  "fitness": 0.527140746750635,
+  "survived": false,
+  "recovered": false,
+  "settled": true,
+  "failure_time_s": 3.199999999999954,
+  "failure_cause": "height",
+  "max_pen_m": 0.009850407468664009,
+  "max_tilt_deg": 86.80478060388936,
+  "trigger_time_s": 2.5,
+  "work_j": 0.8945146824724921,
+  "final_root_xy": [
+    -0.23284614204882834,
+    -0.07077928662708242
+  ],
+  "final_root_z": 0.04073970576414622,
+  "final_tilt_deg": 84.69902968136341,
+  "simulated_s": 5.999999999999894,
+  "pre_qpos": [
+    0.0005773413149367274,
+    0.00020508221239746475,
+    0.11200601646431312,
+    0.9992569756621613,
+    -0.00792114489190434,
+    -0.014324203130364114,
+    0.034893685084733686,
+    0.040511890179119554,
+    -0.06332807993499037,
+    -0.32356576954412275,
+    0.20973232086290602,
+    0.5589741048250461,
+    0.44395317432233833,
+    0.3589715069672524,
+    -0.10362059451412212,
+    0.0003522043684999665,
+    0.00042105799537741983,
+    0.09638338935346556,
+    0.26032156284953517,
+    -0.1643580340535824,
+    -0.4496344100691522
+  ],
+  "foot_shift_m": [
+    0.20569810836339542,
+    0.16149901780133294
+  ],
+  "physical_valid": false,
+  "upright_200hz": false,
+  "recovered_200hz": false,
+  "settled_200hz": true,
+  "support_events": [
+    {
+      "foot": "R",
+      "off_s": 3.154999999999955,
+      "on_s": 3.194999999999954,
+      "air_s": 0.04,
+      "shift_m": 0.016698878823454846,
+      "clearance_m": 0.0003701189813365771,
+      "stable_replant": false,
+      "qualifies": false
+    },
+    {
+      "foot": "R",
+      "off_s": 3.209999999999954,
+      "on_s": 3.424999999999949,
+      "air_s": 0.215,
+      "shift_m": 0.11832200607352765,
+      "clearance_m": 0.04392278894609902,
+      "stable_replant": true,
+      "qualifies": true
+    },
+    {
+      "foot": "R",
+      "off_s": 3.6399999999999446,
+      "on_s": 3.7049999999999432,
+      "air_s": 0.065,
+      "shift_m": 0.002121452338395182,
+      "clearance_m": 0.002951781935009029,
+      "stable_replant": true,
+      "qualifies": false
+    },
+    {
+      "foot": "R",
+      "off_s": 4.514999999999926,
+      "on_s": 4.564999999999925,
+      "air_s": 0.05,
+      "shift_m": 0.0021062107165127518,
+      "clearance_m": 0.0006447675202958247,
+      "stable_replant": false,
+      "qualifies": false
+    },
+    {
+      "foot": "R",
+      "off_s": 4.5849999999999245,
+      "on_s": 4.589999999999924,
+      "air_s": 0.005,
+      "shift_m": 0.00031692129530825074,
+      "clearance_m": 4.1250028922842907e-07,
+      "stable_replant": false,
+      "qualifies": false
+    },
+    {
+      "foot": "R",
+      "off_s": 4.594999999999924,
+      "on_s": 4.599999999999924,
+      "air_s": 0.005,
+      "shift_m": 0.00030715689494837257,
+      "clearance_m": 1.587460896701129e-05,
+      "stable_replant": false,
+      "qualifies": false
+    },
+    {
+      "foot": "R",
+      "off_s": 4.614999999999924,
+      "on_s": 4.619999999999924,
+      "air_s": 0.005,
+      "shift_m": 0.0002898206174842735,
+      "clearance_m": 1.2551707814424662e-05,
+      "stable_replant": true,
+      "qualifies": false
+    }
+  ],
+  "recovery_with_step": false,
+  "condition": {
+    "seed": 2500000100,
+    "duration_s": 6,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.5,
+    "push_dv": [
+      0,
+      0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0
+  }
+}

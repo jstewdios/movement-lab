@@ -1,0 +1,9 @@
+{
+  "checks": 2280,
+  "errors": [],
+  "resimulated": 0,
+  "passed": true,
+  "staging_files_ignored": 6,
+  "tables_unchanged": true,
+  "scenario": "Copies of all six published runs, each with a truncated generation-021.tmp.npz; evaluation, report and source archive linked read-only."
+}

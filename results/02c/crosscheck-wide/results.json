@@ -1,0 +1,363 @@
+{
+  "model_fields_equal": {
+    "body_mass": true,
+    "body_inertia": true,
+    "geom_size": true,
+    "geom_friction": true,
+    "jnt_range": true,
+    "dof_armature": true,
+    "actuator_forcerange": true
+  },
+  "rows": [
+    {
+      "controller": "wide-reflex",
+      "condition": {
+        "seed": 0,
+        "duration_s": 6,
+        "joint_noise_rad": 0.0,
+        "push_time_s": null,
+        "push_dv": [
+          0.0,
+          0.0
+        ],
+        "extra_pushes": [],
+        "pulse_body": "robot/trunk_base",
+        "pulse_force": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "pulse_time_s": null,
+        "pulse_duration_s": 0.0,
+        "vin": 7.35,
+        "vin_drop_gain": 0.1,
+        "lag_min": 4,
+        "lag_max": 4,
+        "gyro_noise": 0.0,
+        "gravity_noise": 0.0,
+        "gyro_lag": 0,
+        "imu_rpy_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "foot_friction": 1.0,
+        "head_mass_scale": 1.0
+      },
+      "design": {
+        "knots": 4,
+        "horizon": 0.8,
+        "bound": 0.8,
+        "trigger": "event",
+        "delay": 0.0,
+        "objective": "balance"
+      },
+      "native_recovered_50hz": true,
+      "warp_recovered_50hz": true,
+      "native_survived": true,
+      "warp_survived": true,
+      "max_initial_qpos_diff": 1.2302398655350544e-08,
+      "native_final_xy": [
+        0.0009696815075709943,
+        -5.9539659063979776e-05
+      ],
+      "warp_displacement_xy": [
+        0.0012848377227783203,
+        0.00012683868408203125
+      ],
+      "tilt_rms_difference": 0.4215035756404624
+    },
+    {
+      "controller": "wide-reflex",
+      "condition": {
+        "seed": 0,
+        "duration_s": 6,
+        "joint_noise_rad": 0.0,
+        "push_time_s": 2.5,
+        "push_dv": [
+          0.28,
+          0.0
+        ],
+        "extra_pushes": [],
+        "pulse_body": "robot/trunk_base",
+        "pulse_force": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "pulse_time_s": null,
+        "pulse_duration_s": 0.0,
+        "vin": 7.35,
+        "vin_drop_gain": 0.1,
+        "lag_min": 4,
+        "lag_max": 4,
+        "gyro_noise": 0.0,
+        "gravity_noise": 0.0,
+        "gyro_lag": 0,
+        "imu_rpy_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "foot_friction": 1.0,
+        "head_mass_scale": 1.0
+      },
+      "design": {
+        "knots": 4,
+        "horizon": 0.8,
+        "bound": 0.8,
+        "trigger": "event",
+        "delay": 0.0,
+        "objective": "balance"
+      },
+      "native_recovered_50hz": true,
+      "warp_recovered_50hz": true,
+      "native_survived": true,
+      "warp_survived": true,
+      "max_initial_qpos_diff": 1.2302398655350544e-08,
+      "native_final_xy": [
+        0.007049926097128792,
+        -0.0010833230752783987
+      ],
+      "warp_displacement_xy": [
+        0.004679679870605469,
+        -0.0020415186882019043
+      ],
+      "tilt_rms_difference": 0.5534721606719154
+    },
+    {
+      "controller": "wide-reflex",
+      "condition": {
+        "seed": 0,
+        "duration_s": 6,
+        "joint_noise_rad": 0.0,
+        "push_time_s": 2.5,
+        "push_dv": [
+          0.3,
+          0.0
+        ],
+        "extra_pushes": [],
+        "pulse_body": "robot/trunk_base",
+        "pulse_force": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "pulse_time_s": null,
+        "pulse_duration_s": 0.0,
+        "vin": 7.35,
+        "vin_drop_gain": 0.1,
+        "lag_min": 4,
+        "lag_max": 4,
+        "gyro_noise": 0.0,
+        "gravity_noise": 0.0,
+        "gyro_lag": 0,
+        "imu_rpy_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "foot_friction": 1.0,
+        "head_mass_scale": 1.0
+      },
+      "design": {
+        "knots": 4,
+        "horizon": 0.8,
+        "bound": 0.8,
+        "trigger": "event",
+        "delay": 0.0,
+        "objective": "balance"
+      },
+      "native_recovered_50hz": false,
+      "warp_recovered_50hz": false,
+      "native_survived": false,
+      "warp_survived": false,
+      "max_initial_qpos_diff": 1.2302398655350544e-08,
+      "native_final_xy": [
+        0.17520728883180942,
+        -0.010106555577594637
+      ],
+      "warp_displacement_xy": [
+        0.16301563382148743,
+        -0.013169288635253906
+      ],
+      "tilt_rms_difference": 4.385877186664231
+    },
+    {
+      "controller": "wide-reflex",
+      "condition": {
+        "seed": 0,
+        "duration_s": 6,
+        "joint_noise_rad": 0.0,
+        "push_time_s": 2.5,
+        "push_dv": [
+          0.32,
+          0.0
+        ],
+        "extra_pushes": [],
+        "pulse_body": "robot/trunk_base",
+        "pulse_force": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "pulse_time_s": null,
+        "pulse_duration_s": 0.0,
+        "vin": 7.35,
+        "vin_drop_gain": 0.1,
+        "lag_min": 4,
+        "lag_max": 4,
+        "gyro_noise": 0.0,
+        "gravity_noise": 0.0,
+        "gyro_lag": 0,
+        "imu_rpy_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "foot_friction": 1.0,
+        "head_mass_scale": 1.0
+      },
+      "design": {
+        "knots": 4,
+        "horizon": 0.8,
+        "bound": 0.8,
+        "trigger": "event",
+        "delay": 0.0,
+        "objective": "balance"
+      },
+      "native_recovered_50hz": false,
+      "warp_recovered_50hz": false,
+      "native_survived": false,
+      "warp_survived": false,
+      "max_initial_qpos_diff": 1.2302398655350544e-08,
+      "native_final_xy": [
+        0.1721549534196815,
+        -0.016184577664191388
+      ],
+      "warp_displacement_xy": [
+        0.16455519199371338,
+        -0.014328062534332275
+      ],
+      "tilt_rms_difference": 0.924058870431388
+    },
+    {
+      "controller": "wide-reflex",
+      "condition": {
+        "seed": 0,
+        "duration_s": 6,
+        "joint_noise_rad": 0.0,
+        "push_time_s": 2.5,
+        "push_dv": [
+          0.34,
+          0.0
+        ],
+        "extra_pushes": [],
+        "pulse_body": "robot/trunk_base",
+        "pulse_force": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "pulse_time_s": null,
+        "pulse_duration_s": 0.0,
+        "vin": 7.35,
+        "vin_drop_gain": 0.1,
+        "lag_min": 4,
+        "lag_max": 4,
+        "gyro_noise": 0.0,
+        "gravity_noise": 0.0,
+        "gyro_lag": 0,
+        "imu_rpy_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "foot_friction": 1.0,
+        "head_mass_scale": 1.0
+      },
+      "design": {
+        "knots": 4,
+        "horizon": 0.8,
+        "bound": 0.8,
+        "trigger": "event",
+        "delay": 0.0,
+        "objective": "balance"
+      },
+      "native_recovered_50hz": false,
+      "warp_recovered_50hz": false,
+      "native_survived": false,
+      "warp_survived": false,
+      "max_initial_qpos_diff": 1.2302398655350544e-08,
+      "native_final_xy": [
+        0.18786334790935763,
+        -0.02486902818853366
+      ],
+      "warp_displacement_xy": [
+        0.17133700847625732,
+        -0.014986991882324219
+      ],
+      "tilt_rms_difference": 0.6813802844512422
+    },
+    {
+      "controller": "wide-reflex",
+      "condition": {
+        "seed": 0,
+        "duration_s": 6,
+        "joint_noise_rad": 0.0,
+        "push_time_s": 2.5,
+        "push_dv": [
+          0.36,
+          0.0
+        ],
+        "extra_pushes": [],
+        "pulse_body": "robot/trunk_base",
+        "pulse_force": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "pulse_time_s": null,
+        "pulse_duration_s": 0.0,
+        "vin": 7.35,
+        "vin_drop_gain": 0.1,
+        "lag_min": 4,
+        "lag_max": 4,
+        "gyro_noise": 0.0,
+        "gravity_noise": 0.0,
+        "gyro_lag": 0,
+        "imu_rpy_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "foot_friction": 1.0,
+        "head_mass_scale": 1.0
+      },
+      "design": {
+        "knots": 4,
+        "horizon": 0.8,
+        "bound": 0.8,
+        "trigger": "event",
+        "delay": 0.0,
+        "objective": "balance"
+      },
+      "native_recovered_50hz": false,
+      "warp_recovered_50hz": false,
+      "native_survived": false,
+      "warp_survived": false,
+      "max_initial_qpos_diff": 1.2302398655350544e-08,
+      "native_final_xy": [
+        0.18692598069134606,
+        -0.024548811839747057
+      ],
+      "warp_displacement_xy": [
+        0.16984939575195312,
+        -0.017116129398345947
+      ],
+      "tilt_rms_difference": 0.5904759834996423
+    }
+  ],
+  "wall_s": 24.737718027000483,
+  "outcome_agreement": 1.0
+}

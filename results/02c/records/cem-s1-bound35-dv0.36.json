@@ -1,0 +1,318 @@
+{
+  "summary": {
+    "fitness": 0.45235035026235026,
+    "survived": false,
+    "recovered": false,
+    "settled": true,
+    "failure_time_s": 2.7599999999999634,
+    "failure_cause": "tilt",
+    "max_pen_m": 0.005342213804471155,
+    "max_tilt_deg": 63.391927483002085,
+    "trigger_time_s": 2.22,
+    "work_j": 0.5448921883403506,
+    "final_root_xy": [
+      0.14802928975582302,
+      0.023359592397743455
+    ],
+    "final_root_z": 0.046910104359892624,
+    "final_tilt_deg": 60.909747325535136,
+    "simulated_s": 5.999999999999894,
+    "pre_qpos": [
+      0.0019447783799546971,
+      0.00028376651984281546,
+      0.11209920129887649,
+      0.9991164178472632,
+      -0.007661102376635353,
+      -0.013032470117717283,
+      0.039215377354555,
+      0.04062418356219274,
+      -0.06380941816317634,
+      -0.3260655432952544,
+      0.20730006190733036,
+      0.5562926643517377,
+      0.44091785464004685,
+      0.3512593857940286,
+      -0.10187299724879977,
+      -0.0028607570165995327,
+      -0.009441192272723548,
+      0.10024062909857327,
+      0.26214931782861217,
+      -0.16496562926299518,
+      -0.45065476462613485
+    ],
+    "foot_shift_m": [
+      0.055106371813237756,
+      0.06145575791128685
+    ],
+    "physical_valid": false,
+    "upright_200hz": false,
+    "recovered_200hz": false,
+    "settled_200hz": true,
+    "support_events": [
+      {
+        "foot": "L",
+        "off_s": 2.7499999999999636,
+        "on_s": 2.7549999999999635,
+        "air_s": 0.005,
+        "shift_m": 0.002391050404560254,
+        "clearance_m": 2.0149712336887948e-05,
+        "stable_replant": false,
+        "qualifies": false
+      },
+      {
+        "foot": "L",
+        "off_s": 2.774999999999963,
+        "on_s": 2.784999999999963,
+        "air_s": 0.01,
+        "shift_m": 0.004546901775721658,
+        "clearance_m": 8.671348103505075e-05,
+        "stable_replant": false,
+        "qualifies": false
+      },
+      {
+        "foot": "L",
+        "off_s": 2.7949999999999626,
+        "on_s": 2.8099999999999623,
+        "air_s": 0.015,
+        "shift_m": 0.007112419431134836,
+        "clearance_m": 0.00010957587083542525,
+        "stable_replant": false,
+        "qualifies": false
+      },
+      {
+        "foot": "L",
+        "off_s": 2.814999999999962,
+        "on_s": 2.824999999999962,
+        "air_s": 0.01,
+        "shift_m": 0.00572061812207142,
+        "clearance_m": 9.828307795291258e-05,
+        "stable_replant": false,
+        "qualifies": false
+      },
+      {
+        "foot": "L",
+        "off_s": 2.8949999999999605,
+        "on_s": 2.8999999999999604,
+        "air_s": 0.005,
+        "shift_m": 0.0008133510340819345,
+        "clearance_m": 0.00010732211037056683,
+        "stable_replant": false,
+        "qualifies": false
+      },
+      {
+        "foot": "L",
+        "off_s": 2.90999999999996,
+        "on_s": 2.91499999999996,
+        "air_s": 0.005,
+        "shift_m": 0.0008744957399507605,
+        "clearance_m": 7.010574276827136e-05,
+        "stable_replant": false,
+        "qualifies": false
+      },
+      {
+        "foot": "L",
+        "off_s": 2.9299999999999597,
+        "on_s": 2.9349999999999596,
+        "air_s": 0.005,
+        "shift_m": 0.0009378619126257828,
+        "clearance_m": 0.00011087270250342146,
+        "stable_replant": false,
+        "qualifies": false
+      },
+      {
+        "foot": "L",
+        "off_s": 2.9449999999999594,
+        "on_s": 2.9499999999999593,
+        "air_s": 0.005,
+        "shift_m": 0.0009313391293571871,
+        "clearance_m": 9.657664753472822e-05,
+        "stable_replant": false,
+        "qualifies": false
+      },
+      {
+        "foot": "L",
+        "off_s": 2.964999999999959,
+        "on_s": 2.969999999999959,
+        "air_s": 0.005,
+        "shift_m": 0.0009370505305442626,
+        "clearance_m": 0.00013760454390753657,
+        "stable_replant": false,
+        "qualifies": false
+      },
+      {
+        "foot": "L",
+        "off_s": 2.9799999999999587,
+        "on_s": 2.9849999999999586,
+        "air_s": 0.005,
+        "shift_m": 0.000907439171300347,
+        "clearance_m": 7.417996037805547e-05,
+        "stable_replant": false,
+        "qualifies": false
+      },
+      {
+        "foot": "L",
+        "off_s": 2.9999999999999583,
+        "on_s": 3.004999999999958,
+        "air_s": 0.005,
+        "shift_m": 0.0008790584009945594,
+        "clearance_m": 6.721581708461419e-05,
+        "stable_replant": false,
+        "qualifies": false
+      },
+      {
+        "foot": "L",
+        "off_s": 3.019999999999958,
+        "on_s": 3.0249999999999577,
+        "air_s": 0.005,
+        "shift_m": 0.0008094949717407842,
+        "clearance_m": 8.60663937080168e-05,
+        "stable_replant": false,
+        "qualifies": false
+      },
+      {
+        "foot": "L",
+        "off_s": 3.0449999999999573,
+        "on_s": 3.049999999999957,
+        "air_s": 0.005,
+        "shift_m": 0.0007129087319639404,
+        "clearance_m": 0.00014097787666959502,
+        "stable_replant": true,
+        "qualifies": false
+      },
+      {
+        "foot": "R",
+        "off_s": 2.7499999999999636,
+        "on_s": 2.7549999999999635,
+        "air_s": 0.005,
+        "shift_m": 0.002339361861231993,
+        "clearance_m": 3.27789821847925e-05,
+        "stable_replant": false,
+        "qualifies": false
+      },
+      {
+        "foot": "R",
+        "off_s": 2.779999999999963,
+        "on_s": 2.784999999999963,
+        "air_s": 0.005,
+        "shift_m": 0.002929517193091918,
+        "clearance_m": 6.374982467836562e-05,
+        "stable_replant": false,
+        "qualifies": false
+      },
+      {
+        "foot": "R",
+        "off_s": 2.7899999999999627,
+        "on_s": 2.7949999999999626,
+        "air_s": 0.005,
+        "shift_m": 0.0031854418524475364,
+        "clearance_m": 1.447859023995246e-05,
+        "stable_replant": false,
+        "qualifies": false
+      },
+      {
+        "foot": "R",
+        "off_s": 2.8049999999999624,
+        "on_s": 2.8099999999999623,
+        "air_s": 0.005,
+        "shift_m": 0.0034993299392438986,
+        "clearance_m": 1.1017626313274131e-05,
+        "stable_replant": false,
+        "qualifies": false
+      },
+      {
+        "foot": "R",
+        "off_s": 2.814999999999962,
+        "on_s": 2.819999999999962,
+        "air_s": 0.005,
+        "shift_m": 0.003791284709816471,
+        "clearance_m": 4.024027940502384e-05,
+        "stable_replant": false,
+        "qualifies": false
+      },
+      {
+        "foot": "R",
+        "off_s": 2.824999999999962,
+        "on_s": 2.829999999999962,
+        "air_s": 0.005,
+        "shift_m": 0.0034192269329536857,
+        "clearance_m": 7.03402861143218e-05,
+        "stable_replant": false,
+        "qualifies": false
+      },
+      {
+        "foot": "R",
+        "off_s": 2.8449999999999616,
+        "on_s": 2.8549999999999613,
+        "air_s": 0.01,
+        "shift_m": 0.0030828675304252987,
+        "clearance_m": 1.943811404218551e-05,
+        "stable_replant": false,
+        "qualifies": false
+      },
+      {
+        "foot": "R",
+        "off_s": 2.869999999999961,
+        "on_s": 2.874999999999961,
+        "air_s": 0.005,
+        "shift_m": 0.0012903100576256371,
+        "clearance_m": 4.4459422008577554e-05,
+        "stable_replant": true,
+        "qualifies": false
+      },
+      {
+        "foot": "R",
+        "off_s": 3.059999999999957,
+        "on_s": 3.0849999999999564,
+        "air_s": 0.025,
+        "shift_m": 0.00031036856499503453,
+        "clearance_m": 0.00011968537702726142,
+        "stable_replant": true,
+        "qualifies": false
+      }
+    ],
+    "recovery_with_step": false,
+    "quiet_supported_final_second": true,
+    "joint_limit_overshoot_rad": 0.009312384031407106
+  },
+  "condition": {
+    "seed": 3000000070,
+    "duration_s": 6,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.2085766605619654,
+    "push_dv": [
+      0.36,
+      0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0
+  },
+  "design": {
+    "knots": 2,
+    "horizon": 0.4,
+    "bound": 0.35,
+    "trigger": "event",
+    "delay": 0.0,
+    "objective": "balance"
+  }
+}

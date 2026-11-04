@@ -1,0 +1,97 @@
+{
+  "summary": {
+    "fitness": 1.9985701704507843,
+    "survived": true,
+    "recovered": true,
+    "settled": true,
+    "failure_time_s": null,
+    "failure_cause": null,
+    "max_pen_m": 0.0011171281013494638,
+    "max_tilt_deg": 7.938840172137042,
+    "trigger_time_s": 2.98,
+    "work_j": 0.1276473916861749,
+    "final_root_xy": [
+      0.0030248972292975023,
+      -0.0011006210145499528
+    ],
+    "final_root_z": 0.11116579909144364,
+    "final_tilt_deg": 1.533412837067296,
+    "simulated_s": 5.999999999999894,
+    "pre_qpos": [
+      0.00025113043041716585,
+      0.0006365306646931179,
+      0.1120247546894074,
+      0.9990879952898745,
+      -0.00900857447859554,
+      -0.013928151416344509,
+      0.03934501050512444,
+      0.043711464396836396,
+      -0.061182005741339245,
+      -0.3253883477761897,
+      0.21162121125954542,
+      0.5618192831943148,
+      0.4458900668057519,
+      0.3582372725629784,
+      -0.10875019066993255,
+      -0.0031921695921512585,
+      -0.0050296968241463095,
+      0.10013396119092809,
+      0.2617674533184158,
+      -0.16304202452718056,
+      -0.449231152857287
+    ],
+    "foot_shift_m": [
+      0.0014389035498476933,
+      0.0035422411167638887
+    ],
+    "physical_valid": true,
+    "upright_200hz": true,
+    "recovered_200hz": true,
+    "settled_200hz": true,
+    "support_events": [],
+    "recovery_with_step": false,
+    "quiet_supported_final_second": true,
+    "joint_limit_overshoot_rad": 0.0
+  },
+  "condition": {
+    "seed": 3000000040,
+    "duration_s": 6,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.977032060976055,
+    "push_dv": [
+      0.3,
+      0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0
+  },
+  "design": {
+    "knots": 4,
+    "horizon": 0.8,
+    "bound": 0.8,
+    "trigger": "event",
+    "delay": 0.0,
+    "objective": "balance"
+  }
+}

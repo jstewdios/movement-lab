@@ -1,0 +1,37 @@
+{
+  "out": "results/02c/runs/random-s3",
+  "seed": 3,
+  "arm": "random",
+  "iterations": 20,
+  "population": 48,
+  "conditions": 4,
+  "elite": 8,
+  "std": 0.25,
+  "floor": 0.04,
+  "lo": 0.28,
+  "hi": 0.36,
+  "stratified": true,
+  "knots": 2,
+  "horizon": 0.4,
+  "bound": 0.8,
+  "workers": 2,
+  "model": "/mnt/c/Users/James/movement-lab/results/02b/model",
+  "base": "results/02b/runs/ars-push-s1/thetas.npz",
+  "init": null,
+  "design": {
+    "knots": 2,
+    "horizon": 0.4,
+    "bound": 0.8,
+    "trigger": "event",
+    "delay": 0.0,
+    "objective": "balance"
+  },
+  "base_sha256": "a2728569b6c8c1803c69d24d209807823012277511e9993323fe687b02c07f1e",
+  "model_sha256": "ebb2ce87cae95c606e6db4ad2e790e9f4309e557443d6ea1a0629d5ba5e3cf8c",
+  "sources": {
+    "learn02c.py": "2e090039e82fe24f71b97b0491c8e3dafdfad8f4c768ff9a776b009e83a0cae2",
+    "sim02c.py": "0d44dc8d8b45026c2b6a5b369328fdca4e0912e38dc4c86b047e5004d9d8909a",
+    "sim02b.py": "fdb9a2fed4802ecc2a81eeecc72bbe4995ab92920bc97b34fbe1ec5fdba34f19",
+    "model02b.py": "0aded0d5b897dcdc63f2c54c82bf61da4da1089af9e665f974afe3f32decbb83"
+  }
+}

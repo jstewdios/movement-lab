@@ -1,0 +1,228 @@
+{
+  "summary": {
+    "fitness": 0.48931985113249415,
+    "survived": false,
+    "recovered": false,
+    "settled": true,
+    "failure_time_s": 2.9799999999999587,
+    "failure_cause": "tilt",
+    "max_pen_m": 0.010474847992700806,
+    "max_tilt_deg": 82.21996474040523,
+    "trigger_time_s": 2.34,
+    "work_j": 0.37741615052041605,
+    "final_root_xy": [
+      0.16164166446040973,
+      -0.015778808494153668
+    ],
+    "final_root_z": 0.04554945383576326,
+    "final_tilt_deg": 63.98631519298986,
+    "simulated_s": 5.999999999999894,
+    "pre_qpos": [
+      0.000690018661810075,
+      -0.0004646201942956082,
+      0.1118986010343977,
+      0.9989062572193664,
+      -0.008422447475040016,
+      -0.013179330323253436,
+      0.0440642362779416,
+      0.044419687069206265,
+      -0.06239706254918482,
+      -0.32172046753107236,
+      0.21625521255459051,
+      0.5612973494623014,
+      0.4483603911015141,
+      0.35553716546214875,
+      -0.11128680039821029,
+      0.0055214298055866785,
+      -0.006010966752682862,
+      0.10366336870029574,
+      0.25574660664652643,
+      -0.17336105376128796,
+      -0.45333829139870924
+    ],
+    "foot_shift_m": [
+      0.0747864040833725,
+      0.06245098919724232
+    ],
+    "physical_valid": false,
+    "upright_200hz": false,
+    "recovered_200hz": false,
+    "settled_200hz": true,
+    "support_events": [
+      {
+        "foot": "L",
+        "off_s": 2.9399999999999595,
+        "on_s": 2.9449999999999594,
+        "air_s": 0.005,
+        "shift_m": 0.0029006902161113055,
+        "clearance_m": 3.217457824364334e-05,
+        "stable_replant": false,
+        "qualifies": false
+      },
+      {
+        "foot": "L",
+        "off_s": 2.959999999999959,
+        "on_s": 2.964999999999959,
+        "air_s": 0.005,
+        "shift_m": 0.0031609742509119817,
+        "clearance_m": 2.5891276633206034e-05,
+        "stable_replant": false,
+        "qualifies": false
+      },
+      {
+        "foot": "L",
+        "off_s": 2.974999999999959,
+        "on_s": 2.9799999999999587,
+        "air_s": 0.005,
+        "shift_m": 0.0032620516708462047,
+        "clearance_m": 5.863348198267143e-06,
+        "stable_replant": false,
+        "qualifies": false
+      },
+      {
+        "foot": "L",
+        "off_s": 2.9999999999999583,
+        "on_s": 3.009999999999958,
+        "air_s": 0.01,
+        "shift_m": 0.005237711340504222,
+        "clearance_m": 0.00011708634813317742,
+        "stable_replant": false,
+        "qualifies": false
+      },
+      {
+        "foot": "L",
+        "off_s": 3.014999999999958,
+        "on_s": 3.019999999999958,
+        "air_s": 0.005,
+        "shift_m": 0.0035953074107857646,
+        "clearance_m": 3.8301467234713726e-05,
+        "stable_replant": false,
+        "qualifies": false
+      },
+      {
+        "foot": "L",
+        "off_s": 3.0299999999999576,
+        "on_s": 3.2799999999999523,
+        "air_s": 0.25,
+        "shift_m": 0.015532184462579002,
+        "clearance_m": 0.032645845612825096,
+        "stable_replant": true,
+        "qualifies": true
+      },
+      {
+        "foot": "R",
+        "off_s": 2.969999999999959,
+        "on_s": 2.974999999999959,
+        "air_s": 0.005,
+        "shift_m": 0.0023261325139264533,
+        "clearance_m": 5.277371071765041e-05,
+        "stable_replant": false,
+        "qualifies": false
+      },
+      {
+        "foot": "R",
+        "off_s": 2.9849999999999586,
+        "on_s": 2.9899999999999585,
+        "air_s": 0.005,
+        "shift_m": 0.0026719727326326424,
+        "clearance_m": 2.0433213970081493e-05,
+        "stable_replant": false,
+        "qualifies": false
+      },
+      {
+        "foot": "R",
+        "off_s": 3.014999999999958,
+        "on_s": 3.019999999999958,
+        "air_s": 0.005,
+        "shift_m": 0.003543255641106942,
+        "clearance_m": 1.9292649362873115e-05,
+        "stable_replant": false,
+        "qualifies": false
+      },
+      {
+        "foot": "R",
+        "off_s": 3.0249999999999577,
+        "on_s": 3.0349999999999575,
+        "air_s": 0.01,
+        "shift_m": 0.00616354898386411,
+        "clearance_m": 0.00010478598423801361,
+        "stable_replant": false,
+        "qualifies": false
+      },
+      {
+        "foot": "R",
+        "off_s": 3.0399999999999574,
+        "on_s": 3.144999999999955,
+        "air_s": 0.105,
+        "shift_m": 0.012339406651388458,
+        "clearance_m": 0.019701047928968683,
+        "stable_replant": true,
+        "qualifies": true
+      },
+      {
+        "foot": "R",
+        "off_s": 3.244999999999953,
+        "on_s": 3.249999999999953,
+        "air_s": 0.005,
+        "shift_m": 0.00021691968489759178,
+        "clearance_m": 5.2865185966258915e-05,
+        "stable_replant": false,
+        "qualifies": false
+      },
+      {
+        "foot": "R",
+        "off_s": 3.2799999999999523,
+        "on_s": 3.284999999999952,
+        "air_s": 0.005,
+        "shift_m": 0.0001565447669023851,
+        "clearance_m": 1.0965541728052974e-05,
+        "stable_replant": true,
+        "qualifies": false
+      }
+    ],
+    "recovery_with_step": false,
+    "quiet_supported_final_second": true,
+    "joint_limit_overshoot_rad": 0.0
+  },
+  "condition": {
+    "seed": 3000000050,
+    "duration_s": 6,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.3329508505189747,
+    "push_dv": [
+      0.32,
+      0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0
+  },
+  "design": {
+    "knots": 4,
+    "horizon": 0.8,
+    "bound": 0.8,
+    "trigger": "event",
+    "delay": 0.0,
+    "objective": "balance"
+  }
+}
