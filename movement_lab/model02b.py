@@ -170,7 +170,8 @@ def regenerate(out, compile_fn):
             raise SystemExit(f'compiled model differs from the published one in {diffs} '
                              f'(published mjb {saved["mjb_sha256"]}, compiled {fresh["mjb_sha256"]}); nothing installed')
         if (tmp / 'resolved_config.txt').read_bytes() != (out / 'resolved_config.txt').read_bytes():
-            print('WARNING: resolved_config.txt differs from the published copy (the compiled model is identical)')
+            print('WARNING: resolved_config.txt differs from the published copy. The compiled model is identical, '
+                  'but the mjlab env settings (used by crosscheck02b) are not')
         notes = [k for k in PROVENANCE if json.dumps(saved.get(k)) != json.dumps(fresh.get(k)) and k != 'wall_s']
         shutil.move(str(tmp / 'model.mjb'), str(mjb))
     print(f'installed {mjb}: hash matches the published {saved["mjb_sha256"]}'

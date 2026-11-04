@@ -332,6 +332,18 @@ class SeedSeparationTests(unittest.TestCase):
         self.assertAlmostEqual(lo, 0.0)
 
 
+@unittest.skipUnless(importlib.util.find_spec('mjlab') is not None, 'upstream mjlab unavailable')
+class UpstreamConfigTests(unittest.TestCase):
+    def test_published_resolved_config_is_the_current_env_cfg(self):
+        # Regression: the published copy once predated env_cfg's cross-check
+        # settings (corruption off, fixed clearance reset, two terminations).
+        import re
+        from pathlib import Path
+        from movement_lab.model02b import env_cfg
+        published = (Path(__file__).resolve().parents[1] / 'results/02b/model/resolved_config.txt').read_text()
+        self.assertEqual(re.sub(r' at 0x[0-9a-fA-F]+', '', repr(env_cfg())), published)
+
+
 @unittest.skipUnless(HAVE_PHYSICS, 'compiled 02B model or upstream mujoco/bam unavailable')
 class PhysicsTests(unittest.TestCase):
     @classmethod

@@ -129,3 +129,13 @@ unchanged.
   `tables.json`, the other in future `summary.json` files. Both are now sorted.
   Regenerated outputs are byte-identical across processes, and `tables.json`
   holds the same values as before.
+- **Found by the fresh-checkout model check:** the published
+  `resolved_config.txt` was stale. It was written by the first compile, before
+  `env_cfg` gained the cross-check settings: observation corruption off, the
+  fixed 1 mm-clearance reset, and terminations limited to `nan_state` and
+  `time_out`. It therefore showed upstream's randomized reset and extra
+  terminations, which no 02B run used. The compiled model is unaffected (the
+  same hash; these are runtime settings), and the native study never reads
+  them. The cross-check did run with the current settings: its initial states
+  agree to 1.2e-8, which a randomized reset could not produce. The file now
+  holds the current resolution, and a test keeps it equal to `env_cfg()`.
