@@ -1,0 +1,96 @@
+{
+  "fitness": 1.9992039785279665,
+  "survived": true,
+  "recovered": true,
+  "settled": true,
+  "failure_time_s": null,
+  "failure_cause": null,
+  "max_pen_m": 0.001095378403179706,
+  "max_tilt_deg": 7.332858028721441,
+  "trigger_time_s": 2.5,
+  "work_j": 0.6807711998277489,
+  "final_root_xy": [
+    -0.00035627859794590814,
+    0.006483598796691963
+  ],
+  "final_root_z": 0.11126911285491169,
+  "final_tilt_deg": 2.0085428134056356,
+  "simulated_s": 5.999999999999894,
+  "pre_qpos": [
+    0.0012899604711211642,
+    0.0007376122861320329,
+    0.11218023967275245,
+    0.999441826125727,
+    -0.00878553996618094,
+    -0.014586387444524508,
+    0.028741742801940272,
+    0.04340480594048068,
+    -0.06278454574214175,
+    -0.3288435780753549,
+    0.20731843518519194,
+    0.5626552569160624,
+    0.4462118324319634,
+    0.3507291381092307,
+    -0.10844118046107365,
+    -0.004011826776052235,
+    0.0001323772799952463,
+    0.09959275764782005,
+    0.2649907540507582,
+    -0.1576229708919241,
+    -0.44873927483359793
+  ],
+  "foot_shift_m": [
+    0.007257274444440829,
+    0.005971398256548509
+  ],
+  "physical_valid": true,
+  "upright_200hz": true,
+  "recovered_200hz": true,
+  "settled_200hz": true,
+  "support_events": [
+    {
+      "foot": "R",
+      "off_s": 2.8349999999999618,
+      "on_s": 2.8399999999999617,
+      "air_s": 0.005,
+      "shift_m": 0.0004647672437952407,
+      "clearance_m": 5.588173526368569e-06,
+      "stable_replant": true,
+      "qualifies": false
+    }
+  ],
+  "recovery_with_step": false,
+  "condition": {
+    "seed": 2500000101,
+    "duration_s": 6,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.5,
+    "push_dv": [
+      0.28,
+      0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0
+  }
+}

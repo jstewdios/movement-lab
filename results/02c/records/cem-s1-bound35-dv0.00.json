@@ -1,0 +1,72 @@
+{
+  "summary": {
+    "fitness": 1.9995875682281956,
+    "survived": true,
+    "recovered": true,
+    "settled": false,
+    "failure_time_s": null,
+    "failure_cause": null,
+    "max_pen_m": 0.0009361543827705095,
+    "max_tilt_deg": 2.073819950310473,
+    "trigger_time_s": null,
+    "work_j": 0.031155285003776748,
+    "final_root_xy": [
+      0.0016405628180450778,
+      5.4266399860511406e-05
+    ],
+    "final_root_z": 0.1118978818441936,
+    "final_tilt_deg": 2.0589392967114253,
+    "simulated_s": 5.999999999999894,
+    "pre_qpos": null,
+    "foot_shift_m": null,
+    "physical_valid": true,
+    "upright_200hz": true,
+    "recovered_200hz": true,
+    "settled_200hz": true,
+    "support_events": [],
+    "recovery_with_step": false,
+    "quiet_supported_final_second": true,
+    "joint_limit_overshoot_rad": 0.0
+  },
+  "condition": {
+    "seed": 3000000000,
+    "duration_s": 6,
+    "joint_noise_rad": 0.01,
+    "push_time_s": null,
+    "push_dv": [
+      0.0,
+      0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0
+  },
+  "design": {
+    "knots": 2,
+    "horizon": 0.4,
+    "bound": 0.35,
+    "trigger": "event",
+    "delay": 0.0,
+    "objective": "balance"
+  }
+}

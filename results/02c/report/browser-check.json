@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "engine": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+  "trials": 35,
+  "rendered_snapshots": 105,
+  "checks": [
+    "trial selection",
+    "timeline control",
+    "all three views at 105 snapshots",
+    "pause control",
+    "measured sole silhouettes"
+  ],
+  "replay_sha256": "118999220e045c065363f11b9733fb6219ccab2c1153fdaaf99bce379deb62c0",
+  "selected_metadata_matches_grid": 35,
+  "displayed_case": "cem-s1, +0.32 m/s \u2014 quiet recovery; no verified recovery step",
+  "displayed_time_s": 2.64,
+  "mode": "DOM and synchronous canvas drawing; screenshot mode stalled and was stopped"
+}

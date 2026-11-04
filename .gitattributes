@@ -4,3 +4,6 @@
 /results/02b/** text=auto eol=lf
 /movement_lab/*02b.py text eol=lf
 /tests/test_react02b.py text eol=lf
+/results/02c/** text=auto eol=lf
+/movement_lab/*02c.py text eol=lf
+/tests/test_move02c.py text eol=lf

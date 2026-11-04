@@ -1,0 +1,85 @@
+{
+  "fitness": 1.9996582826881006,
+  "survived": true,
+  "recovered": true,
+  "settled": true,
+  "failure_time_s": null,
+  "failure_cause": null,
+  "max_pen_m": 0.0009736126985658766,
+  "max_tilt_deg": 6.2738656484972335,
+  "trigger_time_s": 2.5,
+  "work_j": 0.49142053674469294,
+  "final_root_xy": [
+    0.004956964595866386,
+    -0.0038327726819993653
+  ],
+  "final_root_z": 0.11174068172306216,
+  "final_tilt_deg": 1.1541181552243167,
+  "simulated_s": 5.999999999999894,
+  "pre_qpos": [
+    0.0008583903761251766,
+    -0.0005952207526896813,
+    0.1120092379520263,
+    0.9991050088904282,
+    -0.008548138697982327,
+    -0.013097129204941434,
+    0.03930109084294766,
+    0.042971552114843464,
+    -0.06209486394615849,
+    -0.323971223182868,
+    0.21243306643050017,
+    0.5596268282484976,
+    0.44536967653631626,
+    0.35808580491835645,
+    -0.10801733345442542,
+    0.004492381158747019,
+    0.0023728464668408174,
+    0.10248092478730711,
+    0.2599929148476328,
+    -0.16839278887353482,
+    -0.4522635577741446
+  ],
+  "foot_shift_m": [
+    0.003873968067080458,
+    0.0073756925695494455
+  ],
+  "physical_valid": true,
+  "upright_200hz": true,
+  "recovered_200hz": true,
+  "settled_200hz": true,
+  "support_events": [],
+  "recovery_with_step": false,
+  "condition": {
+    "seed": 2500000201,
+    "duration_s": 6,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.5,
+    "push_dv": [
+      0.28,
+      0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0
+  }
+}

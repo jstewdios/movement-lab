@@ -1,0 +1,23 @@
+{
+  "platform": "Linux-6.18.54.1-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "cpu_count": 12,
+  "packages": {
+    "torch": "2.9.1",
+    "numpy": "2.4.1",
+    "mujoco": "3.10.0",
+    "mjlab": "1.3.0",
+    "mujoco-warp": "3.8.1",
+    "better-actuator-models": "1.0.1"
+  },
+  "cuda_available": true,
+  "native_8_trials_wall_s": 1.2235448900000847,
+  "gpu": "NVIDIA GeForce RTX 2070 SUPER",
+  "gpu_compile_wall_s": 4.838498661999893,
+  "gpu_100_steps_wall_s": 4.120854727999813,
+  "gpu_envs": 64,
+  "gpu_peak_bytes": 10538496,
+  "gpu_finite": true,
+  "bam_parameter_sha256": "61c699362fb3fabdde93eeba5e1ad3bf4ef9ca2f71d03e316b1924ff005b20d3",
+  "bam_parameter_canonical_sha256": "278066df7ed404023abe1fbd44476a0a354d22baba41cb19f6520818374fc47d",
+  "bam_windows_parameter_values_equal": true
+}

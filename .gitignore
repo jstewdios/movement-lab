@@ -87,3 +87,9 @@ results/*smoke*/
 /results/02b/**/renders/
 # 02B per-trial evaluation tables are published as deterministic gzip copies.
 /results/02b/eval/*/results.jsonl
+
+# 02C: preserve development trajectories and logs locally; publish hashes,
+# all generation checkpoints, held-out results, and selected full-rate replays.
+/results/02c/**/*.log
+/results/02c/pilot/probe-*/*.npz
+/results/02c/matplotlib/
