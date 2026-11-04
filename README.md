@@ -418,3 +418,55 @@ published inventory and preserved local-only evidence. Read-only
 `python -m movement_lab.validate02a` recomputes physical outcomes and proposal
 history when local raw evidence is present; `python -m movement_lab.publication02a`
 verifies the published inventory (`--full` also checks excluded local artifacts).
+
+## Movement Lab 02B — Learning to React
+
+A small linear IMU reflex (14×5 gains + 14 posture biases on top of upstream
+HOME) learns, by Augmented Random Search over repeated physical trials, to turn
+Microduck's falling fixed posture into reactive standing, and is compared with
+matched-budget random search, with learning that never experiences pushes, and
+with the soles' no-step (capture-point) limit.
+
+Findings in one paragraph:
+
+- **Standing.** Fixed HOME falls in 1.1 s. One ARS update (128 trials) produces standing in every ARS run.
+- **What changed.** Experience grew a sagittal tilt → legs reflex whose restoring gain rose about 10×.
+- **What pushes taught.** Push experience moved where the robot stands, gaining heel margin.
+- **The limit.** Held-out survival is bounded almost exactly by the capture-point limit of each reflex's own stance: 3 of 818 survivals beyond it.
+- **Revision.** Targeted experience beyond the limit, or extra proprioceptive capacity, did not pass it. No stepping emerged.
+- **Controls.** Adaptive search clearly beat random exploration.
+- **Vulnerability.** A 5° IMU pitch error is the one condition the reflex cannot tolerate.
+
+Read the [02B report](results/02b/REPORT.md), the
+[portable replay](results/02b/report/replay.html) and the
+[development attempts](results/02b/ATTEMPTS.md).
+
+This study runs on **CPU**. The Windows upstream venv ships PyPI's `torch+cpu`, so
+mjlab's CUDA path is unavailable here; the upstream environment was not modified.
+The exact 01A–02A model is compiled once through upstream mjlab (`model02b`).
+Learning and evaluation step it in native MuJoCo with upstream's `bam.mujoco`
+XL330 actuator (the `scripts/infer_policy.py` rehearsal path), reproducing mjlab's
+step ordering and command delay. `crosscheck02b` replays reflexes inside upstream's
+own mjlab/MuJoCo-Warp environment, with 99/100 outcome agreement.
+
+```bash
+PY=~/microduck_rl/.venv/Scripts/python.exe     # Linux: ~/microduck_rl/.venv/bin/python
+export PYTHONPATH=. PYTHONUTF8=1
+$PY -m movement_lab.model02b --out results/02b/model      # compile + hash (local MJB)
+$PY -m movement_lab.study02b train --root results/02b     # 9 runs, ~1 h on 12 threads
+$PY -m movement_lab.study02b evaluate --root results/02b  # held-out batteries
+$PY -m movement_lab.study02b ablate --root results/02b
+$PY -m movement_lab.study02b revise --root results/02b --seeds 1
+$PY -m movement_lab.study02b evaluate-revision --root results/02b --seeds 1
+$PY -m movement_lab.study02b crosscheck --root results/02b  # mjlab/warp on CPU, slow
+$PY -m movement_lab.analysis02b --root results/02b && $PY -m movement_lab.replay02b --root results/02b
+$PY -m movement_lab.validate02b --root results/02b --resimulate 24
+$PY -m movement_lab.publication02b --root results/02b --verify
+$PY -m unittest tests.test_react02b -v
+```
+
+Completed runs are reused and incomplete run directories are refused. The
+compiled model (`*.mjb`, upstream meshes), logs and raw per-trial tables stay
+local. Per-trial tables are published as deterministic `.jsonl.gz`, and
+`manifest.json` hashes everything. Physics tests skip explicitly when the local
+model is absent.

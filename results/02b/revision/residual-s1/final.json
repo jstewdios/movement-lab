@@ -1,0 +1,8 @@
+{
+ "arm": "residual",
+ "seed": 1,
+ "init": "results\\02b\\runs\\ars-push-s1\\thetas.npz",
+ "rollouts": 12800,
+ "sim_s": 33333.66,
+ "wall_s": 693.0325551000424
+}

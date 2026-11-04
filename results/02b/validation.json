@@ -1,0 +1,21 @@
+{
+ "model": "hash verified",
+ "runs": {
+  "ars-none-s1": "ok",
+  "ars-none-s2": "ok",
+  "ars-none-s3": "ok",
+  "ars-push-s1": "ok",
+  "ars-push-s2": "ok",
+  "ars-push-s3": "ok",
+  "random-push-s1": "ok",
+  "random-push-s2": "ok",
+  "random-push-s3": "ok"
+ },
+ "eval": {
+  "rows": 6800,
+  "controllers": 10,
+  "conditions": 680,
+  "aggregates": "recomputed equal",
+  "resimulated_identical": 24
+ }
+}
