@@ -1,0 +1,65 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Movement Lab 02D · Learning when to react</title>
+<style>
+:root{color-scheme:dark;--bg:#101a20;--panel:#19272e;--ink:#edf2ec;--muted:#a3b7ba;--mint:#9bd6b4;--amber:#efb57a}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,sans-serif}main{max-width:1240px;margin:auto;padding:32px 28px 60px}.eyebrow{font:12px/1.5 ui-monospace,monospace;letter-spacing:.18em;color:var(--mint)}h1{font-size:clamp(30px,4.6vw,54px);line-height:1.12;letter-spacing:-.045em;margin:18px 0}p{max-width:870px;color:var(--muted);margin:14px 0}.finding{border-left:3px solid var(--amber);padding:6px 18px;margin:24px 0 30px}.finding strong{color:var(--ink)}label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}select,button{font:inherit;color:var(--ink);border:1px solid #42535a;background:var(--panel);border-radius:7px;padding:10px 12px;cursor:pointer}select{max-width:100%;width:100%}button:hover{border-color:var(--mint)}button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid var(--amber);outline-offset:3px}.toolbar{display:grid;grid-template-columns:2fr 1fr;gap:18px;margin:20px 0}.panels{display:grid;grid-template-columns:1fr 1fr;gap:20px}.panel{background:var(--panel);border:1px solid #2a3e46;border-radius:12px;overflow:hidden}.panelhead{padding:18px 20px 10px}.badge{display:inline-block;font:12px/1.6 ui-monospace,monospace;color:var(--amber);margin-top:9px}canvas.scene{width:100%;height:auto;display:block;background:linear-gradient(#1b2b34,#152329)}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:14px 20px;font:13px/1.5 ui-monospace,monospace}.metrics span{display:block;font:11px/1.5 system-ui;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metrics b{font-weight:500}.controls{display:flex;align-items:center;gap:14px;margin:22px 0 4px;flex-wrap:wrap}.controls input{flex:1;min-width:180px;accent-color:var(--mint)}#time{min-width:120px;font:13px ui-monospace,monospace}.legend{display:flex;gap:22px;flex-wrap:wrap;font-size:13px;color:var(--muted)}.dot{width:8px;height:8px;border-radius:50%;display:inline-block;margin-right:6px}.tracebox{margin-top:22px;padding:16px 20px;background:var(--panel);border-radius:10px}.tracebox canvas{display:block;width:100%;height:auto}.notes{font-size:13px;border-top:1px solid #30444c;padding-top:20px;margin-top:28px}.notes a{color:var(--mint)}.resultgrid{display:flex;gap:30px;margin:24px 0;flex-wrap:wrap}.stat{font:28px ui-monospace,monospace;color:var(--mint)}.stat span{display:block;font:12px system-ui;color:var(--muted);max-width:200px;margin-top:5px}@media(max-width:720px){main{padding:24px 14px}.panels{grid-template-columns:1fr}.toolbar{grid-template-columns:1fr}.metrics{font-size:12px}h1{font-size:36px}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
+</style><main>
+<div class="eyebrow">MOVEMENT LAB / STUDY 02D / RECORDED SIMULATION</div>
+<h1>Learning when to react.</h1>
+<p>Can Microduck use what its body senses to choose how strongly—and for how long—to move? Watch the same disturbance meet different controllers.</p>
+<div class="finding" id="finding"></div>
+<div class="resultgrid" id="stats"></div>
+<div class="toolbar"><div><label for="preset">Choose a comparison</label><select id="preset"></select></div><div><label for="view">Camera</label><select id="view"><option value="side">Side · forward balance</option><option value="front">Front · weight transfer</option><option value="top">Above · displacement</option></select></div></div>
+<div class="panels">
+<section class="panel"><div class="panelhead"><label for="left">Left recording</label><select id="left"></select><div class="badge" id="leftStatus"></div></div><canvas class="scene" id="leftScene" width="800" height="520" aria-label="Left robot recorded state"></canvas><div class="metrics" id="leftMetrics"></div></section>
+<section class="panel"><div class="panelhead"><label for="right">Right recording</label><select id="right"></select><div class="badge" id="rightStatus"></div></div><canvas class="scene" id="rightScene" width="800" height="520" aria-label="Right robot recorded state"></canvas><div class="metrics" id="rightMetrics"></div></section>
+</div>
+<div class="controls"><button id="play">Play</button><button id="restart">Restart</button><label for="scrub" style="position:absolute;left:-9999px">Synchronized timeline</label><input id="scrub" type="range" min="-1" max="3" step=".02" value="-.5"><output id="time"></output><label for="speed" style="margin:0">Speed</label><select id="speed" style="width:auto"><option value=".25">¼×</option><option value=".5" selected>½×</option><option value="1">1×</option></select></div>
+<p id="caption" style="font-size:14px"></p>
+<div class="legend"><span><i class="dot" style="background:var(--mint)"></i>Left recording</span><span><i class="dot" style="background:var(--amber)"></i>Right recording</span><span>Filled sole = measured contact</span><span>Orange dot = whole-body centre of mass</span></div>
+<div class="tracebox"><label>Trunk tilt (degrees) · synchronized recordings</label><canvas id="trace" width="1160" height="180" aria-label="Measured trunk tilt comparison"></canvas></div>
+<p class="notes">Every frame comes from a saved MuJoCo/BAM state. The drawing joins measured body frames and projects measured sole outlines; it is a schematic, not a mesh render. Physics and validity checks run at 200 Hz; the replay shows recorded 50 Hz samples. No browser physics, invented motion, or successful-only selection. Recovery requires sustained quiet support and a valid whole episode. A late replant cannot erase a fall. All controllers retain an active standing reflex. Added target measures the RMS joint-target offset applied on top of it. No hardware or locomotion claim. <span id="provenance"></span> <a href="https://github.com/jstewdios/movement-lab/blob/study/02d-sensed-adaptation/results/02d/REPORT.md">Scientific report and reproduction notes ↗</a></p>
+</main><script>
+const DATA=__DATA__;
+const $=id=>document.getElementById(id), trials=DATA.trials;
+let playing=false, elapsed=-.5, last=null, view='side';
+$('finding').textContent=DATA.finding;
+for(const s of DATA.stats){const el=document.createElement('div');el.className='stat';el.append(document.createTextNode(s.value));const label=document.createElement('span');label.textContent=s.label;el.append(label);$('stats').append(el)}
+$('provenance').textContent=DATA.provenance;
+for(const id of ['left','right'])trials.forEach((d,i)=>{const o=document.createElement('option');o.value=i;o.textContent=d.label;$(id).append(o)});
+DATA.presets.forEach((d,i)=>{const o=document.createElement('option');o.value=i;o.textContent=d.title;$('preset').append(o)});
+function selected(id){return trials[Number($(id).value)]}
+function frame(d){const target=elapsed+(d.event_time??2.5);let lo=0,hi=d.frames.length-1;while(lo<hi){const m=Math.ceil((lo+hi)/2);if(d.frames[m].t<=target+1e-8)lo=m;else hi=m-1}return d.frames[lo]}
+function limits(){const ds=[selected('left'),selected('right')];const start=Math.max(...ds.map(d=>d.frames[0].t-(d.event_time??2.5)));const end=Math.min(...ds.map(d=>d.frames.at(-1).t-(d.event_time??2.5)));$('scrub').min=Math.max(-1,start);$('scrub').max=end;elapsed=Math.max(Number($('scrub').min),Math.min(end,elapsed))}
+function drawRobot(id,color){const d=selected(id),f=frame(d),canvas=$(id+'Scene'),ctx=canvas.getContext('2d');ctx.clearRect(0,0,800,520);
+ const axes=view==='side'?[0,2]:view==='front'?[1,2]:[0,1], scale=1.65, origin=[400,view==='top'?260:450];
+ const P=p=>[origin[0]+p[axes[0]]*scale,origin[1]-p[axes[1]]*scale];
+ ctx.strokeStyle='#31444d';ctx.lineWidth=1;ctx.font='15px system-ui';ctx.fillStyle='#849da7';
+ for(let mm=-200;mm<=300;mm+=50){let x=P(view==='front'?[0,mm,0]:[mm,0,0])[0];ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,520);ctx.stroke();ctx.fillText(mm+'',x+4,510)}
+ const ground=view==='top'?260:450;ctx.beginPath();ctx.moveTo(0,ground);ctx.lineTo(800,ground);ctx.stroke();ctx.fillText(view==='top'?'Recorded x/y position (mm)':'Ground · position in millimetres',18,490);
+ const soles=view==='side'?f.soles_xz:view==='front'?f.soles_yz:f.soles;
+ soles.forEach((sole,i)=>{ctx.beginPath();sole.forEach((q,j)=>{const p=P(view==='side'?[q[0],0,q[1]]:view==='front'?[0,q[0],q[1]]:[q[0],q[1],0]);j?ctx.lineTo(...p):ctx.moveTo(...p)});ctx.closePath();ctx.strokeStyle=color;ctx.lineWidth=2;if(f.contact[i]){ctx.fillStyle=color+'88';ctx.fill()}ctx.stroke()});
+ ctx.strokeStyle=color;ctx.lineWidth=4;ctx.lineCap='round';for(const [a,b] of d.edges){ctx.beginPath();ctx.moveTo(...P(f.p[a]));ctx.lineTo(...P(f.p[b]));ctx.stroke()}
+ for(const p of f.p){ctx.beginPath();ctx.arc(...P(p),2.4,0,Math.PI*2);ctx.fillStyle=color;ctx.fill()}
+ ctx.beginPath();ctx.arc(...P(f.head),20,0,Math.PI*2);ctx.stroke();ctx.beginPath();ctx.arc(...P(f.com),5,0,Math.PI*2);ctx.fillStyle='#f9a468';ctx.fill();
+ const fallen=d.failure_time!==null&&f.t>=d.failure_time;ctx.fillStyle=fallen?'#f8b6a4':'#e0eae7';ctx.font='17px system-ui';ctx.fillText(fallen?'Fall latched — later contact cannot count as recovery':d.kind==='quiet'?'Quiet standing · no disturbance':d.kind==='false-gyro'?(elapsed<0?'Before sensor transient':'After sensor transient'):(elapsed<0?'Before disturbance':'After disturbance'),20,32);
+ $(id+'Status').textContent=(d.recovered?'Sustained recovery':'Failed recovery')+' · '+(d.step?'verified recovery step':'no verified recovery step');
+ $(id+'Metrics').innerHTML='<div><span>Body tilt</span><b>'+f.tilt.toFixed(1)+'°</b></div><div><span>Foot contact</span><b>'+(f.contact[0]?'L ●':'L ○')+' '+(f.contact[1]?'R ●':'R ○')+'</b></div><div><span>Added target</span><b>'+f.strength.toFixed(3)+' rad</b></div>';
+}
+function trace(){
+ const c=$('trace'),ctx=c.getContext('2d');ctx.clearRect(0,0,c.width,c.height);
+ const min=Number($('scrub').min),max=Number($('scrub').max),ds=[selected('left'),selected('right')];
+ const ymax=Math.max(15,Math.ceil(Math.max(...ds.flatMap(d=>d.frames.map(f=>f.tilt)))/15)*15);
+ const x=t=>50+(t-min)/(max-min)*1090,y=v=>150-v/ymax*130;
+ ctx.font='13px system-ui';ctx.lineWidth=1;
+ for(let i=0;i<=4;i++){const v=i*ymax/4;ctx.strokeStyle='#32454e';ctx.beginPath();ctx.moveTo(50,y(v));ctx.lineTo(1140,y(v));ctx.stroke();ctx.fillStyle='#afc1c4';ctx.fillText(v.toFixed(0)+'°',10,y(v)+4)}
+ for(const [id,color]of [['left','#9bd6b4'],['right','#efb57a']]){const d=selected(id);ctx.strokeStyle=color;ctx.lineWidth=2;ctx.beginPath();let first=true;for(const f of d.frames){const t=f.t-(d.event_time??2.5);if(t<min||t>max)continue;first?ctx.moveTo(x(t),y(f.tilt)):ctx.lineTo(x(t),y(f.tilt));first=false}ctx.stroke()}
+ ctx.strokeStyle='#e1e6de';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(x(elapsed),16);ctx.lineTo(x(elapsed),155);ctx.stroke();ctx.fillStyle='#afc1c4';ctx.fillText(ds.every(d=>d.event_time===null)?'reference':'onset',x(0)-16,175);ctx.fillText(min.toFixed(1)+' s',50,175);ctx.fillText('+'+max.toFixed(1)+' s',1080,175);
+}
+function draw(){drawRobot('left','#9bd6b4');drawRobot('right','#efb57a');trace();$('scrub').value=elapsed;$('time').textContent=(elapsed>=0?'+':'')+elapsed.toFixed(2)+(selected('left').event_time===null&&selected('right').event_time===null?' s from reference':' s from onset')}
+function preset(i){const p=DATA.presets[i];$('left').value=p.left;$('right').value=p.right;$('caption').textContent=p.caption;elapsed=-.5;limits();draw()}
+$('preset').onchange=()=>preset(Number($('preset').value));for(const id of ['left','right'])$(id).onchange=()=>{limits();draw();$('caption').textContent='Manual comparison. Timelines share event-relative time; check labels for matched conditions.'};
+$('view').onchange=()=>{view=$('view').value;draw()};$('scrub').oninput=()=>{elapsed=Number($('scrub').value);draw()};
+$('play').onclick=()=>{playing=!playing;$('play').textContent=playing?'Pause':'Play';last=null};$('restart').onclick=()=>{elapsed=Number($('scrub').min);draw()};
+function tick(now){if(playing&&last!==null){elapsed+=(now-last)/1000*Number($('speed').value);if(elapsed>Number($('scrub').max)){elapsed=Number($('scrub').max);playing=false;$('play').textContent='Play'}draw()}last=now;requestAnimationFrame(tick)}
+preset(0);requestAnimationFrame(tick);
+</script></html>

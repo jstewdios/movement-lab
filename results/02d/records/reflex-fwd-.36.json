@@ -1,0 +1,259 @@
+{
+  "controller": "reflex",
+  "kind": "fwd-.36",
+  "weights": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "design": {
+    "memory": true,
+    "tau_s": 0.08,
+    "bound": 0.8
+  },
+  "mode": "reflex",
+  "condition": {
+    "seed": 6000000050,
+    "duration_s": 6,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.890844127559999,
+    "push_dv": [
+      0.36,
+      0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0
+  },
+  "z0": 0.11845947692036247,
+  "summary": {
+    "fitness": 0.5629000224102295,
+    "survived": false,
+    "recovered": false,
+    "settled": true,
+    "failure_time_s": 3.4199999999999493,
+    "failure_cause": "tilt",
+    "max_pen_m": 0.007343232415164699,
+    "max_tilt_deg": 80.35375232207949,
+    "trigger_time_s": null,
+    "work_j": 0.36421928625668054,
+    "final_root_xy": [
+      0.1674553154361837,
+      -0.017716660692614915
+    ],
+    "final_root_z": 0.04589028889191652,
+    "residual_rms_rad": 0.0,
+    "peak_torque_nm": 0.33831516920118393,
+    "final_tilt_deg": 63.48834332217983,
+    "simulated_s": 5.999999999999894,
+    "pre_qpos": [
+      -5.617995436504359e-05,
+      0.0002618765729956904,
+      0.11194977523661953,
+      0.9990033054651526,
+      -0.00891753565384969,
+      -0.014713735705912147,
+      0.04118712431255193,
+      0.047593430740003266,
+      -0.06150086570332041,
+      -0.3269431171971488,
+      0.2154016790732148,
+      0.5687872632235812,
+      0.4527754631261541,
+      0.35014322773789713,
+      -0.11233972455613218,
+      0.0052078349397963455,
+      -0.005308469495687444,
+      0.09772844515240874,
+      0.26006070459749503,
+      -0.16398863231126817,
+      -0.44926525185158606
+    ],
+    "foot_shift_m": [
+      0.0798851000241833,
+      0.07090568602946179
+    ],
+    "physical_valid": false,
+    "upright_200hz": false,
+    "recovered_200hz": false,
+    "settled_200hz": true,
+    "support_events": [
+      {
+        "foot": "L",
+        "off_s": 3.37999999999995,
+        "on_s": 3.38499999999995,
+        "air_s": 0.005,
+        "shift_m": 0.0028627321729723,
+        "clearance_m": 6.900954912184704e-06,
+        "stable_replant": false,
+        "qualifies": false
+      },
+      {
+        "foot": "L",
+        "off_s": 3.4049999999999496,
+        "on_s": 3.4099999999999495,
+        "air_s": 0.005,
+        "shift_m": 0.0031970595244883446,
+        "clearance_m": 4.182701225075025e-05,
+        "stable_replant": false,
+        "qualifies": false
+      },
+      {
+        "foot": "L",
+        "off_s": 3.4199999999999493,
+        "on_s": 3.424999999999949,
+        "air_s": 0.005,
+        "shift_m": 0.003323051535584103,
+        "clearance_m": 3.216637683596882e-05,
+        "stable_replant": false,
+        "qualifies": false
+      },
+      {
+        "foot": "L",
+        "off_s": 3.4449999999999488,
+        "on_s": 3.4549999999999486,
+        "air_s": 0.01,
+        "shift_m": 0.005250545117170959,
+        "clearance_m": 0.00010015789372068429,
+        "stable_replant": false,
+        "qualifies": false
+      },
+      {
+        "foot": "L",
+        "off_s": 3.4649999999999483,
+        "on_s": 3.474999999999948,
+        "air_s": 0.01,
+        "shift_m": 0.0054236832952884815,
+        "clearance_m": 0.00013235917767261823,
+        "stable_replant": false,
+        "qualifies": false
+      },
+      {
+        "foot": "L",
+        "off_s": 3.484999999999948,
+        "on_s": 3.674999999999944,
+        "air_s": 0.19,
+        "shift_m": 0.020836923790132147,
+        "clearance_m": 0.030055483443187064,
+        "stable_replant": true,
+        "qualifies": true
+      },
+      {
+        "foot": "R",
+        "off_s": 3.4099999999999495,
+        "on_s": 3.4149999999999494,
+        "air_s": 0.005,
+        "shift_m": 0.0022638057967184462,
+        "clearance_m": 1.9222208290214232e-05,
+        "stable_replant": false,
+        "qualifies": false
+      },
+      {
+        "foot": "R",
+        "off_s": 3.429999999999949,
+        "on_s": 3.434999999999949,
+        "air_s": 0.005,
+        "shift_m": 0.0027182041424663656,
+        "clearance_m": 2.371762510369399e-05,
+        "stable_replant": false,
+        "qualifies": false
+      },
+      {
+        "foot": "R",
+        "off_s": 3.4599999999999485,
+        "on_s": 3.4699999999999482,
+        "air_s": 0.01,
+        "shift_m": 0.0054929203370099955,
+        "clearance_m": 0.00011864347581005616,
+        "stable_replant": false,
+        "qualifies": false
+      },
+      {
+        "foot": "R",
+        "off_s": 3.474999999999948,
+        "on_s": 3.479999999999948,
+        "air_s": 0.005,
+        "shift_m": 0.004178742965610435,
+        "clearance_m": 1.343255423672668e-06,
+        "stable_replant": false,
+        "qualifies": false
+      },
+      {
+        "foot": "R",
+        "off_s": 3.484999999999948,
+        "on_s": 3.6049999999999454,
+        "air_s": 0.12,
+        "shift_m": 0.018686234835271924,
+        "clearance_m": 0.02160980019225251,
+        "stable_replant": true,
+        "qualifies": true
+      }
+    ],
+    "recovery_with_step": false,
+    "quiet_supported_final_second": true,
+    "joint_limit_overshoot_rad": 0.0,
+    "self_contact_samples": 0,
+    "torque_within_envelope": true,
+    "targets_within_limits": true,
+    "actual_event_time_s": 2.9,
+    "quiet_residual_rms_rad": 0.0,
+    "quiet_root_path_m": 0.0031584962861900606,
+    "peak_response_rad": 0.0,
+    "response_active_s": 0.0,
+    "peak_clearance_m": [
+      0.030055483443187064,
+      0.02160980019225251
+    ],
+    "foot_unloaded_s": [
+      0.225,
+      0.145
+    ],
+    "post_root_delta_xy": [
+      0.16597484983190247,
+      -0.017978781014521848
+    ]
+  }
+}

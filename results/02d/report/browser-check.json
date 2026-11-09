@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "engine": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+  "trials": 46,
+  "presets": 13,
+  "snapshots": 117,
+  "controls": [
+    "paired and manual selection",
+    "timeline",
+    "three cameras",
+    "play/pause/restart",
+    "measurements",
+    "outcome labels"
+  ]
+}

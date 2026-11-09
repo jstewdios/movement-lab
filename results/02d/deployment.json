@@ -1,0 +1,39 @@
+{
+  "audience": "owner-private",
+  "source_commit_sha": "c0a1581627fb87b9d02ff3356d790c794e3cc48d",
+  "deployment": {
+    "id": "appgdep_6af22c251be88191813d81879be2ffb2",
+    "project_id": "appgprj_6af22ad0eca08191b18ddad12895fe1b",
+    "title": "Movement Lab 02D — Learning when to react",
+    "version_id": "appgprj_6af22ad0eca08191b18ddad12895fe1b~appgver_fa3865b79ec48191a3eae550558cb530",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://movement-lab-02d-jstewdios.jstewdios.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6af22ad0eca08191b18ddad12895fe1b",
+    "failure_message": null,
+    "env_set_revision": 0,
+    "updated_at": "2026-11-09T20:25:16.613756+00:00"
+  },
+  "prior_attempt": {
+    "source_commit_sha": "875de79bd7e351d614d671cbfb266f89a5449059",
+    "deployment": {
+      "id": "appgdep_6af22b9426488191a4c1c5214c3ca76c",
+      "project_id": "appgprj_6af22ad0eca08191b18ddad12895fe1b",
+      "title": "Movement Lab 02D — Learning when to react",
+      "version_id": "appgprj_6af22ad0eca08191b18ddad12895fe1b~appgver_be387cc7c9248191aa07e35669ca89ab",
+      "type": "publish",
+      "status": "failed",
+      "url": null,
+      "has_mcp": false,
+      "screenshot_asset_pointer": null,
+      "provider_deployment_id": "site---6af22ad0eca08191b18ddad12895fe1b",
+      "failure_message": "Invalid manifest: file size of 30459214 exceeds 26214400 limit - check the request details and try again.",
+      "env_set_revision": 0,
+      "updated_at": "2026-11-09T20:22:46.798044+00:00"
+    }
+  },
+  "source_html": "results/02d/report/replay.html",
+  "packaging": "movement_lab/package02d.py"
+}

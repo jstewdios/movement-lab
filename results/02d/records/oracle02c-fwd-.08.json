@@ -1,0 +1,148 @@
+{
+  "controller": "oracle02c",
+  "kind": "fwd-.08",
+  "weights": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "design": {
+    "memory": true,
+    "tau_s": 0.08,
+    "bound": 0.8
+  },
+  "mode": "oracle02c",
+  "condition": {
+    "seed": 6000000010,
+    "duration_s": 6,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.8421905075544895,
+    "push_dv": [
+      0.08,
+      0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0
+  },
+  "z0": 0.1181237313942156,
+  "summary": {
+    "fitness": 1.9994633421711552,
+    "survived": true,
+    "recovered": true,
+    "settled": true,
+    "failure_time_s": null,
+    "failure_cause": null,
+    "max_pen_m": 0.0009291701902350317,
+    "max_tilt_deg": 6.850645647389203,
+    "trigger_time_s": 2.86,
+    "work_j": 0.4954105735714837,
+    "final_root_xy": [
+      0.0026369965719729967,
+      0.0004505256299978792
+    ],
+    "final_root_z": 0.11136749487500078,
+    "residual_rms_rad": 0.06002798033339877,
+    "peak_torque_nm": 0.2958496660896764,
+    "final_tilt_deg": 1.0287288958996654,
+    "simulated_s": 5.999999999999894,
+    "pre_qpos": [
+      0.0015140147359536248,
+      0.0005998206277413545,
+      0.11199976454968354,
+      0.9992876536216238,
+      -0.009197602476823294,
+      -0.015043568490638662,
+      0.033365857925951946,
+      0.04137943639533879,
+      -0.060915534597143675,
+      -0.3238236941951494,
+      0.21256394087549552,
+      0.5634265952807488,
+      0.4502414662812331,
+      0.34914647639168805,
+      -0.11185124655567213,
+      0.001404972613642438,
+      0.0005907220341589906,
+      0.0982757835728536,
+      0.2607362470831808,
+      -0.16157605741397404,
+      -0.4484677968573919
+    ],
+    "foot_shift_m": [
+      0.0010120706666178565,
+      0.0016048399865881673
+    ],
+    "physical_valid": true,
+    "upright_200hz": true,
+    "recovered_200hz": true,
+    "settled_200hz": true,
+    "support_events": [],
+    "recovery_with_step": false,
+    "quiet_supported_final_second": true,
+    "joint_limit_overshoot_rad": 0.0,
+    "self_contact_samples": 0,
+    "torque_within_envelope": true,
+    "targets_within_limits": true,
+    "actual_event_time_s": 2.86,
+    "quiet_residual_rms_rad": 0.0,
+    "quiet_root_path_m": 0.0029972315396509766,
+    "peak_response_rad": 0.3756032930801742,
+    "response_active_s": 0.36,
+    "peak_clearance_m": [
+      -8.258362181283018e-05,
+      -0.00029975219565902926
+    ],
+    "foot_unloaded_s": [
+      0.0,
+      0.0
+    ],
+    "post_root_delta_xy": [
+      0.000787469366300027,
+      -0.0001478854423517369
+    ]
+  }
+}

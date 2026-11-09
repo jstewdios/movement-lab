@@ -93,3 +93,9 @@ results/*smoke*/
 /results/02c/**/*.log
 /results/02c/pilot/probe-*/*.npz
 /results/02c/matplotlib/
+
+# 02D: model/meshes are reused locally; all selected records and checkpoints publish.
+/results/02d/**/*.log
+/results/02d/**/generation-*.tmp.npz
+/results/02d/**/final.tmp.npz
+/results/02d/site-preview/

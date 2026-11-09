@@ -1,0 +1,13 @@
+{
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "platform": "Linux-6.18.54.1-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "bam_parameter_sha256": "61c699362fb3fabdde93eeba5e1ad3bf4ef9ca2f71d03e316b1924ff005b20d3",
+  "bam_parameter_canonical_sha256": "278066df7ed404023abe1fbd44476a0a354d22baba41cb19f6520818374fc47d",
+  "bam_parameters_match_02c": true,
+  "upstream_revision": "b02fdea4902c2b93b7d34a83a6f05da4ececb7d3",
+  "upstream_dirty": false,
+  "base_revision": "e2c28b8",
+  "training_backend": "native MuJoCo + upstream BAM, two low-priority CPU workers",
+  "gpu_training": false,
+  "new_gpu_crosscheck": false
+}

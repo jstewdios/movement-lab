@@ -1,0 +1,16 @@
+test_fall_flicker_slide_and_unsupported_endpoint_rejected (tests.test_adapt02d.ControlTests.test_fall_flicker_slide_and_unsupported_endpoint_rejected) ... ok
+test_only_sensors_drive_response_and_state_resets (tests.test_adapt02d.ControlTests.test_only_sensors_drive_response_and_state_resets) ... ok
+test_split_seeds_and_stratification (tests.test_adapt02d.ControlTests.test_split_seeds_and_stratification) ... ok
+test_exact_generation_resume_and_staging_ignored (tests.test_adapt02d.PhysicsTests.test_exact_generation_resume_and_staging_ignored) ... {"generation": 1, "trials": 24, "wall_s": 5.174057160009397, "winner_score": 1.621281828304327, "zero_score": 1.621281828304327, "mean_score": 1.621281828304327, "winner_recoveries": 6, "zero_recoveries": 6}
+{"generation": 2, "trials": 48, "wall_s": 10.212237195009948, "winner_score": 1.6287344557939072, "zero_score": 1.6287344557939072, "mean_score": 1.6287344557939072, "winner_recoveries": 6, "zero_recoveries": 6}
+{"generation": 1, "trials": 24, "wall_s": 5.4280840499995975, "winner_score": 1.621281828304327, "zero_score": 1.621281828304327, "mean_score": 1.621281828304327, "winner_recoveries": 6, "zero_recoveries": 6}
+{"generation": 2, "trials": 48, "wall_s": 10.796828670005198, "winner_score": 1.6287344557939072, "zero_score": 1.6287344557939072, "mean_score": 1.6287344557939072, "winner_recoveries": 6, "zero_recoveries": 6}
+ok
+test_legacy_and_zero_compatibility (tests.test_adapt02d.PhysicsTests.test_legacy_and_zero_compatibility) ... ok
+test_no_anticipation_or_privileged_velocity_sensor (tests.test_adapt02d.PhysicsTests.test_no_anticipation_or_privileged_velocity_sensor) ... ok
+test_recording_passive_limits_and_disturbances (tests.test_adapt02d.PhysicsTests.test_recording_passive_limits_and_disturbances) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 27.803s
+
+OK
