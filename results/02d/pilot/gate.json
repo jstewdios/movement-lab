@@ -1,0 +1,16 @@
+{
+  "passed": false,
+  "paired_wins": 6,
+  "paired_losses": 1,
+  "quiet_losses": 1,
+  "training": {
+    "generation": 8,
+    "trials": 1536,
+    "wall_s": 168.7557600900036,
+    "winner_score": 1.8737857351536649,
+    "zero_score": 1.6402599989817694,
+    "mean_score": 1.6596464576590133,
+    "winner_recoveries": 7,
+    "zero_recoveries": 6
+  }
+}

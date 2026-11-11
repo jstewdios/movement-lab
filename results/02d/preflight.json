@@ -1,0 +1,1106 @@
+{
+  "platform": "Linux-6.18.54.1-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "packages": {
+    "numpy": "2.4.1",
+    "mujoco": "3.10.0",
+    "mjlab": "1.3.0",
+    "mujoco-warp": "3.8.1",
+    "better-actuator-models": "1.0.1"
+  },
+  "model_sha256": "ebb2ce87cae95c606e6db4ad2e790e9f4309e557443d6ea1a0629d5ba5e3cf8c",
+  "base_sha256": "a2728569b6c8c1803c69d24d209807823012277511e9993323fe687b02c07f1e",
+  "option_sha256": "c9fe0fb843dcaa62b29598d305a501abc91f310b22485f1665550af824d8e2c7",
+  "physics_dt_s": 0.005,
+  "control_dt_s": 0.02,
+  "nominal_command_delay_s": 0.02,
+  "nominal_added_observation_delay_s": 0,
+  "controller_mean_wall_s": 2.6235801000439095e-05,
+  "zero_residual_exact_02c": true,
+  "deterministic": true,
+  "recording_passive": true,
+  "historical_rows": [
+    {
+      "controller": "reflex02b",
+      "seed": 3000000000,
+      "magnitude": 0.0,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "reflex02b",
+      "seed": 3000000001,
+      "magnitude": 0.0,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "reflex02b",
+      "seed": 3000000002,
+      "magnitude": 0.0,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "reflex02b",
+      "seed": 3000000003,
+      "magnitude": 0.0,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "reflex02b",
+      "seed": 3000000004,
+      "magnitude": 0.0,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "reflex02b",
+      "seed": 3000000005,
+      "magnitude": 0.0,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "reflex02b",
+      "seed": 3000000010,
+      "magnitude": 0.2,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "reflex02b",
+      "seed": 3000000011,
+      "magnitude": 0.2,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "reflex02b",
+      "seed": 3000000012,
+      "magnitude": 0.2,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "reflex02b",
+      "seed": 3000000013,
+      "magnitude": 0.2,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "reflex02b",
+      "seed": 3000000014,
+      "magnitude": 0.2,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "reflex02b",
+      "seed": 3000000015,
+      "magnitude": 0.2,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "reflex02b",
+      "seed": 3000000020,
+      "magnitude": 0.26,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "reflex02b",
+      "seed": 3000000021,
+      "magnitude": 0.26,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "reflex02b",
+      "seed": 3000000022,
+      "magnitude": 0.26,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "reflex02b",
+      "seed": 3000000023,
+      "magnitude": 0.26,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "reflex02b",
+      "seed": 3000000024,
+      "magnitude": 0.26,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "reflex02b",
+      "seed": 3000000025,
+      "magnitude": 0.26,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "reflex02b",
+      "seed": 3000000050,
+      "magnitude": 0.32,
+      "recovered": false,
+      "historical_recovered": false,
+      "survived": false,
+      "historical_survived": false
+    },
+    {
+      "controller": "reflex02b",
+      "seed": 3000000051,
+      "magnitude": 0.32,
+      "recovered": false,
+      "historical_recovered": false,
+      "survived": false,
+      "historical_survived": false
+    },
+    {
+      "controller": "reflex02b",
+      "seed": 3000000052,
+      "magnitude": 0.32,
+      "recovered": false,
+      "historical_recovered": false,
+      "survived": false,
+      "historical_survived": false
+    },
+    {
+      "controller": "reflex02b",
+      "seed": 3000000053,
+      "magnitude": 0.32,
+      "recovered": false,
+      "historical_recovered": false,
+      "survived": false,
+      "historical_survived": false
+    },
+    {
+      "controller": "reflex02b",
+      "seed": 3000000054,
+      "magnitude": 0.32,
+      "recovered": false,
+      "historical_recovered": false,
+      "survived": false,
+      "historical_survived": false
+    },
+    {
+      "controller": "reflex02b",
+      "seed": 3000000055,
+      "magnitude": 0.32,
+      "recovered": false,
+      "historical_recovered": false,
+      "survived": false,
+      "historical_survived": false
+    },
+    {
+      "controller": "cem-s1",
+      "seed": 3000000000,
+      "magnitude": 0.0,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1",
+      "seed": 3000000001,
+      "magnitude": 0.0,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1",
+      "seed": 3000000002,
+      "magnitude": 0.0,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1",
+      "seed": 3000000003,
+      "magnitude": 0.0,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1",
+      "seed": 3000000004,
+      "magnitude": 0.0,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1",
+      "seed": 3000000005,
+      "magnitude": 0.0,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1",
+      "seed": 3000000010,
+      "magnitude": 0.2,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1",
+      "seed": 3000000011,
+      "magnitude": 0.2,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1",
+      "seed": 3000000012,
+      "magnitude": 0.2,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1",
+      "seed": 3000000013,
+      "magnitude": 0.2,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1",
+      "seed": 3000000014,
+      "magnitude": 0.2,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1",
+      "seed": 3000000015,
+      "magnitude": 0.2,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1",
+      "seed": 3000000020,
+      "magnitude": 0.26,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1",
+      "seed": 3000000021,
+      "magnitude": 0.26,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1",
+      "seed": 3000000022,
+      "magnitude": 0.26,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1",
+      "seed": 3000000023,
+      "magnitude": 0.26,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1",
+      "seed": 3000000024,
+      "magnitude": 0.26,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1",
+      "seed": 3000000025,
+      "magnitude": 0.26,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1",
+      "seed": 3000000050,
+      "magnitude": 0.32,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1",
+      "seed": 3000000051,
+      "magnitude": 0.32,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1",
+      "seed": 3000000052,
+      "magnitude": 0.32,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1",
+      "seed": 3000000053,
+      "magnitude": 0.32,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1",
+      "seed": 3000000054,
+      "magnitude": 0.32,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1",
+      "seed": 3000000055,
+      "magnitude": 0.32,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s2",
+      "seed": 3000000000,
+      "magnitude": 0.0,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s2",
+      "seed": 3000000001,
+      "magnitude": 0.0,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s2",
+      "seed": 3000000002,
+      "magnitude": 0.0,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s2",
+      "seed": 3000000003,
+      "magnitude": 0.0,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s2",
+      "seed": 3000000004,
+      "magnitude": 0.0,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s2",
+      "seed": 3000000005,
+      "magnitude": 0.0,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s2",
+      "seed": 3000000010,
+      "magnitude": 0.2,
+      "recovered": false,
+      "historical_recovered": false,
+      "survived": false,
+      "historical_survived": false
+    },
+    {
+      "controller": "cem-s2",
+      "seed": 3000000011,
+      "magnitude": 0.2,
+      "recovered": false,
+      "historical_recovered": false,
+      "survived": false,
+      "historical_survived": false
+    },
+    {
+      "controller": "cem-s2",
+      "seed": 3000000012,
+      "magnitude": 0.2,
+      "recovered": false,
+      "historical_recovered": false,
+      "survived": false,
+      "historical_survived": false
+    },
+    {
+      "controller": "cem-s2",
+      "seed": 3000000013,
+      "magnitude": 0.2,
+      "recovered": false,
+      "historical_recovered": false,
+      "survived": false,
+      "historical_survived": false
+    },
+    {
+      "controller": "cem-s2",
+      "seed": 3000000014,
+      "magnitude": 0.2,
+      "recovered": false,
+      "historical_recovered": false,
+      "survived": false,
+      "historical_survived": false
+    },
+    {
+      "controller": "cem-s2",
+      "seed": 3000000015,
+      "magnitude": 0.2,
+      "recovered": false,
+      "historical_recovered": false,
+      "survived": false,
+      "historical_survived": false
+    },
+    {
+      "controller": "cem-s2",
+      "seed": 3000000020,
+      "magnitude": 0.26,
+      "recovered": false,
+      "historical_recovered": false,
+      "survived": false,
+      "historical_survived": false
+    },
+    {
+      "controller": "cem-s2",
+      "seed": 3000000021,
+      "magnitude": 0.26,
+      "recovered": false,
+      "historical_recovered": false,
+      "survived": false,
+      "historical_survived": false
+    },
+    {
+      "controller": "cem-s2",
+      "seed": 3000000022,
+      "magnitude": 0.26,
+      "recovered": false,
+      "historical_recovered": false,
+      "survived": false,
+      "historical_survived": false
+    },
+    {
+      "controller": "cem-s2",
+      "seed": 3000000023,
+      "magnitude": 0.26,
+      "recovered": false,
+      "historical_recovered": false,
+      "survived": false,
+      "historical_survived": false
+    },
+    {
+      "controller": "cem-s2",
+      "seed": 3000000024,
+      "magnitude": 0.26,
+      "recovered": false,
+      "historical_recovered": false,
+      "survived": false,
+      "historical_survived": false
+    },
+    {
+      "controller": "cem-s2",
+      "seed": 3000000025,
+      "magnitude": 0.26,
+      "recovered": false,
+      "historical_recovered": false,
+      "survived": false,
+      "historical_survived": false
+    },
+    {
+      "controller": "cem-s2",
+      "seed": 3000000050,
+      "magnitude": 0.32,
+      "recovered": false,
+      "historical_recovered": false,
+      "survived": false,
+      "historical_survived": false
+    },
+    {
+      "controller": "cem-s2",
+      "seed": 3000000051,
+      "magnitude": 0.32,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s2",
+      "seed": 3000000052,
+      "magnitude": 0.32,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s2",
+      "seed": 3000000053,
+      "magnitude": 0.32,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s2",
+      "seed": 3000000054,
+      "magnitude": 0.32,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s2",
+      "seed": 3000000055,
+      "magnitude": 0.32,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1-imu",
+      "seed": 3000000000,
+      "magnitude": 0.0,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1-imu",
+      "seed": 3000000001,
+      "magnitude": 0.0,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1-imu",
+      "seed": 3000000002,
+      "magnitude": 0.0,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1-imu",
+      "seed": 3000000003,
+      "magnitude": 0.0,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1-imu",
+      "seed": 3000000004,
+      "magnitude": 0.0,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1-imu",
+      "seed": 3000000005,
+      "magnitude": 0.0,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1-imu",
+      "seed": 3000000010,
+      "magnitude": 0.2,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1-imu",
+      "seed": 3000000011,
+      "magnitude": 0.2,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1-imu",
+      "seed": 3000000012,
+      "magnitude": 0.2,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1-imu",
+      "seed": 3000000013,
+      "magnitude": 0.2,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1-imu",
+      "seed": 3000000014,
+      "magnitude": 0.2,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1-imu",
+      "seed": 3000000015,
+      "magnitude": 0.2,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1-imu",
+      "seed": 3000000020,
+      "magnitude": 0.26,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1-imu",
+      "seed": 3000000021,
+      "magnitude": 0.26,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1-imu",
+      "seed": 3000000022,
+      "magnitude": 0.26,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1-imu",
+      "seed": 3000000023,
+      "magnitude": 0.26,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1-imu",
+      "seed": 3000000024,
+      "magnitude": 0.26,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1-imu",
+      "seed": 3000000025,
+      "magnitude": 0.26,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1-imu",
+      "seed": 3000000050,
+      "magnitude": 0.32,
+      "recovered": false,
+      "historical_recovered": false,
+      "survived": false,
+      "historical_survived": false
+    },
+    {
+      "controller": "cem-s1-imu",
+      "seed": 3000000051,
+      "magnitude": 0.32,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1-imu",
+      "seed": 3000000052,
+      "magnitude": 0.32,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1-imu",
+      "seed": 3000000053,
+      "magnitude": 0.32,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1-imu",
+      "seed": 3000000054,
+      "magnitude": 0.32,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1-imu",
+      "seed": 3000000055,
+      "magnitude": 0.32,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1-delay80",
+      "seed": 3000000000,
+      "magnitude": 0.0,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1-delay80",
+      "seed": 3000000001,
+      "magnitude": 0.0,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1-delay80",
+      "seed": 3000000002,
+      "magnitude": 0.0,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1-delay80",
+      "seed": 3000000003,
+      "magnitude": 0.0,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1-delay80",
+      "seed": 3000000004,
+      "magnitude": 0.0,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1-delay80",
+      "seed": 3000000005,
+      "magnitude": 0.0,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1-delay80",
+      "seed": 3000000010,
+      "magnitude": 0.2,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1-delay80",
+      "seed": 3000000011,
+      "magnitude": 0.2,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1-delay80",
+      "seed": 3000000012,
+      "magnitude": 0.2,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1-delay80",
+      "seed": 3000000013,
+      "magnitude": 0.2,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1-delay80",
+      "seed": 3000000014,
+      "magnitude": 0.2,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1-delay80",
+      "seed": 3000000015,
+      "magnitude": 0.2,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1-delay80",
+      "seed": 3000000020,
+      "magnitude": 0.26,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1-delay80",
+      "seed": 3000000021,
+      "magnitude": 0.26,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1-delay80",
+      "seed": 3000000022,
+      "magnitude": 0.26,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1-delay80",
+      "seed": 3000000023,
+      "magnitude": 0.26,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1-delay80",
+      "seed": 3000000024,
+      "magnitude": 0.26,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1-delay80",
+      "seed": 3000000025,
+      "magnitude": 0.26,
+      "recovered": true,
+      "historical_recovered": true,
+      "survived": true,
+      "historical_survived": true
+    },
+    {
+      "controller": "cem-s1-delay80",
+      "seed": 3000000050,
+      "magnitude": 0.32,
+      "recovered": false,
+      "historical_recovered": false,
+      "survived": false,
+      "historical_survived": false
+    },
+    {
+      "controller": "cem-s1-delay80",
+      "seed": 3000000051,
+      "magnitude": 0.32,
+      "recovered": false,
+      "historical_recovered": false,
+      "survived": false,
+      "historical_survived": false
+    },
+    {
+      "controller": "cem-s1-delay80",
+      "seed": 3000000052,
+      "magnitude": 0.32,
+      "recovered": false,
+      "historical_recovered": false,
+      "survived": false,
+      "historical_survived": false
+    },
+    {
+      "controller": "cem-s1-delay80",
+      "seed": 3000000053,
+      "magnitude": 0.32,
+      "recovered": false,
+      "historical_recovered": false,
+      "survived": false,
+      "historical_survived": false
+    },
+    {
+      "controller": "cem-s1-delay80",
+      "seed": 3000000054,
+      "magnitude": 0.32,
+      "recovered": false,
+      "historical_recovered": false,
+      "survived": false,
+      "historical_survived": false
+    },
+    {
+      "controller": "cem-s1-delay80",
+      "seed": 3000000055,
+      "magnitude": 0.32,
+      "recovered": false,
+      "historical_recovered": false,
+      "survived": false,
+      "historical_survived": false
+    }
+  ],
+  "outcome_matches": 120,
+  "wall_s": 102.29692516900832,
+  "passed": true
+}

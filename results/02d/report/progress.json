@@ -1,0 +1,734 @@
+{
+  "history-s1": [
+    {
+      "generation": 1,
+      "trials": 192,
+      "wall_s": 20.763145751989214,
+      "winner_score": 1.7509610098232795,
+      "zero_score": 1.747904090936184,
+      "mean_score": 1.1650024289109253,
+      "winner_recoveries": 10,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 2,
+      "trials": 384,
+      "wall_s": 46.34028742199007,
+      "winner_score": 1.8814643021257045,
+      "zero_score": 1.7657302285788996,
+      "mean_score": 1.5846476851479023,
+      "winner_recoveries": 11,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 3,
+      "trials": 576,
+      "wall_s": 72.49907684599748,
+      "winner_score": 1.7609139310606299,
+      "zero_score": 1.7546205521781806,
+      "mean_score": 1.6106567194006634,
+      "winner_recoveries": 10,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 4,
+      "trials": 768,
+      "wall_s": 100.21847430198977,
+      "winner_score": 1.873860771088486,
+      "zero_score": 1.8720645945450949,
+      "mean_score": 1.8228691642572628,
+      "winner_recoveries": 11,
+      "zero_recoveries": 11
+    },
+    {
+      "generation": 5,
+      "trials": 960,
+      "wall_s": 128.18150589198922,
+      "winner_score": 1.9995547793132478,
+      "zero_score": 1.7620287009793676,
+      "mean_score": 1.8594129414710894,
+      "winner_recoveries": 12,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 6,
+      "trials": 1152,
+      "wall_s": 156.22760553099215,
+      "winner_score": 1.8728667226180742,
+      "zero_score": 1.7541693207553661,
+      "mean_score": 1.836950589965721,
+      "winner_recoveries": 11,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 7,
+      "trials": 1344,
+      "wall_s": 184.48051247998956,
+      "winner_score": 1.8804906194845035,
+      "zero_score": 1.8786932975158928,
+      "mean_score": 1.7371749021008434,
+      "winner_recoveries": 11,
+      "zero_recoveries": 11
+    },
+    {
+      "generation": 8,
+      "trials": 1536,
+      "wall_s": 212.33287657499022,
+      "winner_score": 1.8853132269424435,
+      "zero_score": 1.7512936226838516,
+      "mean_score": 1.7739687112815945,
+      "winner_recoveries": 11,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 9,
+      "trials": 1728,
+      "wall_s": 240.35035259398865,
+      "winner_score": 1.8717053843262095,
+      "zero_score": 1.752518236303577,
+      "mean_score": 1.817934678069045,
+      "winner_recoveries": 11,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 10,
+      "trials": 1920,
+      "wall_s": 268.4342525550019,
+      "winner_score": 1.8828719621359802,
+      "zero_score": 1.7612199136431836,
+      "mean_score": 1.8124007215068128,
+      "winner_recoveries": 11,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 11,
+      "trials": 2112,
+      "wall_s": 297.2016348879988,
+      "winner_score": 1.897232718568658,
+      "zero_score": 1.761156469202846,
+      "mean_score": 1.855098318401469,
+      "winner_recoveries": 11,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 12,
+      "trials": 2304,
+      "wall_s": 326.0829798880004,
+      "winner_score": 1.8826353467364394,
+      "zero_score": 1.752882087326646,
+      "mean_score": 1.8075146482385291,
+      "winner_recoveries": 11,
+      "zero_recoveries": 10
+    }
+  ],
+  "history-s2": [
+    {
+      "generation": 1,
+      "trials": 192,
+      "wall_s": 21.58017275900056,
+      "winner_score": 1.8732192887568113,
+      "zero_score": 1.7474288618396299,
+      "mean_score": 1.224426298737067,
+      "winner_recoveries": 11,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 2,
+      "trials": 384,
+      "wall_s": 49.57927058900532,
+      "winner_score": 1.8799413596738421,
+      "zero_score": 1.877067359832787,
+      "mean_score": 1.7352720442662075,
+      "winner_recoveries": 11,
+      "zero_recoveries": 11
+    },
+    {
+      "generation": 3,
+      "trials": 576,
+      "wall_s": 78.60558534300071,
+      "winner_score": 1.877044832114308,
+      "zero_score": 1.7478406632150498,
+      "mean_score": 1.7384211336458804,
+      "winner_recoveries": 11,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 4,
+      "trials": 768,
+      "wall_s": 108.35820163201424,
+      "winner_score": 1.8727347049988332,
+      "zero_score": 1.746967440001714,
+      "mean_score": 1.6494347006008585,
+      "winner_recoveries": 11,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 5,
+      "trials": 960,
+      "wall_s": 137.2770430410019,
+      "winner_score": 1.9158837039872099,
+      "zero_score": 1.7436970008178136,
+      "mean_score": 1.64211284355681,
+      "winner_recoveries": 11,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 6,
+      "trials": 1152,
+      "wall_s": 165.46292372100288,
+      "winner_score": 1.8823467009995447,
+      "zero_score": 1.7561157211221152,
+      "mean_score": 1.787724192088156,
+      "winner_recoveries": 11,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 7,
+      "trials": 1344,
+      "wall_s": 193.10167505100253,
+      "winner_score": 1.8752003172669471,
+      "zero_score": 1.7507847732863846,
+      "mean_score": 1.7314170943551384,
+      "winner_recoveries": 11,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 8,
+      "trials": 1536,
+      "wall_s": 221.17144268100674,
+      "winner_score": 1.8823967843937408,
+      "zero_score": 1.7569750531977852,
+      "mean_score": 1.8333591208323121,
+      "winner_recoveries": 11,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 9,
+      "trials": 1728,
+      "wall_s": 249.8372868810111,
+      "winner_score": 1.9993772125819884,
+      "zero_score": 1.7524798091788973,
+      "mean_score": 1.891538332519342,
+      "winner_recoveries": 12,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 10,
+      "trials": 1920,
+      "wall_s": 278.1309599310043,
+      "winner_score": 1.8777304969969704,
+      "zero_score": 1.8758056216886316,
+      "mean_score": 1.7532042114671267,
+      "winner_recoveries": 11,
+      "zero_recoveries": 11
+    },
+    {
+      "generation": 11,
+      "trials": 2112,
+      "wall_s": 307.782890211005,
+      "winner_score": 1.9994869037481482,
+      "zero_score": 1.872883069835875,
+      "mean_score": 1.8953017858383203,
+      "winner_recoveries": 12,
+      "zero_recoveries": 11
+    },
+    {
+      "generation": 12,
+      "trials": 2304,
+      "wall_s": 337.21848677100206,
+      "winner_score": 1.9993868880996375,
+      "zero_score": 1.7560847372715396,
+      "mean_score": 1.8872932092248391,
+      "winner_recoveries": 12,
+      "zero_recoveries": 10
+    }
+  ],
+  "history-s3": [
+    {
+      "generation": 1,
+      "trials": 192,
+      "wall_s": 19.55444319000526,
+      "winner_score": 1.8745921959955218,
+      "zero_score": 1.759075160017179,
+      "mean_score": 1.1273821906575363,
+      "winner_recoveries": 11,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 2,
+      "trials": 384,
+      "wall_s": 44.21359359000053,
+      "winner_score": 1.8814361296937137,
+      "zero_score": 1.7627632469029553,
+      "mean_score": 1.2868580808940635,
+      "winner_recoveries": 11,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 3,
+      "trials": 576,
+      "wall_s": 73.92960945000232,
+      "winner_score": 1.999550994395807,
+      "zero_score": 1.8741812153943986,
+      "mean_score": 1.8110064262007226,
+      "winner_recoveries": 12,
+      "zero_recoveries": 11
+    },
+    {
+      "generation": 4,
+      "trials": 768,
+      "wall_s": 103.26300345000345,
+      "winner_score": 1.7553574193752406,
+      "zero_score": 1.7466417454617167,
+      "mean_score": 1.741693406375459,
+      "winner_recoveries": 10,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 5,
+      "trials": 960,
+      "wall_s": 133.94617173000006,
+      "winner_score": 1.8753938625225353,
+      "zero_score": 1.7532307505919205,
+      "mean_score": 1.858047843078494,
+      "winner_recoveries": 11,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 6,
+      "trials": 1152,
+      "wall_s": 164.54167145999963,
+      "winner_score": 1.8825030446132784,
+      "zero_score": 1.7536908845265256,
+      "mean_score": 1.8708054710269635,
+      "winner_recoveries": 11,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 7,
+      "trials": 1344,
+      "wall_s": 190.77988626000297,
+      "winner_score": 1.87322387064704,
+      "zero_score": 1.7425525783670943,
+      "mean_score": 1.7509032356463807,
+      "winner_recoveries": 11,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 8,
+      "trials": 1536,
+      "wall_s": 219.2039128799952,
+      "winner_score": 1.8807356685467462,
+      "zero_score": 1.7540675159454295,
+      "mean_score": 1.8190686985416553,
+      "winner_recoveries": 11,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 9,
+      "trials": 1728,
+      "wall_s": 248.5717254899937,
+      "winner_score": 1.8790013705655984,
+      "zero_score": 1.7550012797079324,
+      "mean_score": 1.81239743691087,
+      "winner_recoveries": 11,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 10,
+      "trials": 1920,
+      "wall_s": 277.82368713000324,
+      "winner_score": 1.8807605880454321,
+      "zero_score": 1.7508428604808495,
+      "mean_score": 1.7998175682568247,
+      "winner_recoveries": 11,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 11,
+      "trials": 2112,
+      "wall_s": 305.5811607899959,
+      "winner_score": 1.875728757931703,
+      "zero_score": 1.7499083925318066,
+      "mean_score": 1.7696719890840034,
+      "winner_recoveries": 11,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 12,
+      "trials": 2304,
+      "wall_s": 334.8396457199997,
+      "winner_score": 1.8840465646568576,
+      "zero_score": 1.8774486383644653,
+      "mean_score": 1.8800247955711487,
+      "winner_recoveries": 11,
+      "zero_recoveries": 11
+    }
+  ],
+  "memoryless-s1": [
+    {
+      "generation": 1,
+      "trials": 192,
+      "wall_s": 22.129817220004043,
+      "winner_score": 1.874979474451395,
+      "zero_score": 1.747904090936184,
+      "mean_score": 1.2615703939451948,
+      "winner_recoveries": 11,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 2,
+      "trials": 384,
+      "wall_s": 54.521434709997266,
+      "winner_score": 1.8826119768277458,
+      "zero_score": 1.7657302285788996,
+      "mean_score": 1.7759706512479307,
+      "winner_recoveries": 11,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 3,
+      "trials": 576,
+      "wall_s": 83.78393684599723,
+      "winner_score": 1.8852138320524483,
+      "zero_score": 1.7546205521781806,
+      "mean_score": 1.6174468288491255,
+      "winner_recoveries": 11,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 4,
+      "trials": 768,
+      "wall_s": 112.27684346499154,
+      "winner_score": 1.8755015840056763,
+      "zero_score": 1.8720645945450949,
+      "mean_score": 1.6998429692704398,
+      "winner_recoveries": 11,
+      "zero_recoveries": 11
+    },
+    {
+      "generation": 5,
+      "trials": 960,
+      "wall_s": 141.9425450790004,
+      "winner_score": 1.887721077661299,
+      "zero_score": 1.7620287009793676,
+      "mean_score": 1.8595574400612447,
+      "winner_recoveries": 11,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 6,
+      "trials": 1152,
+      "wall_s": 171.00221994900494,
+      "winner_score": 1.8732256612009401,
+      "zero_score": 1.7541693207553661,
+      "mean_score": 1.8150577396622052,
+      "winner_recoveries": 11,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 7,
+      "trials": 1344,
+      "wall_s": 199.6812353389978,
+      "winner_score": 1.8812693385991126,
+      "zero_score": 1.8786932975158928,
+      "mean_score": 1.8535680673599393,
+      "winner_recoveries": 11,
+      "zero_recoveries": 11
+    },
+    {
+      "generation": 8,
+      "trials": 1536,
+      "wall_s": 229.73552013200242,
+      "winner_score": 1.8902005363887147,
+      "zero_score": 1.7512936226838516,
+      "mean_score": 1.8474741666241328,
+      "winner_recoveries": 11,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 9,
+      "trials": 1728,
+      "wall_s": 259.65268257199205,
+      "winner_score": 1.8713433715664294,
+      "zero_score": 1.752518236303577,
+      "mean_score": 1.8330068385211655,
+      "winner_recoveries": 11,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 10,
+      "trials": 1920,
+      "wall_s": 287.17679838200274,
+      "winner_score": 1.8807932985079274,
+      "zero_score": 1.7612199136431836,
+      "mean_score": 1.7268111879308614,
+      "winner_recoveries": 11,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 11,
+      "trials": 2112,
+      "wall_s": 314.87648835200525,
+      "winner_score": 1.8813856586566267,
+      "zero_score": 1.761156469202846,
+      "mean_score": 1.858355408163349,
+      "winner_recoveries": 11,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 12,
+      "trials": 2304,
+      "wall_s": 343.79711688199313,
+      "winner_score": 1.8773834775572054,
+      "zero_score": 1.752882087326646,
+      "mean_score": 1.8444089266450057,
+      "winner_recoveries": 11,
+      "zero_recoveries": 10
+    }
+  ],
+  "memoryless-s2": [
+    {
+      "generation": 1,
+      "trials": 192,
+      "wall_s": 24.856910550006432,
+      "winner_score": 1.7474288618396299,
+      "zero_score": 1.7474288618396299,
+      "mean_score": 1.3875999093345806,
+      "winner_recoveries": 10,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 2,
+      "trials": 384,
+      "wall_s": 53.05630409999867,
+      "winner_score": 1.8782381527257102,
+      "zero_score": 1.877067359832787,
+      "mean_score": 1.8229522105537002,
+      "winner_recoveries": 11,
+      "zero_recoveries": 11
+    },
+    {
+      "generation": 3,
+      "trials": 576,
+      "wall_s": 81.0067330370075,
+      "winner_score": 1.8761390779605644,
+      "zero_score": 1.7478406632150498,
+      "mean_score": 1.7776180212495958,
+      "winner_recoveries": 11,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 4,
+      "trials": 768,
+      "wall_s": 109.7840267700085,
+      "winner_score": 1.749560173444537,
+      "zero_score": 1.746967440001714,
+      "mean_score": 1.6764039068923493,
+      "winner_recoveries": 10,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 5,
+      "trials": 960,
+      "wall_s": 138.32350596001197,
+      "winner_score": 1.8726848379378949,
+      "zero_score": 1.7436970008178136,
+      "mean_score": 1.7796359150779493,
+      "winner_recoveries": 11,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 6,
+      "trials": 1152,
+      "wall_s": 167.0437740260095,
+      "winner_score": 1.886324832053236,
+      "zero_score": 1.7561157211221152,
+      "mean_score": 1.8374561448008961,
+      "winner_recoveries": 11,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 7,
+      "trials": 1344,
+      "wall_s": 194.8358004860056,
+      "winner_score": 1.8815771728733488,
+      "zero_score": 1.7507847732863846,
+      "mean_score": 1.7714149948617215,
+      "winner_recoveries": 11,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 8,
+      "trials": 1536,
+      "wall_s": 223.7287253960094,
+      "winner_score": 1.8810871470743669,
+      "zero_score": 1.7569750531977852,
+      "mean_score": 1.7920044370408916,
+      "winner_recoveries": 11,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 9,
+      "trials": 1728,
+      "wall_s": 253.223915546012,
+      "winner_score": 1.8842313890248128,
+      "zero_score": 1.7524798091788973,
+      "mean_score": 1.798199251180737,
+      "winner_recoveries": 11,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 10,
+      "trials": 1920,
+      "wall_s": 281.4632436259999,
+      "winner_score": 1.8770177555646619,
+      "zero_score": 1.8758056216886316,
+      "mean_score": 1.6694467635059245,
+      "winner_recoveries": 11,
+      "zero_recoveries": 11
+    },
+    {
+      "generation": 11,
+      "trials": 2112,
+      "wall_s": 311.76035726600094,
+      "winner_score": 1.8773985522760313,
+      "zero_score": 1.872883069835875,
+      "mean_score": 1.8425368586649935,
+      "winner_recoveries": 11,
+      "zero_recoveries": 11
+    },
+    {
+      "generation": 12,
+      "trials": 2304,
+      "wall_s": 341.98807262600167,
+      "winner_score": 1.8764614061306235,
+      "zero_score": 1.7560847372715396,
+      "mean_score": 1.756098453164839,
+      "winner_recoveries": 11,
+      "zero_recoveries": 10
+    }
+  ],
+  "memoryless-s3": [
+    {
+      "generation": 1,
+      "trials": 192,
+      "wall_s": 25.116230790008558,
+      "winner_score": 1.8765513861929606,
+      "zero_score": 1.759075160017179,
+      "mean_score": 1.4024860597315212,
+      "winner_recoveries": 11,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 2,
+      "trials": 384,
+      "wall_s": 50.97352292999858,
+      "winner_score": 1.9995235083380418,
+      "zero_score": 1.7627632469029553,
+      "mean_score": 1.511269096902424,
+      "winner_recoveries": 12,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 3,
+      "trials": 576,
+      "wall_s": 81.0715338900045,
+      "winner_score": 1.879430855633321,
+      "zero_score": 1.8741812153943986,
+      "mean_score": 1.7958757269894812,
+      "winner_recoveries": 11,
+      "zero_recoveries": 11
+    },
+    {
+      "generation": 4,
+      "trials": 768,
+      "wall_s": 109.3464171000087,
+      "winner_score": 1.7574208295406875,
+      "zero_score": 1.7466417454617167,
+      "mean_score": 1.7229027225651823,
+      "winner_recoveries": 10,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 5,
+      "trials": 960,
+      "wall_s": 140.3120840400079,
+      "winner_score": 1.9994554287872652,
+      "zero_score": 1.7532307505919205,
+      "mean_score": 1.9062738543325062,
+      "winner_recoveries": 12,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 6,
+      "trials": 1152,
+      "wall_s": 170.79850997999893,
+      "winner_score": 1.8825183000240318,
+      "zero_score": 1.7536908845265256,
+      "mean_score": 1.8716715315329422,
+      "winner_recoveries": 11,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 7,
+      "trials": 1344,
+      "wall_s": 199.04433399000845,
+      "winner_score": 1.8731047670367074,
+      "zero_score": 1.7425525783670943,
+      "mean_score": 1.7453384075730085,
+      "winner_recoveries": 11,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 8,
+      "trials": 1536,
+      "wall_s": 226.422219510001,
+      "winner_score": 1.8813502243863198,
+      "zero_score": 1.7540675159454295,
+      "mean_score": 1.8720627781875792,
+      "winner_recoveries": 11,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 9,
+      "trials": 1728,
+      "wall_s": 253.07614124999964,
+      "winner_score": 1.9992448975578156,
+      "zero_score": 1.7550012797079324,
+      "mean_score": 1.7571827127521231,
+      "winner_recoveries": 12,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 10,
+      "trials": 1920,
+      "wall_s": 279.7377416100062,
+      "winner_score": 1.8826569543305063,
+      "zero_score": 1.7508428604808495,
+      "mean_score": 1.7717097992844602,
+      "winner_recoveries": 11,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 11,
+      "trials": 2112,
+      "wall_s": 307.0052760600083,
+      "winner_score": 1.8784082805677678,
+      "zero_score": 1.7499083925318066,
+      "mean_score": 1.8419913680523132,
+      "winner_recoveries": 11,
+      "zero_recoveries": 10
+    },
+    {
+      "generation": 12,
+      "trials": 2304,
+      "wall_s": 334.6309346400085,
+      "winner_score": 1.9993673338286866,
+      "zero_score": 1.8774486383644653,
+      "mean_score": 1.8754334298738953,
+      "winner_recoveries": 12,
+      "zero_recoveries": 11
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+test_fall_flicker_slide_and_unsupported_endpoint_rejected (test_adapt02d.ControlTests.test_fall_flicker_slide_and_unsupported_endpoint_rejected) ... ok
+test_only_sensors_drive_response_and_state_resets (test_adapt02d.ControlTests.test_only_sensors_drive_response_and_state_resets) ... ok
+test_split_seeds_and_stratification (test_adapt02d.ControlTests.test_split_seeds_and_stratification) ... ok
+test_staged_driver_rejects_changed_reused_helper (test_adapt02d.ControlTests.test_staged_driver_rejects_changed_reused_helper) ... ok
+test_exact_generation_resume_and_staging_ignored (test_adapt02d.PhysicsTests.test_exact_generation_resume_and_staging_ignored) ... {"generation": 1, "trials": 48, "wall_s": 12.617500230000587, "winner_score": 1.7473830022613557, "zero_score": 1.7473830022613557, "mean_score": 1.718944680609238, "winner_recoveries": 10, "zero_recoveries": 10}
+{"generation": 2, "trials": 96, "wall_s": 25.140753629995743, "winner_score": 1.7523468735983256, "zero_score": 1.7523468735983256, "mean_score": 1.7517260126554135, "winner_recoveries": 10, "zero_recoveries": 10}
+{"generation": 1, "trials": 48, "wall_s": 12.559162769990508, "winner_score": 1.7473830022613557, "zero_score": 1.7473830022613557, "mean_score": 1.718944680609238, "winner_recoveries": 10, "zero_recoveries": 10}
+{"generation": 2, "trials": 96, "wall_s": 25.301149109989638, "winner_score": 1.7523468735983256, "zero_score": 1.7523468735983256, "mean_score": 1.7517260126554135, "winner_recoveries": 10, "zero_recoveries": 10}
+ok
+test_legacy_and_zero_compatibility (test_adapt02d.PhysicsTests.test_legacy_and_zero_compatibility) ... ok
+test_no_anticipation_or_privileged_velocity_sensor (test_adapt02d.PhysicsTests.test_no_anticipation_or_privileged_velocity_sensor) ... ok
+test_oracle_is_not_falsely_cued_by_sensor_artifact (test_adapt02d.PhysicsTests.test_oracle_is_not_falsely_cued_by_sensor_artifact) ... ok
+test_recording_passive_limits_and_disturbances (test_adapt02d.PhysicsTests.test_recording_passive_limits_and_disturbances) ... ok
+test_nonmonotone_points_are_retained_and_audited (test_boundary.BoundaryTests.test_nonmonotone_points_are_retained_and_audited) ... ok
+test_return_is_distinct_from_displaced_recovery (test_boundary.BoundaryTests.test_return_is_distinct_from_displaced_recovery) ... ok
+test_rotated_standing_is_not_return_to_original_orientation (test_boundary.BoundaryTests.test_rotated_standing_is_not_return_to_original_orientation) ... ok
+test_upright_instability_is_not_called_falling (test_boundary.BoundaryTests.test_upright_instability_is_not_called_falling) ... ok
+test_terminated_trial_uses_common_pre_event_samples (test_boundary.BoundaryValidationTests.test_terminated_trial_uses_common_pre_event_samples) ... ok
+test_bounded_signed_commands_and_recovery (test_controlled01b.ControlledGateTests.test_bounded_signed_commands_and_recovery) ... ok
+test_contact_and_settling_failures (test_controlled01b.ControlledGateTests.test_contact_and_settling_failures) ... ok
+test_rejects_quiet_fallen_and_body_supported (test_controlled01b.ControlledGateTests.test_rejects_quiet_fallen_and_body_supported) ... ok
+test_contact_invalidity_and_motionless_fall_rejected (test_departure01b.DepartureCriteriaTests.test_contact_invalidity_and_motionless_fall_rejected) ... ok
+test_final_quietness_without_sustained_return_is_insufficient (test_departure01b.DepartureCriteriaTests.test_final_quietness_without_sustained_return_is_insufficient) ... ok
+test_response_requires_actual_motion_and_return (test_departure01b.DepartureCriteriaTests.test_response_requires_actual_motion_and_return) ... ok
+test_unsettled_precommand_is_rejected (test_departure01b.DepartureCriteriaTests.test_unsettled_precommand_is_rejected) ... ok
+test_body_support_is_not_airborne_or_stable (test_discovery.ClassificationTests.test_body_support_is_not_airborne_or_stable) ... ok
+test_quiet_fall_is_not_success (test_discovery.ClassificationTests.test_quiet_fall_is_not_success) ... ok
+test_airtime_requires_consecutive_samples (test_discovery.DiscoveryTests.test_airtime_requires_consecutive_samples) ... ok
+test_pulse_boundaries_and_slew (test_discovery.DiscoveryTests.test_pulse_boundaries_and_slew) ... ok
+test_recovery_requires_settling_and_final_stability (test_disturbance.DisturbanceTests.test_recovery_requires_settling_and_final_stability) ... ok
+test_saved_interventions (test_disturbance.DisturbanceTests.test_saved_interventions) ... ok
+test_step_evidence_rejects_sliding_and_requires_lift (test_disturbance.DisturbanceTests.test_step_evidence_rejects_sliding_and_requires_lift) ... ok
+test_fixed_execution_arguments_and_combination (test_explore02a.AdapterEnvelopeTests.test_fixed_execution_arguments_and_combination) ... ok
+test_control_ignores_outcome (test_explore02a.ExplorationTests.test_control_ignores_outcome) ... ok
+test_invalid_retained_and_duplicate_outcome_not_discovered (test_explore02a.ExplorationTests.test_invalid_retained_and_duplicate_outcome_not_discovered) ... ok
+test_missing_baseline_hard_failure (test_explore02a.ExplorationTests.test_missing_baseline_hard_failure) ... ok
+test_reproducible_and_history_influences_proposal (test_explore02a.ExplorationTests.test_reproducible_and_history_influences_proposal) ... ok
+test_phase_noise_rejected_and_contact_failure_retained (test_explore02a.PhysicalDescriptorTests.test_phase_noise_rejected_and_contact_failure_retained) ... ok
+test_clearance_is_world_mesh_minimum_and_translates (test_landing01b.LandingAuditTests.test_clearance_is_world_mesh_minimum_and_translates) ... ok
+test_diagnostic_runner_has_only_zero_plan (test_landing01b.LandingAuditTests.test_diagnostic_runner_has_only_zero_plan) ... ok
+test_known_physics (test_measure.Measurements.test_known_physics) ... ok
+test_reject_corruption (test_measure.Measurements.test_reject_corruption) ... ok
+test_tilt (test_measure.Measurements.test_tilt) ... ok
+test_checkpoint_discovery_only_lists_promoted_generations_in_numeric_order (test_move02c.CheckpointTests.test_checkpoint_discovery_only_lists_promoted_generations_in_numeric_order) ... ok
+test_resume_ignores_interrupted_checkpoint_write (test_move02c.CheckpointTests.test_resume_ignores_interrupted_checkpoint_write) ... {"generation": 1, "trials": 8, "wall_s": 0.0007640999974682927, "best_score": 0.0045, "mean_score": -0.027004210855534283, "recovered": 8, "survived": 8, "std_mean": 0.0625, "failure_counts": {"tilt": 0, "height": 0, "nonfoot": 0, "penetration": 0, "nonfinite": 0, "null": 8}}
+{"generation": 2, "trials": 16, "wall_s": 0.0022641300020040944, "best_score": 0.0025000000000000005, "mean_score": 0.0009765520903292106, "recovered": 8, "survived": 8, "std_mean": 0.04, "failure_counts": {"tilt": 0, "height": 0, "nonfoot": 0, "penetration": 0, "nonfinite": 0, "null": 8}}
+{"generation": 3, "trials": 24, "wall_s": 0.0035975700011476874, "best_score": 0.0004999999999999996, "mean_score": -0.0004131769801537996, "recovered": 8, "survived": 8, "std_mean": 0.04, "failure_counts": {"tilt": 0, "height": 0, "nonfoot": 0, "penetration": 0, "nonfinite": 0, "null": 8}}
+{"generation": 1, "trials": 8, "wall_s": 0.0003957299923058599, "best_score": 0.0045, "mean_score": -0.027004210855534283, "recovered": 8, "survived": 8, "std_mean": 0.0625, "failure_counts": {"tilt": 0, "height": 0, "nonfoot": 0, "penetration": 0, "nonfinite": 0, "null": 8}}
+{"generation": 2, "trials": 16, "wall_s": 0.0017427599959773943, "best_score": 0.0025000000000000005, "mean_score": 0.0009765520903292106, "recovered": 8, "survived": 8, "std_mean": 0.04, "failure_counts": {"tilt": 0, "height": 0, "nonfoot": 0, "penetration": 0, "nonfinite": 0, "null": 8}}
+{"generation": 3, "trials": 24, "wall_s": 0.0030453299987129867, "best_score": 0.0004999999999999996, "mean_score": -0.0004131769801537996, "recovered": 8, "survived": 8, "std_mean": 0.04, "failure_counts": {"tilt": 0, "height": 0, "nonfoot": 0, "penetration": 0, "nonfinite": 0, "null": 8}}
+{"generation": 1, "trials": 8, "wall_s": 0.0004115699994144961, "best_score": 0.0045, "mean_score": -0.027004210855534283, "recovered": 8, "survived": 8, "std_mean": 0.0625, "failure_counts": {"tilt": 0, "height": 0, "nonfoot": 0, "penetration": 0, "nonfinite": 0, "null": 8}}
+{"generation": 2, "trials": 16, "wall_s": 0.0008138700068229809, "best_score": 0.0025000000000000005, "mean_score": 0.0009765520903292106, "recovered": 8, "survived": 8, "std_mean": 0.04, "failure_counts": {"tilt": 0, "height": 0, "nonfoot": 0, "penetration": 0, "nonfinite": 0, "null": 8}}
+{"generation": 3, "trials": 24, "wall_s": 0.0022435200080508366, "best_score": 0.0004999999999999996, "mean_score": -0.0004131769801537996, "recovered": 8, "survived": 8, "std_mean": 0.04, "failure_counts": {"tilt": 0, "height": 0, "nonfoot": 0, "penetration": 0, "nonfinite": 0, "null": 8}}
+ok
+test_a_real_relocation_requires_air_clearance_and_sustained_replant (test_move02c.MeasurementTests.test_a_real_relocation_requires_air_clearance_and_sustained_replant) ... ok
+test_all_seed_namespaces_are_disjoint_and_bins_are_covered (test_move02c.MeasurementTests.test_all_seed_namespaces_are_disjoint_and_bins_are_covered) ... ok
+test_cem_responds_to_experience_not_iteration_number (test_move02c.MeasurementTests.test_cem_responds_to_experience_not_iteration_number) ... ok
+test_fall_replant_low_height_penetration_and_motion_cannot_win (test_move02c.MeasurementTests.test_fall_replant_low_height_penetration_and_motion_cannot_win) ... ok
+test_measured_joint_limit_exploit_is_rejected (test_move02c.MeasurementTests.test_measured_joint_limit_exploit_is_rejected) ... ok
+test_quiet_flight_or_vertical_motion_is_not_a_recovered_stance (test_move02c.MeasurementTests.test_quiet_flight_or_vertical_motion_is_not_a_recovered_stance) ... ok
+test_sliding_and_contact_flicker_are_not_steps (test_move02c.MeasurementTests.test_sliding_and_contact_flicker_are_not_steps) ... ok
+test_untriggered_and_finished_options_are_exactly_zero (test_move02c.MeasurementTests.test_untriggered_and_finished_options_are_exactly_zero) ... ok
+test_material_contact_point_jacobian_preserves_root_translation (test_move02c.PhysicsTests.test_material_contact_point_jacobian_preserves_root_translation) ... ok
+test_resume_restores_distribution_rng_and_selected_winner (test_move02c.PhysicsTests.test_resume_restores_distribution_rng_and_selected_winner) ... {"generation": 1, "trials": 3, "wall_s": 0.69977628000197, "best_score": 0.48922237297234716, "mean_score": 0.48750656194241015, "recovered": 0, "survived": 0, "std_mean": 0.0625, "failure_counts": {"tilt": 3, "height": 0, "nonfoot": 0, "penetration": 0, "nonfinite": 0, "null": 0}}
+{"generation": 2, "trials": 6, "wall_s": 1.0422807300055865, "best_score": 0.5342918244731159, "mean_score": 0.5342851082893562, "recovered": 0, "survived": 0, "std_mean": 0.04, "failure_counts": {"tilt": 3, "height": 0, "nonfoot": 0, "penetration": 0, "nonfinite": 0, "null": 0}}
+{"generation": 1, "trials": 3, "wall_s": 0.791086319994065, "best_score": 0.48922237297234716, "mean_score": 0.48750656194241015, "recovered": 0, "survived": 0, "std_mean": 0.0625, "failure_counts": {"tilt": 3, "height": 0, "nonfoot": 0, "penetration": 0, "nonfinite": 0, "null": 0}}
+{"generation": 2, "trials": 6, "wall_s": 1.343986469990341, "best_score": 0.5342918244731159, "mean_score": 0.5342851082893562, "recovered": 0, "survived": 0, "std_mean": 0.04, "failure_counts": {"tilt": 3, "height": 0, "nonfoot": 0, "penetration": 0, "nonfinite": 0, "null": 0}}
+ok
+test_sequences_cannot_anticipate_the_event (test_move02c.PhysicsTests.test_sequences_cannot_anticipate_the_event) ... ok
+test_zero_option_exactly_reproduces_02b_and_recording_is_passive (test_move02c.PhysicsTests.test_zero_option_exactly_reproduces_02b_and_recording_is_passive) ... ok
+test_accepts_legitimate_01b_sources (test_publication01b.PublicationScopeTests.test_accepts_legitimate_01b_sources) ... ok
+test_rejects_unexpected_files_and_near_matches (test_publication01b.PublicationScopeTests.test_rejects_unexpected_files_and_near_matches) ... ok
+test_accepts_study_sources_and_evidence (test_publication01c.Publication01cScopeTests.test_accepts_study_sources_and_evidence) ... ok
+test_rejects_earlier_and_unexpected_sources (test_publication01c.Publication01cScopeTests.test_rejects_earlier_and_unexpected_sources) ... ok
+test_missing_conditions_are_hard_failure (test_publication02a.Publication02aTests.test_missing_conditions_are_hard_failure) ... ok
+test_redundant_physical_outcome_is_not_command_diversity (test_publication02a.Publication02aTests.test_redundant_physical_outcome_is_not_command_diversity) ... ok
+test_scope (test_publication02a.Publication02aTests.test_scope) ... ok
+test_home_stance_bound_is_weakest_backward (test_react02b.CapturePointTests.test_home_stance_bound_is_weakest_backward) ... /home/james/movement-lab/movement_lab/physics02b.py:62: DeprecationWarning: Arrays of 2-dimensional vectors are deprecated. Use arrays of 3-dimensional vectors instead. (deprecated in NumPy 2.0)
+  return all(np.cross(poly[(i + 1) % n] - poly[i], p - poly[i]) >= -1e-12 for i in range(n))
+ok
+test_hull_and_ray_exit_on_a_rectangle (test_react02b.CapturePointTests.test_hull_and_ray_exit_on_a_rectangle) ... ok
+test_ars_update_climbs_a_linear_objective (test_react02b.LearnerTests.test_ars_update_climbs_a_linear_objective) ... ok
+test_ars_update_ignores_unranked_directions (test_react02b.LearnerTests.test_ars_update_ignores_unranked_directions) ... ok
+test_probe_schedule_is_dense_early (test_react02b.LearnerTests.test_probe_schedule_is_dense_early) ... ok
+test_penalties_reduce_fitness (test_react02b.ObjectiveTests.test_penalties_reduce_fitness) ... ok
+test_survival_dominates_and_falls_score_lower (test_react02b.ObjectiveTests.test_survival_dominates_and_falls_score_lower) ... ok
+test_clearance_reset_matches_01b (test_react02b.PhysicsTests.test_clearance_reset_matches_01b) ... ok
+test_command_delay_is_four_physics_steps (test_react02b.PhysicsTests.test_command_delay_is_four_physics_steps) ... ok
+test_condition_changes_do_not_accumulate (test_react02b.PhysicsTests.test_condition_changes_do_not_accumulate) ... ok
+test_fixed_home_falls_forward_without_disturbance (test_react02b.PhysicsTests.test_fixed_home_falls_forward_without_disturbance) ... ok
+test_push_changes_only_root_linear_velocity (test_react02b.PhysicsTests.test_push_changes_only_root_linear_velocity) ... ok
+test_recorded_sole_forces_include_actuation_and_pulses (test_react02b.PhysicsTests.test_recorded_sole_forces_include_actuation_and_pulses) ... ok
+test_rollouts_are_deterministic (test_react02b.PhysicsTests.test_rollouts_are_deterministic) ... ok
+test_fall_or_sustained_lean_is_not_recovery (test_react02b.RecoveryTests.test_fall_or_sustained_lean_is_not_recovery) ... ok
+test_oscillation_is_not_recovery (test_react02b.RecoveryTests.test_oscillation_is_not_recovery) ... ok
+test_quiet_stance_recovers_and_settles (test_react02b.RecoveryTests.test_quiet_stance_recovers_and_settles) ... ok
+test_action_is_bounded_and_linear_inside_bound (test_react02b.ReflexTests.test_action_is_bounded_and_linear_inside_bound) ... ok
+test_imu_misalignment_matrix (test_react02b.ReflexTests.test_imu_misalignment_matrix) ... ok
+test_zero_reflex_is_home (test_react02b.ReflexTests.test_zero_reflex_is_home) ... ok
+test_hard_revision_seeds_are_disjoint_and_beyond_the_easy_range (test_react02b.RevisionTests.test_hard_revision_seeds_are_disjoint_and_beyond_the_easy_range) ... ok
+test_zero_residual_reproduces_the_warm_start_reflex (test_react02b.RevisionTests.test_zero_residual_reproduces_the_warm_start_reflex) ... ok
+test_02b_text_is_checked_out_with_lf (test_react02b.SeedSeparationTests.test_02b_text_is_checked_out_with_lf) ... ok
+test_evaluation_extends_beyond_training (test_react02b.SeedSeparationTests.test_evaluation_extends_beyond_training) ... ok
+test_manifest_classifies_every_ignored_path (test_react02b.SeedSeparationTests.test_manifest_classifies_every_ignored_path) ... ok
+test_manifest_refuses_crlf_text_and_names_crlf_checkouts (test_react02b.SeedSeparationTests.test_manifest_refuses_crlf_text_and_names_crlf_checkouts) ... ok
+test_mirror_is_an_involution_and_matches_upstream_home (test_react02b.SeedSeparationTests.test_mirror_is_an_involution_and_matches_upstream_home) ... ok
+test_mirrored_reflex_mirrors_its_response (test_react02b.SeedSeparationTests.test_mirrored_reflex_mirrors_its_response) ... ok
+test_model_regeneration_installs_only_a_matching_model (test_react02b.SeedSeparationTests.test_model_regeneration_installs_only_a_matching_model) ... ok
+test_published_gzip_has_lf_content_whatever_wrote_the_local_file (test_react02b.SeedSeparationTests.test_published_gzip_has_lf_content_whatever_wrote_the_local_file) ... ok
+test_published_gzip_results_round_trip (test_react02b.SeedSeparationTests.test_published_gzip_results_round_trip) ... ok
+test_push_and_none_arms_share_seeds_and_initial_noise (test_react02b.SeedSeparationTests.test_push_and_none_arms_share_seeds_and_initial_noise) ... ok
+test_training_probe_and_evaluation_seeds_are_disjoint (test_react02b.SeedSeparationTests.test_training_probe_and_evaluation_seeds_are_disjoint) ... ok
+test_wilson_interval (test_react02b.SeedSeparationTests.test_wilson_interval) ... ok
+test_published_resolved_config_is_the_current_env_cfg (test_react02b.UpstreamConfigTests.test_published_resolved_config_is_the_current_env_cfg) ... ok
+test_repeatability (test_records.RecordedTrials.test_repeatability) ... ok
+test_saved_rollouts (test_records.RecordedTrials.test_saved_rollouts) ... ok
+test_deadline_before_launch_and_normal_result (test_review02a.DeadlineTests.test_deadline_before_launch_and_normal_result) ... ok
+test_execution_and_validation_interruptions_reap_nested_tree_and_keep_attempt (test_review02a.DeadlineTests.test_execution_and_validation_interruptions_reap_nested_tree_and_keep_attempt) ... [mdp] Patches 1-2 active: NaN-safe reward/advantage
+[mdp] Patch 4 active: ONNX export filters passive_* joints
+[mdp] Patch 5 active: MICRODUCK_WARM_START=1 restarts curricula after checkpoint load
+hard deadline reached; incomplete attempt retained 1.0029860999929952
+hard deadline reached; incomplete attempt retained 1.0082493899972178
+ok
+test_all_missing_is_explicitly_unavailable (test_review02a.HistoryTests.test_all_missing_is_explicitly_unavailable) ... ok
+test_complete_history_strict_arrays_model_and_config (test_review02a.HistoryTests.test_complete_history_strict_arrays_model_and_config) ... ok
+test_fresh_checkout_report_records_absence_and_validates_new_baseline (test_review02a.HistoryTests.test_fresh_checkout_report_records_absence_and_validates_new_baseline) ... /home/james/movement-lab/movement_lab/report02a.py:53: UserWarning: No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+  if ax.lines: ax.legend(fontsize=7)
+ok
+test_partial_history_never_passes_but_available_mismatches_fail (test_review02a.HistoryTests.test_partial_history_never_passes_but_available_mismatches_fail) ... ok
+test_absent_optional_records_are_skipped (test_saved_fixture_modes.SavedFixtureModes.test_absent_optional_records_are_skipped) ... ok
+test_corrupt_available_archive_is_not_skipped (test_saved_fixture_modes.SavedFixtureModes.test_corrupt_available_archive_is_not_skipped) ... ok
+test_explicit_metadata_without_raw_record_fails (test_saved_fixture_modes.SavedFixtureModes.test_explicit_metadata_without_raw_record_fails) ... ok
+test_explicit_missing_or_empty_root_fails (test_saved_fixture_modes.SavedFixtureModes.test_explicit_missing_or_empty_root_fails) ... ok
+test_partial_directory_still_checks_available_real_record (test_saved_fixture_modes.SavedFixtureModes.test_partial_directory_still_checks_available_real_record) ... ok
+test_incomplete_baseline_is_hard_failure (test_transition01c.SafetyStoppedPipelineTests.test_incomplete_baseline_is_hard_failure) ... PASS: hashes, checkpoint, arrays, controller composition, mapping, gate, saved-state geometry/COM/contact audit
+ok
+test_mixed_complete_and_safety_stopped_reports (test_transition01c.SafetyStoppedPipelineTests.test_mixed_complete_and_safety_stopped_reports) ... PASS: hashes, checkpoint, arrays, controller composition, mapping, gate, saved-state geometry/COM/contact audit
+PASS: hashes, checkpoint, arrays, controller composition, mapping, gate, saved-state geometry/COM/contact audit
+PASS: hashes, checkpoint, arrays, controller composition, mapping, gate, saved-state geometry/COM/contact audit
+PASS: hashes, checkpoint, arrays, controller composition, mapping, gate, saved-state geometry/COM/contact audit
+ok
+test_safety_stopped_movement_and_partial_final_window (test_transition01c.SafetyStoppedPipelineTests.test_safety_stopped_movement_and_partial_final_window) ... PASS: hashes, checkpoint, arrays, controller composition, mapping, gate, saved-state geometry/COM/contact audit
+PASS: hashes, checkpoint, arrays, controller composition, mapping, gate, saved-state geometry/COM/contact audit
+ok
+test_unexplained_truncation_corrupt_or_missing_data_is_not_safety_outcome (test_transition01c.SafetyStoppedPipelineTests.test_unexplained_truncation_corrupt_or_missing_data_is_not_safety_outcome) ... PASS: hashes, checkpoint, arrays, controller composition, mapping, gate, saved-state geometry/COM/contact audit
+PASS: hashes, checkpoint, arrays, controller composition, mapping, gate, saved-state geometry/COM/contact audit
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/james/movement-lab/movement_lab/validate01b.py", line 42, in <module>
+    if __name__=='__main__': main()
+                             ^^^^^^
+  File "/home/james/movement-lab/movement_lab/validate01b.py", line 14, in main
+    assert sha(out/name)==digest,name
+           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: flex_+1/metadata.json
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/james/movement-lab/movement_lab/validate01b.py", line 42, in <module>
+    if __name__=='__main__': main()
+                             ^^^^^^
+  File "/home/james/movement-lab/movement_lab/validate01b.py", line 14, in main
+    assert sha(out/name)==digest,name
+           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: flex_+1/metadata.json
+ok
+test_budget_limited_missing_flexion_or_head_yaw (test_transition01c.TransitionReportTests.test_budget_limited_missing_flexion_or_head_yaw) ... ok
+test_complete_five_trial_pilot (test_transition01c.TransitionReportTests.test_complete_five_trial_pilot) ... ok
+test_completed_trial_with_different_classification (test_transition01c.TransitionReportTests.test_completed_trial_with_different_classification) ... ok
+test_no_demonstrated_controlled_transition (test_transition01c.TransitionReportTests.test_no_demonstrated_controlled_transition) ... ok
+test_no_motion_and_invalid_support (test_transition01c.TransitionTests.test_no_motion_and_invalid_support) ... ok
+test_partial_return_and_timing (test_transition01c.TransitionTests.test_partial_return_and_timing) ... ok
+test_persistent_configuration_is_not_return (test_transition01c.TransitionTests.test_persistent_configuration_is_not_return) ... ok
+test_stopped_window_metrics_without_local_geometry (test_transition01c.TransitionTests.test_stopped_window_metrics_without_local_geometry) ... ok
+
+----------------------------------------------------------------------
+Ran 120 tests in 155.688s
+
+OK
+PASS independent audit and atlas: 3 records

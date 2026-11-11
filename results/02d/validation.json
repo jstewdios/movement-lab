@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "checks": 2217,
+  "training_episode_counts": {
+    "history-s71": 1536,
+    "history-s72": 1536,
+    "history-s1": 2304,
+    "history-s2": 2304,
+    "history-s3": 2304,
+    "memoryless-s1": 2304,
+    "memoryless-s2": 2304,
+    "memoryless-s3": 2304
+  },
+  "resimulated": [
+    "reflex",
+    "oracle02c",
+    "imu02c",
+    "history-s1",
+    "history-s2",
+    "history-s3",
+    "memoryless-s1",
+    "memoryless-s2",
+    "memoryless-s3"
+  ],
+  "raw_records": 46,
+  "model_available": true
+}

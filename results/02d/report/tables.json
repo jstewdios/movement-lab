@@ -1,0 +1,1500 @@
+{
+  "grid": {
+    "history-s1": {
+      "n": 68,
+      "recovered": 61,
+      "wins": 14,
+      "losses": 7,
+      "steps": 0,
+      "groups": {
+        "back-.08": {
+          "n": 4,
+          "recovered": 0
+        },
+        "double-push": {
+          "n": 4,
+          "recovered": 4
+        },
+        "false-gyro": {
+          "n": 4,
+          "recovered": 2
+        },
+        "fwd-.08": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.20": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.26": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.28": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.30": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.32": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.34": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.36": {
+          "n": 4,
+          "recovered": 4
+        },
+        "left-.12": {
+          "n": 4,
+          "recovered": 3
+        },
+        "pulse-.06": {
+          "n": 4,
+          "recovered": 4
+        },
+        "pulse-.18": {
+          "n": 4,
+          "recovered": 4
+        },
+        "pulse-.30": {
+          "n": 4,
+          "recovered": 4
+        },
+        "quiet": {
+          "n": 4,
+          "recovered": 4
+        },
+        "right-.12": {
+          "n": 4,
+          "recovered": 4
+        }
+      },
+      "quiet_residual_rms_rad": [
+        0.059986699125937355,
+        0.062146786153400434,
+        0.06792327904683458,
+        0.062077207252161336
+      ],
+      "quiet_root_path_m": [
+        0.010415916659523891,
+        0.012088010475619242,
+        0.014448569432952259,
+        0.013862415067759528
+      ],
+      "physical_valid": 61,
+      "self_contact_trials": 7,
+      "recovered_peak_clearance_m": -8.516159982750477e-05,
+      "paired_against": {
+        "imu02c": {
+          "wins": 11,
+          "losses": 5
+        },
+        "oracle02c": {
+          "wins": 19,
+          "losses": 2
+        },
+        "reflex": {
+          "wins": 14,
+          "losses": 7
+        }
+      }
+    },
+    "history-s2": {
+      "n": 68,
+      "recovered": 57,
+      "wins": 8,
+      "losses": 5,
+      "steps": 0,
+      "groups": {
+        "back-.08": {
+          "n": 4,
+          "recovered": 1
+        },
+        "double-push": {
+          "n": 4,
+          "recovered": 4
+        },
+        "false-gyro": {
+          "n": 4,
+          "recovered": 2
+        },
+        "fwd-.08": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.20": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.26": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.28": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.30": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.32": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.34": {
+          "n": 4,
+          "recovered": 2
+        },
+        "fwd-.36": {
+          "n": 4,
+          "recovered": 0
+        },
+        "left-.12": {
+          "n": 4,
+          "recovered": 4
+        },
+        "pulse-.06": {
+          "n": 4,
+          "recovered": 4
+        },
+        "pulse-.18": {
+          "n": 4,
+          "recovered": 4
+        },
+        "pulse-.30": {
+          "n": 4,
+          "recovered": 4
+        },
+        "quiet": {
+          "n": 4,
+          "recovered": 4
+        },
+        "right-.12": {
+          "n": 4,
+          "recovered": 4
+        }
+      },
+      "quiet_residual_rms_rad": [
+        0.01605437478390713,
+        0.014463910005113543,
+        0.015609199546040158,
+        0.015732285889690393
+      ],
+      "quiet_root_path_m": [
+        0.007591789863569126,
+        0.008539615248582643,
+        0.008133714445271415,
+        0.008252668173448455
+      ],
+      "physical_valid": 57,
+      "self_contact_trials": 10,
+      "recovered_peak_clearance_m": -9.843336880672061e-05,
+      "paired_against": {
+        "imu02c": {
+          "wins": 5,
+          "losses": 3
+        },
+        "oracle02c": {
+          "wins": 15,
+          "losses": 2
+        },
+        "reflex": {
+          "wins": 8,
+          "losses": 5
+        }
+      }
+    },
+    "history-s3": {
+      "n": 68,
+      "recovered": 48,
+      "wins": 9,
+      "losses": 15,
+      "steps": 0,
+      "groups": {
+        "back-.08": {
+          "n": 4,
+          "recovered": 0
+        },
+        "double-push": {
+          "n": 4,
+          "recovered": 4
+        },
+        "false-gyro": {
+          "n": 4,
+          "recovered": 2
+        },
+        "fwd-.08": {
+          "n": 4,
+          "recovered": 1
+        },
+        "fwd-.20": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.26": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.28": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.30": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.32": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.34": {
+          "n": 4,
+          "recovered": 3
+        },
+        "fwd-.36": {
+          "n": 4,
+          "recovered": 0
+        },
+        "left-.12": {
+          "n": 4,
+          "recovered": 3
+        },
+        "pulse-.06": {
+          "n": 4,
+          "recovered": 2
+        },
+        "pulse-.18": {
+          "n": 4,
+          "recovered": 3
+        },
+        "pulse-.30": {
+          "n": 4,
+          "recovered": 4
+        },
+        "quiet": {
+          "n": 4,
+          "recovered": 2
+        },
+        "right-.12": {
+          "n": 4,
+          "recovered": 4
+        }
+      },
+      "quiet_residual_rms_rad": [
+        0.04887245814025095,
+        0.34106402430209515,
+        0.40067409044190766,
+        0.04790631117724865
+      ],
+      "quiet_root_path_m": [
+        0.011411572015623424,
+        0.143720943887869,
+        0.13956467827701377,
+        0.010891579469300815
+      ],
+      "physical_valid": 50,
+      "self_contact_trials": 17,
+      "recovered_peak_clearance_m": -7.38252674940881e-05,
+      "paired_against": {
+        "imu02c": {
+          "wins": 6,
+          "losses": 13
+        },
+        "oracle02c": {
+          "wins": 14,
+          "losses": 10
+        },
+        "reflex": {
+          "wins": 9,
+          "losses": 15
+        }
+      }
+    },
+    "imu02c": {
+      "n": 68,
+      "recovered": 55,
+      "wins": 5,
+      "losses": 4,
+      "steps": 0,
+      "groups": {
+        "back-.08": {
+          "n": 4,
+          "recovered": 4
+        },
+        "double-push": {
+          "n": 4,
+          "recovered": 4
+        },
+        "false-gyro": {
+          "n": 4,
+          "recovered": 0
+        },
+        "fwd-.08": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.20": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.26": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.28": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.30": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.32": {
+          "n": 4,
+          "recovered": 3
+        },
+        "fwd-.34": {
+          "n": 4,
+          "recovered": 0
+        },
+        "fwd-.36": {
+          "n": 4,
+          "recovered": 0
+        },
+        "left-.12": {
+          "n": 4,
+          "recovered": 4
+        },
+        "pulse-.06": {
+          "n": 4,
+          "recovered": 4
+        },
+        "pulse-.18": {
+          "n": 4,
+          "recovered": 4
+        },
+        "pulse-.30": {
+          "n": 4,
+          "recovered": 4
+        },
+        "quiet": {
+          "n": 4,
+          "recovered": 4
+        },
+        "right-.12": {
+          "n": 4,
+          "recovered": 4
+        }
+      },
+      "quiet_residual_rms_rad": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "quiet_root_path_m": [
+        0.004698744809251529,
+        0.00574322449873433,
+        0.007699246289559804,
+        0.007674992812544499
+      ],
+      "physical_valid": 55,
+      "self_contact_trials": 2,
+      "recovered_peak_clearance_m": 8.948383991698623e-06,
+      "paired_against": {
+        "imu02c": {
+          "wins": 0,
+          "losses": 0
+        },
+        "oracle02c": {
+          "wins": 15,
+          "losses": 4
+        },
+        "reflex": {
+          "wins": 5,
+          "losses": 4
+        }
+      }
+    },
+    "memoryless-s1": {
+      "n": 68,
+      "recovered": 59,
+      "wins": 9,
+      "losses": 4,
+      "steps": 0,
+      "groups": {
+        "back-.08": {
+          "n": 4,
+          "recovered": 0
+        },
+        "double-push": {
+          "n": 4,
+          "recovered": 4
+        },
+        "false-gyro": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.08": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.20": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.26": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.28": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.30": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.32": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.34": {
+          "n": 4,
+          "recovered": 3
+        },
+        "fwd-.36": {
+          "n": 4,
+          "recovered": 0
+        },
+        "left-.12": {
+          "n": 4,
+          "recovered": 4
+        },
+        "pulse-.06": {
+          "n": 4,
+          "recovered": 4
+        },
+        "pulse-.18": {
+          "n": 4,
+          "recovered": 4
+        },
+        "pulse-.30": {
+          "n": 4,
+          "recovered": 4
+        },
+        "quiet": {
+          "n": 4,
+          "recovered": 4
+        },
+        "right-.12": {
+          "n": 4,
+          "recovered": 4
+        }
+      },
+      "quiet_residual_rms_rad": [
+        0.0291728071879665,
+        0.0312095508358524,
+        0.03183577302686425,
+        0.030908940636734952
+      ],
+      "quiet_root_path_m": [
+        0.00872352708979925,
+        0.007455728241543754,
+        0.007647023157207049,
+        0.008373740172379586
+      ],
+      "physical_valid": 59,
+      "self_contact_trials": 9,
+      "recovered_peak_clearance_m": -0.00010469597306691017,
+      "paired_against": {
+        "imu02c": {
+          "wins": 8,
+          "losses": 4
+        },
+        "oracle02c": {
+          "wins": 15,
+          "losses": 0
+        },
+        "reflex": {
+          "wins": 9,
+          "losses": 4
+        }
+      }
+    },
+    "memoryless-s2": {
+      "n": 68,
+      "recovered": 57,
+      "wins": 8,
+      "losses": 5,
+      "steps": 0,
+      "groups": {
+        "back-.08": {
+          "n": 4,
+          "recovered": 0
+        },
+        "double-push": {
+          "n": 4,
+          "recovered": 4
+        },
+        "false-gyro": {
+          "n": 4,
+          "recovered": 3
+        },
+        "fwd-.08": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.20": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.26": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.28": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.30": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.32": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.34": {
+          "n": 4,
+          "recovered": 2
+        },
+        "fwd-.36": {
+          "n": 4,
+          "recovered": 0
+        },
+        "left-.12": {
+          "n": 4,
+          "recovered": 4
+        },
+        "pulse-.06": {
+          "n": 4,
+          "recovered": 4
+        },
+        "pulse-.18": {
+          "n": 4,
+          "recovered": 4
+        },
+        "pulse-.30": {
+          "n": 4,
+          "recovered": 4
+        },
+        "quiet": {
+          "n": 4,
+          "recovered": 4
+        },
+        "right-.12": {
+          "n": 4,
+          "recovered": 4
+        }
+      },
+      "quiet_residual_rms_rad": [
+        0.027283193144932917,
+        0.027233925673564318,
+        0.028524579213545093,
+        0.026894233594139897
+      ],
+      "quiet_root_path_m": [
+        0.008493204347280257,
+        0.0085503896770707,
+        0.008824278282419764,
+        0.008544858001364885
+      ],
+      "physical_valid": 57,
+      "self_contact_trials": 11,
+      "recovered_peak_clearance_m": -0.00012475588588899047,
+      "paired_against": {
+        "imu02c": {
+          "wins": 6,
+          "losses": 4
+        },
+        "oracle02c": {
+          "wins": 14,
+          "losses": 1
+        },
+        "reflex": {
+          "wins": 8,
+          "losses": 5
+        }
+      }
+    },
+    "memoryless-s3": {
+      "n": 68,
+      "recovered": 61,
+      "wins": 10,
+      "losses": 3,
+      "steps": 0,
+      "groups": {
+        "back-.08": {
+          "n": 4,
+          "recovered": 1
+        },
+        "double-push": {
+          "n": 4,
+          "recovered": 4
+        },
+        "false-gyro": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.08": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.20": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.26": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.28": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.30": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.32": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.34": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.36": {
+          "n": 4,
+          "recovered": 0
+        },
+        "left-.12": {
+          "n": 4,
+          "recovered": 4
+        },
+        "pulse-.06": {
+          "n": 4,
+          "recovered": 4
+        },
+        "pulse-.18": {
+          "n": 4,
+          "recovered": 4
+        },
+        "pulse-.30": {
+          "n": 4,
+          "recovered": 4
+        },
+        "quiet": {
+          "n": 4,
+          "recovered": 4
+        },
+        "right-.12": {
+          "n": 4,
+          "recovered": 4
+        }
+      },
+      "quiet_residual_rms_rad": [
+        0.014229446991290869,
+        0.013079119203286329,
+        0.012837894619050908,
+        0.012343229055820871
+      ],
+      "quiet_root_path_m": [
+        0.007295984288086876,
+        0.008285709808672272,
+        0.007782045981422501,
+        0.007323734736734139
+      ],
+      "physical_valid": 61,
+      "self_contact_trials": 7,
+      "recovered_peak_clearance_m": -8.870108327027008e-05,
+      "paired_against": {
+        "imu02c": {
+          "wins": 9,
+          "losses": 3
+        },
+        "oracle02c": {
+          "wins": 17,
+          "losses": 0
+        },
+        "reflex": {
+          "wins": 10,
+          "losses": 3
+        }
+      }
+    },
+    "oracle02c": {
+      "n": 68,
+      "recovered": 44,
+      "wins": 5,
+      "losses": 15,
+      "steps": 0,
+      "groups": {
+        "back-.08": {
+          "n": 4,
+          "recovered": 0
+        },
+        "double-push": {
+          "n": 4,
+          "recovered": 1
+        },
+        "false-gyro": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.08": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.20": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.26": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.28": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.30": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.32": {
+          "n": 4,
+          "recovered": 3
+        },
+        "fwd-.34": {
+          "n": 4,
+          "recovered": 0
+        },
+        "fwd-.36": {
+          "n": 4,
+          "recovered": 0
+        },
+        "left-.12": {
+          "n": 4,
+          "recovered": 0
+        },
+        "pulse-.06": {
+          "n": 4,
+          "recovered": 4
+        },
+        "pulse-.18": {
+          "n": 4,
+          "recovered": 4
+        },
+        "pulse-.30": {
+          "n": 4,
+          "recovered": 4
+        },
+        "quiet": {
+          "n": 4,
+          "recovered": 4
+        },
+        "right-.12": {
+          "n": 4,
+          "recovered": 0
+        }
+      },
+      "quiet_residual_rms_rad": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "quiet_root_path_m": [
+        0.004698744809251529,
+        0.00574322449873433,
+        0.007699246289559804,
+        0.007674992812544499
+      ],
+      "physical_valid": 44,
+      "self_contact_trials": 5,
+      "recovered_peak_clearance_m": 4.7041305108158626e-05,
+      "paired_against": {
+        "imu02c": {
+          "wins": 4,
+          "losses": 15
+        },
+        "oracle02c": {
+          "wins": 0,
+          "losses": 0
+        },
+        "reflex": {
+          "wins": 5,
+          "losses": 15
+        }
+      }
+    },
+    "reflex": {
+      "n": 68,
+      "recovered": 54,
+      "wins": 0,
+      "losses": 0,
+      "steps": 0,
+      "groups": {
+        "back-.08": {
+          "n": 4,
+          "recovered": 4
+        },
+        "double-push": {
+          "n": 4,
+          "recovered": 4
+        },
+        "false-gyro": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.08": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.20": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.26": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.28": {
+          "n": 4,
+          "recovered": 4
+        },
+        "fwd-.30": {
+          "n": 4,
+          "recovered": 2
+        },
+        "fwd-.32": {
+          "n": 4,
+          "recovered": 0
+        },
+        "fwd-.34": {
+          "n": 4,
+          "recovered": 0
+        },
+        "fwd-.36": {
+          "n": 4,
+          "recovered": 0
+        },
+        "left-.12": {
+          "n": 4,
+          "recovered": 4
+        },
+        "pulse-.06": {
+          "n": 4,
+          "recovered": 4
+        },
+        "pulse-.18": {
+          "n": 4,
+          "recovered": 4
+        },
+        "pulse-.30": {
+          "n": 4,
+          "recovered": 4
+        },
+        "quiet": {
+          "n": 4,
+          "recovered": 4
+        },
+        "right-.12": {
+          "n": 4,
+          "recovered": 4
+        }
+      },
+      "quiet_residual_rms_rad": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "quiet_root_path_m": [
+        0.004698744809251529,
+        0.00574322449873433,
+        0.007699246289559804,
+        0.007674992812544499
+      ],
+      "physical_valid": 54,
+      "self_contact_trials": 0,
+      "recovered_peak_clearance_m": -0.0001189856704698223,
+      "paired_against": {
+        "imu02c": {
+          "wins": 4,
+          "losses": 5
+        },
+        "oracle02c": {
+          "wins": 15,
+          "losses": 5
+        },
+        "reflex": {
+          "wins": 0,
+          "losses": 0
+        }
+      }
+    }
+  },
+  "shifts": {
+    "history-s1": {
+      "n": 48,
+      "recovered": 28,
+      "wins": 11,
+      "losses": 17,
+      "steps": 0,
+      "groups": {
+        "actuation-30ms": {
+          "n": 6,
+          "recovered": 6
+        },
+        "friction-.6": {
+          "n": 6,
+          "recovered": 6
+        },
+        "friction-1.4": {
+          "n": 6,
+          "recovered": 4
+        },
+        "nominal": {
+          "n": 6,
+          "recovered": 6
+        },
+        "pitch-2deg": {
+          "n": 6,
+          "recovered": 0
+        },
+        "sensor-40ms": {
+          "n": 6,
+          "recovered": 5
+        },
+        "sensor-80ms": {
+          "n": 6,
+          "recovered": 0
+        },
+        "voltage-6.5": {
+          "n": 6,
+          "recovered": 1
+        }
+      },
+      "quiet_residual_rms_rad": [],
+      "quiet_root_path_m": [],
+      "physical_valid": 28,
+      "self_contact_trials": 20,
+      "recovered_peak_clearance_m": -6.530045173621778e-05,
+      "paired_against": {
+        "imu02c": {
+          "wins": 3,
+          "losses": 15
+        },
+        "oracle02c": {
+          "wins": 4,
+          "losses": 14
+        },
+        "reflex": {
+          "wins": 11,
+          "losses": 17
+        }
+      }
+    },
+    "history-s2": {
+      "n": 48,
+      "recovered": 40,
+      "wins": 13,
+      "losses": 7,
+      "steps": 0,
+      "groups": {
+        "actuation-30ms": {
+          "n": 6,
+          "recovered": 6
+        },
+        "friction-.6": {
+          "n": 6,
+          "recovered": 6
+        },
+        "friction-1.4": {
+          "n": 6,
+          "recovered": 6
+        },
+        "nominal": {
+          "n": 6,
+          "recovered": 6
+        },
+        "pitch-2deg": {
+          "n": 6,
+          "recovered": 1
+        },
+        "sensor-40ms": {
+          "n": 6,
+          "recovered": 6
+        },
+        "sensor-80ms": {
+          "n": 6,
+          "recovered": 3
+        },
+        "voltage-6.5": {
+          "n": 6,
+          "recovered": 6
+        }
+      },
+      "quiet_residual_rms_rad": [],
+      "quiet_root_path_m": [],
+      "physical_valid": 41,
+      "self_contact_trials": 7,
+      "recovered_peak_clearance_m": 3.6803786015457765e-06,
+      "paired_against": {
+        "imu02c": {
+          "wins": 5,
+          "losses": 5
+        },
+        "oracle02c": {
+          "wins": 7,
+          "losses": 5
+        },
+        "reflex": {
+          "wins": 13,
+          "losses": 7
+        }
+      }
+    },
+    "history-s3": {
+      "n": 48,
+      "recovered": 27,
+      "wins": 11,
+      "losses": 18,
+      "steps": 0,
+      "groups": {
+        "actuation-30ms": {
+          "n": 6,
+          "recovered": 6
+        },
+        "friction-.6": {
+          "n": 6,
+          "recovered": 5
+        },
+        "friction-1.4": {
+          "n": 6,
+          "recovered": 6
+        },
+        "nominal": {
+          "n": 6,
+          "recovered": 5
+        },
+        "pitch-2deg": {
+          "n": 6,
+          "recovered": 0
+        },
+        "sensor-40ms": {
+          "n": 6,
+          "recovered": 4
+        },
+        "sensor-80ms": {
+          "n": 6,
+          "recovered": 0
+        },
+        "voltage-6.5": {
+          "n": 6,
+          "recovered": 1
+        }
+      },
+      "quiet_residual_rms_rad": [],
+      "quiet_root_path_m": [],
+      "physical_valid": 28,
+      "self_contact_trials": 20,
+      "recovered_peak_clearance_m": 6.620103516857129e-06,
+      "paired_against": {
+        "imu02c": {
+          "wins": 3,
+          "losses": 16
+        },
+        "oracle02c": {
+          "wins": 3,
+          "losses": 14
+        },
+        "reflex": {
+          "wins": 11,
+          "losses": 18
+        }
+      }
+    },
+    "imu02c": {
+      "n": 48,
+      "recovered": 40,
+      "wins": 8,
+      "losses": 2,
+      "steps": 0,
+      "groups": {
+        "actuation-30ms": {
+          "n": 6,
+          "recovered": 6
+        },
+        "friction-.6": {
+          "n": 6,
+          "recovered": 6
+        },
+        "friction-1.4": {
+          "n": 6,
+          "recovered": 6
+        },
+        "nominal": {
+          "n": 6,
+          "recovered": 6
+        },
+        "pitch-2deg": {
+          "n": 6,
+          "recovered": 6
+        },
+        "sensor-40ms": {
+          "n": 6,
+          "recovered": 4
+        },
+        "sensor-80ms": {
+          "n": 6,
+          "recovered": 2
+        },
+        "voltage-6.5": {
+          "n": 6,
+          "recovered": 4
+        }
+      },
+      "quiet_residual_rms_rad": [],
+      "quiet_root_path_m": [],
+      "physical_valid": 40,
+      "self_contact_trials": 2,
+      "recovered_peak_clearance_m": 6.519349181270673e-05,
+      "paired_against": {
+        "imu02c": {
+          "wins": 0,
+          "losses": 0
+        },
+        "oracle02c": {
+          "wins": 2,
+          "losses": 0
+        },
+        "reflex": {
+          "wins": 8,
+          "losses": 2
+        }
+      }
+    },
+    "memoryless-s1": {
+      "n": 48,
+      "recovered": 38,
+      "wins": 12,
+      "losses": 8,
+      "steps": 0,
+      "groups": {
+        "actuation-30ms": {
+          "n": 6,
+          "recovered": 6
+        },
+        "friction-.6": {
+          "n": 6,
+          "recovered": 6
+        },
+        "friction-1.4": {
+          "n": 6,
+          "recovered": 6
+        },
+        "nominal": {
+          "n": 6,
+          "recovered": 6
+        },
+        "pitch-2deg": {
+          "n": 6,
+          "recovered": 0
+        },
+        "sensor-40ms": {
+          "n": 6,
+          "recovered": 6
+        },
+        "sensor-80ms": {
+          "n": 6,
+          "recovered": 2
+        },
+        "voltage-6.5": {
+          "n": 6,
+          "recovered": 6
+        }
+      },
+      "quiet_residual_rms_rad": [],
+      "quiet_root_path_m": [],
+      "physical_valid": 39,
+      "self_contact_trials": 9,
+      "recovered_peak_clearance_m": -6.572141549786477e-06,
+      "paired_against": {
+        "imu02c": {
+          "wins": 4,
+          "losses": 6
+        },
+        "oracle02c": {
+          "wins": 6,
+          "losses": 6
+        },
+        "reflex": {
+          "wins": 12,
+          "losses": 8
+        }
+      }
+    },
+    "memoryless-s2": {
+      "n": 48,
+      "recovered": 40,
+      "wins": 12,
+      "losses": 6,
+      "steps": 0,
+      "groups": {
+        "actuation-30ms": {
+          "n": 6,
+          "recovered": 6
+        },
+        "friction-.6": {
+          "n": 6,
+          "recovered": 6
+        },
+        "friction-1.4": {
+          "n": 6,
+          "recovered": 6
+        },
+        "nominal": {
+          "n": 6,
+          "recovered": 6
+        },
+        "pitch-2deg": {
+          "n": 6,
+          "recovered": 0
+        },
+        "sensor-40ms": {
+          "n": 6,
+          "recovered": 6
+        },
+        "sensor-80ms": {
+          "n": 6,
+          "recovered": 5
+        },
+        "voltage-6.5": {
+          "n": 6,
+          "recovered": 5
+        }
+      },
+      "quiet_residual_rms_rad": [],
+      "quiet_root_path_m": [],
+      "physical_valid": 41,
+      "self_contact_trials": 7,
+      "recovered_peak_clearance_m": -6.987689148285625e-05,
+      "paired_against": {
+        "imu02c": {
+          "wins": 6,
+          "losses": 6
+        },
+        "oracle02c": {
+          "wins": 8,
+          "losses": 6
+        },
+        "reflex": {
+          "wins": 12,
+          "losses": 6
+        }
+      }
+    },
+    "memoryless-s3": {
+      "n": 48,
+      "recovered": 40,
+      "wins": 12,
+      "losses": 6,
+      "steps": 0,
+      "groups": {
+        "actuation-30ms": {
+          "n": 6,
+          "recovered": 6
+        },
+        "friction-.6": {
+          "n": 6,
+          "recovered": 6
+        },
+        "friction-1.4": {
+          "n": 6,
+          "recovered": 6
+        },
+        "nominal": {
+          "n": 6,
+          "recovered": 6
+        },
+        "pitch-2deg": {
+          "n": 6,
+          "recovered": 2
+        },
+        "sensor-40ms": {
+          "n": 6,
+          "recovered": 6
+        },
+        "sensor-80ms": {
+          "n": 6,
+          "recovered": 2
+        },
+        "voltage-6.5": {
+          "n": 6,
+          "recovered": 6
+        }
+      },
+      "quiet_residual_rms_rad": [],
+      "quiet_root_path_m": [],
+      "physical_valid": 41,
+      "self_contact_trials": 7,
+      "recovered_peak_clearance_m": 4.7277401633696e-05,
+      "paired_against": {
+        "imu02c": {
+          "wins": 4,
+          "losses": 4
+        },
+        "oracle02c": {
+          "wins": 6,
+          "losses": 4
+        },
+        "reflex": {
+          "wins": 12,
+          "losses": 6
+        }
+      }
+    },
+    "oracle02c": {
+      "n": 48,
+      "recovered": 38,
+      "wins": 8,
+      "losses": 4,
+      "steps": 0,
+      "groups": {
+        "actuation-30ms": {
+          "n": 6,
+          "recovered": 6
+        },
+        "friction-.6": {
+          "n": 6,
+          "recovered": 6
+        },
+        "friction-1.4": {
+          "n": 6,
+          "recovered": 6
+        },
+        "nominal": {
+          "n": 6,
+          "recovered": 6
+        },
+        "pitch-2deg": {
+          "n": 6,
+          "recovered": 6
+        },
+        "sensor-40ms": {
+          "n": 6,
+          "recovered": 2
+        },
+        "sensor-80ms": {
+          "n": 6,
+          "recovered": 2
+        },
+        "voltage-6.5": {
+          "n": 6,
+          "recovered": 4
+        }
+      },
+      "quiet_residual_rms_rad": [],
+      "quiet_root_path_m": [],
+      "physical_valid": 38,
+      "self_contact_trials": 0,
+      "recovered_peak_clearance_m": 6.445336567759488e-05,
+      "paired_against": {
+        "imu02c": {
+          "wins": 0,
+          "losses": 2
+        },
+        "oracle02c": {
+          "wins": 0,
+          "losses": 0
+        },
+        "reflex": {
+          "wins": 8,
+          "losses": 4
+        }
+      }
+    },
+    "reflex": {
+      "n": 48,
+      "recovered": 34,
+      "wins": 0,
+      "losses": 0,
+      "steps": 0,
+      "groups": {
+        "actuation-30ms": {
+          "n": 6,
+          "recovered": 4
+        },
+        "friction-.6": {
+          "n": 6,
+          "recovered": 4
+        },
+        "friction-1.4": {
+          "n": 6,
+          "recovered": 4
+        },
+        "nominal": {
+          "n": 6,
+          "recovered": 4
+        },
+        "pitch-2deg": {
+          "n": 6,
+          "recovered": 6
+        },
+        "sensor-40ms": {
+          "n": 6,
+          "recovered": 4
+        },
+        "sensor-80ms": {
+          "n": 6,
+          "recovered": 4
+        },
+        "voltage-6.5": {
+          "n": 6,
+          "recovered": 4
+        }
+      },
+      "quiet_residual_rms_rad": [],
+      "quiet_root_path_m": [],
+      "physical_valid": 34,
+      "self_contact_trials": 0,
+      "recovered_peak_clearance_m": -5.541752370518717e-05,
+      "paired_against": {
+        "imu02c": {
+          "wins": 2,
+          "losses": 8
+        },
+        "oracle02c": {
+          "wins": 4,
+          "losses": 8
+        },
+        "reflex": {
+          "wins": 0,
+          "losses": 0
+        }
+      }
+    }
+  }
+}

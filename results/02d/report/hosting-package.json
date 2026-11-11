@@ -1,0 +1,11 @@
+{
+  "lossless_roundtrip": true,
+  "trials": 46,
+  "presets": 13,
+  "source_sha256": "c196eff4d3a2617462e0d1e9554ae161b02b229fe4c7071c5679042b3e06ac06",
+  "payload_sha256": "8b7969a55a061debb673996ed6609b470b35ea3348f80842ecddd6ee48d731d4",
+  "hosted_sha256": "7c7be06aca43faebb7e9ed2096cafb97a928e5eeed16792c72ca7533fe1ac06f",
+  "source_bytes": 30459214,
+  "hosted_bytes": 4409361,
+  "encoding": "gzip/base64; native browser DecompressionStream"
+}

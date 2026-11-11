@@ -521,3 +521,57 @@ finish. Checkpoints, compressed held-out tables and selected 200 Hz trajectories
 are committed. Upstream meshes and compiled model files remain local. The report
 distinguishes recovery, foot-frame motion, passive initial slip, and verified
 airborne support relocation.
+
+## Movement Lab 02D — Learning When and How to React
+
+02D learns continuous sensor-driven feedback over the two joint configurations
+discovered in 02C. Its 22 parameters map current noisy IMU readings and an 80 ms
+observation history to two motor coefficients. It receives no disturbance cue,
+magnitude, root velocity, contact force, or trial clock. A 12-parameter controller
+using current IMU alone receives the same training-episode budget.
+
+Read the [scientific report](results/02d/REPORT.md),
+[staged protocol](results/02d/PROTOCOL.md),
+[attempts, including the rejected first pilot](results/02d/ATTEMPTS.md), and
+[synchronized recorded-state replay](results/02d/report/replay.html).
+The [private hosted replay](https://movement-lab-02d-jstewdios.jstewdios.chatgpt.site)
+opens without downloading the HTML. All six learned controllers recovered the
+four held-out 0.32 m/s cases autonomously, but quiet/backward/calibration
+regressions remain. No recovery step emerged; the report retains all seeds.
+
+```bash
+PY=/home/james/microduck_rl/.venv/bin/python
+export PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
+# Restore the exact 02B model first; retain its published hash guard.
+$PY -m movement_lab.model02b --out results/02b/model
+ROOT=results/02d-reproduction
+$PY -m movement_lab.study02d preflight --root "$ROOT"
+$PY -m movement_lab.study02d pilot --root "$ROOT"
+# Inspect pilot/gate.json before proceeding. The published first pilot failed
+# the quiet-standing gate; the one declared curriculum revision follows.
+$PY -m movement_lab.study02d pilot-revised --root "$ROOT"
+# train refuses to run unless the revised pilot's gate passes.
+$PY -m movement_lab.study02d train --root "$ROOT"
+$PY -m movement_lab.study02d evaluate --root "$ROOT"
+$PY -m movement_lab.diagnose02d --root "$ROOT"
+$PY -m movement_lab.study02d report --root "$ROOT"
+$PY -m movement_lab.validate02d --root "$ROOT" --resimulate 9 --publish
+$PY -m unittest discover -s tests -v
+$PY -m movement_lab.validate02d --root results/02d --verify
+```
+
+Both pilots use 1,536 episodes; six confirmation runs use 2,304 each. Two
+low-priority CPU workers and a 600-second per-run launch cap bound execution.
+Interrupted training resumes at complete generations with source/configuration
+identity checks. The driver retains completed evidence. Final evaluation uses
+every run's last training winner, never a checkpoint selected from held-out
+outcomes. The replay opens directly as a local HTML file and contains actual
+recorded states; it does not run or invent physics in the browser.
+
+The historical model embeds upstream meshes and remains local. On this machine
+recompilation produced a different binary hash and was correctly rejected;
+the preserved hash-matching binary was restored from the previous checkout.
+See the execution notes before treating regeneration on another machine as
+verified. Hash verification of published checkpoints and records does not need
+that local model; physical auditing and resimulation do. This remains a
+simulation study.
