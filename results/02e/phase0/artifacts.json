@@ -1,0 +1,43 @@
+{
+ "02b_published_hashes": {
+  "command": "python -m movement_lab.publication02b --root results/02b --verify",
+  "returncode": 0,
+  "stdout": "verified 103 files (published results, local files present, sources); 20 local-only files absent (not verifiable)",
+  "stderr": "",
+  "passed": true
+ },
+ "02c_published_hashes": {
+  "command": "python -m movement_lab.publication02c --root results/02c --verify",
+  "returncode": 0,
+  "stdout": "{\n  \"passed\": true,\n  \"mismatches\": [],\n  \"full\": false\n}",
+  "stderr": "",
+  "passed": true
+ },
+ "02d_published_hashes": {
+  "command": "python -m movement_lab.validate02d --root results/02d --verify",
+  "returncode": 0,
+  "stdout": "verified 287 published hashes",
+  "stderr": "",
+  "passed": true
+ },
+ "02d_evidence_audit": {
+  "passed": true,
+  "checks": 2208,
+  "training_episode_counts": {
+   "history-s71": 1536,
+   "history-s72": 1536,
+   "history-s1": 2304,
+   "history-s2": 2304,
+   "history-s3": 2304,
+   "memoryless-s1": 2304,
+   "memoryless-s2": 2304,
+   "memoryless-s3": 2304
+  },
+  "resimulated": [],
+  "raw_records": 46,
+  "model_available": true,
+  "wall_s": 1.5863297060132027,
+  "note": "RNG/CEM reconstruction, seed separation, declared budgets and physics-rate re-audit of saved records; resimulation reported separately"
+ },
+ "passed": true
+}

@@ -1,0 +1,239 @@
+{
+ "model_a": {
+  "path": "results/02b/model/model.mjb",
+  "sha256": "ebb2ce87cae95c606e6db4ad2e790e9f4309e557443d6ea1a0629d5ba5e3cf8c",
+  "fields_digest_excluding_hull": "bc8d3d06b675327078d489184b7690962b987ca87b6fb6e31e4472303ad77c30"
+ },
+ "model_b": {
+  "path": "results/02e/phase0/linux-compile/model.mjb",
+  "sha256": "cba1a6dab0683d8ecaa26872b573c48a82bf9c27b7c260c25e80d74abcf0b9bd",
+  "fields_digest_excluding_hull": "bc8d3d06b675327078d489184b7690962b987ca87b6fb6e31e4472303ad77c30"
+ },
+ "fields_compared": 590,
+ "identical_fields": 584,
+ "different_fields": {
+  "mesh_graph": {
+   "elements_differing": 24146,
+   "elements": 309657
+  },
+  "mesh_polymap": {
+   "elements_differing": 100459,
+   "elements": 100500
+  },
+  "mesh_polynormal": {
+   "elements_differing": 89103,
+   "elements": 89130,
+   "max_abs_difference": 1.9999921582658697
+  },
+  "mesh_polyvert": {
+   "elements_differing": 100472,
+   "elements": 100500
+  },
+  "mesh_polyvertadr": {
+   "elements_differing": 29389,
+   "elements": 29710
+  },
+  "mesh_polyvertnum": {
+   "elements_differing": 12540,
+   "elements": 29710
+  }
+ },
+ "differences_only_in_hull_fields": true,
+ "names_equal": true,
+ "paths_equal": true,
+ "nmesh": 38,
+ "meshes_with_hull_differences": [
+  {
+   "mesh": "robot/leg",
+   "collision_geom": "",
+   "is_collision": true,
+   "hull_vertices": [
+    1033,
+    1033
+   ],
+   "hull_faces": [
+    2062,
+    2062
+   ],
+   "graph_bytes_equal": false,
+   "same_hull_vertex_set": true,
+   "same_hull_face_set": true,
+   "same_polygon_set": true
+  },
+  {
+   "mesh": "robot/bottom_head_shell",
+   "collision_geom": "",
+   "is_collision": true,
+   "hull_vertices": [
+    1615,
+    1615
+   ],
+   "hull_faces": [
+    3226,
+    3226
+   ],
+   "graph_bytes_equal": false,
+   "same_hull_vertex_set": true,
+   "same_hull_face_set": true,
+   "same_polygon_set": true
+  },
+  {
+   "mesh": "robot/hip_l",
+   "collision_geom": "",
+   "is_collision": true,
+   "hull_vertices": [
+    1350,
+    1350
+   ],
+   "hull_faces": [
+    2696,
+    2696
+   ],
+   "graph_bytes_equal": false,
+   "same_hull_vertex_set": true,
+   "same_hull_face_set": true,
+   "same_polygon_set": true
+  },
+  {
+   "mesh": "robot/jaw",
+   "collision_geom": "",
+   "is_collision": true,
+   "hull_vertices": [
+    1673,
+    1673
+   ],
+   "hull_faces": [
+    3342,
+    3342
+   ],
+   "graph_bytes_equal": false,
+   "same_hull_vertex_set": true,
+   "same_hull_face_set": false,
+   "same_polygon_set": true
+  },
+  {
+   "mesh": "robot/np_f970",
+   "collision_geom": "",
+   "is_collision": true,
+   "hull_vertices": [
+    831,
+    831
+   ],
+   "hull_faces": [
+    1658,
+    1658
+   ],
+   "graph_bytes_equal": false,
+   "same_hull_vertex_set": true,
+   "same_hull_face_set": true,
+   "same_polygon_set": true
+  },
+  {
+   "mesh": "robot/sole_left",
+   "collision_geom": "robot/left_foot_collision",
+   "is_collision": true,
+   "hull_vertices": [
+    4964,
+    4964
+   ],
+   "hull_faces": [
+    9924,
+    9924
+   ],
+   "graph_bytes_equal": false,
+   "same_hull_vertex_set": true,
+   "same_hull_face_set": true,
+   "same_polygon_set": true
+  },
+  {
+   "mesh": "robot/sole_right",
+   "collision_geom": "robot/right_foot_collision",
+   "is_collision": true,
+   "hull_vertices": [
+    5029,
+    5029
+   ],
+   "hull_faces": [
+    10054,
+    10054
+   ],
+   "graph_bytes_equal": false,
+   "same_hull_vertex_set": true,
+   "same_hull_face_set": true,
+   "same_polygon_set": true
+  },
+  {
+   "mesh": "robot/power_support",
+   "collision_geom": "",
+   "is_collision": true,
+   "hull_vertices": [
+    353,
+    353
+   ],
+   "hull_faces": [
+    702,
+    702
+   ],
+   "graph_bytes_equal": false,
+   "same_hull_vertex_set": true,
+   "same_hull_face_set": true,
+   "same_polygon_set": false
+  }
+ ],
+ "single_mesh_platform_probe": {
+  "sole_left": {
+   "stl_sha256": true,
+   "mesh_vert": true,
+   "mesh_face": true,
+   "mesh_normal": true,
+   "mesh_graph": false,
+   "mesh_polyvert": false,
+   "mesh_polynormal": false,
+   "mesh_polymap": false
+  },
+  "sole_right": {
+   "stl_sha256": true,
+   "mesh_vert": true,
+   "mesh_face": true,
+   "mesh_normal": true,
+   "mesh_graph": false,
+   "mesh_polyvert": false,
+   "mesh_polynormal": false,
+   "mesh_polymap": false
+  },
+  "jaw": {
+   "stl_sha256": true,
+   "mesh_vert": true,
+   "mesh_face": true,
+   "mesh_normal": true,
+   "mesh_graph": false,
+   "mesh_polyvert": false,
+   "mesh_polynormal": false,
+   "mesh_polymap": false
+  },
+  "power_support": {
+   "stl_sha256": true,
+   "mesh_vert": true,
+   "mesh_face": true,
+   "mesh_normal": true,
+   "mesh_graph": false,
+   "mesh_polyvert": false,
+   "mesh_polynormal": false,
+   "mesh_polymap": false
+  },
+  "trunk_base": {
+   "stl_sha256": true,
+   "mesh_vert": true,
+   "mesh_face": true,
+   "mesh_normal": true,
+   "mesh_graph": false,
+   "mesh_polyvert": false,
+   "mesh_polynormal": false,
+   "mesh_polymap": false
+  }
+ },
+ "single_mesh_platform_probe_files": [
+  "platform-linux",
+  "platform-windows"
+ ]
+}

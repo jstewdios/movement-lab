@@ -1,0 +1,67 @@
+{
+ "platform": "Windows-10-10.0.19045-SP0",
+ "python": "3.12.15 (main, Oct 21 2026, 17:48:33) [MSC v.1944 64 bit (AMD64)]",
+ "mujoco": "3.10.0",
+ "meshes": {
+  "sole_left": {
+   "stl_sha256": "e028c8b09fecd4cb354d042bf7fd95a1a1bc2d524d760d62137fa8d74093fc23",
+   "hull_vertices": 4964,
+   "hull_faces": 9924,
+   "mesh_vert": "2da3942e35b2fa11ec790801f8af101c7727ace49d1a10909e6138db85970a00",
+   "mesh_face": "1e85baa61e2c774e5c210cc1a3b9dbdba3a48517f36aa9480f2cac09ddac0c17",
+   "mesh_normal": "4c555ee0ee9e824f0c5d1c4f25253d92be7ba47491ae8929abe9f47a5b9977b7",
+   "mesh_graph": "a4c3b28d137d824aa734d2357bcc4d5c89b873cd9ece324a10e7c91df4f7dc41",
+   "mesh_polyvert": "598c8b070364adef32e9e92ab0a8afd6ebc83880cc7b6079f2f126101f5010fe",
+   "mesh_polynormal": "2f7f98205ba9120ab5878fd75149c7501fdf181cd20879fb3047154e28969305",
+   "mesh_polymap": "7f998d68dd4b611e3fc4fa004ba63a14b4b5b3102ae831486a9e685857e6c915"
+  },
+  "sole_right": {
+   "stl_sha256": "3f5068872f3add10eb967327651445bdfca635f5a8a01befa0ef05e462b72b4c",
+   "hull_vertices": 5029,
+   "hull_faces": 10054,
+   "mesh_vert": "e51bcc3195a8b18e631c69584b64802f878bcd0488286bf14a7d4f14dc0dd328",
+   "mesh_face": "b407c630be2bbcc013504f31c8b9e884caea9cfd3a4f5e84313b5419abb0a791",
+   "mesh_normal": "04b81a05550608b6f026c73c24d28f2552ec817dfbb124ee176bb53d9318abce",
+   "mesh_graph": "a341407058ffd218b1ec3b557941d2442ea01a7bad424550649f4b54b393f87a",
+   "mesh_polyvert": "be52494e6cbbb1d06d874fd0ad22a3649d6902990f67cbbd881c71cc669d6732",
+   "mesh_polynormal": "1ee49ab50758975459f93151cdf1b715bf57551e4646a1981d5cb48452bac7c7",
+   "mesh_polymap": "6427fc55549290f180b8ffed310e2762991129e1edffd6ed11f9a5f601b8785d"
+  },
+  "jaw": {
+   "stl_sha256": "45cdbd319a4583095d8daa0db07dee726522a743d59acb82d27d82ded500a1cf",
+   "hull_vertices": 1673,
+   "hull_faces": 3342,
+   "mesh_vert": "68c79a98283a6b4d4b151fd7e7ad9ab662379928d2ed8565921a6e263e13b9a8",
+   "mesh_face": "49acdb2238165590249e600d0103fc9b1cf0d11f840e1901c293dd3fb2abd19d",
+   "mesh_normal": "458c322ab85f9dad6c46db4938bc605c2c36a897bc4e3b70120af5d7781497c5",
+   "mesh_graph": "09f985a2312629fe7089607d005cebd136c67754b96e3c5317db9f995910dded",
+   "mesh_polyvert": "45ad95de79cd971910c03985f66364bf702a17a7ff1bc1f6de0bea12226011cd",
+   "mesh_polynormal": "3ec6be5a8e9049e5b0fe653eecfdbd4c7f4d86412b841e5116b25866f9889128",
+   "mesh_polymap": "331cfe024cd859fc84b6e0d0314c88ca2d1c3e1eb180cd7fece86eea84de4115"
+  },
+  "power_support": {
+   "stl_sha256": "ee45e397d3f3422f34940a4b61156c3c11c7e8c2b240451ce5f9ddd1622a130e",
+   "hull_vertices": 353,
+   "hull_faces": 702,
+   "mesh_vert": "4f44e1e8a9cd119e783970031532066d216768242cb67a2d8bd68b42f87abadf",
+   "mesh_face": "f5e6a59f5868a166cd91179d94873c1fcd3f9c4dd32f000567a27d181e679940",
+   "mesh_normal": "76b6f47110b14b9e6f530b4dabb567a7229eb9884020d3edf41e268a04085483",
+   "mesh_graph": "092e18f84862ce9a0ecc3af5845b3b3b9fca70aa46b66df3f1fa416fa58a3477",
+   "mesh_polyvert": "edae802b26bf10677274d96bbd5b1de41b3c0ec74784ade7d76b48105b5e4547",
+   "mesh_polynormal": "923b27fa5f2842948cab65871fc969ba0eeb8e64611001cff2aa89f466c194e8",
+   "mesh_polymap": "4809312608ebbb0ff5642f913da60ac358e4d23a8fa786cf4a3f1adfca5c0d4a"
+  },
+  "trunk_base": {
+   "stl_sha256": "aa4f853ae555a8b765e585ce4519c0bbff325ce298ec15a1437792c52a0beac1",
+   "hull_vertices": 226,
+   "hull_faces": 448,
+   "mesh_vert": "139d2b7a7f0c042f846ac6c38d58ca9e5cd3cb7212f8f4d7ba6d20f3108780ed",
+   "mesh_face": "73a7a94ce4c38e35a91dfe4c0fe2f975b5d7e9b4e7eba343f455f5c21c6306e6",
+   "mesh_normal": "eb9ae627483572642a6076d0ebb3bbd1188d0fafb807eab7947f9a39204a0f0f",
+   "mesh_graph": "d3980014b2e61cc885930e884af9ac7b5fedcd8b36c45d1ad1106066ea517fdd",
+   "mesh_polyvert": "59ae5fe06cad7a3b21dc38e77ed2315e4d6f0cb1d71ad936de3f56472a2bde89",
+   "mesh_polynormal": "02b7feccf302dedaae8f0a146df66d7211957cc970096bec5abf6baf305b8ce6",
+   "mesh_polymap": "f8a4f9cd7b117c0412139809d5622a791d9b15511943ea337b832d2e26edfb00"
+  }
+ }
+}

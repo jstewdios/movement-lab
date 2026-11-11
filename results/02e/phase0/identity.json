@@ -1,0 +1,118 @@
+{
+ "platform": "Linux-6.18.54.1-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+ "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+ "packages": {
+  "mujoco": "3.10.0",
+  "mjlab": "1.3.0",
+  "mujoco-warp": "3.8.1",
+  "warp-lang": "1.12.0",
+  "torch": "2.9.1",
+  "better-actuator-models": "1.0.1",
+  "numpy": "2.4.1",
+  "scipy": "1.18.0"
+ },
+ "historical_model_packages": {
+  "mjlab": "1.3.0",
+  "mujoco": "3.10.0",
+  "mujoco-warp": "3.8.1",
+  "warp-lang": "1.12.0",
+  "torch": "2.9.1",
+  "better-actuator-models": "1.0.1",
+  "numpy": "2.4.1"
+ },
+ "packages_match_historical_model": {
+  "mjlab": true,
+  "mujoco": true,
+  "mujoco-warp": true,
+  "warp-lang": true,
+  "torch": true,
+  "better-actuator-models": true,
+  "numpy": true
+ },
+ "model": {
+  "path": "results/02b/model/model.mjb",
+  "sha256": "ebb2ce87cae95c606e6db4ad2e790e9f4309e557443d6ea1a0629d5ba5e3cf8c",
+  "published_sha256": "ebb2ce87cae95c606e6db4ad2e790e9f4309e557443d6ea1a0629d5ba5e3cf8c",
+  "matches": true,
+  "compiled_on": "3.12.15 (main, Oct 21 2026, 17:48:33) [MSC v.1944 64 bit (AMD64)]",
+  "published_model_json_sha256": "83722a62eee57c80e859d9903b0e6c9e3cc9138d80843e9ae913f66fb31f8021"
+ },
+ "upstream": {
+  "path": "/home/james/microduck_rl",
+  "revision": "b02fdea4902c2b93b7d34a83a6f05da4ececb7d3",
+  "dirty": false,
+  "historical_revision": "b02fdea4902c2b93b7d34a83a6f05da4ececb7d3",
+  "files": {
+   "src/mjlab_microduck/robot/microduck/robot_groundcontact.xml": {
+    "raw_sha256": "99d23867e46e9d4748ff1398016b850f09fb6cf02a558c0272743b39ce3acf15",
+    "crlf_sha256": "8dd2985c25f4a5fb5b5fcd02dea92d4fd52a667c1663af677ee1d0e41e3084a5",
+    "historical_model_json": "8dd2985c25f4a5fb5b5fcd02dea92d4fd52a667c1663af677ee1d0e41e3084a5",
+    "has_crlf": false
+   },
+   "src/mjlab_microduck/robot/microduck_constants.py": {
+    "raw_sha256": "0e7097afe833ac1259b197f9854d01c1666be03ac0c9b090233b4fbc7619eb94",
+    "crlf_sha256": "e6636e07e27608ce34651dfa680aeb7fa43e5a828e812e0767847b2713638fdc",
+    "historical_model_json": "e6636e07e27608ce34651dfa680aeb7fa43e5a828e812e0767847b2713638fdc",
+    "has_crlf": false
+   }
+  }
+ },
+ "bam": {
+  "parameters_sha256": "61c699362fb3fabdde93eeba5e1ad3bf4ef9ca2f71d03e316b1924ff005b20d3",
+  "canonical_sha256": "278066df7ed404023abe1fbd44476a0a354d22baba41cb19f6520818374fc47d",
+  "historical_02c": "278066df7ed404023abe1fbd44476a0a354d22baba41cb19f6520818374fc47d",
+  "historical_02d": "278066df7ed404023abe1fbd44476a0a354d22baba41cb19f6520818374fc47d"
+ },
+ "checkpoints": {
+  "results/02b/runs/ars-push-s1/thetas.npz": "a2728569b6c8c1803c69d24d209807823012277511e9993323fe687b02c07f1e",
+  "results/02c/runs/cem-s1/final.npz": "c9fe0fb843dcaa62b29598d305a501abc91f310b22485f1665550af824d8e2c7",
+  "results/02c/runs/cem-s2/final.npz": "812f5377ca29febd5628160f826e238147c505145e49cbfba99f53ae54242197",
+  "results/02d/runs/history-s1/final.npz": "c2b85891de4043ec1317436d9267af87533f0f0226ffe6aaf0978bcd05a52e8d",
+  "results/02d/runs/history-s2/final.npz": "3a7a3628dfab88d585ff60ac073f8e5561bcdecaa4ec07b8eaee9267361856d6",
+  "results/02d/runs/history-s3/final.npz": "0f4497cd39a712bc1b4086839647740bc1a5567d71433fd88968f7ab1b23c9c9",
+  "results/02d/runs/memoryless-s1/final.npz": "113849bd0a52f5858b4e959f2eef6d7c9564c9f1a37ca3a826a66ecd6d22449b",
+  "results/02d/runs/memoryless-s2/final.npz": "051b780032b613c36e263279d07d571bf3d3c09238de969b10a1b7d72a0b6721",
+  "results/02d/runs/memoryless-s3/final.npz": "15eaa0e3c4680e1e1ecda34a9a49c7fb9a004671b872e70dcf3230eb5a69dff4"
+ },
+ "historical_sources": {
+  "movement_lab/analysis02b.py": "f57dec36c540ac0feeec57ca602ce10f126b21d57db6e5ebc59e4a7037d0fbf1",
+  "movement_lab/analysis02c.py": "827dec2a8bb43662625060e5defd002722c73212a9409b54d8c29414a2908158",
+  "movement_lab/contact02c.py": "3cfb92255ca1a6272c8137ba2e187150bd84617f07485d31e21c0c28336ed961",
+  "movement_lab/control02d.py": "e4f05f3ad8df9e1e7bb30e210b932dc4565967aff730f2f8d32588b29a405751",
+  "movement_lab/crosscheck02b.py": "db9e81e939a2b3894a185a016c2ba7a5dfe223fe5105e09d242376d21e3831e1",
+  "movement_lab/crosscheck02c.py": "561e10cf184208e45cee2a9b7a5667fd97a1267426fb9b0a4f7be56fb619e197",
+  "movement_lab/diagnose02d.py": "90200281fc4b087c009307f95e95fc851d99f0f224a3b40c834f0e6a7fda43fe",
+  "movement_lab/eval02b.py": "fdba332449e7ca3e070aaa2f766e392c6a2760abad6a1cf06ae39df5c42f68b2",
+  "movement_lab/eval02c.py": "c0363a47752ea245cdc2c5d96f06755cc399b105dc940d7a6d1b80cc947a5491",
+  "movement_lab/eval02d.py": "a52306fad550f17afa6bcfdae17f05d446b05c520436488fe0e0b26ab69e29ef",
+  "movement_lab/learn02b.py": "2302e7863413af2ecd0f3b592e45efad84ef31225dd6aa9bcc5afbcccf7bdbf8",
+  "movement_lab/learn02c.py": "108f6154c54ad40ff29255882afaabf757db1d022787169348cc98983f9780ae",
+  "movement_lab/learn02d.py": "e1e32c3e9faa08fc20fb16af10b3a5abab6042a3915e3fb1ea9c8fe38157f913",
+  "movement_lab/model02b.py": "0aded0d5b897dcdc63f2c54c82bf61da4da1089af9e665f974afe3f32decbb83",
+  "movement_lab/package02d.py": "13f5a80e67761eaf555af6c69bcd2c095f35cc6b03a3464a423caed21212decc",
+  "movement_lab/physics02b.py": "7702e7336dbf8a9c2b631b987b872cc85e52f2f321b1941e26dd6c11310ead43",
+  "movement_lab/preflight02c.py": "0cbf96ab7522419c9641c3ae338a0cd52af56050d05bdb55071e59d85a88f5da",
+  "movement_lab/preflight02d.py": "6029987e035df495af57755305127d8d0554bd1a801c99a1b31033674fc4efa9",
+  "movement_lab/publication02b.py": "884308da8995e227783a7a880f24a228b82b02b20824eead4cac35d0920c9386",
+  "movement_lab/publication02c.py": "7d2f6b3ce7ac2bcdef09209644e99ed0e161cd539304d0834fdd99723289bf04",
+  "movement_lab/replay02b.py": "4ca284e9c2a1dff48714f085a2585a772e62469979ba4eb91632d14feb38be93",
+  "movement_lab/replay02c.py": "53d14008432cb55a5444c5bc509a3d10854b904eb99375b159439f7f38c03445",
+  "movement_lab/report02d.py": "1662966f2a624b45e74a606af10a90d490cc658d0005815f9992af8b2ad2809d",
+  "movement_lab/revise02b.py": "0a7305acc33233d7d53f79614b4463965dfa93b331d4df2fe57b9bc51211f301",
+  "movement_lab/sim02b.py": "fdb9a2fed4802ecc2a81eeecc72bbe4995ab92920bc97b34fbe1ec5fdba34f19",
+  "movement_lab/sim02c.py": "0d44dc8d8b45026c2b6a5b369328fdca4e0912e38dc4c86b047e5004d9d8909a",
+  "movement_lab/sim02d.py": "38c72526939f390721b84ba90c00030575255082f39c7b81f12827f45accd77d",
+  "movement_lab/study02b.py": "f1de8d2d9faf4112c9eb13c99ddb1e43d7f08f1b997944f8e3c43ba6f9075daa",
+  "movement_lab/study02c.py": "7bc69ed453f125330b4631fcb3a341e3a1eadaa91faa2c1e452368b4f8869d7c",
+  "movement_lab/study02d.py": "5b388c0e6a4874c61a9e493ab72af6130beaf9b75e33c8598058b0ba989726d1",
+  "movement_lab/validate02b.py": "9de28a8d3db4c4625b1d622466ad5f714650a90ad9a63e1eb36664d1364d55b4",
+  "movement_lab/validate02c.py": "317169ca99fb283ea028eb5c5d7881ffcd3170cc2e924f486f1c2954ea79fb75",
+  "movement_lab/validate02d.py": "8534b0e1de224bd04b022dc80b641d84724af02b83f8648d54cdb383346ae9ac"
+ },
+ "evaluation_identities": {
+  "results/02d/eval/grid/identity.json": "8850373bd679b0ef14b5d5c1d1c042d87f4d48fdfc959fce31b4e530d3d84ca7",
+  "results/02d/eval/pilot/identity.json": "892b74312f99bf07878afa59fab19eede07d102c9c7a73a2fc276dd857266f86",
+  "results/02d/eval/pilot-revised/identity.json": "12f9b3419c5254301d57a6b5e10cf27674ee53a9a33bea1ab4a56a0a01ae1ce3",
+  "results/02d/eval/shifts/identity.json": "993e9b1cee6e92931cc19ec79f3b313526ceaaa8998328fb6675f35c72ca4965"
+ }
+}

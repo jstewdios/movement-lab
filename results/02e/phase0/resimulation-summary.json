@@ -1,0 +1,32 @@
+{
+ "rows": 1044,
+ "exact_historical": 1044,
+ "by_group": {
+  "grid": {
+   "rows": 612,
+   "exact": 612
+  },
+  "shifts": {
+   "rows": 432,
+   "exact": 432
+  }
+ },
+ "alternate": {
+  "bitwise_identical": 1009,
+  "diverged": 35,
+  "outcomes_equal": 1044,
+  "rows_equal": 1009,
+  "recovered_historical": 821,
+  "recovered_alternate": 821,
+  "divergence_after_failure_or_nonfoot_or_self_contact": 35,
+  "divergence_before_any_such_event": [],
+  "earliest_divergence_s": 1.6699999999999864,
+  "outcome_differences": []
+ },
+ "run": {
+  "wall_s": 922.2022034239781,
+  "workers": 6,
+  "alternate_model_dir": "results/02e/phase0/linux-compile",
+  "note": "recorded from the run log; the original summary key collided and was regenerated from saved rows"
+ }
+}
