@@ -97,10 +97,11 @@ def pilot_controllers():
     return cs
 
 
-def gate_learning():
+def gate_learning(root=ROOT):
+    """The declared 1D decision from the battery D rows under ``root``, written to ``root/pilot/gate-learning.json``."""
     from movement_lab.diag02e import paired, MISALIGNED_D
     from movement_lab.eval02c import read_rows
-    dest = ROOT / 'pilot/learning'
+    dest = root / 'pilot/learning'
     rows = {p.name[:-9]: read_rows(p) for p in dest.glob('*.jsonl.gz')}
     result = {}
     for arm, control in (('history-rand-s72', 'history-s72'), ('memoryless-rand-s72', 'memoryless-s72')):
@@ -114,7 +115,7 @@ def gate_learning():
                            nominal_quiet_losses=quiet_l, nominal_backward_losses=back_l,
                            nominal_recovered=[rec(base), rec(new)], slope=paired(base, new, ('slope-2', 'slope+2')),
                            misaligned_recovered=[sum(r['recovered_200hz'] for r in rs if r['setting'] in MISALIGNED_D) for rs in (base, new)])
-    (ROOT / 'pilot/gate-learning.json').write_text(json.dumps(result, indent=1) + '\n', newline='\n')
+    (root / 'pilot/gate-learning.json').write_text(json.dumps(result, indent=1) + '\n', newline='\n')
     print(json.dumps(result, indent=1))
 
 
@@ -147,7 +148,7 @@ def run_phase(a, D, guard):
         conds = D.battery(D.SETTINGS_D, D.KINDS, 7_200_000_000)
         battery(ROOT / 'pilot/learning', [(c[0], c, None) for c in pilot_controllers()], conds)
     elif a.phase == 'gate-learning':
-        gate_learning()
+        gate_learning(ROOT)
     elif a.phase == 'train':
         gate = json.loads((ROOT / 'pilot/gate-learning.json').read_text())
         arms = [arm for arm, name in (('history', 'history-rand-s72'), ('memoryless', 'memoryless-rand-s72')) if gate[name]['passed']]

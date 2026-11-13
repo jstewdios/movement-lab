@@ -300,3 +300,85 @@
   - `validate02e --audit --resimulate 12`: 6,444 checks and 12 exact held-out
     resimulations.
   - `--publish`/`--verify`: all published hashes verify.
+
+## Review corrections (2026-11-13)
+
+The automated review of PR #11 (Codex) raised two P2 findings. Both are fixed.
+No trial outcome, gate decision, training run or conclusion changed.
+
+- **Support margins were projected against gravity on sloped floors.**
+  - `sim02e.support_margins` placed the COM's ground point at
+    `com − g_xy · com_z / (−g_z)`. The gravity line through the COM meets the
+    floor at `com + g_xy · com_z / (−g_z)`.
+  - On a ±2° slope, the stored point was 2 · com_z · tan 2° ≈ 9.4 mm uphill of
+    the true one (COM height about 0.135 m).
+  - On a level floor, gravity's horizontal component is exactly +0.0, so both
+    forms give bit-identical margins.
+  - Margins are diagnostic only. No controller, front-end, failure test,
+    score, gate or training rollout reads them (`learn02e` never requests
+    them). Only six margin fields of sloped rows could be wrong:
+    `min_support_margin_m`, `min_toe_margin_m`, `min_heel_margin_m`,
+    `steady_toe_margin_m`, `steady_heel_margin_m` and
+    `com_outside_support_s`.
+- **Fix.** The sign was corrected. The `sim02e` docstring erratum recorded
+  under Phase 1 ("+x uphill") was corrected in the same edit, since the file's
+  hash was changing anyway.
+- **Regeneration, `correct02e margins --workers 4`.**
+  - It re-simulated exactly the 1,444 sloped battery rows: 180 (1A), 560
+    (1C), 80 (1D) and 624 (H).
+  - It also re-simulated the three sloped replay recordings. Their 200 Hz
+    arrays came back identical, so their local `.npz` files were kept and only
+    the margin fields of their summaries changed.
+  - Every non-margin field of every regenerated row came back identical. All
+    1,444 rows changed margins.
+  - It took 17 minutes. Memory: peak worker 323 MB, peak total 1,330 MB, WSL
+    `MemAvailable` at or above 6,249 MB.
+- **Provenance.**
+  - Battery identities now pin the corrected `sim02e.py`. Training
+    configurations keep the hash they ran with.
+  - The source that produced the original rows is archived in
+    `corrections/margin-projection/source/`. The validator checks that it
+    differs from the current source only by the declared edit.
+  - `corrections/margin-projection/rows.jsonl.gz` keeps each regenerated row's
+    old and new margins. The validator rebuilds every original file's rows
+    byte for byte from it. The interrupted-v1 1A rows predate the correction,
+    are unchanged, and are compared against those rebuilt rows.
+- **What changed in the published evidence.**
+  - The margin fields of the sloped rows, and the summaries of the three
+    sloped replay records.
+  - In `report/tables.json`, 66 values: the steady toe and heel margins of the
+    slope settings in the 1A and held-out quiet-mechanism tables. On the +2°
+    slope, the steady toe margin fell by 9.4 mm and the heel margin rose by
+    9.4 mm.
+  - The −2° slope changed more (mean −40 mm toe, −53 mm heel). There, the
+    corrected ground point leaves the support polygon during some steady
+    windows, and those means include the −1 m outside-support sentinel, so
+    they are not distances. COM time outside support rose by 0.09 s on
+    average.
+  - `REPORT.md` never quoted a margin. No count, gate decision, figure,
+    replay frame or `replay.html` byte changed.
+- **Training was not restarted.** Learning rollouts never compute margins, so
+  no candidate score, CEM update or final controller could change.
+- **The learning-gate audit ignored `--root`.**
+  - `validate02e --audit` recomputed the 1D gate with
+    `study02e.gate_learning()`, which read and wrote the hard-coded
+    `results/02e`.
+  - For any other root, the saved decision was compared with itself, so it was
+    never checked against that root's rows. `results/02e/pilot/gate-learning.json`
+    was rewritten as a side effect.
+  - Every published audit used the default root, where the read and the write
+    hit the audited tree, so the published check was valid.
+  - Fix: `gate_learning(root)`. The validator now recomputes both gates on a
+    scratch copy of their input rows and compares the result with the saved
+    decision.
+  - The audit writes nothing under the audited root except `validation.json`,
+    and nothing anywhere else. The old version wrote each gate file and then
+    restored its saved bytes.
+- **Regression tests.**
+  - `test_support_margins_project_the_com_along_gravity`: pitch and roll
+    slopes against a known polygon, plus a COM whose gravity line leaves past
+    the toe. It fails on the archived source.
+  - `test_margin_correction_is_exactly_the_declared_edit_and_spares_training`.
+  - `GateAuditTests`: gates on a synthetic alternate root are recomputed from
+    that root's rows, and a tampered decision is caught. Neither the alternate
+    root nor `results/02e` is written. It fails on the old `gate_learning()`.

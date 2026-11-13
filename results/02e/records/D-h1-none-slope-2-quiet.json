@@ -288,7 +288,7 @@
   "min_heel_margin_m": -1.0,
   "steady_toe_margin_m": null,
   "steady_heel_margin_m": null,
-  "com_outside_support_s": 0.26,
+  "com_outside_support_s": 0.38,
   "settle_time_s": null,
   "final_true_pitch_deg": -70.63069413486019,
   "final_root_displacement_m": 0.1218417365017031,

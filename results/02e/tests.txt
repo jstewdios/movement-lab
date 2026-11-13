@@ -1,11 +1,14 @@
 test_phase0_gate_and_exact_reproduction_record (tests.test_upright02e.EvidenceTests.test_phase0_gate_and_exact_reproduction_record) ... ok
 test_replay_selection_is_declared_and_only_raw_records_stay_local (tests.test_upright02e.EvidenceTests.test_replay_selection_is_declared_and_only_raw_records_stay_local) ... ok
+test_gates_are_recomputed_under_the_requested_root_without_writing (tests.test_upright02e.GateAuditTests.test_gates_are_recomputed_under_the_requested_root_without_writing) ... ok
 test_encoder_offsets_are_bounded_seeded_and_off_by_default (tests.test_upright02e.MathTests.test_encoder_offsets_are_bounded_seeded_and_off_by_default) ... ok
 test_floor_slope_and_drift_conventions (tests.test_upright02e.MathTests.test_floor_slope_and_drift_conventions) ... ok
 test_frontend_only_sees_declared_inputs_and_gates_residual (tests.test_upright02e.MathTests.test_frontend_only_sees_declared_inputs_and_gates_residual) ... ok
+test_margin_correction_is_exactly_the_declared_edit_and_spares_training (tests.test_upright02e.MathTests.test_margin_correction_is_exactly_the_declared_edit_and_spares_training) ... ok
 test_prior_frontend_corrects_smoothly_after_its_window (tests.test_upright02e.MathTests.test_prior_frontend_corrects_smoothly_after_its_window) ... ok
 test_rotation_fit_recovers_a_misalignment_and_only_what_is_observable (tests.test_upright02e.MathTests.test_rotation_fit_recovers_a_misalignment_and_only_what_is_observable) ... ok
 test_rotation_helpers_round_trip (tests.test_upright02e.MathTests.test_rotation_helpers_round_trip) ... ok
+test_support_margins_project_the_com_along_gravity (tests.test_upright02e.MathTests.test_support_margins_project_the_com_along_gravity) ... ok
 test_fork_is_bit_identical_to_02d_without_interventions (tests.test_upright02e.PhysicsTests.test_fork_is_bit_identical_to_02d_without_interventions) ... ok
 test_gate_holds_residual_off_during_calibration_only (tests.test_upright02e.PhysicsTests.test_gate_holds_residual_off_during_calibration_only) ... ok
 test_kinematic_trunk_rate_matches_truth_for_rigid_planted_feet (tests.test_upright02e.PhysicsTests.test_kinematic_trunk_rate_matches_truth_for_rigid_planted_feet) ... ok
@@ -21,6 +24,6 @@ test_task_exception_propagates_and_leaves_no_workers (tests.test_upright02e.Work
 test_worker_cap (tests.test_upright02e.WorkerPoolTests.test_worker_cap) ... ok
 
 ----------------------------------------------------------------------
-Ran 21 tests in 5.674s
+Ran 24 tests in 6.058s
 
 OK

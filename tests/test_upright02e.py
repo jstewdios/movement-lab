@@ -81,6 +81,97 @@ class MathTests(unittest.TestCase):
         mid = seen[int(round(1.45 / .02))]
         self.assertTrue(0 < abs(mid[0]) < abs((Rb.T @ g_true)[0]))    # ramped, not stepped
 
+    def test_support_margins_project_the_com_along_gravity(self):
+        # Regression (PR #11 review): the COM's ground point is com + s g with s = com_z / -g_z > 0.
+        # The original code subtracted, moving the point uphill instead of downhill.
+        from types import SimpleNamespace
+        from unittest import mock
+        import movement_lab.sim02e as S
+        poly = np.array([[-.04, -.03], [.06, -.03], [.06, .05], [-.04, .05]])   # CCW; toe +x, heel -x; asymmetric
+        h = .2
+        sim, data = SimpleNamespace(trunk=0), SimpleNamespace(subtree_com=np.array([[0., 0., h]]))
+        with mock.patch.object(S, 'support_polygon', return_value=poly):
+            np.testing.assert_allclose(S.support_margins(sim, data, gravity_direction((0., 0.))), (.03, .06, .04), atol=1e-12)
+            shift = h * math.tan(math.radians(2))
+            g = gravity_direction((0., 2.))                       # floor descends toward +x
+            _, toe, heel = S.support_margins(sim, data, g)
+            self.assertAlmostEqual(toe, .06 - shift, places=12)   # downhill: the gravity line lands nearer the toe
+            self.assertAlmostEqual(heel, .04 + shift, places=12)
+            low, _, _ = S.support_margins(sim, data, gravity_direction((2., 0.)))   # gravity has a -y component
+            self.assertAlmostEqual(low, .03 - shift, places=12)
+            data.subtree_com[0] = (.06 - shift / 2, 0., h)        # the gravity line leaves past the toe
+            self.assertEqual(S.support_margins(sim, data, g), (-1., -1., -1.))
+            self.assertGreater(S.support_margins(sim, data, gravity_direction((0., -2.)))[1], 0)   # uphill: inside
+
+    def test_margin_correction_is_exactly_the_declared_edit_and_spares_training(self):
+        from movement_lab.correct02e import apply_edits, EDITS, BEFORE_SHA256, RECORD, MARGIN_FIELDS
+        from movement_lab.learn02c import digest
+        archived = Path('results/02e') / RECORD / 'source/sim02e.py'
+        if not archived.exists():
+            self.skipTest('no published correction record')
+        self.assertEqual(digest(archived), BEFORE_SHA256)
+        self.assertEqual(apply_edits(archived.read_text(), EDITS), Path('movement_lab/sim02e.py').read_text())
+        with self.assertRaises(ValueError):
+            apply_edits(Path('movement_lab/sim02e.py').read_text(), EDITS)   # already applied: no silent double edit
+        # Learning rollouts never compute margins, so training pinned to the archived source is unaffected.
+        self.assertNotIn('margins', Path('movement_lab/learn02e.py').read_text())
+        self.assertEqual(len(MARGIN_FIELDS), 6)
+
+
+class GateAuditTests(unittest.TestCase):
+    """Regression (PR #11 review): the gate audit recomputes from the requested root and writes nothing."""
+
+    @staticmethod
+    def _rows(rng):
+        from movement_lab.diag02e import MISALIGNED_D
+        settings = ['nominal', *MISALIGNED_D, 'slope-2', 'slope+2']
+        return [dict(setting=s, set=k, condition=dict(seed=7_200_000_000 + 10 * i + j), recovered_200hz=bool(rng.random() < .6))
+                for i, s in enumerate(settings) for j, k in enumerate(('quiet', 'back-.08', 'fwd-.20'))]
+
+    @staticmethod
+    def _snapshot(folder):
+        return {p: (p.stat().st_mtime_ns, p.read_bytes()) for p in sorted(folder.rglob('*')) if p.is_file()} if folder.exists() else {}
+
+    def test_gates_are_recomputed_under_the_requested_root_without_writing(self):
+        import contextlib, io, tempfile
+        from movement_lab import diag02e as D
+        from movement_lab.eval02c import write_gzip
+        from movement_lab.study02e import gate_learning
+        from movement_lab.validate02e import Audit, audit_gates
+        published = Path('results/02e/pilot')
+        before_published = self._snapshot(published)
+        rng = np.random.default_rng(5)
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp) / 'alternate'
+            (root / 'pilot/learning').mkdir(parents=True); (root / 'pilot/frontend').mkdir()
+            for n in ('history-s72', 'history-rand-s72', 'memoryless-s72', 'memoryless-rand-s72'):
+                write_gzip(root / f'pilot/learning/{n}.jsonl.gz', self._rows(rng))
+            for n in ('reflex', *[f'{a}-s{s}' for a in ('history', 'memoryless') for s in (1, 2, 3)]):
+                for fe in ('none', 'static', 'prior', 'gate'):
+                    write_gzip(root / f'pilot/frontend/{n}__{fe}.jsonl.gz', self._rows(rng))
+            with contextlib.redirect_stdout(io.StringIO()):
+                gate_learning(root); D.gate(root)
+            self.assertEqual(self._snapshot(published), before_published)   # a gate for another root leaves published evidence alone
+            mine = json.loads((root / 'pilot/gate-learning.json').read_text())
+            if (published / 'gate-learning.json').exists():
+                self.assertNotEqual(mine, json.loads((published / 'gate-learning.json').read_text()))
+            before_alternate = self._snapshot(root)
+            check = Audit()
+            audit_gates(root, check)
+            self.assertEqual(check.count, 2)
+            self.assertEqual(self._snapshot(root), before_alternate)        # the audit writes nothing under the audited root
+            # A decision that does not follow from this root's rows is caught (it used to be compared with itself).
+            for name, key, field in (('gate-learning.json', 'history-rand-s72', 'misaligned_gains'), ('gate-frontend.json', 'static', 'misaligned_net')):
+                path = root / 'pilot' / name
+                saved = path.read_bytes()
+                d = json.loads(saved); d[key][field] += 1
+                path.write_text(json.dumps(d, indent=1) + '\n', newline='\n')
+                with self.assertRaises(AssertionError):
+                    audit_gates(root, Audit())
+                self.assertNotEqual(path.read_bytes(), saved)               # the audit did not "restore" anything
+                path.write_bytes(saved)
+        self.assertEqual(self._snapshot(published), before_published)
+
 
 class SeedAndCurriculumTests(unittest.TestCase):
     def test_battery_seeds_paired_and_disjoint_from_all_training_and_02d(self):

@@ -290,9 +290,18 @@ would be a new study.
   hold two or three trials.
 - **Evidence checks.** `validate02e --audit` recomputes both gates from rows.
   It reconstructs every training generation from its seed (candidates,
-  curriculum, scores, CEM distribution, RNG state) and re-simulates 12
-  held-out rows exactly: 6,444 checks. Each of the 26 replay recordings also
-  reproduces its published row exactly.
+  curriculum, scores, CEM distribution, RNG state). It re-simulates 12
+  held-out rows and one sloped row per battery exactly: 8,180 checks in all.
+  Each of the 26 replay recordings also reproduces its published row exactly.
+- **Corrections after review ([ATTEMPTS.md](ATTEMPTS.md), "Review corrections").**
+  - On sloped floors, the diagnostic COM support margins had been projected
+    against gravity, about 9.4 mm uphill of the true point. The 1,444 sloped
+    rows were re-simulated with the sign fixed. Every non-margin field came
+    back identical, so no outcome, gate, table count or conclusion here
+    changed.
+  - The learning-gate audit now checks the tree it is given. Before, for any
+    root other than `results/02e`, it compared that tree's saved decision with
+    itself. The published audit, run on the default root, was valid.
 - **Platform.** Hash verification is portable. Physics checks need the
   Windows-compiled binary, and bitwise replay across platforms is not claimed.
 - **Two interruptions, recorded in [ATTEMPTS.md](ATTEMPTS.md).**

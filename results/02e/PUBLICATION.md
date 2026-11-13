@@ -40,6 +40,16 @@ historical model through the unchanged 02B guard.
     control (`movement_lab/browsercheck02e.js` appended to a QA copy), and
     `browser-preview.png`.
 - `records/`: metadata and summaries of the replayed trials.
+- `corrections/margin-projection/`: the review correction of the support-margin
+  projection (ATTEMPTS.md, "Review corrections"):
+  - `source/sim02e.py`, the source that produced the original rows;
+  - `correction.json`, with the declared edit and the before/after hashes of
+    every battery file, identity and replay record it touched;
+  - `rows.jsonl.gz`, the before/after margins of every regenerated row.
+
+  Only the sloped trials were re-simulated, and every non-margin field had to
+  come back identical. The validator rebuilds each original file's rows byte
+  for byte from this record.
 - `validation.json`, `manifest.json`, `tests.txt`.
 
 These stay local and are hashed in `manifest.json` (`local_only`):
@@ -82,11 +92,15 @@ $PY -m movement_lab.study02e gate-learning
 # Phase 2 (each refuses to run unless its gate passed)
 $PY -m movement_lab.study02e train --workers 4 --concurrent-runs 2
 $PY -m movement_lab.study02e confirm --workers 4
+# Review correction, published root only (a fresh root already runs the corrected sim02e):
+# re-simulates the sloped rows and the sloped replay records, margins only
+$PY -m movement_lab.correct02e margins --plan
+$PY -m movement_lab.correct02e margins --workers 4
 # Report, audit, publication
 $PY -m movement_lab.report02e                # re-simulates the 26 replay records unless present
 #   browser check: append movement_lab/browsercheck02e.js to a copy of report/replay.html, open headless
 $PY -m unittest tests.test_upright02e -v > results/02e/tests.txt 2>&1
-$PY -m movement_lab.validate02e --audit --resimulate 12
+$PY -m movement_lab.validate02e --audit --resimulate 12   # writes only validation.json under --root
 $PY -m movement_lab.validate02e --publish
 python -m movement_lab.validate02e --verify   # portable: hashes only, no model needed
 ```

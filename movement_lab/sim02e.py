@@ -8,7 +8,8 @@ default and no front-end/probe, the trial is bit-identical to ``sim02d.rollout``
   reported gravity direction AND the gyro, as in 02D. ``drift_deg`` adds a slow
   linear change of that misalignment over ``drift_start_s .. +drift_duration_s``.
 * ``slope_deg`` (roll, pitch) tilts gravity relative to the floor, which is
-  physically equivalent to standing on an inclined plane. Positive pitch: +x uphill.
+  physically equivalent to standing on an inclined plane. Positive pitch: the floor
+  descends toward +x.
 * Joint encoders (only read by an explicit front-end) carry upstream's uniform
   0.001 rad noise and optional fixed per-joint offsets ``encoder_offset_rad``,
   drawn from a separate RNG stream so the physical trial is unchanged.
@@ -92,8 +93,8 @@ def support_margins(sim, data, g_hat):
     """Signed COM support margins (m) along gravity: min over 16 ray exits, and toe/heel along +x/-x."""
     poly = support_polygon(sim, data)
     com = data.subtree_com[sim.trunk]
-    # Project the COM along gravity onto the floor plane z = 0.
-    c = com[:2] - g_hat[:2] * (com[2] / -g_hat[2])
+    # Project the COM along gravity onto the floor plane z = 0: com + s g_hat with s = com_z / -g_z > 0.
+    c = com[:2] + g_hat[:2] * (com[2] / -g_hat[2])
     ok = len(poly) >= 3 and inside_all(poly, c)
     if not ok:
         return -1.0, -1.0, -1.0
