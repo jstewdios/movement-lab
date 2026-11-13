@@ -1,0 +1,5001 @@
+{
+ "model_sha256": "ebb2ce87cae95c606e6db4ad2e790e9f4309e557443d6ea1a0629d5ba5e3cf8c",
+ "base_sha256": "a2728569b6c8c1803c69d24d209807823012277511e9993323fe687b02c07f1e",
+ "option_sha256": "c9fe0fb843dcaa62b29598d305a501abc91f310b22485f1665550af824d8e2c7",
+ "configurations": [
+  {
+   "file": "history-s72",
+   "controller": "history-s72",
+   "weights": [
+    0.10106901959135967,
+    -0.07800693888374531,
+    0.3064973656508809,
+    -0.0915382752481394,
+    0.05401412589238856,
+    -0.032615336468460626,
+    0.03458357605251449,
+    -0.010121900052974381,
+    0.161243952287454,
+    0.07827546842949762,
+    0.016033332151794092,
+    0.5528220592288202,
+    -0.08194002490468225,
+    -0.04256905162049113,
+    0.09737164363101021,
+    0.10057065122372916,
+    0.16508943799142423,
+    -0.06707653557110058,
+    0.17425125943345016,
+    0.029202795520401705,
+    -0.07545455613126717,
+    0.011989541316604763
+   ],
+   "design": {
+    "memory": true,
+    "tau_s": 0.08,
+    "bound": 0.8
+   },
+   "mode": "learned",
+   "frontend": null
+  },
+  {
+   "file": "history-rand-s72",
+   "controller": "history-rand-s72",
+   "weights": [
+    0.02340407079105564,
+    -0.016328860013492486,
+    0.1048625051892701,
+    -0.01508848154443683,
+    -0.045223912768602374,
+    -0.03684177040476916,
+    -0.05224759076742902,
+    0.08555836596089694,
+    0.02570265723157862,
+    -0.0011381636946994414,
+    0.04339439015809761,
+    0.052480034193629975,
+    -0.10656529393379535,
+    -0.05038384318029196,
+    -0.006250141945924929,
+    0.01540934183625673,
+    -0.003329953724957993,
+    0.0026097616491582323,
+    0.0098395176169086,
+    0.14540271598005494,
+    -0.025733030346647368,
+    -0.009916026224501258
+   ],
+   "design": {
+    "memory": true,
+    "tau_s": 0.08,
+    "bound": 0.8
+   },
+   "mode": "learned",
+   "frontend": null
+  },
+  {
+   "file": "memoryless-rand-s72",
+   "controller": "memoryless-rand-s72",
+   "weights": [
+    -0.008134690938358363,
+    -0.03489210846338369,
+    -0.01653055321958711,
+    0.00730443172852388,
+    0.02569776413498498,
+    0.048187205675620765,
+    -0.0025861878052591703,
+    -0.05930803153033016,
+    0.016886454850699728,
+    0.022369633449690826,
+    -0.08256663510758944,
+    -0.07766737535390547
+   ],
+   "design": {
+    "memory": false,
+    "tau_s": 0.08,
+    "bound": 0.8
+   },
+   "mode": "learned",
+   "frontend": null
+  },
+  {
+   "file": "memoryless-s72",
+   "controller": "memoryless-s72",
+   "weights": [
+    -0.0010128891330015502,
+    -0.28645192430405864,
+    0.44446798824201317,
+    0.19101124573486672,
+    0.09980985770642695,
+    0.031095480973175185,
+    0.4678898210755841,
+    -0.24278895542329965,
+    -0.05464831633186665,
+    -0.04778357530078442,
+    -0.04564011157021563,
+    0.056844723743490595
+   ],
+   "design": {
+    "memory": false,
+    "tau_s": 0.08,
+    "bound": 0.8
+   },
+   "mode": "learned",
+   "frontend": null
+  }
+ ],
+ "conditions": [
+  {
+   "setting": "nominal",
+   "kind": "quiet",
+   "condition": {
+    "seed": 7200000000,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": null,
+    "push_dv": [
+     0.0,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "nominal",
+   "kind": "quiet",
+   "condition": {
+    "seed": 7200000001,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": null,
+    "push_dv": [
+     0.0,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "nominal",
+   "kind": "fwd-.20",
+   "condition": {
+    "seed": 7200000010,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.6896045063209364,
+    "push_dv": [
+     0.2,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "nominal",
+   "kind": "fwd-.20",
+   "condition": {
+    "seed": 7200000011,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.966835592823738,
+    "push_dv": [
+     0.2,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "nominal",
+   "kind": "fwd-.32",
+   "condition": {
+    "seed": 7200000020,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 1.8188553557541887,
+    "push_dv": [
+     0.32,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "nominal",
+   "kind": "fwd-.32",
+   "condition": {
+    "seed": 7200000021,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.902628784718803,
+    "push_dv": [
+     0.32,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "nominal",
+   "kind": "back-.08",
+   "condition": {
+    "seed": 7200000030,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.481966762855068,
+    "push_dv": [
+     -0.08,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "nominal",
+   "kind": "back-.08",
+   "condition": {
+    "seed": 7200000031,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.22689684952997,
+    "push_dv": [
+     -0.08,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "nominal",
+   "kind": "false-gyro",
+   "condition": {
+    "seed": 7200000040,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": null,
+    "push_dv": [
+     0.0,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": 1.9000000000000001,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.75,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "nominal",
+   "kind": "false-gyro",
+   "condition": {
+    "seed": 7200000041,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": null,
+    "push_dv": [
+     0.0,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": 2.7,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": -0.75,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "pitch-4",
+   "kind": "quiet",
+   "condition": {
+    "seed": 7200000000,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": null,
+    "push_dv": [
+     0.0,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     -4.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "pitch-4",
+   "kind": "quiet",
+   "condition": {
+    "seed": 7200000001,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": null,
+    "push_dv": [
+     0.0,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     -4.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "pitch-4",
+   "kind": "fwd-.20",
+   "condition": {
+    "seed": 7200000010,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.6896045063209364,
+    "push_dv": [
+     0.2,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     -4.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "pitch-4",
+   "kind": "fwd-.20",
+   "condition": {
+    "seed": 7200000011,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.966835592823738,
+    "push_dv": [
+     0.2,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     -4.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "pitch-4",
+   "kind": "fwd-.32",
+   "condition": {
+    "seed": 7200000020,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 1.8188553557541887,
+    "push_dv": [
+     0.32,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     -4.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "pitch-4",
+   "kind": "fwd-.32",
+   "condition": {
+    "seed": 7200000021,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.902628784718803,
+    "push_dv": [
+     0.32,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     -4.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "pitch-4",
+   "kind": "back-.08",
+   "condition": {
+    "seed": 7200000030,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.481966762855068,
+    "push_dv": [
+     -0.08,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     -4.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "pitch-4",
+   "kind": "back-.08",
+   "condition": {
+    "seed": 7200000031,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.22689684952997,
+    "push_dv": [
+     -0.08,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     -4.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "pitch-4",
+   "kind": "false-gyro",
+   "condition": {
+    "seed": 7200000040,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": null,
+    "push_dv": [
+     0.0,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     -4.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": 1.9000000000000001,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.75,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "pitch-4",
+   "kind": "false-gyro",
+   "condition": {
+    "seed": 7200000041,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": null,
+    "push_dv": [
+     0.0,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     -4.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": 2.7,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": -0.75,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "pitch-2",
+   "kind": "quiet",
+   "condition": {
+    "seed": 7200000000,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": null,
+    "push_dv": [
+     0.0,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     -2.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "pitch-2",
+   "kind": "quiet",
+   "condition": {
+    "seed": 7200000001,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": null,
+    "push_dv": [
+     0.0,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     -2.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "pitch-2",
+   "kind": "fwd-.20",
+   "condition": {
+    "seed": 7200000010,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.6896045063209364,
+    "push_dv": [
+     0.2,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     -2.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "pitch-2",
+   "kind": "fwd-.20",
+   "condition": {
+    "seed": 7200000011,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.966835592823738,
+    "push_dv": [
+     0.2,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     -2.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "pitch-2",
+   "kind": "fwd-.32",
+   "condition": {
+    "seed": 7200000020,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 1.8188553557541887,
+    "push_dv": [
+     0.32,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     -2.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "pitch-2",
+   "kind": "fwd-.32",
+   "condition": {
+    "seed": 7200000021,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.902628784718803,
+    "push_dv": [
+     0.32,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     -2.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "pitch-2",
+   "kind": "back-.08",
+   "condition": {
+    "seed": 7200000030,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.481966762855068,
+    "push_dv": [
+     -0.08,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     -2.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "pitch-2",
+   "kind": "back-.08",
+   "condition": {
+    "seed": 7200000031,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.22689684952997,
+    "push_dv": [
+     -0.08,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     -2.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "pitch-2",
+   "kind": "false-gyro",
+   "condition": {
+    "seed": 7200000040,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": null,
+    "push_dv": [
+     0.0,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     -2.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": 1.9000000000000001,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.75,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "pitch-2",
+   "kind": "false-gyro",
+   "condition": {
+    "seed": 7200000041,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": null,
+    "push_dv": [
+     0.0,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     -2.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": 2.7,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": -0.75,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "pitch+2",
+   "kind": "quiet",
+   "condition": {
+    "seed": 7200000000,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": null,
+    "push_dv": [
+     0.0,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     2.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "pitch+2",
+   "kind": "quiet",
+   "condition": {
+    "seed": 7200000001,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": null,
+    "push_dv": [
+     0.0,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     2.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "pitch+2",
+   "kind": "fwd-.20",
+   "condition": {
+    "seed": 7200000010,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.6896045063209364,
+    "push_dv": [
+     0.2,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     2.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "pitch+2",
+   "kind": "fwd-.20",
+   "condition": {
+    "seed": 7200000011,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.966835592823738,
+    "push_dv": [
+     0.2,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     2.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "pitch+2",
+   "kind": "fwd-.32",
+   "condition": {
+    "seed": 7200000020,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 1.8188553557541887,
+    "push_dv": [
+     0.32,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     2.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "pitch+2",
+   "kind": "fwd-.32",
+   "condition": {
+    "seed": 7200000021,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.902628784718803,
+    "push_dv": [
+     0.32,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     2.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "pitch+2",
+   "kind": "back-.08",
+   "condition": {
+    "seed": 7200000030,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.481966762855068,
+    "push_dv": [
+     -0.08,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     2.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "pitch+2",
+   "kind": "back-.08",
+   "condition": {
+    "seed": 7200000031,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.22689684952997,
+    "push_dv": [
+     -0.08,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     2.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "pitch+2",
+   "kind": "false-gyro",
+   "condition": {
+    "seed": 7200000040,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": null,
+    "push_dv": [
+     0.0,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     2.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": 1.9000000000000001,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.75,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "pitch+2",
+   "kind": "false-gyro",
+   "condition": {
+    "seed": 7200000041,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": null,
+    "push_dv": [
+     0.0,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     2.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": 2.7,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": -0.75,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "pitch+4",
+   "kind": "quiet",
+   "condition": {
+    "seed": 7200000000,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": null,
+    "push_dv": [
+     0.0,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     4.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "pitch+4",
+   "kind": "quiet",
+   "condition": {
+    "seed": 7200000001,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": null,
+    "push_dv": [
+     0.0,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     4.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "pitch+4",
+   "kind": "fwd-.20",
+   "condition": {
+    "seed": 7200000010,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.6896045063209364,
+    "push_dv": [
+     0.2,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     4.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "pitch+4",
+   "kind": "fwd-.20",
+   "condition": {
+    "seed": 7200000011,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.966835592823738,
+    "push_dv": [
+     0.2,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     4.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "pitch+4",
+   "kind": "fwd-.32",
+   "condition": {
+    "seed": 7200000020,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 1.8188553557541887,
+    "push_dv": [
+     0.32,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     4.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "pitch+4",
+   "kind": "fwd-.32",
+   "condition": {
+    "seed": 7200000021,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.902628784718803,
+    "push_dv": [
+     0.32,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     4.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "pitch+4",
+   "kind": "back-.08",
+   "condition": {
+    "seed": 7200000030,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.481966762855068,
+    "push_dv": [
+     -0.08,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     4.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "pitch+4",
+   "kind": "back-.08",
+   "condition": {
+    "seed": 7200000031,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.22689684952997,
+    "push_dv": [
+     -0.08,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     4.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "pitch+4",
+   "kind": "false-gyro",
+   "condition": {
+    "seed": 7200000040,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": null,
+    "push_dv": [
+     0.0,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     4.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": 1.9000000000000001,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.75,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "pitch+4",
+   "kind": "false-gyro",
+   "condition": {
+    "seed": 7200000041,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": null,
+    "push_dv": [
+     0.0,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     4.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": 2.7,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": -0.75,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "roll+2",
+   "kind": "quiet",
+   "condition": {
+    "seed": 7200000000,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": null,
+    "push_dv": [
+     0.0,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     2.0,
+     0.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "roll+2",
+   "kind": "quiet",
+   "condition": {
+    "seed": 7200000001,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": null,
+    "push_dv": [
+     0.0,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     2.0,
+     0.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "roll+2",
+   "kind": "fwd-.20",
+   "condition": {
+    "seed": 7200000010,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.6896045063209364,
+    "push_dv": [
+     0.2,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     2.0,
+     0.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "roll+2",
+   "kind": "fwd-.20",
+   "condition": {
+    "seed": 7200000011,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.966835592823738,
+    "push_dv": [
+     0.2,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     2.0,
+     0.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "roll+2",
+   "kind": "fwd-.32",
+   "condition": {
+    "seed": 7200000020,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 1.8188553557541887,
+    "push_dv": [
+     0.32,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     2.0,
+     0.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "roll+2",
+   "kind": "fwd-.32",
+   "condition": {
+    "seed": 7200000021,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.902628784718803,
+    "push_dv": [
+     0.32,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     2.0,
+     0.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "roll+2",
+   "kind": "back-.08",
+   "condition": {
+    "seed": 7200000030,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.481966762855068,
+    "push_dv": [
+     -0.08,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     2.0,
+     0.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "roll+2",
+   "kind": "back-.08",
+   "condition": {
+    "seed": 7200000031,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.22689684952997,
+    "push_dv": [
+     -0.08,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     2.0,
+     0.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "roll+2",
+   "kind": "false-gyro",
+   "condition": {
+    "seed": 7200000040,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": null,
+    "push_dv": [
+     0.0,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     2.0,
+     0.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": 1.9000000000000001,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.75,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "roll+2",
+   "kind": "false-gyro",
+   "condition": {
+    "seed": 7200000041,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": null,
+    "push_dv": [
+     0.0,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     2.0,
+     0.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": 2.7,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": -0.75,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "slope-2",
+   "kind": "quiet",
+   "condition": {
+    "seed": 7200000000,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": null,
+    "push_dv": [
+     0.0,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     -2.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "slope-2",
+   "kind": "quiet",
+   "condition": {
+    "seed": 7200000001,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": null,
+    "push_dv": [
+     0.0,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     -2.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "slope-2",
+   "kind": "fwd-.20",
+   "condition": {
+    "seed": 7200000010,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.6896045063209364,
+    "push_dv": [
+     0.2,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     -2.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "slope-2",
+   "kind": "fwd-.20",
+   "condition": {
+    "seed": 7200000011,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.966835592823738,
+    "push_dv": [
+     0.2,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     -2.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "slope-2",
+   "kind": "fwd-.32",
+   "condition": {
+    "seed": 7200000020,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 1.8188553557541887,
+    "push_dv": [
+     0.32,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     -2.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "slope-2",
+   "kind": "fwd-.32",
+   "condition": {
+    "seed": 7200000021,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.902628784718803,
+    "push_dv": [
+     0.32,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     -2.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "slope-2",
+   "kind": "back-.08",
+   "condition": {
+    "seed": 7200000030,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.481966762855068,
+    "push_dv": [
+     -0.08,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     -2.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "slope-2",
+   "kind": "back-.08",
+   "condition": {
+    "seed": 7200000031,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.22689684952997,
+    "push_dv": [
+     -0.08,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     -2.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "slope-2",
+   "kind": "false-gyro",
+   "condition": {
+    "seed": 7200000040,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": null,
+    "push_dv": [
+     0.0,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": 1.9000000000000001,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.75,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     -2.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "slope-2",
+   "kind": "false-gyro",
+   "condition": {
+    "seed": 7200000041,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": null,
+    "push_dv": [
+     0.0,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": 2.7,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": -0.75,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     -2.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "slope+2",
+   "kind": "quiet",
+   "condition": {
+    "seed": 7200000000,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": null,
+    "push_dv": [
+     0.0,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     2.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "slope+2",
+   "kind": "quiet",
+   "condition": {
+    "seed": 7200000001,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": null,
+    "push_dv": [
+     0.0,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     2.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "slope+2",
+   "kind": "fwd-.20",
+   "condition": {
+    "seed": 7200000010,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.6896045063209364,
+    "push_dv": [
+     0.2,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     2.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "slope+2",
+   "kind": "fwd-.20",
+   "condition": {
+    "seed": 7200000011,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.966835592823738,
+    "push_dv": [
+     0.2,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     2.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "slope+2",
+   "kind": "fwd-.32",
+   "condition": {
+    "seed": 7200000020,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 1.8188553557541887,
+    "push_dv": [
+     0.32,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     2.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "slope+2",
+   "kind": "fwd-.32",
+   "condition": {
+    "seed": 7200000021,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.902628784718803,
+    "push_dv": [
+     0.32,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     2.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "slope+2",
+   "kind": "back-.08",
+   "condition": {
+    "seed": 7200000030,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.481966762855068,
+    "push_dv": [
+     -0.08,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     2.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "slope+2",
+   "kind": "back-.08",
+   "condition": {
+    "seed": 7200000031,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.22689684952997,
+    "push_dv": [
+     -0.08,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     2.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "slope+2",
+   "kind": "false-gyro",
+   "condition": {
+    "seed": 7200000040,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": null,
+    "push_dv": [
+     0.0,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": 1.9000000000000001,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.75,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     2.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "slope+2",
+   "kind": "false-gyro",
+   "condition": {
+    "seed": 7200000041,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": null,
+    "push_dv": [
+     0.0,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": 2.7,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": -0.75,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     2.0
+    ],
+    "encoder_offset_rad": 0.0,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "enc+pitch+2",
+   "kind": "quiet",
+   "condition": {
+    "seed": 7200000000,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": null,
+    "push_dv": [
+     0.0,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     2.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.015,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "enc+pitch+2",
+   "kind": "quiet",
+   "condition": {
+    "seed": 7200000001,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": null,
+    "push_dv": [
+     0.0,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     2.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.015,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "enc+pitch+2",
+   "kind": "fwd-.20",
+   "condition": {
+    "seed": 7200000010,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.6896045063209364,
+    "push_dv": [
+     0.2,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     2.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.015,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "enc+pitch+2",
+   "kind": "fwd-.20",
+   "condition": {
+    "seed": 7200000011,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.966835592823738,
+    "push_dv": [
+     0.2,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     2.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.015,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "enc+pitch+2",
+   "kind": "fwd-.32",
+   "condition": {
+    "seed": 7200000020,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 1.8188553557541887,
+    "push_dv": [
+     0.32,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     2.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.015,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "enc+pitch+2",
+   "kind": "fwd-.32",
+   "condition": {
+    "seed": 7200000021,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.902628784718803,
+    "push_dv": [
+     0.32,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     2.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.015,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "enc+pitch+2",
+   "kind": "back-.08",
+   "condition": {
+    "seed": 7200000030,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.481966762855068,
+    "push_dv": [
+     -0.08,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     2.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.015,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "enc+pitch+2",
+   "kind": "back-.08",
+   "condition": {
+    "seed": 7200000031,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": 2.22689684952997,
+    "push_dv": [
+     -0.08,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     2.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": null,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.0,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.015,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "enc+pitch+2",
+   "kind": "false-gyro",
+   "condition": {
+    "seed": 7200000040,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": null,
+    "push_dv": [
+     0.0,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     2.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": 1.9000000000000001,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": 0.75,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.015,
+    "encoder_noise_rad": 0.001
+   }
+  },
+  {
+   "setting": "enc+pitch+2",
+   "kind": "false-gyro",
+   "condition": {
+    "seed": 7200000041,
+    "duration_s": 6.0,
+    "joint_noise_rad": 0.01,
+    "push_time_s": null,
+    "push_dv": [
+     0.0,
+     0.0
+    ],
+    "extra_pushes": [],
+    "pulse_body": "robot/trunk_base",
+    "pulse_force": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "pulse_time_s": null,
+    "pulse_duration_s": 0.0,
+    "vin": 7.35,
+    "vin_drop_gain": 0.1,
+    "lag_min": 4,
+    "lag_max": 4,
+    "gyro_noise": 0.03,
+    "gravity_noise": 0.01,
+    "gyro_lag": 0,
+    "imu_rpy_deg": [
+     0.0,
+     2.0,
+     0.0
+    ],
+    "foot_friction": 1.0,
+    "head_mass_scale": 1.0,
+    "observation_delay": 0,
+    "false_gyro_time_s": 2.7,
+    "false_gyro_duration_s": 0.04,
+    "false_gyro_rad_s": -0.75,
+    "drift_deg": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "drift_start_s": 0.5,
+    "drift_duration_s": 4.0,
+    "slope_deg": [
+     0.0,
+     0.0
+    ],
+    "encoder_offset_rad": 0.015,
+    "encoder_noise_rad": 0.001
+   }
+  }
+ ],
+ "sources": {
+  "diag02e.py": "bf0052645e9bf17371c277726516d4cd9ca8dc06916cf94016062ab59939663a",
+  "sim02e.py": "04fe0e8f24d61e8a11347e15347cdc181976f995947b7e3c359c43638fb3f531",
+  "estimate02e.py": "1ae5bc5ed8ef3bb56f1ad6617a9ed38caaa21a97b6811634a9f21ad274cffe20",
+  "sim02d.py": "38c72526939f390721b84ba90c00030575255082f39c7b81f12827f45accd77d",
+  "sim02c.py": "0d44dc8d8b45026c2b6a5b369328fdca4e0912e38dc4c86b047e5004d9d8909a",
+  "sim02b.py": "fdb9a2fed4802ecc2a81eeecc72bbe4995ab92920bc97b34fbe1ec5fdba34f19",
+  "control02d.py": "e4f05f3ad8df9e1e7bb30e210b932dc4565967aff730f2f8d32588b29a405751",
+  "eval02c.py": "c0363a47752ea245cdc2c5d96f06755cc399b105dc940d7a6d1b80cc947a5491",
+  "eval02d.py": "a52306fad550f17afa6bcfdae17f05d446b05c520436488fe0e0b26ab69e29ef",
+  "physics02b.py": "7702e7336dbf8a9c2b631b987b872cc85e52f2f321b1941e26dd6c11310ead43"
+ }
+}

@@ -216,3 +216,44 @@
   `study02e pilot-learning --workers 2 --concurrent-runs 1` →
   `study02e evaluate-pilot --workers 4` → `study02e gate-learning`. Phase 2
   runs only for an arm or front-end that passes its gate.
+
+## Phase 1 completion (2026-11-13)
+
+- **1C resumed.** The run was `pool02e --workers 4 diag02e pilot`, 1,096 s. It
+  retained the 12 saved configurations and ran the other 16.
+  - Memory: peak worker 375 MB, peak total 1,512 MB, WSL `MemAvailable` at or
+    above 6,058 MB, no breach.
+- **1C gate (declared): no front-end passes.**
+  - `static` gained a net +75 paired recoveries on misaligned cells (85 gains,
+    10 losses), above the required 30. It also lost 4 nominal quiet trials:
+    both quiet seeds of history s1 and of history s3. With a correct IMU its
+    nominal estimates were 0.13–0.30° roll and −0.10 to −0.16° pitch.
+  - `prior` netted −3.
+  - The `gate` control, which corrects nothing, netted +9 and lost 1 nominal
+    quiet trial (history s3). Part of the nominal cost is the calibration
+    window itself.
+  - Neither front-end proceeds to Phase 2.
+- **1D resumed.** The run was `study02e pilot-learning --workers 2
+  --concurrent-runs 1`. It took each pilot from generation 3 to 8 at about 28 s
+  per generation.
+  - Memory: peak worker 138 MB, peak total 358 MB.
+- **1D evaluation.** `study02e evaluate-pilot --workers 4` on D, front-end
+  `none`, recovered of 90:
+
+  | Controller | Recovered |
+  |---|---|
+  | `history-s72` | 38 |
+  | `history-rand-s72` | 62 |
+  | `memoryless-rand-s72` | 61 |
+  | `memoryless-s72` | 38 |
+
+  - Memory: peak worker 376 MB.
+- **1D gate (declared): both randomized arms pass.**
+  - History arm: net +16 (18 gains, 2 losses).
+  - Memoryless arm: net +15 (18 gains, 3 losses).
+  - Both had zero nominal quiet or backward losses, and nominal recoveries
+    equal to the control (8 and 8).
+  - Slope cells, reported and not gated: 8 gains and 0 losses for each arm.
+- **Phase 2 applies to both learning arms only.** That is
+  `study02e train` (2 arms × 3 seeds × 2,304 episodes) and `study02e confirm`
+  (battery H: 7 controllers with `none` plus the 6 trained runs, × 360 trials).

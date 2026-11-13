@@ -1,0 +1,255 @@
+{
+ "static": {
+  "passed": false,
+  "misaligned_net": 75,
+  "misaligned_gains": 85,
+  "misaligned_losses": 10,
+  "nominal_quiet_losses": 4,
+  "nominal_backward_losses": 0,
+  "reflex_nominal_losses": 0,
+  "per_controller": {
+   "history-s1": {
+    "misaligned_gains": 9,
+    "misaligned_losses": 4,
+    "slope": [
+     0,
+     0
+    ],
+    "nominal": [
+     0,
+     3
+    ]
+   },
+   "history-s2": {
+    "misaligned_gains": 11,
+    "misaligned_losses": 0,
+    "slope": [
+     0,
+     0
+    ],
+    "nominal": [
+     1,
+     0
+    ]
+   },
+   "history-s3": {
+    "misaligned_gains": 12,
+    "misaligned_losses": 4,
+    "slope": [
+     0,
+     0
+    ],
+    "nominal": [
+     0,
+     4
+    ]
+   },
+   "memoryless-s1": {
+    "misaligned_gains": 15,
+    "misaligned_losses": 0,
+    "slope": [
+     0,
+     0
+    ],
+    "nominal": [
+     0,
+     0
+    ]
+   },
+   "memoryless-s2": {
+    "misaligned_gains": 18,
+    "misaligned_losses": 1,
+    "slope": [
+     0,
+     2
+    ],
+    "nominal": [
+     0,
+     0
+    ]
+   },
+   "memoryless-s3": {
+    "misaligned_gains": 20,
+    "misaligned_losses": 1,
+    "slope": [
+     0,
+     0
+    ],
+    "nominal": [
+     0,
+     0
+    ]
+   }
+  }
+ },
+ "prior": {
+  "passed": false,
+  "misaligned_net": -3,
+  "misaligned_gains": 19,
+  "misaligned_losses": 22,
+  "nominal_quiet_losses": 1,
+  "nominal_backward_losses": 0,
+  "reflex_nominal_losses": 0,
+  "per_controller": {
+   "history-s1": {
+    "misaligned_gains": 1,
+    "misaligned_losses": 5,
+    "slope": [
+     0,
+     0
+    ],
+    "nominal": [
+     0,
+     0
+    ]
+   },
+   "history-s2": {
+    "misaligned_gains": 9,
+    "misaligned_losses": 1,
+    "slope": [
+     0,
+     0
+    ],
+    "nominal": [
+     2,
+     0
+    ]
+   },
+   "history-s3": {
+    "misaligned_gains": 0,
+    "misaligned_losses": 3,
+    "slope": [
+     0,
+     0
+    ],
+    "nominal": [
+     0,
+     3
+    ]
+   },
+   "memoryless-s1": {
+    "misaligned_gains": 0,
+    "misaligned_losses": 6,
+    "slope": [
+     0,
+     0
+    ],
+    "nominal": [
+     0,
+     0
+    ]
+   },
+   "memoryless-s2": {
+    "misaligned_gains": 2,
+    "misaligned_losses": 4,
+    "slope": [
+     0,
+     2
+    ],
+    "nominal": [
+     0,
+     1
+    ]
+   },
+   "memoryless-s3": {
+    "misaligned_gains": 7,
+    "misaligned_losses": 3,
+    "slope": [
+     0,
+     0
+    ],
+    "nominal": [
+     0,
+     0
+    ]
+   }
+  }
+ },
+ "gate": {
+  "passed": false,
+  "misaligned_net": 9,
+  "misaligned_gains": 21,
+  "misaligned_losses": 12,
+  "nominal_quiet_losses": 1,
+  "nominal_backward_losses": 0,
+  "reflex_nominal_losses": 0,
+  "per_controller": {
+   "history-s1": {
+    "misaligned_gains": 0,
+    "misaligned_losses": 4,
+    "slope": [
+     0,
+     0
+    ],
+    "nominal": [
+     0,
+     0
+    ]
+   },
+   "history-s2": {
+    "misaligned_gains": 4,
+    "misaligned_losses": 0,
+    "slope": [
+     0,
+     0
+    ],
+    "nominal": [
+     2,
+     1
+    ]
+   },
+   "history-s3": {
+    "misaligned_gains": 0,
+    "misaligned_losses": 2,
+    "slope": [
+     0,
+     0
+    ],
+    "nominal": [
+     0,
+     3
+    ]
+   },
+   "memoryless-s1": {
+    "misaligned_gains": 0,
+    "misaligned_losses": 5,
+    "slope": [
+     0,
+     0
+    ],
+    "nominal": [
+     0,
+     0
+    ]
+   },
+   "memoryless-s2": {
+    "misaligned_gains": 5,
+    "misaligned_losses": 1,
+    "slope": [
+     0,
+     0
+    ],
+    "nominal": [
+     0,
+     1
+    ]
+   },
+   "memoryless-s3": {
+    "misaligned_gains": 12,
+    "misaligned_losses": 0,
+    "slope": [
+     5,
+     0
+    ],
+    "nominal": [
+     0,
+     0
+    ]
+   }
+  }
+ },
+ "decision": {
+  "static": false,
+  "prior": false
+ }
+}
