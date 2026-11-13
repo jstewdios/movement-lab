@@ -142,6 +142,32 @@ def figures(root, t):
     ax.legend(frameon=False, fontsize=8); ax.grid(alpha=.2, axis='y')
     fig.savefig(out / 'estimators.png', dpi=150); plt.close(fig)
 
+    if 'confirm' in t:
+        cf = t['confirm']['cells']
+        settings = list(cf['reflex__none']['by_setting'])
+        frac = lambda name, s: cf[name]['by_setting'][s][0] / cf[name]['by_setting'][s][1]
+        x = np.arange(len(settings))
+        ref = [frac('reflex__none', s) for s in settings]
+        fig, axes = plt.subplots(1, 2, figsize=(15, 5), sharey=True, constrained_layout=True)
+        for ax, arm, color in ((axes[0], 'history', '#1b7f5e'), (axes[1], 'memoryless', '#b4561c')):
+            def pooled(tag):
+                names = [f'{arm}{tag}-s{s}__none' for s in (1, 2, 3)]
+                return [sum(cf[n]['by_setting'][s][0] for n in names) / sum(cf[n]['by_setting'][s][1] for n in names) for s in settings]
+            a, b = pooled(''), pooled('-rand')
+            ax.vlines(x, np.minimum(a, b), np.maximum(a, b), color=color, alpha=.3, lw=2)
+            ax.plot(x, ref, '_', color='#666666', ms=18, mew=2, label='Frozen 02B reflex (24 trials/point)')
+            ax.plot(x, a, 'o', mfc='white', mec=color, mew=2, ms=8, label=f'02D {arm} (3 seeds, 72/point)')
+            ax.plot(x, b, 'o', color=color, ms=8, label=f'Randomized {arm} (3 seeds, 72/point)')
+            ax.set_xticks(x, settings, rotation=35, ha='right')
+            ax.set(title=f'{arm.capitalize()} arm on held-out battery H', ylim=(-.03, 1.03))
+            ax.grid(alpha=.2, axis='y')
+        axes[0].set_ylabel('Strict recovery fraction')
+        handles = [h for ax in axes for h in ax.get_legend_handles_labels()[0]]
+        labels = [l for ax in axes for l in ax.get_legend_handles_labels()[1]]
+        keep = [i for i, l in enumerate(labels) if not (l.startswith('Frozen') and i > 0)]
+        fig.legend([handles[i] for i in keep], [labels[i] for i in keep], loc='outside lower center', ncol=3, frameon=False, fontsize=9)
+        fig.savefig(out / 'confirmation.png', dpi=150); plt.close(fig)
+
 
 def record_trial(sim, theta, basis, kin, name, vec, design, mode, fe, cond, records, key):
     """Record (or reload and verify) one replay trial."""

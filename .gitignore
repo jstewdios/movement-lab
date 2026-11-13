@@ -105,3 +105,5 @@ results/*smoke*/
 /results/02e/**/*.mjb
 /results/02e/**/*.log
 /results/02e/**/*.tmp
+# 02E replay 200 Hz records regenerate exactly (report02e); JSON metadata and hashes publish.
+/results/02e/records/*.npz

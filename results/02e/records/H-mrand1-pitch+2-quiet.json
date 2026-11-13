@@ -1,0 +1,149 @@
+{
+ "controller": "memoryless-rand-s1",
+ "weights": [
+  0.0009803294856536443,
+  0.0896788836607908,
+  -0.05951383033866171,
+  0.03134590512488422,
+  0.05481810374640432,
+  0.02790998779336535,
+  0.17722299009396258,
+  0.033902915528090896,
+  0.0342417655852429,
+  0.017772609968867932,
+  -0.0017087017463426682,
+  -0.006154134631625646
+ ],
+ "design": {
+  "memory": false,
+  "tau_s": 0.08,
+  "bound": 0.8
+ },
+ "mode": "learned",
+ "frontend": null,
+ "condition": {
+  "seed": 8000000000,
+  "duration_s": 6.0,
+  "joint_noise_rad": 0.01,
+  "push_time_s": null,
+  "push_dv": [
+   0.0,
+   0.0
+  ],
+  "extra_pushes": [],
+  "pulse_body": "robot/trunk_base",
+  "pulse_force": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "pulse_time_s": null,
+  "pulse_duration_s": 0.0,
+  "vin": 7.35,
+  "vin_drop_gain": 0.1,
+  "lag_min": 4,
+  "lag_max": 4,
+  "gyro_noise": 0.03,
+  "gravity_noise": 0.01,
+  "gyro_lag": 0,
+  "imu_rpy_deg": [
+   0.0,
+   2.0,
+   0.0
+  ],
+  "foot_friction": 1.0,
+  "head_mass_scale": 1.0,
+  "observation_delay": 0,
+  "false_gyro_time_s": null,
+  "false_gyro_duration_s": 0.04,
+  "false_gyro_rad_s": 0.0,
+  "drift_deg": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "drift_start_s": 0.5,
+  "drift_duration_s": 4.0,
+  "slope_deg": [
+   0.0,
+   0.0
+  ],
+  "encoder_offset_rad": 0.0,
+  "encoder_noise_rad": 0.001
+ },
+ "z0": 0.11890530125836175,
+ "summary": {
+  "fitness": 1.9985513721875607,
+  "survived": true,
+  "recovered": true,
+  "settled": false,
+  "failure_time_s": null,
+  "failure_cause": null,
+  "max_pen_m": 0.0011084292064203385,
+  "max_tilt_deg": 3.9142874000145067,
+  "trigger_time_s": null,
+  "work_j": 0.04529638154586452,
+  "final_root_xy": [
+   -0.0026661227899525968,
+   0.00014688853573727891
+  ],
+  "final_root_z": 0.11243100849391494,
+  "residual_rms_rad": 0.014348599600494364,
+  "peak_torque_nm": 0.11389419923608121,
+  "final_tilt_deg": 3.542939443228723,
+  "simulated_s": 5.999999999999894,
+  "pre_qpos": null,
+  "foot_shift_m": null,
+  "physical_valid": true,
+  "upright_200hz": true,
+  "recovered_200hz": true,
+  "settled_200hz": true,
+  "support_events": [],
+  "recovery_with_step": false,
+  "quiet_supported_final_second": true,
+  "joint_limit_overshoot_rad": 0.0,
+  "self_contact_samples": 0,
+  "torque_within_envelope": true,
+  "targets_within_limits": true,
+  "actual_event_time_s": null,
+  "quiet_residual_rms_rad": 0.014289393897132734,
+  "quiet_root_path_m": 0.004447186589051738,
+  "peak_response_rad": 0.019497466827739285,
+  "response_active_s": 0.0,
+  "peak_clearance_m": [
+   -0.00029808566626007664,
+   -0.00030866176672636903
+  ],
+  "foot_unloaded_s": [
+   0.0,
+   0.0
+  ],
+  "post_root_delta_xy": [
+   -0.000516286339896985,
+   0.0003666563279745088
+  ],
+  "steady_true_pitch_deg": -3.2352511523250107,
+  "steady_true_roll_deg": -1.2532944659322003,
+  "steady_seen_pitch_deg": -1.209263321683855,
+  "steady_seen_roll_deg": -1.2480711559795756,
+  "steady_raw_pitch_deg": -1.209263321683855,
+  "steady_coefficients": [
+   0.04723109228028158,
+   -0.03613139589018133
+  ],
+  "steady_coefficient_abs_max": 0.0588146448108028,
+  "steady_residual_rms_rad": 0.014350710483690578,
+  "torque_saturation_frac": 0.0,
+  "target_saturation_frac": 0.0,
+  "min_support_margin_m": 0.01132251620562234,
+  "min_toe_margin_m": 0.030153119032746804,
+  "min_heel_margin_m": 0.01132251620562234,
+  "steady_toe_margin_m": 0.037349449873362424,
+  "steady_heel_margin_m": 0.011616719457898042,
+  "com_outside_support_s": 0.0,
+  "settle_time_s": null,
+  "final_true_pitch_deg": -3.2741636348015972,
+  "final_root_displacement_m": 0.002681966295357216,
+  "frontend_report": null
+ }
+}

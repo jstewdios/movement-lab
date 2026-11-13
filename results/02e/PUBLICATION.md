@@ -27,14 +27,27 @@ historical model through the unchanged 02B guard.
 - `learning/`: the training-reproduction check and the three 1,536-episode
   pilots. Every generation stores candidates, outcomes, conditions, search
   distribution and RNG state.
-- `runs/` and `confirm/`: present only if a pilot passed its declared gate.
-- `report/`, `records/`: tables, figures, selected 200 Hz records and the
-  portable replay.
+- `runs/`: Phase 2 training for the two arms that passed 1D, 3 seeds × 2,304
+  episodes each. No front-end passed 1C, so none was confirmed.
+- `confirm/`: held-out battery H, 13 configurations × 360 trials: the reflex
+  and six 02D controllers with front-end `none`, plus the six trained runs.
+- `report/`:
+  - `tables.json` and the figures;
+  - `replay.html`, the portable replay of 26 declared recordings;
+  - `replay-checks.json`, listing the battery rows each recording reproduced
+    exactly;
+  - `browser-check.json`, a headless Chrome check of every preset, camera and
+    control (`movement_lab/browsercheck02e.js` appended to a QA copy), and
+    `browser-preview.png`.
+- `records/`: metadata and summaries of the replayed trials.
 - `validation.json`, `manifest.json`, `tests.txt`.
 
-The fresh Linux `model.mjb` (`phase0/linux-compile`) embeds upstream meshes. It
-stays local and is hashed in `phase0/model-comparison.json`; its `model.json`
-and resolved configuration are published.
+These stay local and are hashed in `manifest.json` (`local_only`):
+- The fresh Linux `model.mjb` (`phase0/linux-compile`) embeds upstream meshes.
+  It is also hashed in `phase0/model-comparison.json`, and its `model.json`
+  and resolved configuration are published.
+- The replay's raw 200 Hz `records/*.npz` (about 20 MB). `report02e`
+  regenerates them exactly; each must reproduce its published battery row.
 
 ## Commands
 
@@ -70,10 +83,11 @@ $PY -m movement_lab.study02e gate-learning
 $PY -m movement_lab.study02e train --workers 4 --concurrent-runs 2
 $PY -m movement_lab.study02e confirm --workers 4
 # Report, audit, publication
-$PY -m movement_lab.report02e
+$PY -m movement_lab.report02e                # re-simulates the 26 replay records unless present
+#   browser check: append movement_lab/browsercheck02e.js to a copy of report/replay.html, open headless
+$PY -m unittest tests.test_upright02e -v > results/02e/tests.txt 2>&1
 $PY -m movement_lab.validate02e --audit --resimulate 12
 $PY -m movement_lab.validate02e --publish
-$PY -m unittest tests.test_upright02e -v
 python -m movement_lab.validate02e --verify   # portable: hashes only, no model needed
 ```
 

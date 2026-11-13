@@ -1,0 +1,30 @@
+{
+ "reproduced_rows": [
+  "diagnostic/characterize/history-s1/nominal/quiet/7000000000",
+  "diagnostic/characterize/history-s1/pitch+1/quiet/7000000000",
+  "diagnostic/characterize/history-s1/pitch+2/quiet/7000000000",
+  "diagnostic/characterize/reflex/pitch+2/quiet/7000000000",
+  "diagnostic/characterize/memoryless-s1/pitch+2/quiet/7000000000",
+  "pilot/frontend/history-s1__none/pitch+2/quiet/7200000000",
+  "pilot/frontend/history-s1__gate/pitch+2/quiet/7200000000",
+  "pilot/frontend/history-s1__static/pitch+2/quiet/7200000000",
+  "pilot/frontend/history-s1__none/slope-2/quiet/7200000000",
+  "pilot/frontend/history-s1__static/slope-2/quiet/7200000000",
+  "pilot/frontend/history-s1__static/slope+2/quiet/7200000000",
+  "pilot/frontend/history-s3__none/nominal/quiet/7200000000",
+  "pilot/frontend/history-s3__gate/nominal/quiet/7200000000",
+  "pilot/frontend/history-s3__static/nominal/quiet/7200000000",
+  "pilot/frontend/reflex__none/pitch+2/fwd-.20/7200000010",
+  "pilot/frontend/history-s1__none/pitch+2/fwd-.20/7200000010",
+  "pilot/frontend/history-s1__static/pitch+2/fwd-.20/7200000010",
+  "pilot/learning/history-s72/pitch+2/quiet/7200000000",
+  "pilot/learning/history-rand-s72/pitch+2/quiet/7200000000",
+  "pilot/learning/memoryless-rand-s72/pitch+2/quiet/7200000000",
+  "confirm/history-s1__none/pitch+2/quiet/8000000000",
+  "confirm/history-rand-s1__none/pitch+2/quiet/8000000000",
+  "confirm/memoryless-rand-s1__none/pitch+2/quiet/8000000000",
+  "confirm/history-s1__none/nominal/fwd-.32/8000000040",
+  "confirm/history-rand-s1__none/nominal/fwd-.32/8000000040",
+  "confirm/memoryless-rand-s1__none/nominal/fwd-.32/8000000040"
+ ]
+}

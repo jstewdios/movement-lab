@@ -257,3 +257,46 @@
 - **Phase 2 applies to both learning arms only.** That is
   `study02e train` (2 arms × 3 seeds × 2,304 episodes) and `study02e confirm`
   (battery H: 7 controllers with `none` plus the 6 trained runs, × 360 trials).
+
+## Phase 2 and publication (2026-11-13)
+
+- **The first Phase 2 launch ran nothing.**
+  - It was an inline `wsl.exe … bash -c '…'` command. `wsl.exe` expands `$VAR`
+    and `$?` before bash runs, so `$PY` became empty. Both steps failed at once
+    with "command not found" and wrote no files.
+  - For the same reason, the `exit=` lines that inline wrappers appended to
+    `pilot/frontend.log`, `learning/pilot-learning.log` and
+    `pilot/learning.log` show the wrapper's status, not the run's. That
+    includes the earlier `stopped by signal 15` followed by `exit=0`.
+  - Completion is established by each run's final memory-summary line, which
+    is printed only after a step completes, and by the validator. Phase 2 was
+    rerun from a script file.
+- **Training.** The run was `study02e train --workers 4 --concurrent-runs 2`:
+  6 runs × 12 generations, 2,304 episodes each (13,824 in total), 358–369 s
+  per run.
+  - Memory: peak worker 138 MB, peak total 675 MB.
+- **History randomized s1 ended exactly on the frozen reflex.** The all-zero
+  candidate (population index 2) won its last generation, so its final
+  parameters are zero.
+  - Final = last training winner, as declared; it was not replaced.
+  - All 360 of its held-out rows equal the reflex's.
+- **Confirmation.** The run was `study02e confirm --workers 4`: 13
+  configurations × 360 trials, since no front-end passed 1C. It took 2,656 s.
+  - Memory: peak worker 412 MB, peak total 1,668 MB, WSL `MemAvailable` at or
+    above 5,897 MB.
+- **Report.** `replay_select02e`, which `report02e` imports, was written after
+  confirmation.
+  - Each of its 26 recordings is the first replicate of a battery cell, and
+    each reproduces its published row exactly (`report/replay-checks.json`).
+  - Presets 05 (static's nominal quiet regression) and 09 (the held-out
+    0.32 m/s trade-off) were chosen after their results were known. Their
+    captions say so.
+  - The raw 200 Hz `records/*.npz` (20 MB) stay local and hashed. The replay
+    page is 17.7 MB (02D's is 30 MB).
+  - Headless Chrome 157 check: 26 recordings, 9 presets, 108 snapshots.
+  - The figure `confirmation.png` was added to `report02e`.
+- **Validation.**
+  - 21 of 21 tests pass.
+  - `validate02e --audit --resimulate 12`: 6,444 checks and 12 exact held-out
+    resimulations.
+  - `--publish`/`--verify`: all published hashes verify.

@@ -174,10 +174,15 @@ def audit(root, resimulate=0):
                 evaluation_files=len(rows), estimator_rows=len(est))
 
 
+def local_only(p):
+    """Kept local and hashed: the Linux compile embeds upstream meshes; replay 200 Hz records regenerate exactly."""
+    return p.suffix == '.mjb' or (p.parent.name == 'records' and p.suffix == '.npz')
+
+
 def manifest(root):
     files = {}
     for p in sorted(root.rglob('*')):
-        if not p.is_file() or p.name == 'manifest.json' or p.suffix in ('.log', '.mjb', '.tmp') or '__pycache__' in p.parts:
+        if not p.is_file() or p.name == 'manifest.json' or p.suffix in ('.log', '.tmp') or local_only(p) or '__pycache__' in p.parts:
             continue
         files[p.as_posix()] = digest(p)
     for p in sorted(Path('movement_lab').glob('*02e*')):
@@ -187,7 +192,7 @@ def manifest(root):
         files[f'movement_lab/{name}'] = digest(Path('movement_lab') / name)
     for p in HISTORICAL_INPUTS:
         files[p] = digest(p)
-    local = {p.as_posix(): digest(p) for p in sorted(root.rglob('*.mjb'))}
+    local = {p.as_posix(): digest(p) for p in sorted(root.rglob('*')) if p.is_file() and local_only(p)}
     return dict(files=files, local_only=local, model=dict(path='results/02b/model/model.mjb', sha256=json.loads(
         Path('results/02b/model/model.json').read_text())['mjb_sha256']))
 

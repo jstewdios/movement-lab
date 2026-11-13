@@ -218,6 +218,17 @@ class EvidenceTests(unittest.TestCase):
         self.assertEqual(cmp_['model_a']['fields_digest_excluding_hull'], cmp_['model_b']['fields_digest_excluding_hull'])
         self.assertEqual(json.loads(Path('results/02e/learning/reproduce.json').read_text())['passed'], True)
 
+    def test_replay_selection_is_declared_and_only_raw_records_stay_local(self):
+        from movement_lab.replay_select02e import TRIALS, PRESETS
+        from movement_lab.validate02e import local_only
+        keys = [t[0] for t in TRIALS]
+        self.assertEqual(len(keys), len(set(keys)))
+        self.assertTrue(all(len(p[1]) == 3 and set(p[1]) <= set(keys) for p in PRESETS))
+        self.assertTrue(local_only(Path('results/02e/records/x.npz')))
+        self.assertTrue(local_only(Path('results/02e/phase0/linux-compile/model.mjb')))
+        self.assertFalse(local_only(Path('results/02e/records/x.json')))
+        self.assertFalse(local_only(Path('results/02e/runs/history-rand-s1/generation-001.npz')))
+
 
 # ----------------------------------------------------------------------------- bounded worker pools
 def _pool_probe(i):
