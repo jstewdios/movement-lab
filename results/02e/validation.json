@@ -1,0 +1,36 @@
+{
+ "passed": true,
+ "checks": 8180,
+ "training_episode_counts": {
+  "history-rand-s72": 1536,
+  "memoryless-rand-s72": 1536,
+  "memoryless-s72": 1536,
+  "history-rand-s1": 2304,
+  "history-rand-s2": 2304,
+  "history-rand-s3": 2304,
+  "memoryless-rand-s1": 2304,
+  "memoryless-rand-s2": 2304,
+  "memoryless-rand-s3": 2304
+ },
+ "resimulated": [
+  "confirm/history-rand-s1__none/roll-2/fwd-.32/8000000040",
+  "confirm/history-rand-s2__none/roll-2/fwd-.32/8000000040",
+  "confirm/history-rand-s3__none/roll-2/fwd-.32/8000000040",
+  "confirm/history-s1__none/roll-2/fwd-.32/8000000040",
+  "confirm/history-s2__none/roll-2/fwd-.32/8000000040",
+  "confirm/history-s3__none/roll-2/fwd-.32/8000000040",
+  "confirm/memoryless-rand-s1__none/roll-2/fwd-.32/8000000040",
+  "confirm/memoryless-rand-s2__none/roll-2/fwd-.32/8000000040",
+  "confirm/memoryless-rand-s3__none/roll-2/fwd-.32/8000000040",
+  "confirm/memoryless-s1__none/roll-2/fwd-.32/8000000040",
+  "confirm/memoryless-s2__none/roll-2/fwd-.32/8000000040",
+  "confirm/memoryless-s3__none/roll-2/fwd-.32/8000000040",
+  "diagnostic/characterize/memoryless-s1/slope-2/quiet/7000000000",
+  "pilot/frontend/memoryless-s1__prior/slope+2/quiet/7200000000",
+  "pilot/learning/memoryless-rand-s72/slope+2/quiet/7200000000",
+  "confirm/memoryless-rand-s1__none/slope-2/quiet/8000000000"
+ ],
+ "evaluation_files": 55,
+ "estimator_rows": 224,
+ "margin_corrected_files": 54
+}

@@ -10,3 +10,6 @@
 /results/02d/** text=auto eol=lf
 /movement_lab/*02d* text eol=lf
 /tests/test_adapt02d.py text eol=lf
+/results/02e/** text=auto eol=lf
+/movement_lab/*02e* text eol=lf
+/tests/test_upright02e.py text eol=lf

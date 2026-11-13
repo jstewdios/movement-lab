@@ -1,0 +1,44 @@
+{
+ "history-rand-s72": {
+  "passed": true,
+  "control": "history-s72",
+  "misaligned_gains": 18,
+  "misaligned_losses": 2,
+  "misaligned_net": 16,
+  "nominal_quiet_losses": 0,
+  "nominal_backward_losses": 0,
+  "nominal_recovered": [
+   8,
+   8
+  ],
+  "slope": [
+   8,
+   0
+  ],
+  "misaligned_recovered": [
+   22,
+   38
+  ]
+ },
+ "memoryless-rand-s72": {
+  "passed": true,
+  "control": "memoryless-s72",
+  "misaligned_gains": 18,
+  "misaligned_losses": 3,
+  "misaligned_net": 15,
+  "nominal_quiet_losses": 0,
+  "nominal_backward_losses": 0,
+  "nominal_recovered": [
+   8,
+   8
+  ],
+  "slope": [
+   8,
+   0
+  ],
+  "misaligned_recovered": [
+   22,
+   37
+  ]
+ }
+}

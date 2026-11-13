@@ -1,0 +1,16 @@
+{
+    "passed":  true,
+    "engine":  "Chrome 157.0.8103.51 (headless, Windows)",
+    "trials":  26,
+    "presets":  9,
+    "snapshots":  108,
+    "controls":  [
+                     "preset and manual selection",
+                     "timeline",
+                     "three cameras",
+                     "play/pause/restart",
+                     "measurements",
+                     "outcome labels"
+                 ],
+    "script":  "QA copy only: browsercheck appended after the replay script; replay data unchanged"
+}

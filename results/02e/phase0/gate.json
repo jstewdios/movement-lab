@@ -1,0 +1,29 @@
+{
+ "passed": true,
+ "checks": {
+  "model_hash_matches_published": true,
+  "upstream_revision_matches": true,
+  "bam_parameters_match_02c_02d": true,
+  "packages_match_historical_model": true,
+  "published_artifacts_verified": true,
+  "historical_02c_outcomes_reproduced": true,
+  "all_02d_heldout_rows_resimulated_exactly": true
+ },
+ "model_investigation": {
+  "fresh_compile_sha256": "cba1a6dab0683d8ecaa26872b573c48a82bf9c27b7c260c25e80d74abcf0b9bd",
+  "fresh_compile_differs_only_in_hull_fields": true,
+  "alternate_model": {
+   "bitwise_identical": 1009,
+   "diverged": 35,
+   "outcomes_equal": 1044,
+   "rows_equal": 1009,
+   "recovered_historical": 821,
+   "recovered_alternate": 821,
+   "divergence_after_failure_or_nonfoot_or_self_contact": 35,
+   "divergence_before_any_such_event": [],
+   "earliest_divergence_s": 1.6699999999999864,
+   "outcome_differences": []
+  }
+ },
+ "decision": "02E simulations use the hash-matching historical model through the unchanged guard. The fresh Linux compile is NOT substituted for it."
+}

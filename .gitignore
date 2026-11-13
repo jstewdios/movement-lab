@@ -99,3 +99,11 @@ results/*smoke*/
 /results/02d/**/generation-*.tmp.npz
 /results/02d/**/final.tmp.npz
 /results/02d/site-preview/
+
+# 02E: the fresh Linux compile embeds upstream meshes (local evidence, hashed in
+# phase0/model-comparison.json); console logs duplicate structured JSON.
+/results/02e/**/*.mjb
+/results/02e/**/*.log
+/results/02e/**/*.tmp
+# 02E replay 200 Hz records regenerate exactly (report02e); JSON metadata and hashes publish.
+/results/02e/records/*.npz

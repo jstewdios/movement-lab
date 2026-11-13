@@ -575,3 +575,40 @@ See the execution notes before treating regeneration on another machine as
 verified. Hash verification of published checkpoints and records does not need
 that local model; physical auditing and resimulation do. This remains a
 simulation study.
+
+## Movement Lab 02E — The Unreliable Sense of Upright
+
+02E asks what happens when Microduck's sense of upright is slightly wrong: a
+constant IMU mounting misalignment, a slow drift, or a correct IMU on a tilted
+floor. It also asks whether the robot can resolve the error itself, by
+calibrating against leg kinematics before balancing or by learning with
+randomized misalignment.
+
+Read the [scientific report](results/02e/REPORT.md),
+[declared protocol](results/02e/PROTOCOL.md),
+[execution notes, including every interruption](results/02e/ATTEMPTS.md),
+[reproduction instructions](results/02e/PUBLICATION.md), and
+[synchronized recorded-state replay](results/02e/report/replay.html).
+
+- **What a small error does.** A +2° misalignment makes every learned 02D
+  controller fall while standing still. The frozen reflex is unaffected.
+- **Calibration.** Static calibration recovered many misaligned trials but
+  failed its declared gate on nominal quiet losses.
+- **Randomized training.** It passed its pilot gate and, on the held-out
+  battery, raised recoveries from 534 to 855 (history) and from 629 to 792
+  (memoryless) per 1,080 trials. It did so by keeping the learned response near
+  the frozen reflex, and lost most of 02D's strong-push gain.
+- **No recovery step emerged.**
+
+```bash
+PY=/home/james/microduck_rl/.venv/bin/python
+export PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
+# Full staged command list: results/02e/PUBLICATION.md. Batteries run in bounded,
+# memory-guarded pools (at most 4 workers on an 8 GB WSL).
+$PY -m movement_lab.validate02e --audit --resimulate 12
+$PY -m unittest tests.test_upright02e -v
+python -m movement_lab.validate02e --verify   # portable hash check
+```
+
+The compiled historical model and the replay's raw 200 Hz records stay local and
+are hashed in `results/02e/manifest.json`. This remains a simulation study.
