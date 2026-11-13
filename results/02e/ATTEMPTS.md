@@ -171,3 +171,48 @@
   - The validator's battery audit passes (957 checks).
   - Stdout is in `diagnostic/characterize-resume.log` and memory samples are in
     `diag02e-characterize-memory.log`.
+
+## Interruptions and recovery (2026-11-13)
+
+- **The multi-hour stall was the first 1A run, already diagnosed above.**
+  - Six unbounded `diag02e characterize` workers ran alongside three
+    2-worker pilots.
+  - From about 18:27 on 2026-11-10, WSL thrashed with swap full, load
+    about 22 and workers at 1.2–1.3 GB RSS plus about 0.3 GB of swap each.
+  - It was terminated at 22:51. The cause was the NumPy `np.unique` leak, and
+    the remedy is `pool02e`.
+- **The 1C front-end pilot was stopped on request, not stalled.**
+  - The run was `pool02e --workers 4 diag02e pilot`, started 02:53 on
+    2026-11-11. It received SIGTERM at 03:05:19 after 12 of 28 configurations:
+    `none` for all seven controllers, plus `gate` for reflex, history s1–s3 and
+    memoryless s1.
+  - The handler terminated the workers and left no `.tmp` or partial file.
+  - Memory peaked at 372 MB per worker and 1,512 MB in total, with no guard
+    breach.
+- **Recovery check (read-only, no simulation).**
+  - WSL had restarted, and no study process was running.
+  - Every battery identity still matches the current sources and model. Every
+    saved configuration has full rows in the declared order. The
+    interrupted-v1 reflex rows still equal the rerun byte for byte.
+  - Each 1D pilot's three generations reconstruct exactly from its seed:
+    candidates, curriculum, scores, CEM mean/std/best and RNG state.
+  - `learning/reproduce-history-s72-g1/config.json` pins the pre-vectorization
+    `sim02e.py` (`c3fbb7…`). That is Phase 0's committed source and the
+    interrupted-v1 snapshot. Learning rollouts never compute support margins,
+    so the vectorization cannot affect that check.
+  - All 20 tests in `tests.test_upright02e` pass.
+- **State at recovery.**
+  - 1A and 1B are complete.
+  - 1C has 12 of 28 configurations.
+  - 1D has 3 of 8 generations per pilot (576 of 1,536 episodes), and no final
+    controllers.
+  - No gate has been computed, and Phase 2 has not started.
+  - `report02e`'s replay step imports `replay_select02e`, which was never
+    written.
+  - `PUBLICATION.md` describes the intended final layout, not this state.
+- **Resume with the unchanged declared commands.** Completed files and
+  generations are retained, and identities are re-checked:
+  `pool02e --workers 4 diag02e pilot` → `diag02e gate` →
+  `study02e pilot-learning --workers 2 --concurrent-runs 1` →
+  `study02e evaluate-pilot --workers 4` → `study02e gate-learning`. Phase 2
+  runs only for an arm or front-end that passes its gate.
