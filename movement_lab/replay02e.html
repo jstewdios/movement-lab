@@ -1,0 +1,82 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Unreliable Upright Replay</title>
+<style>
+:root{color-scheme:dark;--bg:#0f181d;--panel:#18252c;--line:#2b3d45;--ink:#ecf1ec;--muted:#a1b4b7;--a:#9bd6b4;--b:#efb57a;--c:#9fb8f2;--warn:#f3a593}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
+main{max-width:1320px;margin:auto;padding:32px 24px 64px}.eyebrow{font:12px/1.5 ui-monospace,monospace;letter-spacing:.16em;color:var(--a)}
+h1{font-size:clamp(30px,4.4vw,52px);line-height:1.1;letter-spacing:-.04em;margin:16px 0 10px}p{max-width:900px;color:var(--muted);margin:12px 0}
+.finding{border-left:3px solid var(--b);padding:6px 18px;margin:22px 0 26px;color:var(--ink);max-width:960px}
+.stats{display:flex;gap:28px;flex-wrap:wrap;margin:22px 0}.stat{font:26px ui-monospace,monospace;color:var(--a)}.stat span{display:block;font:12px/1.4 system-ui;color:var(--muted);max-width:210px;margin-top:4px}
+label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
+select,button{font:inherit;color:var(--ink);border:1px solid #42535a;background:var(--panel);border-radius:7px;padding:9px 12px;cursor:pointer}select{width:100%;max-width:100%}
+button:hover,select:hover{border-color:var(--a)}button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid var(--b);outline-offset:3px}
+.toolbar{display:grid;grid-template-columns:2fr 1fr;gap:18px;margin:18px 0}
+.panels{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;min-width:0}
+.panelhead{padding:14px 16px 8px}.role{font:12px/1.4 ui-monospace,monospace;letter-spacing:.08em;text-transform:uppercase}.badge{display:inline-block;font:12px/1.6 ui-monospace,monospace;margin-top:8px}
+canvas.scene{width:100%;height:auto;display:block;background:linear-gradient(#1a2a33,#141f25)}
+.metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:6px 10px;padding:12px 16px 16px;font:13px/1.45 ui-monospace,monospace}.metrics span{display:block;font:11px/1.4 system-ui;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.controls{display:flex;align-items:center;gap:12px;margin:20px 0 4px;flex-wrap:wrap}.controls input{flex:1;min-width:180px;accent-color:var(--a)}#time{min-width:130px;font:13px ui-monospace,monospace}
+.caption{font-size:14px;color:var(--ink);max-width:1100px}.legend{display:flex;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin:10px 0}
+.tracebox{margin-top:18px;padding:14px 18px;background:var(--panel);border-radius:10px}.tracebox canvas{display:block;width:100%;height:auto}
+.notes{font-size:13px;border-top:1px solid var(--line);padding-top:18px;margin-top:26px}.notes a{color:var(--a)}
+.sr{position:absolute;left:-9999px}
+@media(max-width:980px){.panels{grid-template-columns:1fr}.toolbar{grid-template-columns:1fr}}
+@media(max-width:520px){main{padding:20px 16px 48px}h1{font-size:32px}}
+</style><main>
+<div class="eyebrow">MOVEMENT LAB / STUDY 02E / RECORDED SIMULATION</div>
+<h1>The unreliable sense of upright.</h1>
+<p>What happens when Microduck's sense of upright is a little wrong? Each panel replays a saved MuJoCo/BAM trial under the same external condition. Below, compare the trunk's true pitch with the pitch its controller perceived.</p>
+<div class="finding" id="finding"></div>
+<div class="stats" id="stats"></div>
+<div class="toolbar"><div><label for="preset">Choose a comparison</label><select id="preset"></select></div>
+<div><label for="view">Camera</label><select id="view"><option value="side">Side · forward balance</option><option value="front">Front · weight transfer</option><option value="top">Above · displacement</option></select></div></div>
+<p class="caption" id="caption"></p>
+<div class="panels" id="panels"></div>
+<div class="controls"><button id="play">Play</button><button id="restart">Restart</button><label for="scrub" class="sr">Synchronized timeline</label><input id="scrub" type="range" min="-1" max="3" step=".02" value="-.5"><output id="time"></output><label for="speed" style="margin:0">Speed</label><select id="speed" style="width:auto"><option value=".25">¼×</option><option value=".5" selected>½×</option><option value="1">1×</option></select></div>
+<div class="legend"><span>Filled sole = geometric foot contact</span><span>Orange dot = whole-body centre of mass</span><span>Solid trace = true trunk pitch · dashed = pitch the controller perceived</span></div>
+<div class="tracebox"><label>Trunk pitch (degrees, + = forward): true (solid) and perceived (dashed)</label><canvas id="trace" width="1260" height="200" aria-label="True and perceived trunk pitch"></canvas></div>
+<div class="tracebox"><label>Added joint-target offset on top of the frozen reflex (RMS radians): learned residual, fixed option or probe</label><canvas id="strength" width="1260" height="130" aria-label="Added joint target offset"></canvas></div>
+<p class="notes">Every frame is a saved simulation state from the native MuJoCo/BAM model with the hash-matching compiled binary, recorded at 200 Hz and shown at 50 Hz. The drawing joins measured body frames and projects geometry-derived sole outlines; it is a schematic, not a mesh render, and runs no browser physics. Perceived pitch is what the controller received, including misalignment, noise and any calibration front-end. Outcome labels apply the unchanged 02D whole-trial audit. A late replant cannot erase a fall. Comparisons were declared before rendering and include failures. No hardware, stepping or locomotion claim. <span id="provenance"></span></p>
+</main><script>
+const DATA=__DATA__;
+const $=id=>document.getElementById(id),trials=DATA.trials,COLORS=['#9bd6b4','#efb57a','#9fb8f2'];
+let playing=false,elapsed=-.5,last=null,view='side',current=DATA.presets[0];
+$('finding').textContent=DATA.finding;$('provenance').textContent=DATA.provenance;
+for(const s of DATA.stats){const el=document.createElement('div');el.className='stat';el.append(document.createTextNode(s.value));const l=document.createElement('span');l.textContent=s.label;el.append(l);$('stats').append(el)}
+DATA.presets.forEach((p,i)=>{const o=document.createElement('option');o.value=i;o.textContent=p.title;$('preset').append(o)});
+for(let k=0;k<3;k++){const s=document.createElement('section');s.className='panel';s.innerHTML=`<div class="panelhead"><div class="role" id="role${k}" style="color:${COLORS[k]}"></div><label for="pick${k}" class="sr">Recording ${k+1}</label><select id="pick${k}"></select><div class="badge" id="status${k}"></div></div><canvas class="scene" id="scene${k}" width="620" height="440" aria-label="Recorded robot state ${k+1}"></canvas><div class="metrics" id="metrics${k}"></div>`;$('panels').append(s);
+ trials.forEach((d,i)=>{const o=document.createElement('option');o.value=i;o.textContent=d.label;$('pick'+k).append(o)});
+ $('pick'+k).onchange=()=>{limits();draw();$('caption').textContent='Manual selection. Timelines share event-relative time; check that conditions match before comparing.'}}
+const sel=k=>trials[Number($('pick'+k).value)];
+function ref(d){return d.event_time??2.5}
+function frame(d){const target=elapsed+ref(d);let lo=0,hi=d.frames.length-1;while(lo<hi){const m=Math.ceil((lo+hi)/2);if(d.frames[m].t<=target+1e-8)lo=m;else hi=m-1}return d.frames[lo]}
+function limits(){const ds=[0,1,2].map(sel);const a=Math.max(...ds.map(d=>d.frames[0].t-ref(d))),b=Math.min(...ds.map(d=>d.frames.at(-1).t-ref(d)));$('scrub').min=Math.max(a,-2.4);$('scrub').max=b;elapsed=Math.max(Number($('scrub').min),Math.min(b,elapsed))}
+function robot(k){const d=sel(k),f=frame(d),cv=$('scene'+k),ctx=cv.getContext('2d'),W=cv.width,H=cv.height,color=COLORS[k];ctx.clearRect(0,0,W,H);
+ const ax=view==='side'?[0,2]:view==='front'?[1,2]:[0,1],sc=1.35,org=[W/2-30,view==='top'?H/2:H-60],P=p=>[org[0]+p[ax[0]]*sc,org[1]-p[ax[1]]*sc];
+ ctx.strokeStyle='#2f424a';ctx.lineWidth=1;ctx.font='13px system-ui';ctx.fillStyle='#8aa1aa';
+ for(let mm=-200;mm<=300;mm+=50){const x=P(view==='front'?[0,mm,0]:[mm,0,0])[0];if(x<0||x>W)continue;ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,H);ctx.stroke();ctx.fillText(mm,x+3,H-8)}
+ const g=view==='top'?H/2:H-60;ctx.beginPath();ctx.moveTo(0,g);ctx.lineTo(W,g);ctx.stroke();
+ const soles=view==='side'?f.soles_xz:view==='front'?f.soles_yz:f.soles;
+ soles.forEach((s,i)=>{ctx.beginPath();s.forEach((q,j)=>{const p=P(view==='side'?[q[0],0,q[1]]:view==='front'?[0,q[0],q[1]]:[q[0],q[1],0]);j?ctx.lineTo(...p):ctx.moveTo(...p)});ctx.closePath();ctx.strokeStyle=color;ctx.lineWidth=2;if(f.contact[i]){ctx.fillStyle=color+'88';ctx.fill()}ctx.stroke()});
+ ctx.strokeStyle=color;ctx.lineWidth=3.5;ctx.lineCap='round';for(const [a,b] of d.edges){ctx.beginPath();ctx.moveTo(...P(f.p[a]));ctx.lineTo(...P(f.p[b]));ctx.stroke()}
+ ctx.beginPath();ctx.arc(...P(f.head),17,0,Math.PI*2);ctx.stroke();ctx.beginPath();ctx.arc(...P(f.com),5,0,Math.PI*2);ctx.fillStyle='#f9a468';ctx.fill();
+ const fallen=d.failure_time!==null&&f.t>=d.failure_time;ctx.fillStyle=fallen?'#f8b6a4':'#e0eae7';ctx.font='14px system-ui';
+ ctx.fillText(fallen?'Fall latched at '+d.failure_time.toFixed(2)+' s':d.phase_note&&f.t<d.phase_end?d.phase_note:(d.event_time===null?'No disturbance':elapsed<0?'Before disturbance':'After disturbance'),14,24);
+ $('role'+k).textContent=(current.roles&&current.roles[k])||'Recording '+(k+1);
+ const st=$('status'+k);st.textContent=(d.recovered?'Sustained recovery':'Failed')+(d.failure_time!==null?' · fell at '+d.failure_time.toFixed(2)+' s':'')+' · '+(d.step?'verified step':'no verified step');st.style.color=d.recovered?'var(--a)':'var(--warn)';
+ $('metrics'+k).innerHTML=`<div><span>True pitch</span><b>${f.pitch_true.toFixed(2)}°</b></div><div><span>Perceived pitch</span><b>${f.pitch_seen.toFixed(2)}°</b></div><div><span>Body tilt</span><b>${f.tilt.toFixed(1)}°</b></div><div><span>Added target</span><b>${f.strength.toFixed(3)} rad</b></div><div><span>Feet</span><b>${f.contact[0]?'L ●':'L ○'} ${f.contact[1]?'R ●':'R ○'}</b></div><div><span>Condition</span><b>${d.condition}</b></div>`}
+function plot(id,key,dashedKey,yr){const c=$(id),ctx=c.getContext('2d');ctx.clearRect(0,0,c.width,c.height);const min=Number($('scrub').min),max=Number($('scrub').max),ds=[0,1,2].map(sel);
+ let lo=yr[0],hi=yr[1];for(const d of ds)for(const f of d.frames){const t=f.t-ref(d);if(t<min||t>max)continue;for(const k of [key,dashedKey]){if(!k)continue;lo=Math.min(lo,f[k]);hi=Math.max(hi,f[k])}}
+ lo=Math.max(lo,-30);hi=Math.min(hi,45);const H=c.height-30,x=t=>56+(t-min)/(max-min)*(c.width-70),y=v=>12+(hi-v)/(hi-lo)*(H-12);
+ ctx.font='12px system-ui';ctx.lineWidth=1;for(let i=0;i<=4;i++){const v=lo+i*(hi-lo)/4;ctx.strokeStyle='#30434b';ctx.beginPath();ctx.moveTo(56,y(v));ctx.lineTo(c.width-14,y(v));ctx.stroke();ctx.fillStyle='#a9bbbe';ctx.fillText(v.toFixed(key==='strength'?2:1),6,y(v)+4)}
+ ds.forEach((d,k)=>{for(const [kk,dash] of [[key,[]],[dashedKey,[6,5]]]){if(!kk)continue;ctx.setLineDash(dash);ctx.strokeStyle=COLORS[k];ctx.lineWidth=2;ctx.beginPath();let first=true;for(const f of d.frames){const t=f.t-ref(d);if(t<min||t>max)continue;const v=Math.max(lo,Math.min(hi,f[kk]));first?ctx.moveTo(x(t),y(v)):ctx.lineTo(x(t),y(v));first=false}ctx.stroke()}});ctx.setLineDash([]);
+ ctx.strokeStyle='#e1e6de';ctx.beginPath();ctx.moveTo(x(elapsed),8);ctx.lineTo(x(elapsed),H);ctx.stroke();ctx.fillStyle='#a9bbbe';ctx.fillText(min.toFixed(1)+' s',56,c.height-6);ctx.fillText('+'+max.toFixed(1)+' s',c.width-60,c.height-6);if(min<0&&max>0)ctx.fillText(ds.every(d=>d.event_time===null)?'2.5 s reference':'event',x(0)-20,c.height-6)}
+function draw(){for(let k=0;k<3;k++)robot(k);plot('trace','pitch_true','pitch_seen',[-2,4]);plot('strength','strength',null,[0,.1]);$('scrub').value=elapsed;$('time').textContent=(elapsed>=0?'+':'')+elapsed.toFixed(2)+([0,1,2].every(k=>sel(k).event_time===null)?' s from 2.5 s':' s from event')}
+function preset(i){current=DATA.presets[i];current.panels.forEach((t,k)=>$('pick'+k).value=t);$('caption').textContent=current.caption;elapsed=current.start??-.5;limits();draw()}
+$('preset').onchange=()=>preset(Number($('preset').value));$('view').onchange=()=>{view=$('view').value;draw()};
+$('scrub').oninput=()=>{elapsed=Number($('scrub').value);draw()};$('play').onclick=()=>{playing=!playing;$('play').textContent=playing?'Pause':'Play';last=null};
+$('restart').onclick=()=>{elapsed=Number($('scrub').min);draw()};
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function tick(now){if(playing&&last!==null){elapsed+=(now-last)/1000*Number($('speed').value);if(elapsed>Number($('scrub').max)){elapsed=Number($('scrub').max);playing=false;$('play').textContent='Play'}draw()}last=now;requestAnimationFrame(tick)}
+preset(0);if(!reduce)requestAnimationFrame(tick);else $('play').onclick=()=>{elapsed=Math.min(Number($('scrub').max),elapsed+.25);draw()};
+</script></html>

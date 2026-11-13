@@ -69,3 +69,105 @@
   clean-gyro oracle exact at nominal; noisy-gyro oracle 0.03–1.0°;
   kinematic-from-true-joints 0.7–14° (rate error 35–89% from sole rotation);
   the 0.10 rad probe fell in all three smoke trials.
+
+## Phase 1 execution
+
+- **Training reproduction before any 02E learning.** `learn02e` with
+  randomization off reproduced 02D's published `history-s72` generation 1
+  exactly: candidates, outcomes, scores, CEM mean/std/best, RNG state, and every
+  02D condition field (`learning/reproduce.json`).
+- **Characterization stopped once, for speed only.** The first 1A launch spent
+  4.5 of 6.6 s per trial in Python-loop polygon tests for support margins. It
+  was stopped after the reflex's 150 trials. `support_margins` was vectorized
+  with the same element-wise operations and tolerances; 900/900 recorded states
+  gave bitwise-identical margins. The partial run, its identity and the original
+  `sim02e.py` source are kept in `diagnostic/characterize-interrupted-v1/`. The
+  validator requires its reflex rows to equal the rerun byte for byte. No result
+  was seen or used to make this change; the reflex summary line printed the
+  same 110/150 both times.
+- **Erratum, documentation only.** The `sim02e` module docstring says a
+  positive pitch slope puts "+x uphill". The implemented convention, tested in
+  `test_floor_slope_and_drift_conventions`: positive pitch slope means the
+  floor descends toward +x, so the robot faces downhill. A correct IMU on a
+  trunk perpendicular to that floor reads the same sign as a positive pitch
+  misalignment. The file was not edited after the batteries began, because the
+  evaluation identities pin its hash.
+
+### Worker memory: the run was stopped by host memory exhaustion
+
+- **What happened.** 1A `characterize` (6 workers) ran at the same time as the
+  three 1D pilots (3 × 2 `learn02e` workers). After `history-s3` (18:27) the six
+  battery workers had each grown to about 1.6 GB. WSL (7.9 GB RAM, 2 GB swap)
+  thrashed and was terminated, which also ended the operator session.
+- **Nothing partial was kept, and nothing valid was lost.** 1A had six complete
+  configurations (`reflex` … `history-s3`, 150 rows each, recovered counts as
+  logged). `memoryless-s1..s3` were never written, and there were no `.tmp` files.
+  Each pilot had three complete, atomic generations (576 episodes). Every pinned
+  source and model hash still matches its identity, and `reflex` still equals
+  the interrupted-v1 rows byte for byte.
+- **Cause: a NumPy 2.4.1 leak, not retained simulator state and not expected
+  footprint.** A fresh worker is about 170 MB: the MjModel buffer is 77 MB and
+  each MjData arena is 14 MB. One in-process worker then grew 11–12 MB per 1A
+  trial. Neither `gc.collect()` nor `malloc_trim` released it, and the count of
+  GC-tracked objects did not change. Each path was tested separately, one
+  process per variant:
+  - learning rollouts: no growth;
+  - 200 Hz recording, `mj_copyData`/`mj_forward`, and contact access: no growth;
+  - `margins=True`: 11.5 MB per trial;
+  - `physics02b.support_polygon` alone: 11.4 MB per 300 calls. Within it,
+    `ConvexHull` (Qhull) does not grow; `np.unique` does.
+
+  `np.unique` retains one buffer the size of its input on every call
+  (retained/input = 1.0 for 200–6,000 rows, float and int, `axis=0` and 1-D).
+  tracemalloc shows the buffers as live NumPy allocations. Sorting and lexsort
+  do not leak. `diag02e.evaluate` records margins on every control step, so a
+  6 s trial makes 300 calls. Over about 150 trials per worker that predicts
+  1.7–1.9 GB per worker, which matches what was observed.
+- **Remedy, outside every pinned source.** The pinned evaluation and learning
+  sources are unchanged: `diag02e`, `sim02e`, `physics02b` and `learn02e`, and
+  the NumPy version (a package change would alter the Phase 0 identity).
+  `pool02e` replaces the battery pools at run time:
+  - every batch of about `workers × 20` tasks runs in a freshly forked pool,
+    which is then shut down;
+  - a guard is polled from the main thread. It stops the run and terminates
+    every worker if any worker exceeds 900 MB, the study's process tree exceeds
+    2,000 MB, or WSL `MemAvailable` falls below 1,500 MB;
+  - workers die with their driver (`PR_SET_PDEATHSIG`) and keep plain SIGTERM;
+  - SIGTERM or SIGINT to the driver terminates and reaps the whole tree;
+  - at most four workers.
+
+  `diag02e` battery steps now run through `python -m movement_lab.pool02e`.
+  `study02e` uses the same pools for its batteries, and for training it runs at
+  most `--concurrent-runs` jobs at once under a process-tree guard.
+- **Verified with one worker before any concurrency.**
+  - Through the bounded pool, 30 1A `history-s1` tasks (all 15 settings × all 5
+    kinds) reproduced the published rows byte for byte.
+  - Over 15 tasks per lifetime, worker RSS went from 136–154 MB to a peak of
+    311 MB (about 11.7 MB per task). It returned to baseline at each
+    replacement, with no orphaned processes. The rate was 1.83 s per task, the
+    same as unbounded.
+  - `learn02e.worker` in one long-lived process stayed at 147→149 MB over 132
+    evaluations.
+  - Unit tests cover task order, bounded lifetimes, guard breaches, task
+    exceptions and the worker signal settings.
+- **Execution budget on this machine.** The host is a 6-core/12-thread Ryzen 5
+  2600 with 16 GB. WSL gets 7.9 GB by default, and the Windows side had about
+  3.5 GB free during these measurements. The budget:
+  - batteries at most 4 workers × 20 tasks, about 0.4 GB peak per worker and
+    about 1.7 GB total;
+  - training at most 4 workers in total (one run × 2 workers to start);
+  - batteries and training never run together above 4 workers;
+  - concurrency is raised only after a short run's memory log stays within its
+    expected peak.
+- **1A completed with 2 bounded workers.** The run was
+  `pool02e --workers 2 diag02e characterize`, 457 s. It retained the six
+  completed configurations under the unchanged identity and added
+  `memoryless-s1..s3`: 91, 84 and 91 of 150 recovered.
+  - Memory: peak worker 388 MB and peak driver plus workers 822 MB. WSL
+    `MemAvailable` stayed at or above 6,554 MB, with no guard breach and no
+    swap.
+  - Peak worker RSS per batch was 292–381 MB over 12 fresh-worker batches, with
+    no trend across batches.
+  - The validator's battery audit passes (957 checks).
+  - Stdout is in `diagnostic/characterize-resume.log` and memory samples are in
+    `diag02e-characterize-memory.log`.

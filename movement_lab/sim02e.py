@@ -27,7 +27,7 @@ from movement_lab.sim02c import Design as FixedDesign, residual
 from movement_lab.sim02d import Condition as Condition02d, event_time, quiet
 from movement_lab.control02d import Controller, Design, load_basis
 from movement_lab.eval02c import audit_record
-from movement_lab.physics02b import support_polygon, ray_exit, inside
+from movement_lab.physics02b import support_polygon
 
 ENCODER_NOISE_RAD = 0.001   # upstream actor joint-position noise (uniform), as 02B revision
 
@@ -64,17 +64,41 @@ def encoder_offsets(cond, n=14):
     return np.random.default_rng([cond.seed, 202]).uniform(-1, 1, n) * cond.encoder_offset_rad
 
 
+MARGIN_DIRECTIONS = np.array([[math.cos(a), math.sin(a)] for a in np.linspace(0, 2 * math.pi, 16, endpoint=False)]
+                             + [[1., 0.], [-1., 0.]])
+
+
+def ray_exits(poly, origin, dirs):
+    """Vectorized physics02b.ray_exit for several directions; same element-wise operations and tolerances."""
+    a = poly; e = np.roll(poly, -1, axis=0) - poly
+    w = a - origin
+    u0, u1 = dirs[:, :1], dirs[:, 1:]
+    den = u0 * (-e[:, 1]) + u1 * e[:, 0]
+    with np.errstate(divide='ignore', invalid='ignore'):
+        t = (w[:, 0] * (-e[:, 1]) + w[:, 1] * e[:, 0]) / den
+        s = (u0 * w[:, 1] - u1 * w[:, 0]) / den
+    ok = (np.abs(den) >= 1e-12) & (t >= 0) & (s >= -1e-9) & (s <= 1 + 1e-9)
+    return np.where(ok, t, np.inf).min(axis=1)
+
+
+def inside_all(poly, p):
+    """Vectorized physics02b.inside (2-D cross products against every CCW edge)."""
+    e = np.roll(poly, -1, axis=0) - poly
+    d = p - poly
+    return bool(np.all(e[:, 0] * d[:, 1] - e[:, 1] * d[:, 0] >= -1e-12))
+
+
 def support_margins(sim, data, g_hat):
-    """Signed COM support margins (m) along gravity: min distance to polygon edge, and toe/heel along +x/-x."""
+    """Signed COM support margins (m) along gravity: min over 16 ray exits, and toe/heel along +x/-x."""
     poly = support_polygon(sim, data)
     com = data.subtree_com[sim.trunk]
     # Project the COM along gravity onto the floor plane z = 0.
     c = com[:2] - g_hat[:2] * (com[2] / -g_hat[2])
-    ok = len(poly) >= 3 and inside(poly, c)
+    ok = len(poly) >= 3 and inside_all(poly, c)
     if not ok:
         return -1.0, -1.0, -1.0
-    edges = [ray_exit(poly, c, np.array([math.cos(a), math.sin(a)])) for a in np.linspace(0, 2 * math.pi, 16, endpoint=False)]
-    return float(min(edges)), float(ray_exit(poly, c, np.array([1., 0.]))), float(ray_exit(poly, c, np.array([-1., 0.])))
+    t = ray_exits(poly, c, MARGIN_DIRECTIONS)
+    return float(t[:16].min()), float(t[16]), float(t[17])
 
 
 def rollout(sim, theta, vec, cond, design=Design(), record=False, terminate=True, mode="learned", basis=None,

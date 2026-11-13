@@ -1,0 +1,32 @@
+{
+  "seed": 72,
+  "arm": "memoryless",
+  "iterations": 8,
+  "population": 16,
+  "elite": 4,
+  "conditions_per_generation": 12,
+  "revision": true,
+  "initial_std": 0.2,
+  "floor": 0.025,
+  "randomize_deg": 4.0,
+  "design": {
+    "memory": false,
+    "tau_s": 0.08,
+    "bound": 0.8
+  },
+  "model_sha256": "ebb2ce87cae95c606e6db4ad2e790e9f4309e557443d6ea1a0629d5ba5e3cf8c",
+  "base_sha256": "a2728569b6c8c1803c69d24d209807823012277511e9993323fe687b02c07f1e",
+  "option_sha256": "c9fe0fb843dcaa62b29598d305a501abc91f310b22485f1665550af824d8e2c7",
+  "sources": {
+    "learn02e.py": "22abf146eb82c1a9e01bf40184c25ea77e49f95dcdc8e813aa145e7304dcc9d3",
+    "sim02e.py": "04fe0e8f24d61e8a11347e15347cdc181976f995947b7e3c359c43638fb3f531",
+    "control02d.py": "e4f05f3ad8df9e1e7bb30e210b932dc4565967aff730f2f8d32588b29a405751",
+    "sim02d.py": "38c72526939f390721b84ba90c00030575255082f39c7b81f12827f45accd77d",
+    "sim02b.py": "fdb9a2fed4802ecc2a81eeecc72bbe4995ab92920bc97b34fbe1ec5fdba34f19",
+    "sim02c.py": "0d44dc8d8b45026c2b6a5b369328fdca4e0912e38dc4c86b047e5004d9d8909a",
+    "eval02c.py": "c0363a47752ea245cdc2c5d96f06755cc399b105dc940d7a6d1b80cc947a5491",
+    "learn02d.py": "e1e32c3e9faa08fc20fb16af10b3a5abab6042a3915e3fb1ea9c8fe38157f913",
+    "learn02c.py": "108f6154c54ad40ff29255882afaabf757db1d022787169348cc98983f9780ae",
+    "physics02b.py": "7702e7336dbf8a9c2b631b987b872cc85e52f2f321b1941e26dd6c11310ead43"
+  }
+}

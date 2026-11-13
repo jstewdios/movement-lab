@@ -1,0 +1,1238 @@
+[
+ {
+  "kind": "static",
+  "condition": {},
+  "frontend": {
+   "settings": {
+    "kind": "static",
+    "start_s": 0.3,
+    "end_s": 1.3,
+    "blend_s": 0.3,
+    "probe_rad": 0.0,
+    "probe_hz": 1.0,
+    "probe_sign": 1.0,
+    "pitch_rad": 0.0,
+    "pitch_hz": 1.5,
+    "prior_gravity": [
+     0.0,
+     0.0,
+     -1.0
+    ]
+   },
+   "samples": 50,
+   "estimate_time_s": 1.3,
+   "correction_rotvec_rad": [
+    0.0019959322926108255,
+    -0.0011249728442544985,
+    -5.762738201371462e-05
+   ],
+   "correction_roll_pitch_deg": [
+    0.11435849656047077,
+    -0.06445619604261084
+   ]
+  },
+  "true_correction_roll_pitch_deg": [
+   0.0,
+   0.0
+  ],
+  "max_trunk_angular_speed": [
+   0.05477771540273973,
+   0.12447445016259939,
+   0.09970334773991286
+  ],
+  "foot_travel_mm": [
+   0.6248481816787494,
+   0.5165999242016032
+  ],
+  "window_max_tilt_deg": 1.7034071941561468,
+  "recovered_200hz": true,
+  "survived": true
+ },
+ {
+  "kind": "static",
+  "condition": {
+   "imu_rpy_deg": [
+    0.0,
+    2.0,
+    0.0
+   ]
+  },
+  "frontend": {
+   "settings": {
+    "kind": "static",
+    "start_s": 0.3,
+    "end_s": 1.3,
+    "blend_s": 0.3,
+    "probe_rad": 0.0,
+    "probe_hz": 1.0,
+    "probe_sign": 1.0,
+    "pitch_rad": 0.0,
+    "pitch_hz": 1.5,
+    "prior_gravity": [
+     0.0,
+     0.0,
+     -1.0
+    ]
+   },
+   "samples": 50,
+   "estimate_time_s": 1.3,
+   "correction_rotvec_rad": [
+    0.0012865225971957195,
+    0.033705360870954264,
+    0.0006631860066052462
+   ],
+   "correction_roll_pitch_deg": [
+    0.07371231506752397,
+    1.931174924871068
+   ]
+  },
+  "true_correction_roll_pitch_deg": [
+   0.0,
+   1.9999999999999996
+  ],
+  "max_trunk_angular_speed": [
+   0.17259407290343243,
+   0.17119333463075415,
+   0.33866174505490726
+  ],
+  "foot_travel_mm": [
+   0.35863239507973155,
+   0.2907419641649434
+  ],
+  "window_max_tilt_deg": 3.820342299712453,
+  "recovered_200hz": true,
+  "survived": true
+ },
+ {
+  "kind": "static",
+  "condition": {
+   "imu_rpy_deg": [
+    0.0,
+    -2.0,
+    0.0
+   ]
+  },
+  "frontend": {
+   "settings": {
+    "kind": "static",
+    "start_s": 0.3,
+    "end_s": 1.3,
+    "blend_s": 0.3,
+    "probe_rad": 0.0,
+    "probe_hz": 1.0,
+    "probe_sign": 1.0,
+    "pitch_rad": 0.0,
+    "pitch_hz": 1.5,
+    "prior_gravity": [
+     0.0,
+     0.0,
+     -1.0
+    ]
+   },
+   "samples": 50,
+   "estimate_time_s": 1.3,
+   "correction_rotvec_rad": [
+    0.003749864204247673,
+    -0.03514726881575676,
+    -0.000516464616338253
+   ],
+   "correction_roll_pitch_deg": [
+    0.21485139265057457,
+    -2.0137901645546337
+   ]
+  },
+  "true_correction_roll_pitch_deg": [
+   0.0,
+   -1.9999999999999996
+  ],
+  "max_trunk_angular_speed": [
+   0.03633776185067135,
+   0.17088713389874344,
+   0.06668441086437937
+  ],
+  "foot_travel_mm": [
+   0.533440219654284,
+   0.554800908333008
+  ],
+  "window_max_tilt_deg": 2.184462539559643,
+  "recovered_200hz": true,
+  "survived": true
+ },
+ {
+  "kind": "static",
+  "condition": {
+   "imu_rpy_deg": [
+    2.0,
+    0.0,
+    0.0
+   ]
+  },
+  "frontend": {
+   "settings": {
+    "kind": "static",
+    "start_s": 0.3,
+    "end_s": 1.3,
+    "blend_s": 0.3,
+    "probe_rad": 0.0,
+    "probe_hz": 1.0,
+    "probe_sign": 1.0,
+    "pitch_rad": 0.0,
+    "pitch_hz": 1.5,
+    "prior_gravity": [
+     0.0,
+     0.0,
+     -1.0
+    ]
+   },
+   "samples": 50,
+   "estimate_time_s": 1.3,
+   "correction_rotvec_rad": [
+    0.03786286106492595,
+    -0.0013432021138057699,
+    -0.0010489946673962398
+   ],
+   "correction_roll_pitch_deg": [
+    2.169382139310467,
+    -0.0769598121541215
+   ]
+  },
+  "true_correction_roll_pitch_deg": [
+   1.9999999999999996,
+   0.0
+  ],
+  "max_trunk_angular_speed": [
+   0.040268768962769055,
+   0.06828953585682448,
+   0.09399141629179118
+  ],
+  "foot_travel_mm": [
+   0.33186493675717843,
+   0.5109277877737226
+  ],
+  "window_max_tilt_deg": 2.7247297677696185,
+  "recovered_200hz": true,
+  "survived": true
+ },
+ {
+  "kind": "static",
+  "condition": {
+   "slope_deg": [
+    0.0,
+    2.0
+   ]
+  },
+  "frontend": {
+   "settings": {
+    "kind": "static",
+    "start_s": 0.3,
+    "end_s": 1.3,
+    "blend_s": 0.3,
+    "probe_rad": 0.0,
+    "probe_hz": 1.0,
+    "probe_sign": 1.0,
+    "pitch_rad": 0.0,
+    "pitch_hz": 1.5,
+    "prior_gravity": [
+     0.0,
+     0.0,
+     -1.0
+    ]
+   },
+   "samples": 50,
+   "estimate_time_s": 1.3,
+   "correction_rotvec_rad": [
+    0.004197147674273834,
+    0.03632694928639934,
+    5.308714553256102e-05
+   ],
+   "correction_roll_pitch_deg": [
+    0.24047884772903985,
+    2.0813808766964597
+   ]
+  },
+  "true_correction_roll_pitch_deg": [
+   0.0,
+   0.0
+  ],
+  "max_trunk_angular_speed": [
+   0.08311763038036869,
+   0.11252012158291326,
+   0.10184494081470216
+  ],
+  "foot_travel_mm": [
+   0.7939364944284597,
+   0.7945594206557551
+  ],
+  "window_max_tilt_deg": 2.282903364546649,
+  "recovered_200hz": true,
+  "survived": true
+ },
+ {
+  "kind": "static",
+  "condition": {
+   "imu_rpy_deg": [
+    0.0,
+    2.0,
+    0.0
+   ],
+   "slope_deg": [
+    0.0,
+    2.0
+   ]
+  },
+  "frontend": {
+   "settings": {
+    "kind": "static",
+    "start_s": 0.3,
+    "end_s": 1.3,
+    "blend_s": 0.3,
+    "probe_rad": 0.0,
+    "probe_hz": 1.0,
+    "probe_sign": 1.0,
+    "pitch_rad": 0.0,
+    "pitch_hz": 1.5,
+    "prior_gravity": [
+     0.0,
+     0.0,
+     -1.0
+    ]
+   },
+   "samples": 50,
+   "estimate_time_s": 1.3,
+   "correction_rotvec_rad": [
+    0.005665850604424173,
+    0.06782404903018208,
+    0.0007204674368968379
+   ],
+   "correction_roll_pitch_deg": [
+    0.3246293269851516,
+    3.886031758917797
+   ]
+  },
+  "true_correction_roll_pitch_deg": [
+   0.0,
+   1.9999999999999996
+  ],
+  "max_trunk_angular_speed": [
+   0.23193697747198802,
+   0.18407322884289987,
+   0.4956623884479697
+  ],
+  "foot_travel_mm": [
+   0.6763361776846938,
+   0.510576097963912
+  ],
+  "window_max_tilt_deg": 5.090173788642102,
+  "recovered_200hz": true,
+  "survived": true
+ },
+ {
+  "kind": "yaw",
+  "condition": {
+   "imu_rpy_deg": [
+    0.0,
+    2.0,
+    0.0
+   ]
+  },
+  "frontend": {
+   "settings": {
+    "kind": "yaw",
+    "start_s": 0.3,
+    "end_s": 1.3,
+    "blend_s": 0.3,
+    "probe_rad": 0.05,
+    "probe_hz": 1.0,
+    "probe_sign": 1.0,
+    "pitch_rad": 0.0,
+    "pitch_hz": 1.5,
+    "prior_gravity": [
+     0.0,
+     0.0,
+     -1.0
+    ]
+   },
+   "samples": 50,
+   "estimate_time_s": 1.3,
+   "correction_rotvec_rad": [
+    0.022158002265134574,
+    0.06541503389113364,
+    -0.009424267457740061
+   ],
+   "correction_roll_pitch_deg": [
+    1.269560012233529,
+    3.7480053586672004
+   ],
+   "kinematic_rate_rms_rad_s": 0.06979554037962442,
+   "singular_values": [
+    0.18112454812070658,
+    0.0033682221546075045,
+    0.0007270290286144717
+   ],
+   "observable": null
+  },
+  "true_correction_roll_pitch_deg": [
+   0.0,
+   1.9999999999999996
+  ],
+  "max_trunk_angular_speed": [
+   0.17259407290343243,
+   0.17119333463075415,
+   0.33866174505490726
+  ],
+  "foot_travel_mm": [
+   0.4562960623030244,
+   0.3850349967424049
+  ],
+  "window_max_tilt_deg": 3.820342299712453,
+  "recovered_200hz": true,
+  "survived": true
+ },
+ {
+  "kind": "yaw",
+  "condition": {
+   "imu_rpy_deg": [
+    0.0,
+    2.0,
+    0.0
+   ]
+  },
+  "frontend": {
+   "settings": {
+    "kind": "yaw",
+    "start_s": 0.3,
+    "end_s": 1.3,
+    "blend_s": 0.3,
+    "probe_rad": 0.05,
+    "probe_hz": 1.0,
+    "probe_sign": -1.0,
+    "pitch_rad": 0.0,
+    "pitch_hz": 1.5,
+    "prior_gravity": [
+     0.0,
+     0.0,
+     -1.0
+    ]
+   },
+   "samples": 50,
+   "estimate_time_s": 1.3,
+   "correction_rotvec_rad": [
+    0.034550420541559254,
+    0.0724243714626889,
+    -0.010597606602376852
+   ],
+   "correction_roll_pitch_deg": [
+    1.9795932774334493,
+    4.149610818699795
+   ],
+   "kinematic_rate_rms_rad_s": 0.06502029290539584,
+   "singular_values": [
+    0.15913560809421715,
+    0.002552343345685489,
+    0.00019802118672343613
+   ],
+   "observable": null
+  },
+  "true_correction_roll_pitch_deg": [
+   0.0,
+   1.9999999999999996
+  ],
+  "max_trunk_angular_speed": [
+   0.17259407290343243,
+   0.17119333463075415,
+   0.33866174505490726
+  ],
+  "foot_travel_mm": [
+   0.4328455273824369,
+   0.37816064240371744
+  ],
+  "window_max_tilt_deg": 3.820342299712453,
+  "recovered_200hz": true,
+  "survived": true
+ },
+ {
+  "kind": "yaw",
+  "condition": {
+   "imu_rpy_deg": [
+    0.0,
+    2.0,
+    0.0
+   ]
+  },
+  "frontend": {
+   "settings": {
+    "kind": "yaw",
+    "start_s": 0.3,
+    "end_s": 1.3,
+    "blend_s": 0.3,
+    "probe_rad": 0.1,
+    "probe_hz": 1.0,
+    "probe_sign": 1.0,
+    "pitch_rad": 0.0,
+    "pitch_hz": 1.5,
+    "prior_gravity": [
+     0.0,
+     0.0,
+     -1.0
+    ]
+   },
+   "samples": 50,
+   "estimate_time_s": 1.3,
+   "correction_rotvec_rad": [
+    0.01191494887754145,
+    0.028825068936168697,
+    -0.0019013647344442916
+   ],
+   "correction_roll_pitch_deg": [
+    0.6826762837972626,
+    1.6515547942161202
+   ],
+   "kinematic_rate_rms_rad_s": 0.17084134940790754,
+   "singular_values": [
+    1.0084678530573639,
+    0.012670440684327815,
+    0.00043844402638188763
+   ],
+   "observable": null
+  },
+  "true_correction_roll_pitch_deg": [
+   0.0,
+   1.9999999999999996
+  ],
+  "max_trunk_angular_speed": [
+   0.17259407290343243,
+   0.17119333463075415,
+   0.33866174505490726
+  ],
+  "foot_travel_mm": [
+   0.9169632394927706,
+   0.45598608912534894
+  ],
+  "window_max_tilt_deg": 5.299714647536547,
+  "recovered_200hz": false,
+  "survived": false
+ },
+ {
+  "kind": "yaw",
+  "condition": {
+   "imu_rpy_deg": [
+    0.0,
+    2.0,
+    0.0
+   ]
+  },
+  "frontend": {
+   "settings": {
+    "kind": "yaw",
+    "start_s": 0.3,
+    "end_s": 1.3,
+    "blend_s": 0.3,
+    "probe_rad": 0.1,
+    "probe_hz": 1.0,
+    "probe_sign": -1.0,
+    "pitch_rad": 0.0,
+    "pitch_hz": 1.5,
+    "prior_gravity": [
+     0.0,
+     0.0,
+     -1.0
+    ]
+   },
+   "samples": 50,
+   "estimate_time_s": 1.3,
+   "correction_rotvec_rad": [
+    0.03809274729238738,
+    0.052726465798908335,
+    -0.0054991102422488666
+   ],
+   "correction_roll_pitch_deg": [
+    2.182553649912191,
+    3.021003958918328
+   ],
+   "kinematic_rate_rms_rad_s": 0.06644981283539435,
+   "singular_values": [
+    0.16746051812481044,
+    0.003967801949658253,
+    0.0005617080549761905
+   ],
+   "observable": null
+  },
+  "true_correction_roll_pitch_deg": [
+   0.0,
+   1.9999999999999996
+  ],
+  "max_trunk_angular_speed": [
+   0.17259407290343243,
+   0.17119333463075415,
+   0.33866174505490726
+  ],
+  "foot_travel_mm": [
+   0.6295745984331714,
+   0.573264124961686
+  ],
+  "window_max_tilt_deg": 3.83700104708681,
+  "recovered_200hz": true,
+  "survived": true
+ },
+ {
+  "kind": "yaw",
+  "condition": {
+   "imu_rpy_deg": [
+    0.0,
+    2.0,
+    0.0
+   ]
+  },
+  "frontend": {
+   "settings": {
+    "kind": "yaw",
+    "start_s": 0.3,
+    "end_s": 1.3,
+    "blend_s": 0.3,
+    "probe_rad": 0.2,
+    "probe_hz": 1.0,
+    "probe_sign": 1.0,
+    "pitch_rad": 0.0,
+    "pitch_hz": 1.5,
+    "prior_gravity": [
+     0.0,
+     0.0,
+     -1.0
+    ]
+   },
+   "samples": 50,
+   "estimate_time_s": 1.3,
+   "correction_rotvec_rad": [
+    -0.23392348994129436,
+    -0.0274267306221964,
+    -0.026699076360471894
+   ],
+   "correction_roll_pitch_deg": [
+    -13.402828702607133,
+    -1.571435910494068
+   ],
+   "kinematic_rate_rms_rad_s": 0.5096130379148055,
+   "singular_values": [
+    9.373899775114753,
+    1.0054264098539627,
+    0.11561015057751502
+   ],
+   "observable": null
+  },
+  "true_correction_roll_pitch_deg": [
+   0.0,
+   1.9999999999999996
+  ],
+  "max_trunk_angular_speed": [
+   0.47296119526168157,
+   0.43615488703444216,
+   0.934069539022719
+  ],
+  "foot_travel_mm": [
+   4.538973763804214,
+   5.514971379858881
+  ],
+  "window_max_tilt_deg": 10.580446218016553,
+  "recovered_200hz": false,
+  "survived": false
+ },
+ {
+  "kind": "yaw",
+  "condition": {
+   "imu_rpy_deg": [
+    0.0,
+    2.0,
+    0.0
+   ]
+  },
+  "frontend": {
+   "settings": {
+    "kind": "yaw",
+    "start_s": 0.3,
+    "end_s": 1.3,
+    "blend_s": 0.3,
+    "probe_rad": 0.2,
+    "probe_hz": 1.0,
+    "probe_sign": -1.0,
+    "pitch_rad": 0.0,
+    "pitch_hz": 1.5,
+    "prior_gravity": [
+     0.0,
+     0.0,
+     -1.0
+    ]
+   },
+   "samples": 50,
+   "estimate_time_s": 1.3,
+   "correction_rotvec_rad": [
+    0.11604453099941421,
+    0.05379110713843251,
+    0.003024686480958511
+   ],
+   "correction_roll_pitch_deg": [
+    6.648861861841484,
+    3.082003414368218
+   ],
+   "kinematic_rate_rms_rad_s": 0.06858147500341745,
+   "singular_values": [
+    0.1704922518697264,
+    0.008796516444199117,
+    0.005796701655038514
+   ],
+   "observable": null
+  },
+  "true_correction_roll_pitch_deg": [
+   0.0,
+   1.9999999999999996
+  ],
+  "max_trunk_angular_speed": [
+   0.17259407290343243,
+   0.17119333463075415,
+   0.33866174505490726
+  ],
+  "foot_travel_mm": [
+   1.5257142731441922,
+   1.3552135429956491
+  ],
+  "window_max_tilt_deg": 4.142606631894439,
+  "recovered_200hz": true,
+  "survived": true
+ },
+ {
+  "kind": "rock",
+  "condition": {
+   "imu_rpy_deg": [
+    0.0,
+    2.0,
+    0.0
+   ]
+  },
+  "frontend": {
+   "settings": {
+    "kind": "rock",
+    "start_s": 0.3,
+    "end_s": 2.3,
+    "blend_s": 0.3,
+    "probe_rad": 0.05,
+    "probe_hz": 1.0,
+    "probe_sign": 1.0,
+    "pitch_rad": 0.0,
+    "pitch_hz": 1.5,
+    "prior_gravity": [
+     0.0,
+     0.0,
+     -1.0
+    ]
+   },
+   "samples": 100,
+   "estimate_time_s": 2.3000000000000003,
+   "correction_rotvec_rad": [
+    0.011969873324208251,
+    -0.011292443119687834,
+    0.005150877399355009
+   ],
+   "correction_roll_pitch_deg": [
+    0.6858232227833617,
+    -0.6470093311496576
+   ],
+   "kinematic_rate_rms_rad_s": 0.05423159816187448,
+   "singular_values": [
+    0.17869577966502534,
+    0.0681794657634984,
+    0.0036460964042939587
+   ],
+   "observable": "pitch/yaw tilt of the dominant (roll) axis only"
+  },
+  "true_correction_roll_pitch_deg": [
+   0.0,
+   1.9999999999999996
+  ],
+  "max_trunk_angular_speed": [
+   0.17259407290343243,
+   0.17119333463075415,
+   0.33866174505490726
+  ],
+  "foot_travel_mm": [
+   0.8801124655797894,
+   0.37210310441010463
+  ],
+  "window_max_tilt_deg": 3.9577276482828463,
+  "recovered_200hz": true,
+  "survived": true
+ },
+ {
+  "kind": "rock",
+  "condition": {},
+  "frontend": {
+   "settings": {
+    "kind": "rock",
+    "start_s": 0.3,
+    "end_s": 2.3,
+    "blend_s": 0.3,
+    "probe_rad": 0.05,
+    "probe_hz": 1.0,
+    "probe_sign": 1.0,
+    "pitch_rad": 0.0,
+    "pitch_hz": 1.5,
+    "prior_gravity": [
+     0.0,
+     0.0,
+     -1.0
+    ]
+   },
+   "samples": 100,
+   "estimate_time_s": 2.3000000000000003,
+   "correction_rotvec_rad": [
+    0.0013768539002352942,
+    0.019246059051366223,
+    -0.03714226070142804
+   ],
+   "correction_roll_pitch_deg": [
+    0.07888791748960887,
+    1.1027179559028415
+   ],
+   "kinematic_rate_rms_rad_s": 0.04775418086704172,
+   "singular_values": [
+    0.1440828227227739,
+    0.05230999769915591,
+    0.0026827454310496537
+   ],
+   "observable": "pitch/yaw tilt of the dominant (roll) axis only"
+  },
+  "true_correction_roll_pitch_deg": [
+   0.0,
+   0.0
+  ],
+  "max_trunk_angular_speed": [
+   0.154410262800053,
+   0.12439302351935581,
+   0.08999289044145095
+  ],
+  "foot_travel_mm": [
+   0.9703037364191823,
+   0.7413685080572306
+  ],
+  "window_max_tilt_deg": 2.1204164805228354,
+  "recovered_200hz": true,
+  "survived": true
+ },
+ {
+  "kind": "rock",
+  "condition": {
+   "slope_deg": [
+    0.0,
+    2.0
+   ]
+  },
+  "frontend": {
+   "settings": {
+    "kind": "rock",
+    "start_s": 0.3,
+    "end_s": 2.3,
+    "blend_s": 0.3,
+    "probe_rad": 0.05,
+    "probe_hz": 1.0,
+    "probe_sign": 1.0,
+    "pitch_rad": 0.0,
+    "pitch_hz": 1.5,
+    "prior_gravity": [
+     0.0,
+     0.0,
+     -1.0
+    ]
+   },
+   "samples": 100,
+   "estimate_time_s": 2.3000000000000003,
+   "correction_rotvec_rad": [
+    -0.014968360461725482,
+    0.037861925967819364,
+    -0.13121889150564953
+   ],
+   "correction_roll_pitch_deg": [
+    -0.8576238806873624,
+    2.1693285621928244
+   ],
+   "kinematic_rate_rms_rad_s": 0.03463782759323752,
+   "singular_values": [
+    0.07006443538591314,
+    0.021433208338014917,
+    0.001841875976040902
+   ],
+   "observable": "pitch/yaw tilt of the dominant (roll) axis only"
+  },
+  "true_correction_roll_pitch_deg": [
+   0.0,
+   0.0
+  ],
+  "max_trunk_angular_speed": [
+   0.11279757840723588,
+   0.11252012158291326,
+   0.11292296093670402
+  ],
+  "foot_travel_mm": [
+   1.5857008396613805,
+   1.365904979097243
+  ],
+  "window_max_tilt_deg": 2.2888679519557695,
+  "recovered_200hz": true,
+  "survived": true
+ },
+ {
+  "kind": "rock",
+  "condition": {
+   "imu_rpy_deg": [
+    0.0,
+    2.0,
+    0.0
+   ]
+  },
+  "frontend": {
+   "settings": {
+    "kind": "rock",
+    "start_s": 0.3,
+    "end_s": 2.3,
+    "blend_s": 0.3,
+    "probe_rad": 0.1,
+    "probe_hz": 1.0,
+    "probe_sign": 1.0,
+    "pitch_rad": 0.0,
+    "pitch_hz": 1.5,
+    "prior_gravity": [
+     0.0,
+     0.0,
+     -1.0
+    ]
+   },
+   "samples": 100,
+   "estimate_time_s": 2.3000000000000003,
+   "correction_rotvec_rad": [
+    0.01718324171227056,
+    0.15759042993481234,
+    -0.12776703219191812
+   ],
+   "correction_roll_pitch_deg": [
+    0.9845272284662532,
+    9.029266526916857
+   ],
+   "kinematic_rate_rms_rad_s": 0.1797823009191836,
+   "singular_values": [
+    2.1827099664300627,
+    0.23224992428656135,
+    0.08755154416132789
+   ],
+   "observable": "pitch/yaw tilt of the dominant (roll) axis only"
+  },
+  "true_correction_roll_pitch_deg": [
+   0.0,
+   1.9999999999999996
+  ],
+  "max_trunk_angular_speed": [
+   0.33277030674685604,
+   0.23890063745238166,
+   0.33866174505490726
+  ],
+  "foot_travel_mm": [
+   5.0936017425204225,
+   0.9577989102321629
+  ],
+  "window_max_tilt_deg": 7.638873735698852,
+  "recovered_200hz": false,
+  "survived": false
+ },
+ {
+  "kind": "rock",
+  "condition": {},
+  "frontend": {
+   "settings": {
+    "kind": "rock",
+    "start_s": 0.3,
+    "end_s": 2.3,
+    "blend_s": 0.3,
+    "probe_rad": 0.1,
+    "probe_hz": 1.0,
+    "probe_sign": 1.0,
+    "pitch_rad": 0.0,
+    "pitch_hz": 1.5,
+    "prior_gravity": [
+     0.0,
+     0.0,
+     -1.0
+    ]
+   },
+   "samples": 100,
+   "estimate_time_s": 2.3000000000000003,
+   "correction_rotvec_rad": [
+    0.10145066997666669,
+    0.2457824146628974,
+    -0.056763483217483
+   ],
+   "correction_roll_pitch_deg": [
+    5.812695218437575,
+    14.08229503871834
+   ],
+   "kinematic_rate_rms_rad_s": 0.16451844269880744,
+   "singular_values": [
+    2.108048605904402,
+    0.2325431452203431,
+    0.043696650269855065
+   ],
+   "observable": "pitch/yaw tilt of the dominant (roll) axis only"
+  },
+  "true_correction_roll_pitch_deg": [
+   0.0,
+   0.0
+  ],
+  "max_trunk_angular_speed": [
+   0.3562422672437686,
+   0.2577759147382227,
+   0.17067553098869082
+  ],
+  "foot_travel_mm": [
+   1.3944574461144865,
+   1.23239059700648
+  ],
+  "window_max_tilt_deg": 3.24942412958932,
+  "recovered_200hz": false,
+  "survived": false
+ },
+ {
+  "kind": "rock",
+  "condition": {
+   "slope_deg": [
+    0.0,
+    2.0
+   ]
+  },
+  "frontend": {
+   "settings": {
+    "kind": "rock",
+    "start_s": 0.3,
+    "end_s": 2.3,
+    "blend_s": 0.3,
+    "probe_rad": 0.1,
+    "probe_hz": 1.0,
+    "probe_sign": 1.0,
+    "pitch_rad": 0.0,
+    "pitch_hz": 1.5,
+    "prior_gravity": [
+     0.0,
+     0.0,
+     -1.0
+    ]
+   },
+   "samples": 100,
+   "estimate_time_s": 2.3000000000000003,
+   "correction_rotvec_rad": [
+    0.11121206137766194,
+    0.33105432162451454,
+    -0.03156935496298028
+   ],
+   "correction_roll_pitch_deg": [
+    6.3719817478898975,
+    18.968015418651227
+   ],
+   "kinematic_rate_rms_rad_s": 0.14331052821723425,
+   "singular_values": [
+    1.6312132786906706,
+    0.19743781326495946,
+    0.002332346991124254
+   ],
+   "observable": "pitch/yaw tilt of the dominant (roll) axis only"
+  },
+  "true_correction_roll_pitch_deg": [
+   0.0,
+   0.0
+  ],
+  "max_trunk_angular_speed": [
+   0.3655631914781287,
+   0.18892109403669358,
+   0.1525556049580149
+  ],
+  "foot_travel_mm": [
+   1.8658680739478453,
+   1.734207123601141
+  ],
+  "window_max_tilt_deg": 3.177167977606763,
+  "recovered_200hz": false,
+  "survived": false
+ },
+ {
+  "kind": "rock",
+  "condition": {
+   "imu_rpy_deg": [
+    0.0,
+    2.0,
+    0.0
+   ]
+  },
+  "frontend": {
+   "settings": {
+    "kind": "rock",
+    "start_s": 0.3,
+    "end_s": 2.3,
+    "blend_s": 0.3,
+    "probe_rad": 0.15,
+    "probe_hz": 1.0,
+    "probe_sign": 1.0,
+    "pitch_rad": 0.0,
+    "pitch_hz": 1.5,
+    "prior_gravity": [
+     0.0,
+     0.0,
+     -1.0
+    ]
+   },
+   "samples": 100,
+   "estimate_time_s": 2.3000000000000003,
+   "correction_rotvec_rad": [
+    -0.8085938937424181,
+    -0.00689736381904846,
+    -0.07710635242013285
+   ],
+   "correction_roll_pitch_deg": [
+    -46.3290174514903,
+    -0.395189836597712
+   ],
+   "kinematic_rate_rms_rad_s": 0.9748818432697178,
+   "singular_values": [
+    117.50028170367699,
+    13.534477848297485,
+    5.355521533981499
+   ],
+   "observable": "pitch/yaw tilt of the dominant (roll) axis only"
+  },
+  "true_correction_roll_pitch_deg": [
+   0.0,
+   1.9999999999999996
+  ],
+  "max_trunk_angular_speed": [
+   0.8403301993524928,
+   11.20331036216616,
+   1.6957464367469408
+  ],
+  "foot_travel_mm": [
+   87.05101490951688,
+   88.38056175581411
+  ],
+  "window_max_tilt_deg": 83.71905977447729,
+  "recovered_200hz": false,
+  "survived": false
+ },
+ {
+  "kind": "rock",
+  "condition": {},
+  "frontend": {
+   "settings": {
+    "kind": "rock",
+    "start_s": 0.3,
+    "end_s": 2.3,
+    "blend_s": 0.3,
+    "probe_rad": 0.15,
+    "probe_hz": 1.0,
+    "probe_sign": 1.0,
+    "pitch_rad": 0.0,
+    "pitch_hz": 1.5,
+    "prior_gravity": [
+     0.0,
+     0.0,
+     -1.0
+    ]
+   },
+   "samples": 100,
+   "estimate_time_s": 2.3000000000000003,
+   "correction_rotvec_rad": [
+    0.0295060925303497,
+    0.09741256171949565,
+    -0.04146105122033363
+   ],
+   "correction_roll_pitch_deg": [
+    1.6905745719115217,
+    5.581328658084747
+   ],
+   "kinematic_rate_rms_rad_s": 0.4047479276903729,
+   "singular_values": [
+    12.088034224758173,
+    0.745547566515979,
+    0.08847137836654073
+   ],
+   "observable": "pitch/yaw tilt of the dominant (roll) axis only"
+  },
+  "true_correction_roll_pitch_deg": [
+   0.0,
+   0.0
+  ],
+  "max_trunk_angular_speed": [
+   0.6359952081537303,
+   0.5310737179268987,
+   0.7843398514488269
+  ],
+  "foot_travel_mm": [
+   4.568620535601273,
+   2.0382917554488413
+  ],
+  "window_max_tilt_deg": 6.515159242734454,
+  "recovered_200hz": false,
+  "survived": false
+ },
+ {
+  "kind": "rock",
+  "condition": {
+   "slope_deg": [
+    0.0,
+    2.0
+   ]
+  },
+  "frontend": {
+   "settings": {
+    "kind": "rock",
+    "start_s": 0.3,
+    "end_s": 2.3,
+    "blend_s": 0.3,
+    "probe_rad": 0.15,
+    "probe_hz": 1.0,
+    "probe_sign": 1.0,
+    "pitch_rad": 0.0,
+    "pitch_hz": 1.5,
+    "prior_gravity": [
+     0.0,
+     0.0,
+     -1.0
+    ]
+   },
+   "samples": 100,
+   "estimate_time_s": 2.3000000000000003,
+   "correction_rotvec_rad": [
+    0.1366286603076173,
+    0.17621845979288486,
+    0.03453934859045582
+   ],
+   "correction_roll_pitch_deg": [
+    7.828245596153064,
+    10.096574018428093
+   ],
+   "kinematic_rate_rms_rad_s": 0.36939435747141347,
+   "singular_values": [
+    10.303429004389585,
+    0.6223880006140153,
+    0.5504150748230799
+   ],
+   "observable": "pitch/yaw tilt of the dominant (roll) axis only"
+  },
+  "true_correction_roll_pitch_deg": [
+   0.0,
+   0.0
+  ],
+  "max_trunk_angular_speed": [
+   0.6560273958461766,
+   0.45433522392393216,
+   0.5421262588090419
+  ],
+  "foot_travel_mm": [
+   3.2121463877215546,
+   2.301078196176752
+  ],
+  "window_max_tilt_deg": 6.4209443669301836,
+  "recovered_200hz": false,
+  "survived": false
+ }
+]

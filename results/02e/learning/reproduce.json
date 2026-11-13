@@ -1,0 +1,11 @@
+{
+ "candidates": true,
+ "scores": true,
+ "outcomes": true,
+ "best": true,
+ "mean": true,
+ "std": true,
+ "rng_state": true,
+ "conditions_02d_fields": true,
+ "passed": true
+}
